@@ -1,0 +1,39 @@
+# Patient data never enters git — no documents, images, e-mails or spreadsheets.
+# Every screen of Bridgr Pro shows a patient's name, so a real capture of the
+# current app IS patient data. Mockups live in the Claude Design project and
+# use the fictitious cast in docs/06-sample-data.md (AGENTS.md).
+#
+# The bracket patterns make the match case-insensitive: git's is not, and
+# scanners and cameras write `.PDF` and `.JPG` all day.
+#
+# ⚠️ This guards the accident, never `git add -f` — the rule in AGENTS.md is
+# broader than this list.
+*.[pP][dD][fF]
+*.[eE][mM][lL]
+*.[mM][sS][gG]
+*.[pP][nN][gG]
+*.[jJ][pP][gG]
+*.[jJ][pP][eE][gG]
+*.[wW][eE][bB][pP]
+*.[gG][iI][fF]
+*.[tT][iI][fF]
+*.[tT][iI][fF][fF]
+*.[bB][mM][pP]
+*.[hH][eE][iI][cC]
+*.[xX][lL][sS]
+*.[xX][lL][sS][xX]
+*.[cC][sS][vV]
+*.[oO][dD][sS]
+*.[dD][oO][cC]
+*.[dD][oO][cC][xX]
+screenshots/
+capturas/
+documentos/
+
+# The Claude Design canvas, when pulled to disk to be searched: generated,
+# large, and regenerable from the project, which stays its source of truth.
+*.dc.html
+
+# Local environment
+.env
+.env.*
