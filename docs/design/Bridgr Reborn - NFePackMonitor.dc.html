@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" rel="stylesheet">
+<link href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css" rel="stylesheet">
+<style>
+body { margin: 0; background: #0a0b0d; }
+a { color: #6ea3e0; }
+a:hover { color: #9cc0ec; }
+</style>
+</helmet>
+
+<div style="font-family:'IBM Plex Sans',system-ui,sans-serif;background:#0a0b0d;color:#e6e9ec;padding:56px;display:flex;flex-direction:column;gap:72px;align-items:flex-start">
+
+  <div style="display:flex;flex-direction:column;gap:10px;max-width:940px">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(230,233,236,.4)">Bridgr Pro · reborn · rodada 7</div>
+    <div style="font-size:30px;font-weight:600;letter-spacing:-.01em">NFePackMonitor</div>
+    <div style="font-size:14px;line-height:1.6;color:rgba(230,233,236,.66);text-wrap:pretty">O console do monitor: estado e chave no mesmo cartão, o batimento do último ciclo, a fila offline-first, os cinco últimos ciclos, o histórico de notas (só leitura) e o log cru ao lado. A tela mostra e não interpreta: <span style="color:#e6e9ec">processo vivo não é portal funcionando</span>, e só <span style="color:#e6e9ec">falhas &gt; 0</span> acende âmbar na fila.</div>
+  </div>
+
+  <!-- ============ PRINCIPAL ============ -->
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <div style="font-size:18px;font-weight:600">1 · Console — <span style="font-family:'IBM Plex Mono',monospace;font-size:15px;font-weight:400">/nfe-pack-monitor</span></div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(230,233,236,.4)">baixando · 2/3 notas + 1/3 log</div>
+    </div>
+
+    <div style="width:1440px;height:900px;border-radius:8px;border:1px solid #2b2f36;background:#14161a;overflow:hidden;display:flex;flex-direction:column;font-size:13.5px;color:#e6e9ec">
+      <div style="height:42px;flex:none;display:flex;align-items:center;gap:14px;padding:0 6px 0 12px;border-bottom:1px solid #2b2f36">
+        <div style="display:flex;align-items:center;gap:8px">
+          <svg width="20" height="22" viewBox="0 0 24 24" fill="none"><path d="M3.5 21.5V12a8.5 8.5 0 0 1 17 0v9.5" stroke="#6ea3e0" stroke-width="2"></path><path d="M1 22.5h22" stroke="#6ea3e0" stroke-width="2" stroke-linecap="round"></path><path d="M20 1.5l1.1 2.9 2.9 1.1-2.9 1.1L20 9.5l-1.1-2.9L16 5.5l2.9-1.1z" fill="#f0913a"></path></svg>
+          <div style="font-size:13.5px;font-weight:500">Bridgr Pro</div>
+          <div style="font-size:11px;color:rgba(230,233,236,.45)">· NFePackMonitor</div>
+        </div>
+        <div style="flex:1;display:flex;justify-content:center">
+          <div style="width:430px;height:26px;display:flex;align-items:center;gap:7px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;padding:0 8px">
+            <i class="ph ph-magnifying-glass" style="font-size:13px;color:rgba(230,233,236,.45)"></i>
+            <div style="flex:1;font-size:11.5px;color:rgba(230,233,236,.4);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Buscar paciente, atendimento, arquivo ou código do ERP…</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:rgba(230,233,236,.45);background:#23272e;border:1px solid #2b2f36;border-radius:3px;padding:1px 5px">Ctrl K</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:4px">
+          <div style="width:27px;height:25px;display:flex;align-items:center;justify-content:center;position:relative"><i class="ph ph-bell" style="font-size:15px;color:rgba(230,233,236,.72)"></i><div style="position:absolute;top:2px;right:2px;min-width:13px;height:13px;border-radius:7px;background:#e06a63;border:2px solid #14161a;color:#14161a;font-size:9px;font-weight:600;display:flex;align-items:center;justify-content:center;padding:0 3px">1</div></div>
+          <div style="display:flex;align-items:center;gap:7px;height:26px;padding:0 7px;border-radius:6px;background:#1b1e23"><div style="width:19px;height:19px;border-radius:10px;background:#1b3350;color:#bfd8f5;font-size:9px;font-weight:600;display:flex;align-items:center;justify-content:center">CR</div><div style="font-size:12px">Camila</div><i class="ph ph-caret-down" style="font-size:10px;color:rgba(230,233,236,.45)"></i></div>
+          <div style="display:flex;align-items:center;gap:2px;margin-left:6px">
+            <div style="width:26px;height:22px;display:flex;align-items:center;justify-content:center"><i class="ph ph-minus" style="font-size:13px;color:rgba(230,233,236,.72)"></i></div>
+            <div style="width:26px;height:22px;display:flex;align-items:center;justify-content:center"><i class="ph ph-square" style="font-size:12px;color:rgba(230,233,236,.72)"></i></div>
+            <div style="width:26px;height:22px;display:flex;align-items:center;justify-content:center"><i class="ph ph-x" style="font-size:13px;color:rgba(230,233,236,.72)"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="flex:1;display:flex;min-height:0">
+        <div style="width:52px;flex:none;border-right:1px solid #2b2f36;padding:8px 6px;display:flex;flex-direction:column;gap:3px;align-items:center">
+          <div style="width:40px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:6px;color:rgba(230,233,236,.72)"><i class="ph ph-gauge" style="font-size:16px"></i></div>
+          <div style="width:40px;height:1px;background:#2b2f36;margin:7px 0"></div>
+          <div style="width:40px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:6px;color:rgba(230,233,236,.72)"><i class="ph ph-tray-arrow-down" style="font-size:16px"></i></div>
+          <div style="width:40px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:6px;color:rgba(230,233,236,.72)"><i class="ph ph-check-square-offset" style="font-size:16px"></i></div>
+          <div style="width:40px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:6px;color:rgba(230,233,236,.72)"><i class="ph ph-receipt" style="font-size:16px"></i></div>
+          <div style="width:40px;height:1px;background:#2b2f36;margin:7px 0"></div>
+          <div style="width:40px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:6px;color:rgba(230,233,236,.72)"><i class="ph ph-archive" style="font-size:16px"></i></div>
+          <div style="width:40px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:6px;color:rgba(230,233,236,.72)"><i class="ph ph-brackets-curly" style="font-size:16px"></i></div>
+          <div style="width:40px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:6px;color:rgba(230,233,236,.72)"><i class="ph ph-table" style="font-size:16px"></i></div>
+          <div style="width:40px;height:1px;background:#2b2f36;margin:7px 0"></div>
+          <div style="width:40px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:6px;color:rgba(230,233,236,.72)"><i class="ph ph-gear-six" style="font-size:16px"></i></div>
+          <div style="width:40px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:6px;color:rgba(230,233,236,.72)"><i class="ph ph-terminal-window" style="font-size:16px"></i></div>
+          <div style="width:40px;height:1px;background:#2b2f36;margin:7px 0"></div>
+          <div style="width:40px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:6px;background:rgba(110,163,224,.13);box-shadow:inset 2px 0 0 #6ea3e0;color:#bfd8f5"><i class="ph-fill ph-receipt-x" style="font-size:16px"></i></div>
+        </div>
+
+        <div style="flex:1;min-width:0;display:flex;flex-direction:column;min-height:0">
+          <div style="flex:none;padding:14px 18px 0;display:flex;flex-direction:column;gap:3px">
+            <div style="font-size:19px;font-weight:600;letter-spacing:-.01em">NFePackMonitor</div>
+            <div style="font-size:12px;color:rgba(230,233,236,.55)">As notas estão descendo do portal sozinhas?</div>
+          </div>
+
+          <div style="flex:none;padding:12px 18px 0;display:flex;gap:12px">
+            <div style="flex:1;border:1px solid #2b2f36;border-radius:9px;background:#1b1e23;padding:13px 14px;display:flex;align-items:center;gap:12px">
+              <i class="ph-fill ph-receipt" style="font-size:20px;color:#57b184;flex:none"></i>
+              <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
+                <div style="font-size:13.5px;font-weight:500">Serviço · baixando</div>
+                <div style="font-size:11px;color:rgba(230,233,236,.5);line-height:1.5">As NF-e do portal ACOM — sobe com o app e fica no ar; só Desligar derruba</div>
+                <div style="font-size:11px;color:rgba(230,233,236,.6)">Último ciclo: <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px">09/09/2026 · 14:31 · 3 notas no ciclo · 1482 ciclos no total</span></div>
+              </div>
+              <div style="width:38px;height:21px;flex:none;border-radius:12px;background:#6ea3e0;display:flex;align-items:center;justify-content:flex-end;padding:0 2px"><div style="width:17px;height:17px;border-radius:9px;background:#14161a"></div></div>
+            </div>
+
+            <div style="width:520px;flex:none;border:1px solid #2b2f36;border-radius:9px;background:#1b1e23;padding:13px 14px;display:flex;flex-direction:column;gap:10px">
+              <div style="display:flex;align-items:baseline;gap:10px"><div style="font-size:13px;font-weight:500">Métricas</div><div style="flex:1"></div><div style="font-size:10.5px;color:rgba(230,233,236,.45)">exportadas em 09/09/2026 · 14:20</div></div>
+              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:9px">
+                <div style="display:flex;flex-direction:column;gap:2px"><div style="font-family:'IBM Plex Mono',monospace;font-size:15px">1.480</div><div style="font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">ciclos</div></div>
+                <div style="display:flex;flex-direction:column;gap:2px"><div style="font-family:'IBM Plex Mono',monospace;font-size:15px">1.477</div><div style="font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">bem-sucedidos</div></div>
+                <div style="display:flex;flex-direction:column;gap:2px"><div style="font-family:'IBM Plex Mono',monospace;font-size:15px;color:#e0a33c">3</div><div style="font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">falhas</div></div>
+                <div style="display:flex;flex-direction:column;gap:2px"><div style="font-family:'IBM Plex Mono',monospace;font-size:15px">1.206</div><div style="font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">notas baixadas</div></div>
+                <div style="display:flex;flex-direction:column;gap:2px"><div style="font-family:'IBM Plex Mono',monospace;font-size:15px">12,4 s</div><div style="font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">duração do último ciclo</div></div>
+                <div style="display:flex;flex-direction:column;gap:2px"><div style="font-family:'IBM Plex Mono',monospace;font-size:15px">3</div><div style="font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">notas no último ciclo</div></div>
+              </div>
+            </div>
+          </div>
+
+          <div style="flex:none;padding:12px 18px 0;display:flex;gap:12px">
+            <div style="flex:1;border:1px solid #2b2f36;border-radius:9px;background:#1b1e23;padding:13px 14px;display:flex;flex-direction:column;gap:10px">
+              <div style="display:flex;align-items:center;gap:10px">
+                <div style="font-size:13px;font-weight:500">Fila de sincronização</div>
+                <div style="font-size:11px;color:rgba(230,233,236,.5)">1.208 eventos</div>
+                <div style="flex:1"></div>
+                <div style="height:24px;display:flex;align-items:center;gap:6px;padding:0 9px;border:1px solid #2b2f36;border-radius:5px;font-size:11px;color:rgba(230,233,236,.85)"><i class="ph ph-arrows-clockwise" style="font-size:11px"></i>Reler</div>
+              </div>
+              <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px">
+                <div style="border:1px solid #2b2f36;border-radius:7px;padding:8px 9px;display:flex;flex-direction:column;gap:2px"><div style="font-family:'IBM Plex Mono',monospace;font-size:15px">1.206</div><div style="font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">Pendentes</div></div>
+                <div style="border:1px solid #2b2f36;border-radius:7px;padding:8px 9px;display:flex;flex-direction:column;gap:2px"><div style="font-family:'IBM Plex Mono',monospace;font-size:15px">0</div><div style="font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">Processando</div></div>
+                <div style="border:1px solid #2b2f36;border-radius:7px;padding:8px 9px;display:flex;flex-direction:column;gap:2px"><div style="font-family:'IBM Plex Mono',monospace;font-size:15px">0</div><div style="font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">Enviadas</div></div>
+                <div style="border:1px solid rgba(224,163,60,.5);border-radius:7px;padding:8px 9px;display:flex;flex-direction:column;gap:2px"><div style="font-family:'IBM Plex Mono',monospace;font-size:15px;color:#e0a33c">2</div><div style="font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(244,217,163,.75)">Com falha</div></div>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:6px">
+                <div style="font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">Falhas de sincronização</div>
+                <div style="display:flex;flex-direction:column;gap:3px">
+                  <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:rgba(230,233,236,.78)">#1187 · nfe_downloads_queue · 5 tentativas · 08/09/2026 · 17:02</div>
+                  <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#f3b1ac;line-height:1.5">Error 111 connecting to localhost:6379. Connection refused.</div>
+                </div>
+              </div>
+              <div style="font-size:10.5px;color:rgba(230,233,236,.45);line-height:1.6;text-wrap:pretty">A fila offline-first do monitor: cada download vira um evento, e pendente aguarda a sincronização com o Redis — que só corre quando está habilitada no monitor.</div>
+            </div>
+
+            <div style="width:520px;flex:none;border:1px solid #2b2f36;border-radius:9px;background:#1b1e23;padding:13px 14px;display:flex;flex-direction:column;gap:10px">
+              <div style="display:flex;align-items:baseline;gap:10px"><div style="font-size:13px;font-weight:500">Ciclos</div><div style="flex:1"></div><div style="font-size:10.5px;color:rgba(230,233,236,.45)">os 5 últimos · o monitor guarda só 10</div></div>
+              <div style="font-size:11px;color:rgba(230,233,236,.6)">1.482 ciclos desde 03/08/2026 · <span style="color:#f4d9a3">3 com falha</span></div>
+              <div style="display:flex;flex-direction:column;gap:7px">
+                <div style="display:flex;align-items:center;gap:9px;font-size:11px"><i class="ph-fill ph-check-circle" style="font-size:13px;color:#57b184;flex:none"></i><div style="font-family:'IBM Plex Mono',monospace;color:rgba(230,233,236,.78)">09/09/2026 · 14:31</div><div style="font-family:'IBM Plex Mono',monospace;color:rgba(230,233,236,.55)">12,4 s · 3 notas</div></div>
+                <div style="display:flex;align-items:center;gap:9px;font-size:11px"><i class="ph-fill ph-check-circle" style="font-size:13px;color:#57b184;flex:none"></i><div style="font-family:'IBM Plex Mono',monospace;color:rgba(230,233,236,.78)">09/09/2026 · 14:30</div><div style="font-family:'IBM Plex Mono',monospace;color:rgba(230,233,236,.55)">9,8 s · 0 notas</div></div>
+                <div style="display:flex;flex-direction:column;gap:3px">
+                  <div style="display:flex;align-items:center;gap:9px;font-size:11px"><i class="ph-fill ph-warning-circle" style="font-size:13px;color:#e06a63;flex:none"></i><div style="font-family:'IBM Plex Mono',monospace;color:rgba(230,233,236,.78)">09/09/2026 · 14:29</div><div style="font-family:'IBM Plex Mono',monospace;color:rgba(230,233,236,.55)">31 s · 0 notas · falhou</div></div>
+                  <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#f3b1ac;padding-left:22px">Authentication failed</div>
+                </div>
+                <div style="display:flex;align-items:center;gap:9px;font-size:11px"><i class="ph-fill ph-check-circle" style="font-size:13px;color:#57b184;flex:none"></i><div style="font-family:'IBM Plex Mono',monospace;color:rgba(230,233,236,.78)">09/09/2026 · 14:28</div><div style="font-family:'IBM Plex Mono',monospace;color:rgba(230,233,236,.55)">11,7 s · 1 nota</div></div>
+                <div style="display:flex;align-items:center;gap:9px;font-size:11px"><i class="ph-fill ph-check-circle" style="font-size:13px;color:#57b184;flex:none"></i><div style="font-family:'IBM Plex Mono',monospace;color:rgba(230,233,236,.78)">09/09/2026 · 14:27</div><div style="font-family:'IBM Plex Mono',monospace;color:rgba(230,233,236,.55)">10,2 s · 0 notas</div></div>
+              </div>
+            </div>
+          </div>
+
+          <div style="flex:1;min-height:0;display:flex;gap:12px;padding:12px 18px 16px">
+            <div style="flex:2;min-width:0;border:1px solid #2b2f36;border-radius:9px;background:#1b1e23;display:flex;flex-direction:column;overflow:hidden">
+              <div style="display:flex;align-items:center;gap:10px;padding:11px 13px;border-bottom:1px solid #2b2f36">
+                <div style="font-size:13px;font-weight:500">Notas baixadas</div>
+                <div style="flex:1"></div>
+                <div style="height:24px;display:flex;align-items:center;gap:6px;padding:0 9px;border:1px solid #2b2f36;border-radius:5px;font-size:11px;color:rgba(230,233,236,.85)"><i class="ph ph-arrows-clockwise" style="font-size:11px"></i>Reler</div>
+              </div>
+              <div style="display:flex;align-items:center;gap:9px;padding:9px 13px;border-bottom:1px solid #2b2f36">
+                <div style="width:280px;height:26px;display:flex;align-items:center;gap:7px;padding:0 9px;background:#14161a;border:1px solid #2b2f36;border-radius:6px"><i class="ph ph-funnel" style="font-size:12px;color:rgba(230,233,236,.45)"></i><div style="flex:1;font-size:11.5px;color:rgba(230,233,236,.4)">Filtrar notas…</div><div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:rgba(230,233,236,.45);background:#23272e;border:1px solid #2b2f36;border-radius:3px;padding:1px 4px">Ctrl ⇧ K</div></div>
+                <div style="flex:1"></div>
+                <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:rgba(230,233,236,.45)"><i class="ph ph-rows" style="font-size:12px"></i>conforto</div>
+                <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:rgba(230,233,236,.45)"><i class="ph ph-columns" style="font-size:12px"></i>colunas</div>
+              </div>
+              <div style="padding:7px 13px;font-size:11px;color:rgba(230,233,236,.55);border-bottom:1px solid #2b2f36">1.208 baixadas — as mais recentes primeiro</div>
+              <div style="display:flex;align-items:center;padding:7px 13px;background:#23272e;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:rgba(230,233,236,.45)">
+                <div style="width:84px;flex:none">Nota</div><div style="flex:1;min-width:0">Cliente</div><div style="width:150px;flex:none">Operação</div><div style="width:104px;flex:none;text-align:right">Valor</div><div style="width:104px;flex:none">Emitida em</div><div style="width:64px;flex:none"></div>
+              </div>
+              <div style="display:flex;align-items:center;padding:9px 13px;border-bottom:1px solid #2b2f36;font-size:12px">
+                <div style="width:84px;flex:none;font-family:'IBM Plex Mono',monospace">100246</div>
+                <div style="flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">HOSPITAL SANTA AURORA</div>
+                <div style="width:150px;flex:none">Venda</div>
+                <div style="width:104px;flex:none;text-align:right;font-family:'IBM Plex Mono',monospace">3.215,40</div>
+                <div style="width:104px;flex:none;font-family:'IBM Plex Mono',monospace">03/09/2026</div>
+                <div style="width:64px;flex:none;display:flex;gap:6px;justify-content:flex-end"><i class="ph ph-file-code" style="font-size:14px;color:rgba(230,233,236,.5)"></i><i class="ph ph-file-pdf" style="font-size:14px;color:rgba(230,233,236,.5)"></i></div>
+              </div>
+              <div style="display:flex;align-items:center;padding:9px 13px;border-bottom:1px solid #2b2f36;font-size:12px;background:rgba(255,255,255,.02)">
+                <div style="width:84px;flex:none;font-family:'IBM Plex Mono',monospace">100245</div>
+                <div style="flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">HOSPITAL VALE VERDE</div>
+                <div style="width:150px;flex:none">Venda</div>
+                <div style="width:104px;flex:none;text-align:right;font-family:'IBM Plex Mono',monospace">12.480,00</div>
+                <div style="width:104px;flex:none;font-family:'IBM Plex Mono',monospace">02/09/2026</div>
+                <div style="width:64px;flex:none;display:flex;gap:6px;justify-content:flex-end"><i class="ph ph-file-code" style="font-size:14px;color:#6ea3e0"></i><i class="ph ph-file-pdf" style="font-size:14px;color:rgba(230,233,236,.5)"></i></div>
+              </div>
+              <div style="display:flex;align-items:center;padding:9px 13px;border-bottom:1px solid #2b2f36;font-size:12px">
+                <div style="width:84px;flex:none;font-family:'IBM Plex Mono',monospace">100239</div>
+                <div style="flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">INSTITUTO ORTOPEDICO HORIZONTE</div>
+                <div style="width:150px;flex:none">Devolução</div>
+                <div style="width:104px;flex:none;text-align:right;font-family:'IBM Plex Mono',monospace">842,10</div>
+                <div style="width:104px;flex:none;font-family:'IBM Plex Mono',monospace">01/09/2026</div>
+                <div style="width:64px;flex:none;display:flex;gap:6px;justify-content:flex-end"><i class="ph ph-file-code" style="font-size:14px;color:rgba(230,233,236,.5)"></i><i class="ph ph-file-pdf" style="font-size:14px;color:rgba(230,233,236,.5)"></i></div>
+              </div>
+              <div style="display:flex;align-items:center;padding:9px 13px;border-bottom:1px solid #2b2f36;font-size:12px">
+                <div style="width:84px;flex:none;font-family:'IBM Plex Mono',monospace">100231</div>
+                <div style="flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">HOSPITAL INFANTIL SOL NASCENTE</div>
+                <div style="width:150px;flex:none">Remessa</div>
+                <div style="width:104px;flex:none"></div>
+                <div style="width:104px;flex:none;font-family:'IBM Plex Mono',monospace">31/08/2026</div>
+                <div style="width:64px;flex:none;display:flex;gap:6px;justify-content:flex-end"><i class="ph ph-file-code" style="font-size:14px;color:rgba(230,233,236,.5)"></i><i class="ph ph-file-pdf" style="font-size:14px;color:rgba(230,233,236,.5)"></i></div>
+              </div>
+              <div style="display:flex;align-items:center;padding:9px 13px;border-bottom:1px solid #2b2f36;font-size:12px">
+                <div style="width:84px;flex:none;font-family:'IBM Plex Mono',monospace">100228</div>
+                <div style="flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">HOSPITAL VALE VERDE</div>
+                <div style="width:150px;flex:none;font-size:11px;color:rgba(230,233,236,.72);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">OUTRA SAIDA NAO ESPECIFICADA</div>
+                <div style="width:104px;flex:none;text-align:right;font-family:'IBM Plex Mono',monospace">150,00</div>
+                <div style="width:104px;flex:none;font-family:'IBM Plex Mono',monospace">29/08/2026</div>
+                <div style="width:64px;flex:none;display:flex;gap:6px;justify-content:flex-end"><i class="ph ph-file-code" style="font-size:14px;color:rgba(230,233,236,.5)"></i><i class="ph ph-file-pdf" style="font-size:14px;color:rgba(230,233,236,.5)"></i></div>
+              </div>
+              <div style="flex:1"></div>
+              <div style="display:flex;align-items:center;gap:10px;padding:9px 13px;border-top:1px solid #2b2f36;font-size:11px;color:rgba(230,233,236,.5)">
+                <div>1–5 de 1.208</div><div style="flex:1"></div><i class="ph ph-caret-left" style="font-size:12px;opacity:.4"></i><div style="font-family:'IBM Plex Mono',monospace">1</div><i class="ph ph-caret-right" style="font-size:12px"></i>
+              </div>
+            </div>
+
+            <div style="flex:1;min-width:0;border:1px solid #2b2f36;border-radius:9px;background:#1b1e23;display:flex;flex-direction:column;overflow:hidden">
+              <div style="display:flex;align-items:center;gap:8px;padding:11px 13px;border-bottom:1px solid #2b2f36">
+                <div style="font-size:13px;font-weight:500">O que o monitor disse</div>
+                <div style="flex:1"></div>
+                <div style="height:24px;display:flex;align-items:center;gap:5px;padding:0 8px;border:1px solid #2b2f36;border-radius:5px;font-size:11px;color:rgba(230,233,236,.85)"><i class="ph ph-arrows-clockwise" style="font-size:11px"></i>Reler</div>
+                <div style="height:24px;display:flex;align-items:center;gap:5px;padding:0 8px;border:1px solid #6ea3e0;background:rgba(110,163,224,.16);border-radius:5px;font-size:11px;color:#bfd8f5"><i class="ph-fill ph-arrow-fat-line-down" style="font-size:10px"></i>Seguindo</div>
+              </div>
+              <div style="flex:1;min-height:0;overflow:hidden;background:#0d0e11;font-family:'IBM Plex Mono',monospace;font-size:10.5px;line-height:1.75;color:#cfd6de">
+                <div style="display:flex"><div style="width:40px;flex:none;text-align:right;padding-right:9px;color:rgba(230,233,236,.28)">5120</div><div style="flex:1;min-width:0;padding-right:10px">[2026-09-09 14:31:58] [INFO] cycle finished — 3 NF-e</div></div>
+                <div style="display:flex"><div style="width:40px;flex:none;text-align:right;padding-right:9px;color:rgba(230,233,236,.28)">5119</div><div style="flex:1;min-width:0;padding-right:10px">[2026-09-09 14:31:51] [INFO] danfe saved 100246.pdf</div></div>
+                <div style="display:flex"><div style="width:40px;flex:none;text-align:right;padding-right:9px;color:rgba(230,233,236,.28)">5118</div><div style="flex:1;min-width:0;padding-right:10px">[2026-09-09 14:31:47] [INFO] xml saved 100246.xml</div></div>
+                <div style="display:flex"><div style="width:40px;flex:none;text-align:right;padding-right:9px;color:rgba(230,233,236,.28)">5117</div><div style="flex:1;min-width:0;padding-right:10px">[2026-09-09 14:31:40] [INFO] cycle started</div></div>
+                <div style="display:flex"><div style="width:40px;flex:none;text-align:right;padding-right:9px;color:rgba(230,233,236,.28)">5116</div><div style="flex:1;min-width:0;padding-right:10px;color:#f3b1ac">[2026-09-09 14:29:12] [ERROR] Authentication failed</div></div>
+                <div style="display:flex"><div style="width:40px;flex:none;text-align:right;padding-right:9px;color:rgba(230,233,236,.28)">5115</div><div style="flex:1;min-width:0;padding-right:10px">[2026-09-09 14:28:41] [INFO] cycle finished — 1 NF-e</div></div>
+                <div style="display:flex"><div style="width:40px;flex:none;text-align:right;padding-right:9px;color:rgba(230,233,236,.28)">5114</div><div style="flex:1;min-width:0;padding-right:10px">[2026-09-09 14:28:30] [INFO] queue event #1208 pending</div></div>
+                <div style="display:flex"><div style="width:40px;flex:none;text-align:right;padding-right:9px;color:rgba(230,233,236,.28)">5113</div><div style="flex:1;min-width:0;padding-right:10px">[2026-09-09 14:27:16] [INFO] cycle finished — 0 NF-e</div></div>
+                <div style="display:flex"><div style="width:40px;flex:none;text-align:right;padding-right:9px;color:rgba(230,233,236,.28)">5112</div><div style="flex:1;min-width:0;padding-right:10px">[2026-09-09 14:26:58] [INFO] portal login ok</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="height:28px;flex:none;border-top:1px solid #2b2f36;background:rgba(255,255,255,.03);display:flex;align-items:center;padding:0 10px;gap:2px;font-size:10.5px">
+        <div style="display:flex;align-items:center;gap:6px;padding:3px 8px"><i class="ph ph-tray" style="font-size:12px;color:#57b184"></i><span style="font-weight:500;color:rgba(230,233,236,.78)">MailBridgr</span><span style="color:rgba(230,233,236,.52)">canal confirmado · doca a caminho</span></div>
+        <div style="display:flex;align-items:center;gap:6px;padding:3px 8px"><i class="ph ph-eye" style="font-size:12px;color:#57b184"></i><span style="font-weight:500;color:rgba(230,233,236,.78)">MedLens</span><span style="color:rgba(230,233,236,.52)">no ar</span></div>
+        <div style="display:flex;align-items:center;gap:6px;padding:3px 8px"><i class="ph ph-robot" style="font-size:12px;color:#57b184"></i><span style="font-weight:500;color:rgba(230,233,236,.78)">Fantasma</span><span style="color:rgba(230,233,236,.52)">pronto</span></div>
+        <div style="display:flex;align-items:center;gap:6px;padding:3px 8px"><i class="ph ph-plugs-connected" style="font-size:12px;color:#57b184"></i><span style="font-weight:500;color:rgba(230,233,236,.78)">Spook</span><span style="color:rgba(230,233,236,.52)">no ar</span></div>
+        <div style="display:flex;align-items:center;gap:6px;padding:3px 8px"><i class="ph ph-receipt" style="font-size:12px;color:#57b184"></i><span style="font-weight:500;color:rgba(230,233,236,.78)">NFe Pack</span><span style="color:rgba(230,233,236,.52)">baixando</span></div>
+        <div style="flex:1"></div>
+        <div style="display:flex;align-items:center;gap:5px;padding:3px 8px"><i class="ph ph-lock" style="font-size:12px;color:#57b184"></i><span style="color:rgba(230,233,236,.72)">PIN ativo</span></div>
+        <div style="display:flex;align-items:center;gap:5px;padding:3px 8px"><i class="ph ph-info" style="font-size:12px;color:rgba(230,233,236,.38)"></i><span style="color:rgba(230,233,236,.52)">v0.1.0</span></div>
+      </div>
+    </div>
+
+    <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;gap:28px;max-width:1440px;font-size:11.5px;line-height:1.7;color:rgba(230,233,236,.55)">
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">Mil e duzentos "Pendentes" não é alarme:</span> é o estado projetado da fila offline-first enquanto a sincronização com o Redis está desligada no monitor. Só "Com falha" acima de zero acende âmbar.</div>
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">Notas e log lado a lado</span>, cada um com a sua rolagem — uma rolagem só esconderia o log exatamente enquanto se lê a listagem ao lado (desenho do operador, 26/08/2026).</div>
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">Nenhuma luz de saúde tirada do log.</span> A tela mostra o batimento e as linhas cruas; processo vivo com login do portal falhando aparece como um carimbo que para de andar — nunca como um veredito nosso.</div>
+      </div>
+    </sc-if>
+  </div>
+
+  <!-- ============ ESTADOS ============ -->
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <div style="font-size:18px;font-weight:600">2 · Estados</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(230,233,236,.4)">ausência, vazio e falha são três frases diferentes</div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:706px 706px;gap:28px;align-items:start">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="border:1px solid #2b2f36;border-radius:9px;background:#1b1e23;padding:13px 14px;display:flex;align-items:center;gap:12px">
+          <i class="ph ph-receipt" style="font-size:20px;color:rgba(230,233,236,.38);flex:none"></i>
+          <div style="flex:1;display:flex;flex-direction:column;gap:3px"><div style="font-size:13.5px;font-weight:500">Serviço · …</div><div style="font-size:11px;color:rgba(230,233,236,.5)">Último ciclo: nenhum ciclo registrado ainda</div></div>
+          <div style="width:38px;height:21px;flex:none;border-radius:12px;background:#23272e;border:1px solid #434a53;display:flex;align-items:center;padding:0 2px;opacity:.5"><div style="width:15px;height:15px;border-radius:8px;background:#8b939d"></div></div>
+        </div>
+        <div style="border:1px solid #2b2f36;border-radius:9px;background:#1b1e23;padding:13px 14px;display:flex;align-items:center;gap:12px">
+          <i class="ph ph-receipt" style="font-size:20px;color:rgba(230,233,236,.38);flex:none"></i>
+          <div style="flex:1;display:flex;flex-direction:column;gap:3px"><div style="font-size:13.5px;font-weight:500">Serviço · sem pasta configurada</div><div style="font-size:11px;color:rgba(230,233,236,.5)">a pasta do projeto está em Configurações · NFe Pack</div></div>
+          <div style="width:38px;height:21px;flex:none;border-radius:12px;background:#23272e;border:1px solid #434a53;display:flex;align-items:center;padding:0 2px;opacity:.5"><div style="width:15px;height:15px;border-radius:8px;background:#8b939d"></div></div>
+        </div>
+        <div style="border:1px solid #2b2f36;border-radius:9px;background:#1b1e23;padding:13px 14px;display:flex;align-items:center;gap:12px">
+          <i class="ph ph-receipt" style="font-size:20px;color:rgba(230,233,236,.38);flex:none"></i>
+          <div style="flex:1;display:flex;flex-direction:column;gap:3px"><div style="font-size:13.5px;font-weight:500">Serviço · parado</div><div style="font-size:11px;color:rgba(230,233,236,.5)">Último ciclo: <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px">09/09/2026 · 08:12 · 2 notas no ciclo · 1465 ciclos no total</span></div></div>
+          <div style="width:38px;height:21px;flex:none;border-radius:12px;background:#23272e;border:1px solid #434a53;display:flex;align-items:center;padding:0 2px"><div style="width:15px;height:15px;border-radius:8px;background:#8b939d"></div></div>
+        </div>
+        <div style="border:1px solid #2b2f36;border-radius:9px;background:#1b1e23;padding:13px 14px;display:flex;align-items:center;gap:12px">
+          <i class="ph-fill ph-receipt" style="font-size:20px;color:#57b184;flex:none"></i>
+          <div style="flex:1;display:flex;flex-direction:column;gap:3px"><div style="font-size:13.5px;font-weight:500">Serviço · no ar — subiu fora deste app</div><div style="font-size:11px;color:rgba(230,233,236,.55);line-height:1.5">de fora do app — quem subiu foi outro programa; usar, sim; derrubar daqui, não</div></div>
+          <div style="width:38px;height:21px;flex:none;border-radius:12px;background:#6ea3e0;display:flex;align-items:center;justify-content:flex-end;padding:0 2px;opacity:.5"><div style="width:17px;height:17px;border-radius:9px;background:#14161a"></div></div>
+        </div>
+        <div style="border:1px solid #2b2f36;border-radius:9px;background:#1b1e23;padding:13px 14px;display:flex;align-items:center;gap:12px">
+          <i class="ph ph-receipt" style="font-size:20px;color:rgba(230,233,236,.38);flex:none"></i>
+          <div style="flex:1;display:flex;flex-direction:column;gap:3px"><div style="font-size:13.5px;font-weight:500">Serviço · parado</div><div style="font-size:11px;color:rgba(230,233,236,.5)">subindo — o sinal de vida aparece antes do comando sair</div></div>
+          <div style="width:38px;height:21px;flex:none;border-radius:12px;background:#23272e;border:1px solid #434a53;display:flex;align-items:center;justify-content:center"><i class="ph ph-circle-notch" style="font-size:11px;color:#6ea3e0"></i></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:9px;padding:9px 13px;background:#33201f;border:1px solid rgba(224,106,99,.4);border-radius:8px"><i class="ph-fill ph-warning-octagon" style="font-size:13px;color:#e06a63;flex:none"></i><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#f3b1ac;line-height:1.5">NFePackMonitor: uv was not found (PATH, ~/.local/bin, ~/.cargo/bin, UV_BIN)</div></div>
+        <div style="border:1px solid #2b2f36;border-radius:9px;background:#1b1e23;padding:13px 14px;display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;align-items:baseline;gap:10px"><div style="font-size:13px;font-weight:500">Métricas</div></div>
+          <div style="font-size:11.5px;color:rgba(230,233,236,.55);line-height:1.55">Nenhuma exportação ainda — o monitor grava as métricas a cada 10 ciclos bons.</div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="display:flex;align-items:center;gap:9px;padding:9px 13px;background:#33201f;border:1px solid rgba(224,106,99,.4);border-radius:8px"><i class="ph-fill ph-warning-octagon" style="font-size:13px;color:#e06a63;flex:none"></i><div style="font-size:11.5px;color:#f3b1ac;line-height:1.5">A leitura do painel falhou — <span style="font-family:'IBM Plex Mono',monospace;font-size:11px">database is locked</span></div></div>
+        <div style="border:1px solid #2b2f36;border-radius:9px;background:#1b1e23;padding:14px;display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">Sem fila — as duas cartas dizem o mesmo</div>
+          <div style="font-size:11.5px;color:rgba(230,233,236,.55);line-height:1.55">O monitor ainda não registrou downloads desta pasta — a fila nasce no primeiro ciclo com nota.</div>
+          <div style="height:1px;background:#2b2f36"></div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">Fila existe, vazia</div>
+          <div style="font-size:11.5px;color:rgba(230,233,236,.55);line-height:1.55">A fila existe e está vazia — nenhuma nota baixada ainda.</div>
+          <div style="height:1px;background:#2b2f36"></div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">Leitura perdida para quem escreve</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:11.5px;color:#f3b1ac;line-height:1.5"><i class="ph-fill ph-warning-octagon" style="font-size:12px;color:#e06a63;flex:none"></i>Não deu para ler a fila do monitor — <span style="font-family:'IBM Plex Mono',monospace;font-size:11px">database is locked</span></div>
+          <div style="font-size:10.5px;color:rgba(230,233,236,.45);line-height:1.6">⚠️ a última listagem fica na tela: leitura perdida nunca parece histórico apagado.</div>
+          <div style="height:1px;background:#2b2f36"></div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">Sem ciclos</div>
+          <div style="font-size:11.5px;color:rgba(230,233,236,.55);line-height:1.55">O monitor ainda não registrou nenhum ciclo aqui.</div>
+        </div>
+        <div style="border:1px solid #2b2f36;border-radius:9px;background:#1b1e23;padding:14px;display:flex;flex-direction:column;gap:9px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">Listagem em fluxo, filtro sem resposta, recusa de abertura</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:rgba(230,233,236,.6)"><i class="ph ph-circle-notch" style="font-size:11px;color:#6ea3e0"></i>500 de 1.208 baixadas — as mais recentes primeiro</div>
+          <div style="font-size:11.5px;color:rgba(230,233,236,.5)">Nenhuma nota passa no filtro.</div>
+          <div style="display:flex;align-items:flex-start;gap:8px;font-size:11.5px;color:#f3b1ac;line-height:1.5"><i class="ph-fill ph-warning-octagon" style="font-size:12px;color:#e06a63;flex:none;margin-top:1px"></i><div><span style="font-family:'IBM Plex Mono',monospace;font-size:11px">NFePackMonitor: the DANFE is no longer beside the XML — a cancelled note is cleaned up, and the queue keeps no copy of a PDF</span></div></div>
+          <div style="font-size:10.5px;color:rgba(230,233,236,.45);line-height:1.6;text-wrap:pretty">PDF que já foi é recusa dita, nunca visor vazio. Proposta (oportunidade 11): traduzir estas recusas — hoje chegam em inglês.</div>
+          <div style="height:1px;background:#2b2f36"></div>
+          <div style="font-size:11.5px;color:rgba(230,233,236,.55);line-height:1.55">Nada ainda — o monitor nunca rodou a partir da pasta configurada.</div>
+          <div style="font-size:10.5px;color:rgba(230,233,236,.45)">o log vazio</div>
+        </div>
+        <div style="border:1px solid #2b2f36;border-radius:9px;background:#1b1e23;padding:14px;display:flex;flex-direction:column;gap:9px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">Janela estreita (&lt; 1180 px)</div>
+          <div style="display:flex;gap:3px;padding:2px;background:#14161a;border:1px solid #2b2f36;border-radius:7px;align-self:flex-start">
+            <div style="padding:4px 11px;border-radius:5px;font-size:11.5px;color:#bfd8f5;background:rgba(110,163,224,.16)">Notas baixadas</div>
+            <div style="padding:4px 11px;border-radius:5px;font-size:11.5px;color:rgba(230,233,236,.6)">O que o monitor disse</div>
+          </div>
+          <div style="font-size:10.5px;color:rgba(230,233,236,.45);line-height:1.6">A faixa vira uma coluna e o par de painéis vira alternador — notas por padrão. Proposta (oportunidade 10): a contagem no próprio botão ("Notas baixadas · 1.208").</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ DIÁLOGO DA NOTA ============ -->
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <div style="font-size:18px;font-weight:600">3 · O diálogo da nota — XML e DANFE</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(230,233,236,.4)">só leitura · a indentação é para os olhos</div>
+    </div>
+
+    <div style="display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap">
+      <div style="width:760px;height:520px;background:#14161a;border:1px solid #2b2f36;border-radius:12px;box-shadow:0 22px 48px rgba(0,0,0,.6);overflow:hidden;display:flex;flex-direction:column">
+        <div style="display:flex;align-items:center;gap:11px;padding:11px 14px;border-bottom:1px solid #2b2f36">
+          <i class="ph ph-file-code" style="font-size:15px;color:rgba(230,233,236,.7)"></i>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12.5px">NFe-100245.xml</div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:10.5px;color:rgba(230,233,236,.5)"><span style="font-family:'IBM Plex Mono',monospace">100245</span><span>Venda</span><span style="font-family:'IBM Plex Mono',monospace">02/09/2026</span><span style="font-family:'IBM Plex Mono',monospace">12.480,00</span></div>
+          <div style="flex:1"></div>
+          <div style="display:flex;align-items:center;gap:6px;font-size:10.5px;color:rgba(230,233,236,.45)"><span style="font-family:'IBM Plex Mono',monospace;background:#23272e;border:1px solid #2b2f36;border-radius:3px;padding:1px 5px">Esc</span>fecha</div>
+          <div style="width:26px;height:24px;display:flex;align-items:center;justify-content:center;border:1px solid #2b2f36;border-radius:5px"><i class="ph ph-arrows-out" style="font-size:12px;color:rgba(230,233,236,.72)"></i></div>
+          <div style="width:26px;height:24px;display:flex;align-items:center;justify-content:center"><i class="ph ph-x" style="font-size:13px;color:rgba(230,233,236,.72)"></i></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;padding:8px 14px;border-bottom:1px solid #2b2f36;background:#1b1e23;flex-wrap:wrap">
+          <div style="width:180px;height:24px;display:flex;align-items:center;padding:0 8px;border:1px solid #6ea3e0;border-radius:5px;background:#14161a;font-size:11.5px">natOp<span style="color:#6ea3e0">|</span></div>
+          <div style="height:24px;display:flex;align-items:center;padding:0 8px;border:1px solid #2b2f36;border-radius:5px;font-size:11px;color:rgba(230,233,236,.85)">próxima</div>
+          <div style="height:24px;display:flex;align-items:center;padding:0 8px;border:1px solid #2b2f36;border-radius:5px;font-size:11px;color:rgba(230,233,236,.85)">anterior</div>
+          <div style="height:24px;display:flex;align-items:center;padding:0 8px;border:1px solid #2b2f36;border-radius:5px;font-size:11px;color:rgba(230,233,236,.85)">todas</div>
+          <div style="display:flex;align-items:center;gap:6px;font-size:10.5px;color:rgba(230,233,236,.6)"><div style="width:12px;height:12px;border:1px solid #434a53;border-radius:3px"></div>maiúsculas/minúsculas</div>
+          <div style="display:flex;align-items:center;gap:6px;font-size:10.5px;color:rgba(230,233,236,.6)"><div style="width:12px;height:12px;border:1px solid #434a53;border-radius:3px"></div>palavra inteira</div>
+          <div style="display:flex;align-items:center;gap:6px;font-size:10.5px;color:rgba(230,233,236,.6)"><div style="width:12px;height:12px;border:1px solid #434a53;border-radius:3px"></div>regexp</div>
+          <div style="flex:1"></div>
+          <div style="font-size:11px;color:rgba(230,233,236,.6)">fechar</div>
+        </div>
+        <div style="flex:1;min-height:0;overflow:hidden;background:#0d0e11;padding:10px 0;font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.8;color:#cfd6de">
+          <div style="display:flex"><div style="width:38px;flex:none;text-align:right;padding-right:10px;color:rgba(230,233,236,.28)">1</div><div style="flex:1"><span style="color:rgba(230,233,236,.45)">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></div></div>
+          <div style="display:flex"><div style="width:38px;flex:none;text-align:right;padding-right:10px;color:rgba(230,233,236,.28)">2</div><div style="flex:1"><span style="color:#9cc0ec">&lt;nfeProc</span> <span style="color:#e0a33c">versao</span>=<span style="color:#a6dcbf">"4.00"</span><span style="color:#9cc0ec">&gt;</span></div></div>
+          <div style="display:flex"><div style="width:38px;flex:none;text-align:right;padding-right:10px;color:rgba(230,233,236,.28)">3</div><div style="flex:1;padding-left:14px"><span style="color:#9cc0ec">&lt;NFe&gt;</span></div></div>
+          <div style="display:flex"><div style="width:38px;flex:none;text-align:right;padding-right:10px;color:rgba(230,233,236,.28)">4</div><div style="flex:1;padding-left:28px"><span style="color:#9cc0ec">&lt;infNFe</span> <span style="color:#e0a33c">versao</span>=<span style="color:#a6dcbf">"4.00"</span><span style="color:#9cc0ec">&gt;</span></div></div>
+          <div style="display:flex"><div style="width:38px;flex:none;text-align:right;padding-right:10px;color:rgba(230,233,236,.28)">5</div><div style="flex:1;padding-left:42px"><span style="color:#9cc0ec">&lt;ide&gt;</span></div></div>
+          <div style="display:flex;background:rgba(224,163,60,.13)"><div style="width:38px;flex:none;text-align:right;padding-right:10px;color:rgba(230,233,236,.28)">6</div><div style="flex:1;padding-left:56px"><span style="color:#9cc0ec">&lt;</span><span style="background:rgba(224,163,60,.35);color:#f4d9a3">natOp</span><span style="color:#9cc0ec">&gt;</span>VENDA DE MERCADORIA<span style="color:#9cc0ec">&lt;/</span><span style="background:rgba(224,163,60,.2);color:#f4d9a3">natOp</span><span style="color:#9cc0ec">&gt;</span></div></div>
+          <div style="display:flex"><div style="width:38px;flex:none;text-align:right;padding-right:10px;color:rgba(230,233,236,.28)">7</div><div style="flex:1;padding-left:56px"><span style="color:#9cc0ec">&lt;nNF&gt;</span>100245<span style="color:#9cc0ec">&lt;/nNF&gt;</span></div></div>
+          <div style="display:flex"><div style="width:38px;flex:none;text-align:right;padding-right:10px;color:rgba(230,233,236,.28)">8</div><div style="flex:1;padding-left:56px"><span style="color:#9cc0ec">&lt;dhEmi&gt;</span>2026-09-02T10:14:00-03:00<span style="color:#9cc0ec">&lt;/dhEmi&gt;</span></div></div>
+          <div style="display:flex"><div style="width:38px;flex:none;text-align:right;padding-right:10px;color:rgba(230,233,236,.28)">9</div><div style="flex:1;padding-left:42px"><span style="color:#9cc0ec">&lt;/ide&gt;</span></div></div>
+          <div style="display:flex"><div style="width:38px;flex:none;text-align:right;padding-right:10px;color:rgba(230,233,236,.28)">10</div><div style="flex:1;padding-left:42px"><span style="color:#9cc0ec">&lt;emit&gt;</span></div></div>
+          <div style="display:flex"><div style="width:38px;flex:none;text-align:right;padding-right:10px;color:rgba(230,233,236,.28)">11</div><div style="flex:1;padding-left:56px"><span style="color:#9cc0ec">&lt;xNome&gt;</span>DISTRIBUIDORA EXEMPLO LTDA<span style="color:#9cc0ec">&lt;/xNome&gt;</span></div></div>
+          <div style="display:flex"><div style="width:38px;flex:none;text-align:right;padding-right:10px;color:rgba(230,233,236,.28)">12</div><div style="flex:1;padding-left:42px"><span style="color:#9cc0ec">&lt;/emit&gt;</span></div></div>
+          <div style="display:flex"><div style="width:38px;flex:none;text-align:right;padding-right:10px;color:rgba(230,233,236,.28)">13</div><div style="flex:1;padding-left:42px"><span style="color:#9cc0ec">&lt;total&gt;</span></div></div>
+          <div style="display:flex"><div style="width:38px;flex:none;text-align:right;padding-right:10px;color:rgba(230,233,236,.28)">14</div><div style="flex:1;padding-left:56px"><span style="color:#9cc0ec">&lt;ICMSTot&gt;</span></div></div>
+          <div style="display:flex"><div style="width:38px;flex:none;text-align:right;padding-right:10px;color:rgba(230,233,236,.28)">15</div><div style="flex:1;padding-left:70px"><span style="color:#9cc0ec">&lt;vNF&gt;</span>12480.00<span style="color:#9cc0ec">&lt;/vNF&gt;</span></div></div>
+        </div>
+      </div>
+
+      <div style="width:440px;height:520px;background:#14161a;border:1px solid #2b2f36;border-radius:12px;box-shadow:0 22px 48px rgba(0,0,0,.6);overflow:hidden;display:flex;flex-direction:column">
+        <div style="display:flex;align-items:center;gap:10px;padding:11px 14px;border-bottom:1px solid #2b2f36">
+          <i class="ph ph-file-pdf" style="font-size:15px;color:rgba(230,233,236,.7)"></i>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12.5px">DANFE-100245.pdf</div>
+          <div style="flex:1"></div>
+          <div style="display:flex;align-items:center;gap:6px;font-size:10.5px;color:rgba(230,233,236,.45)"><span style="font-family:'IBM Plex Mono',monospace;background:#23272e;border:1px solid #2b2f36;border-radius:3px;padding:1px 5px">Esc</span>fecha</div>
+          <div style="width:26px;height:24px;display:flex;align-items:center;justify-content:center"><i class="ph ph-x" style="font-size:13px;color:rgba(230,233,236,.72)"></i></div>
+        </div>
+        <div style="flex:1;min-height:0;display:flex;flex-direction:column;background:#0d0e11">
+          <div style="height:26px;flex:none;background:#3a3d42;display:flex;align-items:center;justify-content:center;gap:14px;color:#d8dde2;font-size:10.5px"><i class="ph ph-caret-up" style="font-size:11px"></i><span style="font-family:'IBM Plex Mono',monospace">1 / 1</span><i class="ph ph-caret-down" style="font-size:11px"></i><span style="opacity:.4">|</span><i class="ph ph-minus" style="font-size:11px"></i><span style="font-family:'IBM Plex Mono',monospace">100%</span><i class="ph ph-plus" style="font-size:11px"></i></div>
+          <div style="flex:1;display:flex;justify-content:center;padding:16px;overflow:hidden">
+            <div style="width:100%;background:#f7f6f3;color:#1b1a17;padding:16px 18px;display:flex;flex-direction:column;gap:9px">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start"><div style="font-size:10px;font-weight:600;letter-spacing:.04em">DANFE · NF-e 100245</div><div style="font-family:'IBM Plex Mono',monospace;font-size:8.5px;color:#8b877f">02/09/2026</div></div>
+              <div style="height:1px;background:#ded9d1"></div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:8.5px;color:#8b877f;line-height:1.7">EMITENTE DISTRIBUIDORA EXEMPLO LTDA<br>DESTINATÁRIO HOSPITAL VALE VERDE<br>NATUREZA VENDA DE MERCADORIA</div>
+              <div style="background:#ecebe5;height:9px;border-radius:1px"></div>
+              <div style="background:#ecebe5;height:9px;width:84%;border-radius:1px"></div>
+              <div style="background:#ecebe5;height:9px;width:70%;border-radius:1px"></div>
+              <div style="display:flex;justify-content:flex-end;font-family:'IBM Plex Mono',monospace;font-size:9px">VALOR TOTAL 12.480,00</div>
+              <div style="font-size:8px;color:#8b877f">documento do portal ACOM</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;gap:28px;max-width:1240px;font-size:11.5px;line-height:1.7;color:rgba(230,233,236,.55)">
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">Proposta (oportunidade 9):</span> os fatos da nota no cabeçalho do diálogo — número, operação, emissão e valor — porque o nome do arquivo sozinho não diz nada a uma pessoa.</div>
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">A indentação é só para os olhos:</span> nada formatado volta para o disco nem sai daqui, então reorganizar espaço em branco não toca o que foi assinado. O documento decodificado é descartado ao fechar — o XML nomeia o paciente.</div>
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">A abertura manda um id, nunca um caminho</span>, e só abre arquivo que a própria fila do monitor nomeia. O XML vem da cópia da fila — por isso nota cancelada ainda abre, e a DANFE dela não.</div>
+      </div>
+    </sc-if>
+  </div>
+
+  <div style="max-width:960px;font-size:12.5px;line-height:1.8;color:rgba(230,233,236,.55);border-top:1px solid #2b2f36;padding-top:20px;text-wrap:pretty">
+    <span style="color:#e6e9ec">Propostas marcadas</span> — idade do batimento ("há 40 s") ao lado do carimbo, carimbo de leitura na faixa, contagem no alternador estreito, fatos da nota no cabeçalho do diálogo e recusas em português. <span style="color:#e6e9ec">Perguntas do documento que são suas:</span> Desligar deve pedir confirmação, como o Derrubar do Fantasma? A ladrilha "falhas" deve continuar âmbar para uma contagem de vida inteira? E o painel do log merece o filtro e o copiar da tela de Logs?
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showNotes&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Apresentação&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return { showNotes: this.props.showNotes ?? true };
+  }
+}
+</script>
+</body>
+</html>
