@@ -34,15 +34,16 @@ locked. Everything behind it stays open and untouched.
    fading hairline, then a 2 × 2 grid of tiles separated by hairlines. Each tile:
    small uppercase label, the value (or "—" in quiet ink), sometimes a note.
 
-   | Tile                     | Value style | Note under it (verbatim)                                                          |
-   | ------------------------ | ----------- | --------------------------------------------------------------------------------- |
-   | Nome                     | text        | —                                                                                 |
-   | Função                   | text        | "quem aprova conta neste app"                                                     |
-   | E-mail                   | monospace   | only when an e-mail exists: "não confirmado" or "confirmado em 05/09/2026 · 14:32" |
-   | Assinatura no informe    | monospace   | "vai no rodapé do que você exporta"                                               |
+   | Tile                  | Value style | Note under it (verbatim)                                                           |
+   | --------------------- | ----------- | ---------------------------------------------------------------------------------- |
+   | Nome                  | text        | —                                                                                  |
+   | Função                | text        | "quem aprova conta neste app"                                                      |
+   | E-mail                | monospace   | only when an e-mail exists: "não confirmado" or "confirmado em 05/09/2026 · 14:32" |
+   | Assinatura no informe | monospace   | "vai no rodapé do que você exporta"                                                |
 
    In edit mode each value becomes an input in place (e-mail and signature in
    monospace).
+
 4. **Main › "Foto e avatar"** — kicker, then a card; **the whole card accepts a
    dropped image**. Left: the chosen face in a 72 px circle that is itself a
    button (tooltip "Clique para desenhar outra variação" when a drawn style is
@@ -54,7 +55,7 @@ locked. Everything behind it stays open and untouched.
    **"Polegar"**, **"Robô"**, **"Formas"**, **"Grade"** — the chosen one
    outlined in the accent. Under the row, only when a name exists: "Os avatares
    vêm do DiceBear, desenhados nesta máquina com a semente `Camila Duarte
-   Rocha#3` — mesma pessoa, mesmo desenho em qualquer máquina." There is no
+Rocha#3` — mesma pessoa, mesmo desenho em qualquer máquina." There is no
    "photo" choice in the row: the photo mode is entered by picking or dropping a
    picture. A failed save shows a danger line "A foto não foi gravada: {motivo}".
 5. **The framing dialog** (modal over the whole window, dimmed backdrop):
@@ -129,100 +130,100 @@ replaced by one centred column:
 
 ### Perfil
 
-| Field / fact                 | Meaning                                                      | Presentation rule                                                     | Example                                   |
-| ---------------------------- | ------------------------------------------------------------ | --------------------------------------------------------------------- | ----------------------------------------- |
-| Nome                         | who signs; self-declared, authorizes nothing                 | "—" when blank; header shows "Sem nome"                               | Camila Duarte Rocha                       |
-| Função                       | a free-text role                                             | "—" when blank                                                        | Faturista OPME                            |
-| E-mail                       | the address confirmed through MailBridgr                     | monospace; confirmation note only when an e-mail exists               | camila.rocha@empresa.example              |
-| Confirmation                 | the stamp written by the code verification                   | "não confirmado" / "confirmado em dd/mm/aaaa · hh:mm"                 | confirmado em 05/09/2026 · 14:32          |
-| Assinatura no informe        | the string printed in the footer of exports                  | monospace                                                             | C. D. ROCHA · FATURAMENTO OPME            |
-| Face                         | photo › drawn style › initials › person glyph                | same face in titlebar, menu, header, lock                             | CR                                        |
-| Seed                         | what the drawn styles are generated from                     | the name, or the pinned variation `name#N`                            | Camila Duarte Rocha#3                     |
-| Aparência value              | the palette painting the base in force                       | the built-in Breeze of that base when none chosen                     | Breeze Dark                               |
-| Máquina                      | this computer's name                                         | "—" when unknown                                                      | estacao-faturamento-01                    |
-| Versão do app                | this build                                                   | "—" when unknown                                                      | 0.1.0                                     |
-| Aberto desde                 | when this run of the app started                             | `dd/mm/aaaa · hh:mm`, "—" when unknown                                | 10/09/2026 · 08:02                        |
-| PIN active line              | a PIN is stored (the wallet's answer) + when it was saved    | date part omitted when unknown                                        | PIN de 4 dígitos ativo · gravado em 05/09/2026 · 14:32 |
-| Auto-lock                    | idle minutes before the window locks itself                  | 1 / 5 / 15 / nunca; default 5                                         | 5 min                                     |
+| Field / fact          | Meaning                                                   | Presentation rule                                       | Example                                                |
+| --------------------- | --------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------ |
+| Nome                  | who signs; self-declared, authorizes nothing              | "—" when blank; header shows "Sem nome"                 | Camila Duarte Rocha                                    |
+| Função                | a free-text role                                          | "—" when blank                                          | Faturista OPME                                         |
+| E-mail                | the address confirmed through MailBridgr                  | monospace; confirmation note only when an e-mail exists | camila.rocha@empresa.example                           |
+| Confirmation          | the stamp written by the code verification                | "não confirmado" / "confirmado em dd/mm/aaaa · hh:mm"   | confirmado em 05/09/2026 · 14:32                       |
+| Assinatura no informe | the string printed in the footer of exports               | monospace                                               | C. D. ROCHA · FATURAMENTO OPME                         |
+| Face                  | photo › drawn style › initials › person glyph             | same face in titlebar, menu, header, lock               | CR                                                     |
+| Seed                  | what the drawn styles are generated from                  | the name, or the pinned variation `name#N`              | Camila Duarte Rocha#3                                  |
+| Aparência value       | the palette painting the base in force                    | the built-in Breeze of that base when none chosen       | Breeze Dark                                            |
+| Máquina               | this computer's name                                      | "—" when unknown                                        | estacao-faturamento-01                                 |
+| Versão do app         | this build                                                | "—" when unknown                                        | 0.1.0                                                  |
+| Aberto desde          | when this run of the app started                          | `dd/mm/aaaa · hh:mm`, "—" when unknown                  | 10/09/2026 · 08:02                                     |
+| PIN active line       | a PIN is stored (the wallet's answer) + when it was saved | date part omitted when unknown                          | PIN de 4 dígitos ativo · gravado em 05/09/2026 · 14:32 |
+| Auto-lock             | idle minutes before the window locks itself               | 1 / 5 / 15 / nunca; default 5                           | 5 min                                                  |
 
 ### The locked window
 
-| Element             | Meaning                                  | Rule                                        | Example              |
-| ------------------- | ---------------------------------------- | ------------------------------------------- | -------------------- |
-| Name and face       | who left the bench                       | as above                                    | Camila Duarte Rocha  |
-| "trancada há N min" | whole minutes since the lock             | floor; re-read every 30 s; survives restart | trancada há 6 min    |
-| Dots                | digits typed so far                      | 0–4                                         | ●●○○                 |
+| Element             | Meaning                      | Rule                                        | Example             |
+| ------------------- | ---------------------------- | ------------------------------------------- | ------------------- |
+| Name and face       | who left the bench           | as above                                    | Camila Duarte Rocha |
+| "trancada há N min" | whole minutes since the lock | floor; re-read every 30 s; survives restart | trancada há 6 min   |
+| Dots                | digits typed so far          | 0–4                                         | ●●○○                |
 
 ## States
 
 ### Perfil
 
-| State                          | Trigger                                   | What is drawn                                                                                       |
-| ------------------------------ | ----------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| No identity yet                | profile blank                             | "Sem nome", no subtitle, tiles "—", initials face = person glyph, no seed note                     |
-| Viewing / editing              | "Editar dados" / "Concluir edição"        | values vs inputs in place                                                                           |
-| E-mail unconfirmed / confirmed | the code confirmation                     | tile note "não confirmado" / "confirmado em …"; no note without an e-mail                           |
-| Initials / drawn / photo       | the avatar choice                         | the chosen button outlined (none outlined while the photo is in use)                               |
-| Framing                        | an image picked or dropped                | the modal; "Usar foto" disabled until loaded                                                        |
-| Photo not saved                | the app refused or the disk failed        | "A foto não foi gravada: {motivo}"                                                                  |
-| Non-image dropped              | —                                         | nothing happens                                                                                     |
-| Station facts unknown          | the answer failed                         | "—"                                                                                                 |
-| PIN off / form / active        | the wallet's answer and the switch        | the three card bodies above; until the wallet answers the card shows off                           |
-| PIN form errors                | save refused                              | "Digite o PIN atual." · "O PIN tem 4 dígitos." · "Os dois campos não batem." · "O PIN atual não confere." · or the system's message |
-| Preference not written         | disk refused                              | the change stays for the session; danger toast (shell)                                             |
-| Narrow window                  | ≤ 1180 px                                 | one column; aside under main                                                                        |
+| State                          | Trigger                            | What is drawn                                                                                                                       |
+| ------------------------------ | ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| No identity yet                | profile blank                      | "Sem nome", no subtitle, tiles "—", initials face = person glyph, no seed note                                                      |
+| Viewing / editing              | "Editar dados" / "Concluir edição" | values vs inputs in place                                                                                                           |
+| E-mail unconfirmed / confirmed | the code confirmation              | tile note "não confirmado" / "confirmado em …"; no note without an e-mail                                                           |
+| Initials / drawn / photo       | the avatar choice                  | the chosen button outlined (none outlined while the photo is in use)                                                                |
+| Framing                        | an image picked or dropped         | the modal; "Usar foto" disabled until loaded                                                                                        |
+| Photo not saved                | the app refused or the disk failed | "A foto não foi gravada: {motivo}"                                                                                                  |
+| Non-image dropped              | —                                  | nothing happens                                                                                                                     |
+| Station facts unknown          | the answer failed                  | "—"                                                                                                                                 |
+| PIN off / form / active        | the wallet's answer and the switch | the three card bodies above; until the wallet answers the card shows off                                                            |
+| PIN form errors                | save refused                       | "Digite o PIN atual." · "O PIN tem 4 dígitos." · "Os dois campos não batem." · "O PIN atual não confere." · or the system's message |
+| Preference not written         | disk refused                       | the change stays for the session; danger toast (shell)                                                                              |
+| Narrow window                  | ≤ 1180 px                          | one column; aside under main                                                                                                        |
 
 ### The locked window
 
-| State                   | Trigger                                   | What is drawn                                                                    |
-| ----------------------- | ----------------------------------------- | -------------------------------------------------------------------------------- |
-| Pad, idle               | locked                                    | four empty dots                                                                  |
-| Typing                  | digits                                    | dots fill; a fifth digit is ignored                                              |
-| Too short               | ✓ / Enter with fewer than 4               | "O PIN tem 4 dígitos."                                                           |
-| Checking                | ✓ / Enter                                 | "✓" disabled until the answer                                                    |
-| Wrong PIN               | mismatch                                  | "PIN errado." and the dots empty; no limit on tries                              |
-| Could not check         | the app failed to answer                  | the system's message                                                             |
-| Code panel states       | "Esqueci o PIN…"                          | waiting, another address, expired, ready, and the verdicts of the wizard's code panel ([15-welcome.md](15-welcome.md)) |
-| No PIN stored           | locked while the wallet holds no PIN      | the defensive panel; also drawn until the wallet has answered                    |
-| After a restart         | the lock is kept on disk                  | still locked; minutes count from the stamp on disk — the moment of locking, or the moment the X closed the locked window (the X locks again before closing) |
+| State             | Trigger                              | What is drawn                                                                                                                                               |
+| ----------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Pad, idle         | locked                               | four empty dots                                                                                                                                             |
+| Typing            | digits                               | dots fill; a fifth digit is ignored                                                                                                                         |
+| Too short         | ✓ / Enter with fewer than 4          | "O PIN tem 4 dígitos."                                                                                                                                      |
+| Checking          | ✓ / Enter                            | "✓" disabled until the answer                                                                                                                               |
+| Wrong PIN         | mismatch                             | "PIN errado." and the dots empty; no limit on tries                                                                                                         |
+| Could not check   | the app failed to answer             | the system's message                                                                                                                                        |
+| Code panel states | "Esqueci o PIN…"                     | waiting, another address, expired, ready, and the verdicts of the wizard's code panel ([15-welcome.md](15-welcome.md))                                      |
+| No PIN stored     | locked while the wallet holds no PIN | the defensive panel; also drawn until the wallet has answered                                                                                               |
+| After a restart   | the lock is kept on disk             | still locked; minutes count from the stamp on disk — the moment of locking, or the moment the X closed the locked window (the X locks again before closing) |
 
 ## Actions
 
 ### Perfil
 
-| Gesture                       | Where                     | Precondition / disabled reason                         | Effect                                                                               | Confirmation | Reversible                        | Feedback                        | Shortcut |
-| ----------------------------- | ------------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------ | --------------------------------- | ------------------------------- | -------- |
-| Editar dados / Concluir edição | header                   | —                                                      | switches the tiles between values and inputs                                         | —            | yes                               | button state                    | —        |
-| Edit a tile                   | tiles (edit mode)         | —                                                      | saved when the field is left (or Enter), trimmed; the chrome updates at once          | —            | edit again                        | —                               | —        |
-| Change the e-mail             | E-mail tile               | —                                                      | saves and **clears** the confirmation                                                | —            | confirm again (only the wizard confirms today) | note "não confirmado" | —        |
-| Pick a style                  | style row                 | —                                                      | "Iniciais" or a drawn style, saved at once                                           | —            | yes                               | the face changes everywhere     | —        |
-| Click the big circle          | avatar card               | —                                                      | drawn style chosen: the next variation (`name#2`, `name#3`, …) is pinned; otherwise opens the desktop's picture chooser ("Escolher foto", filter "Imagens": png, jpg, jpeg, webp) | — | clicking walks on; never back | the face changes          | —        |
-| Drop a picture                | anywhere on the avatar card | an image file                                        | opens the framing dialog                                                             | —            | Cancelar                          | —                               | —        |
-| Frame                         | framing dialog            | —                                                      | drag to place; zoom 1×–3×                                                            | —            | —                                 | live preview                    | arrows move 4 px (Shift: 20 px) |
-| Usar foto                     | framing dialog            | picture loaded                                         | saves a 256 × 256 picture on this machine (one file, overwritten), switches to photo | —            | choose another mode               | toast "Foto salva."             | —        |
-| Cancelar                      | framing dialog            | —                                                      | closes without saving                                                                | —            | —                                 | —                               | Esc; a click on the backdrop |
-| Aparência                     | Preferências card         | —                                                      | opens Configurações › Aparência                                                      | —            | —                                 | —                               | —        |
-| Barra lateral                 | Preferências card         | —                                                      | Automática / Sempre aberta / Sempre recolhida, at once                               | —            | yes                               | the sidebar changes             | —        |
-| Idioma                        | Preferências card         | —                                                      | switches the whole interface's language, at once                                     | —            | yes                               | every label changes             | —        |
-| Switch on                     | PIN card                  | no PIN stored                                          | opens the define form (switching again closes it)                                    | —            | —                                 | —                               | —        |
-| Gravar PIN                    | PIN form                  | 4 digits, both fields equal; when changing, the current PIN | stores the new PIN (checked by the app), stamps "gravado em"                     | —            | change or switch off              | toast "PIN gravado." / "PIN trocado." | —   |
-| Switch off                    | PIN card                  | a PIN stored                                           | removes the PIN at once — **asks nothing**                                           | none         | define a new one                  | toast "PIN desligado."          | —        |
-| Auto-lock chip                | PIN card (active)         | —                                                      | 1 / 5 / 15 min / nunca, saved at once                                                | —            | yes                               | the chip lights                 | —        |
-| Trocar PIN                    | PIN card (active)         | —                                                      | opens the change form                                                                | —            | Cancelar                          | —                               | —        |
-| Trancar agora                 | PIN card (active)         | —                                                      | locks the window now                                                                 | —            | unlock                            | the locked window               | —        |
+| Gesture                        | Where                       | Precondition / disabled reason                              | Effect                                                                                                                                                                            | Confirmation | Reversible                                     | Feedback                              | Shortcut                        |
+| ------------------------------ | --------------------------- | ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | ---------------------------------------------- | ------------------------------------- | ------------------------------- |
+| Editar dados / Concluir edição | header                      | —                                                           | switches the tiles between values and inputs                                                                                                                                      | —            | yes                                            | button state                          | —                               |
+| Edit a tile                    | tiles (edit mode)           | —                                                           | saved when the field is left (or Enter), trimmed; the chrome updates at once                                                                                                      | —            | edit again                                     | —                                     | —                               |
+| Change the e-mail              | E-mail tile                 | —                                                           | saves and **clears** the confirmation                                                                                                                                             | —            | confirm again (only the wizard confirms today) | note "não confirmado"                 | —                               |
+| Pick a style                   | style row                   | —                                                           | "Iniciais" or a drawn style, saved at once                                                                                                                                        | —            | yes                                            | the face changes everywhere           | —                               |
+| Click the big circle           | avatar card                 | —                                                           | drawn style chosen: the next variation (`name#2`, `name#3`, …) is pinned; otherwise opens the desktop's picture chooser ("Escolher foto", filter "Imagens": png, jpg, jpeg, webp) | —            | clicking walks on; never back                  | the face changes                      | —                               |
+| Drop a picture                 | anywhere on the avatar card | an image file                                               | opens the framing dialog                                                                                                                                                          | —            | Cancelar                                       | —                                     | —                               |
+| Frame                          | framing dialog              | —                                                           | drag to place; zoom 1×–3×                                                                                                                                                         | —            | —                                              | live preview                          | arrows move 4 px (Shift: 20 px) |
+| Usar foto                      | framing dialog              | picture loaded                                              | saves a 256 × 256 picture on this machine (one file, overwritten), switches to photo                                                                                              | —            | choose another mode                            | toast "Foto salva."                   | —                               |
+| Cancelar                       | framing dialog              | —                                                           | closes without saving                                                                                                                                                             | —            | —                                              | —                                     | Esc; a click on the backdrop    |
+| Aparência                      | Preferências card           | —                                                           | opens Configurações › Aparência                                                                                                                                                   | —            | —                                              | —                                     | —                               |
+| Barra lateral                  | Preferências card           | —                                                           | Automática / Sempre aberta / Sempre recolhida, at once                                                                                                                            | —            | yes                                            | the sidebar changes                   | —                               |
+| Idioma                         | Preferências card           | —                                                           | switches the whole interface's language, at once                                                                                                                                  | —            | yes                                            | every label changes                   | —                               |
+| Switch on                      | PIN card                    | no PIN stored                                               | opens the define form (switching again closes it)                                                                                                                                 | —            | —                                              | —                                     | —                               |
+| Gravar PIN                     | PIN form                    | 4 digits, both fields equal; when changing, the current PIN | stores the new PIN (checked by the app), stamps "gravado em"                                                                                                                      | —            | change or switch off                           | toast "PIN gravado." / "PIN trocado." | —                               |
+| Switch off                     | PIN card                    | a PIN stored                                                | removes the PIN at once — **asks nothing**                                                                                                                                        | none         | define a new one                               | toast "PIN desligado."                | —                               |
+| Auto-lock chip                 | PIN card (active)           | —                                                           | 1 / 5 / 15 min / nunca, saved at once                                                                                                                                             | —            | yes                                            | the chip lights                       | —                               |
+| Trocar PIN                     | PIN card (active)           | —                                                           | opens the change form                                                                                                                                                             | —            | Cancelar                                       | —                                     | —                               |
+| Trancar agora                  | PIN card (active)           | —                                                           | locks the window now                                                                                                                                                              | —            | unlock                                         | the locked window                     | —                               |
 
 ### The locked window
 
-| Gesture                               | Where         | Precondition                          | Effect                                                                                         | Confirmation | Reversible            | Feedback                         | Shortcut           |
-| ------------------------------------- | ------------- | ------------------------------------- | ---------------------------------------------------------------------------------------------- | ------------ | --------------------- | -------------------------------- | ------------------ |
-| Digit                                 | keypad        | fewer than 4 typed                    | adds a digit                                                                                   | —            | ⌫                     | a dot fills                      | `0`–`9`            |
-| ⌫ Apagar                              | keypad        | —                                     | removes the last digit                                                                         | —            | —                     | —                                | Backspace          |
-| ✓ Destrancar                          | keypad        | not already checking                  | the app checks the PIN; right → the window unlocks where it was                               | —            | —                     | error line on failure            | Enter              |
-| Esqueci o PIN — destrancar por código | pad           | —                                     | shows the code panel and starts watching for a code (every 2 s while open)                     | —            | "Voltar para o PIN"   | —                                | —                  |
-| Confirmar (code)                      | code panel    | a code typed                          | right code → **unlocks and turns the PIN off** in one act; the bell receives "O PIN foi desligado pelo código" | — | define a new PIN      | the screen behind returns        | Enter in the field |
-| Bloqueio com PIN                      | no-PIN panel  | —                                     | unlocks and opens the Perfil                                                                   | —            | —                     | —                                | —                  |
-| Voltar ao app                         | no-PIN panel  | —                                     | unlocks                                                                                        | —            | —                     | —                                | —                  |
-| Fechar (X)                            | titlebar      | —                                     | locks again (re-stamping the moment) and closes the app                                        | —            | —                     | next launch opens locked         | —                  |
+| Gesture                               | Where        | Precondition         | Effect                                                                                                         | Confirmation | Reversible          | Feedback                  | Shortcut           |
+| ------------------------------------- | ------------ | -------------------- | -------------------------------------------------------------------------------------------------------------- | ------------ | ------------------- | ------------------------- | ------------------ |
+| Digit                                 | keypad       | fewer than 4 typed   | adds a digit                                                                                                   | —            | ⌫                   | a dot fills               | `0`–`9`            |
+| ⌫ Apagar                              | keypad       | —                    | removes the last digit                                                                                         | —            | —                   | —                         | Backspace          |
+| ✓ Destrancar                          | keypad       | not already checking | the app checks the PIN; right → the window unlocks where it was                                                | —            | —                   | error line on failure     | Enter              |
+| Esqueci o PIN — destrancar por código | pad          | —                    | shows the code panel and starts watching for a code (every 2 s while open)                                     | —            | "Voltar para o PIN" | —                         | —                  |
+| Confirmar (code)                      | code panel   | a code typed         | right code → **unlocks and turns the PIN off** in one act; the bell receives "O PIN foi desligado pelo código" | —            | define a new PIN    | the screen behind returns | Enter in the field |
+| Bloqueio com PIN                      | no-PIN panel | —                    | unlocks and opens the Perfil                                                                                   | —            | —                   | —                         | —                  |
+| Voltar ao app                         | no-PIN panel | —                    | unlocks                                                                                                        | —            | —                   | —                         | —                  |
+| Fechar (X)                            | titlebar     | —                    | locks again (re-stamping the moment) and closes the app                                                        | —            | —                   | next launch opens locked  | —                  |
 
 ## Business rules
 

@@ -40,7 +40,7 @@ mais comum**. Opening a row expands it inline with:
    you typed" and counts. It never writes "the model does not understand accents" — a machine
    concluding about its own error is how this app would lose the operator's trust.
 2. **Rate zero is not a celebration.** "22 readings · no corrections" gets a muted tick, never
-   green: green in this app means *somebody checked*, and nobody checked that the model was
+   green: green in this app means _somebody checked_, and nobody checked that the model was
    right — only that nobody had to intervene.
 3. **No rate is not zero.** An adapter with no readings in the period sits in its own group.
 4. **Two sources, never in one table.** The list belongs to MedLens. When MedLens is silent the
@@ -53,7 +53,7 @@ mais comum**. Opening a row expands it inline with:
    configurado". Today the app promises the first always, and half the time that is false
    (`write_local` returns `Ok(())` without writing when the Fantasma folder is missing).
 7. **Retired corrections stay listed**, struck through, with the date. A pattern that comes back
-   *after* a re-extraction is the proof that the repair was the colinha, not a fresh read.
+   _after_ a re-extraction is the proof that the repair was the colinha, not a fresh read.
 
 ## Sample data
 

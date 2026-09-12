@@ -33,6 +33,7 @@ A dropdown about 352 px wide, anchored under the bell and aligned to its right.
    - "nada pendente por aqui" when nothing is pending.
 
    At the right sits a small "Marcar todos como lidos", disabled when nothing is pending.
+
 2. **List** (scrolls past 340 px). It holds **pending notices only**: unread and not silenced, newest first. Each item is one button, made of:
    - the unread dot (accent);
    - a tone tile with the kind's icon;
@@ -42,6 +43,7 @@ A dropdown about 352 px wide, anchored under the bell and aligned to its right.
    - a target chip "→ <TARGET>" in uppercase.
 
    With nothing pending, the list shows "Nada pendente por aqui. O que já foi lido fica em Avisos."
+
 3. **Footer.** "Ver todos os avisos" (bell icon) opens `/notices`.
 
 ### C. The Avisos screen (`/notices`)
@@ -76,12 +78,12 @@ A dropdown about 352 px wide, anchored under the bell and aligned to its right.
 - the text, then the detail (for the kinds that draw one);
 - the meta rows, with uppercase labels:
 
-  | Label | Value |
-  | --- | --- |
-  | "De onde veio" | the source |
-  | "Quando" | "<day label>, hh:mm", e.g. "Hoje · 10/09/2026, 14:34" |
-  | "Vezes" | "uma vez", or "<N> vezes neste dia" |
-  | "Decidido pelo app" | "nada", in green |
+  | Label               | Value                                                 |
+  | ------------------- | ----------------------------------------------------- |
+  | "De onde veio"      | the source                                            |
+  | "Quando"            | "<day label>, hh:mm", e.g. "Hoje · 10/09/2026, 14:34" |
+  | "Vezes"             | "uma vez", or "<N> vezes neste dia"                   |
+  | "Decidido pelo app" | "nada", in green                                      |
 
 - a box with the kicker "o que o app fez" and two lines: an arrow icon with what the app did, and a prohibit icon with what it did not do;
 - when the row folds more than one notice, a "quando aconteceu" timeline: one mark and "hh:mm" per occurrence, newest first. The newest mark takes the tone's colour and reads "mais recente"; the oldest reads "primeira vez".
@@ -93,41 +95,41 @@ A dropdown about 352 px wide, anchored under the bell and aligned to its right.
 
 The stored identifier is in the first column. The tone word is the detail panel's badge. The last column says who posts the notice and when.
 
-| Kind | Title (verbatim) | Target → opens | Source | Tone | Icon | Pedem você | Detail drawn | Posted |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `idle_autolock` | "A janela se trancou sozinha" | "Perfil" → `/profile` | Sistema | accent ("chegou coisa") | lock | no | — | by the app, when the idle timer locks the window (PIN active) |
-| `pin_reset_by_code` | "O PIN foi desligado pelo código" | "Perfil" → `/profile` | Sistema | warn ("pede atenção") | envelope-open | no | — | when the locked window is opened with the MailBridgr code |
-| `medlens_autostart_failed` | "O MedLens não subiu com o app" | "Configurações · MedLens" → `/settings?section=medlens` | MedLens | danger ("parou") | eye | yes | — | at launch, when the configured rise fails |
-| `fantasma_autostart_failed` | "O Fantasma não subiu com o app" | "Configurações · Fantasma" → `/settings?section=fantasma` | Fantasma | danger | robot | yes | — | at launch, when the configured rise fails |
-| `nfepack_autostart_failed` | "O NFePackMonitor não subiu com o app" | "Configurações · NFe Pack" → `/settings?section=nfepack` | NFe Pack | danger | receipt | yes | — | at launch, when the configured rise fails |
-| `nfepack_errors` | "O monitor registrou erros novos" | "NFePackMonitor" → `/nfe-pack-monitor` | NFe Pack | danger | receipt | yes | **yes**: how much the error count grew, e.g. "+3" | by the monitor's status check, when its log gained error lines ([NFePackMonitor](12-nfe-pack-monitor.md)) |
-| `dock_pieces_extracted` | "Extração concluída" | "Revisão" → `/review` | Esteira | accent | tray | no | no (stored: the piece count) | when an extraction run ends with pieces read |
-| `dock_extraction_failed` | "Uma extração falhou" | "Triagem" → `/triage` | Esteira | danger | tray | yes | no (stored: the piece count) | when pieces fail extraction |
-| `opmenexo_invoices_sent` | "Notas enviadas ao portal" | "Opmenexo" → `/opmenexo` | Spook | accent | paper-plane-tilt | no | no (stored: the order number) | when an invoice send to the portal answers |
-| `opmenexo_invoices_failed` | "Envio de notas não respondeu" | "Opmenexo" → `/opmenexo` | Spook | danger | paper-plane-tilt | yes | no (stored: the order number) | when a send ends unanswered or refused |
-| `opmenexo_quotation_answered` | "Cotação respondida no portal" | "Opmenexo" → `/opmenexo` | Spook | accent | currency-circle-dollar | no | no (stored: the order number) | when a quotation answer goes through |
-| `opmenexo_quotation_failed` | "Resposta de cotação não saiu" | "Opmenexo" → `/opmenexo` | Spook | danger | currency-circle-dollar | yes | no (stored: the order number) | when a quotation answer ends unconfirmed or refused |
-| `opmenexo_news` | "Novidades no portal" | "Opmenexo" → `/opmenexo` | Spook | accent | bell-ringing | yes | **yes**: what grew, e.g. "+2 cotações · +3 mensagens" | by the automatic portal re-read (the clock set in Configurações › Spook), when a count grew, and only while the operator is not on the OPMENEXO screen |
+| Kind                          | Title (verbatim)                       | Target → opens                                            | Source   | Tone                    | Icon                   | Pedem você | Detail drawn                                          | Posted                                                                                                                                                 |
+| ----------------------------- | -------------------------------------- | --------------------------------------------------------- | -------- | ----------------------- | ---------------------- | ---------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `idle_autolock`               | "A janela se trancou sozinha"          | "Perfil" → `/profile`                                     | Sistema  | accent ("chegou coisa") | lock                   | no         | —                                                     | by the app, when the idle timer locks the window (PIN active)                                                                                          |
+| `pin_reset_by_code`           | "O PIN foi desligado pelo código"      | "Perfil" → `/profile`                                     | Sistema  | warn ("pede atenção")   | envelope-open          | no         | —                                                     | when the locked window is opened with the MailBridgr code                                                                                              |
+| `medlens_autostart_failed`    | "O MedLens não subiu com o app"        | "Configurações · MedLens" → `/settings?section=medlens`   | MedLens  | danger ("parou")        | eye                    | yes        | —                                                     | at launch, when the configured rise fails                                                                                                              |
+| `fantasma_autostart_failed`   | "O Fantasma não subiu com o app"       | "Configurações · Fantasma" → `/settings?section=fantasma` | Fantasma | danger                  | robot                  | yes        | —                                                     | at launch, when the configured rise fails                                                                                                              |
+| `nfepack_autostart_failed`    | "O NFePackMonitor não subiu com o app" | "Configurações · NFe Pack" → `/settings?section=nfepack`  | NFe Pack | danger                  | receipt                | yes        | —                                                     | at launch, when the configured rise fails                                                                                                              |
+| `nfepack_errors`              | "O monitor registrou erros novos"      | "NFePackMonitor" → `/nfe-pack-monitor`                    | NFe Pack | danger                  | receipt                | yes        | **yes**: how much the error count grew, e.g. "+3"     | by the monitor's status check, when its log gained error lines ([NFePackMonitor](12-nfe-pack-monitor.md))                                              |
+| `dock_pieces_extracted`       | "Extração concluída"                   | "Revisão" → `/review`                                     | Esteira  | accent                  | tray                   | no         | no (stored: the piece count)                          | when an extraction run ends with pieces read                                                                                                           |
+| `dock_extraction_failed`      | "Uma extração falhou"                  | "Triagem" → `/triage`                                     | Esteira  | danger                  | tray                   | yes        | no (stored: the piece count)                          | when pieces fail extraction                                                                                                                            |
+| `opmenexo_invoices_sent`      | "Notas enviadas ao portal"             | "Opmenexo" → `/opmenexo`                                  | Spook    | accent                  | paper-plane-tilt       | no         | no (stored: the order number)                         | when an invoice send to the portal answers                                                                                                             |
+| `opmenexo_invoices_failed`    | "Envio de notas não respondeu"         | "Opmenexo" → `/opmenexo`                                  | Spook    | danger                  | paper-plane-tilt       | yes        | no (stored: the order number)                         | when a send ends unanswered or refused                                                                                                                 |
+| `opmenexo_quotation_answered` | "Cotação respondida no portal"         | "Opmenexo" → `/opmenexo`                                  | Spook    | accent                  | currency-circle-dollar | no         | no (stored: the order number)                         | when a quotation answer goes through                                                                                                                   |
+| `opmenexo_quotation_failed`   | "Resposta de cotação não saiu"         | "Opmenexo" → `/opmenexo`                                  | Spook    | danger                  | currency-circle-dollar | yes        | no (stored: the order number)                         | when a quotation answer ends unconfirmed or refused                                                                                                    |
+| `opmenexo_news`               | "Novidades no portal"                  | "Opmenexo" → `/opmenexo`                                  | Spook    | accent                  | bell-ringing           | yes        | **yes**: what grew, e.g. "+2 cotações · +3 mensagens" | by the automatic portal re-read (the clock set in Configurações › Spook), when a count grew, and only while the operator is not on the OPMENEXO screen |
 
 The `opmenexo_news` detail joins with " · " only the pieces that grew, among "+{n} cotações", "+{n} prontas para nota" and "+{n} mensagens". The words do not change when n is 1.
 
 **Text and narration of each kind (verbatim):**
 
-| Kind | Text | "o que o app fez" | what it did not do |
-| --- | --- | --- | --- |
-| `idle_autolock` | "Ninguém mexeu na estação pelo tempo configurado e o PIN assumiu. Nada foi fechado nem perdido." | "Trancou a janela e manteve tudo aberto por baixo." | "Nada foi fechado nem perdido — nenhum trabalho em andamento parou." |
-| `pin_reset_by_code` | "A janela destrancou com o código do MailBridgr e o PIN antigo saiu de cena. Grave um novo quando quiser." | "Destrancou a janela com o código e desligou o PIN antigo." | "Não gravou um PIN novo — gravar um é gesto seu, no Perfil." |
-| `medlens_autostart_failed` | "O serviço estava configurado para subir sozinho e não veio. A esteira fica sem os olhos até alguém olhar a configuração." | "Tentou subir o serviço na abertura do app e registrou a falha." | "Não mandou as páginas para outro lugar — a fila de leitura ficou como estava." |
-| `fantasma_autostart_failed` | "O robô estava configurado para subir sozinho e não veio — container ou login no Everest falharam. As mãos ficam paradas até alguém olhar." | "Tentou a subida configurada e registrou a falha." | "Não mexeu nas mãos paradas: elas continuam esperando alguém olhar." |
-| `nfepack_autostart_failed` | "O monitor estava configurado para subir sozinho e não veio. As notas do portal param de descer até alguém olhar a configuração." | "Tentou subir o monitor na abertura do app e registrou a falha." | "Não tocou no que já foi baixado — as notas em disco ficaram como estavam." |
-| `nfepack_errors` | "O log do NFePackMonitor cresceu em linhas de erro desde o último aviso — o número abaixo é o quanto cresceu. As linhas estão em Logs · NFe Pack." | "Contou as linhas de erro novas no log e avisou uma vez, com o total." | "Não interpretou as linhas — elas estão cruas em Logs · NFe Pack." |
-| `dock_pieces_extracted` | "A leitura terminou e as peças saíram da fila de decisão — estão em Já extraídos, a caminho da Revisão." | "Enviou as peças ao MedLens e as moveu para Já extraídos." | "Não aprovou nem enfileirou nada — conferir continua sendo seu." |
-| `dock_extraction_failed` | "O MedLens não conseguiu ler. A peça continua na doca, marcada, e diz o motivo — nada foi extraído dela." | "Guardou a recusa do MedLens, com as palavras dele, na peça." | "Não inventou uma leitura nem tirou a peça da doca." |
-| `opmenexo_invoices_sent` | "O envio respondeu: a linha da lista diz o estado, e a ordem guarda o relatório arquivo por arquivo." | "Subiu os arquivos pela ordem e guardou o relatório arquivo por arquivo." | "Não deu baixa em nada além do que o portal confirmou." |
-| `opmenexo_invoices_failed` | "Um envio ao portal terminou sem resposta ou recusado. Não reenvie antes de olhar a ordem: se o arquivo já subiu, a segunda tentativa é segunda via." | "Guardou o desfecho do envio, com a resposta do portal quando houve." | "Não reenviou sozinho — segunda tentativa sem olhar a ordem pode ser segunda via." |
-| `opmenexo_quotation_answered` | "A resposta saiu: a linha da lista diz o estado, e a ordem guarda o relatório linha a linha." | "Enviou a resposta montada na folha e guardou o relatório linha a linha." | "Não mudou preço nenhum — o que saiu é o que você conferiu." |
-| `opmenexo_quotation_failed` | "Uma resposta ao portal terminou sem confirmação ou recusada. Não reenvie antes de olhar a ordem no portal: preço é proposta comercial." | "Guardou o desfecho da tentativa, com a resposta do portal quando houve." | "Não tentou de novo sozinho — preço é proposta comercial." |
-| `opmenexo_news` | "A releitura automática achou mais trabalho que a leitura anterior — as contagens estão no aviso; o painel tem as linhas." | "Releu o portal no relógio que você marcou e contou o que chegou." | "Não respondeu nem baixou nada sozinho — o trabalho continua lá." |
+| Kind                          | Text                                                                                                                                                  | "o que o app fez"                                                         | what it did not do                                                                 |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `idle_autolock`               | "Ninguém mexeu na estação pelo tempo configurado e o PIN assumiu. Nada foi fechado nem perdido."                                                      | "Trancou a janela e manteve tudo aberto por baixo."                       | "Nada foi fechado nem perdido — nenhum trabalho em andamento parou."               |
+| `pin_reset_by_code`           | "A janela destrancou com o código do MailBridgr e o PIN antigo saiu de cena. Grave um novo quando quiser."                                            | "Destrancou a janela com o código e desligou o PIN antigo."               | "Não gravou um PIN novo — gravar um é gesto seu, no Perfil."                       |
+| `medlens_autostart_failed`    | "O serviço estava configurado para subir sozinho e não veio. A esteira fica sem os olhos até alguém olhar a configuração."                            | "Tentou subir o serviço na abertura do app e registrou a falha."          | "Não mandou as páginas para outro lugar — a fila de leitura ficou como estava."    |
+| `fantasma_autostart_failed`   | "O robô estava configurado para subir sozinho e não veio — container ou login no Everest falharam. As mãos ficam paradas até alguém olhar."           | "Tentou a subida configurada e registrou a falha."                        | "Não mexeu nas mãos paradas: elas continuam esperando alguém olhar."               |
+| `nfepack_autostart_failed`    | "O monitor estava configurado para subir sozinho e não veio. As notas do portal param de descer até alguém olhar a configuração."                     | "Tentou subir o monitor na abertura do app e registrou a falha."          | "Não tocou no que já foi baixado — as notas em disco ficaram como estavam."        |
+| `nfepack_errors`              | "O log do NFePackMonitor cresceu em linhas de erro desde o último aviso — o número abaixo é o quanto cresceu. As linhas estão em Logs · NFe Pack."    | "Contou as linhas de erro novas no log e avisou uma vez, com o total."    | "Não interpretou as linhas — elas estão cruas em Logs · NFe Pack."                 |
+| `dock_pieces_extracted`       | "A leitura terminou e as peças saíram da fila de decisão — estão em Já extraídos, a caminho da Revisão."                                              | "Enviou as peças ao MedLens e as moveu para Já extraídos."                | "Não aprovou nem enfileirou nada — conferir continua sendo seu."                   |
+| `dock_extraction_failed`      | "O MedLens não conseguiu ler. A peça continua na doca, marcada, e diz o motivo — nada foi extraído dela."                                             | "Guardou a recusa do MedLens, com as palavras dele, na peça."             | "Não inventou uma leitura nem tirou a peça da doca."                               |
+| `opmenexo_invoices_sent`      | "O envio respondeu: a linha da lista diz o estado, e a ordem guarda o relatório arquivo por arquivo."                                                 | "Subiu os arquivos pela ordem e guardou o relatório arquivo por arquivo." | "Não deu baixa em nada além do que o portal confirmou."                            |
+| `opmenexo_invoices_failed`    | "Um envio ao portal terminou sem resposta ou recusado. Não reenvie antes de olhar a ordem: se o arquivo já subiu, a segunda tentativa é segunda via." | "Guardou o desfecho do envio, com a resposta do portal quando houve."     | "Não reenviou sozinho — segunda tentativa sem olhar a ordem pode ser segunda via." |
+| `opmenexo_quotation_answered` | "A resposta saiu: a linha da lista diz o estado, e a ordem guarda o relatório linha a linha."                                                         | "Enviou a resposta montada na folha e guardou o relatório linha a linha." | "Não mudou preço nenhum — o que saiu é o que você conferiu."                       |
+| `opmenexo_quotation_failed`   | "Uma resposta ao portal terminou sem confirmação ou recusada. Não reenvie antes de olhar a ordem no portal: preço é proposta comercial."              | "Guardou o desfecho da tentativa, com a resposta do portal quando houve." | "Não tentou de novo sozinho — preço é proposta comercial."                         |
+| `opmenexo_news`               | "A releitura automática achou mais trabalho que a leitura anterior — as contagens estão no aviso; o painel tem as linhas."                            | "Releu o portal no relógio que você marcou e contou o que chegou."        | "Não respondeu nem baixou nada sozinho — o trabalho continua lá."                  |
 
 **Tone words.** "correu bem" (ok; no kind uses it today), "pede atenção" (warn), "parou" (danger), "chegou coisa" (accent).
 
@@ -135,14 +137,14 @@ The `opmenexo_news` detail joins with " · " only the pieces that grew, among "+
 
 ### What each number counts
 
-| Where | Counts |
-| --- | --- |
-| Bell badge and panel summary | unread notices of known kinds, not archived, whose kind is **not** silenced |
-| Screen summary | "<N> aviso não lido" / "<N> avisos não lidos" (or "nada não lido"), counting unread notices **including** silenced kinds; then " · <M> nos últimos 30 dias", M being every notice on the screen (known kinds, not archived); then " · nada foi decidido sozinho". The search, tabs and chips do not change it |
-| "Não lidos (N)" | the same unread count as the screen summary |
-| "Pedem você (N)" | every notice whose kind asks for a human, **read or not** |
-| Day header "<N> avisos" | rows in that section after filtering; a folded row counts once |
-| Row "<N>×", "Vezes", timeline | the notices folded into that row |
+| Where                         | Counts                                                                                                                                                                                                                                                                                                        |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Bell badge and panel summary  | unread notices of known kinds, not archived, whose kind is **not** silenced                                                                                                                                                                                                                                   |
+| Screen summary                | "<N> aviso não lido" / "<N> avisos não lidos" (or "nada não lido"), counting unread notices **including** silenced kinds; then " · <M> nos últimos 30 dias", M being every notice on the screen (known kinds, not archived); then " · nada foi decidido sozinho". The search, tabs and chips do not change it |
+| "Não lidos (N)"               | the same unread count as the screen summary                                                                                                                                                                                                                                                                   |
+| "Pedem você (N)"              | every notice whose kind asks for a human, **read or not**                                                                                                                                                                                                                                                     |
+| Day header "<N> avisos"       | rows in that section after filtering; a folded row counts once                                                                                                                                                                                                                                                |
+| Row "<N>×", "Vezes", timeline | the notices folded into that row                                                                                                                                                                                                                                                                              |
 
 - **Elapsed time in the panel**: "agora" (under a minute), "<N> min" (under an hour), "<N> h" (under 24 h), "ontem" (24 to 48 h ago), then "dd/mm/aaaa". It is recomputed every 30 s while the panel is open.
 - **Times on the screen**: "hh:mm", local. The day labels are "Hoje · dd/mm/aaaa", "Ontem · dd/mm/aaaa" (the calendar day), or the capitalised weekday followed by "· dd/mm/aaaa".
@@ -152,40 +154,40 @@ The `opmenexo_news` detail joins with " · " only the pieces that grew, among "+
 
 **The bell**
 
-| State | Trigger | Drawn |
-| --- | --- | --- |
-| Nothing pending | no unread, non-silenced notice | no badge |
-| Pending | at least one | the badge with the number |
-| Only silenced kinds unread | — | no badge (silenced kinds do not count) |
-| Locked | the window lock | bell disabled, panel closed |
-| First assembly | the `/welcome` screen | no bell |
-| Stale badge | a notice posted in the background (a boot failure, the monitor's error count, an extraction's outcome) | the badge shows it only at the next re-read: at launch, on unlock, when the panel opens, when the Avisos screen opens, or after this side posts a notice |
+| State                      | Trigger                                                                                                | Drawn                                                                                                                                                    |
+| -------------------------- | ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Nothing pending            | no unread, non-silenced notice                                                                         | no badge                                                                                                                                                 |
+| Pending                    | at least one                                                                                           | the badge with the number                                                                                                                                |
+| Only silenced kinds unread | —                                                                                                      | no badge (silenced kinds do not count)                                                                                                                   |
+| Locked                     | the window lock                                                                                        | bell disabled, panel closed                                                                                                                              |
+| First assembly             | the `/welcome` screen                                                                                  | no bell                                                                                                                                                  |
+| Stale badge                | a notice posted in the background (a boot failure, the monitor's error count, an extraction's outcome) | the badge shows it only at the next re-read: at launch, on unlock, when the panel opens, when the Avisos screen opens, or after this side posts a notice |
 
 **The panel**
 
-| State | Trigger | Drawn |
-| --- | --- | --- |
-| Pending | — | the list |
-| Nothing pending | — | "Nada pendente por aqui. O que já foi lido fica em Avisos."; the summary "nada pendente por aqui"; the mark-all button disabled |
-| Opening | click | re-reads the notices from disk; elapsed times re-tick every 30 s |
-| An unknown kind | a stored kind this version does not know (an older or newer file) | never drawn, never counted |
+| State           | Trigger                                                           | Drawn                                                                                                                           |
+| --------------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| Pending         | —                                                                 | the list                                                                                                                        |
+| Nothing pending | —                                                                 | "Nada pendente por aqui. O que já foi lido fica em Avisos."; the summary "nada pendente por aqui"; the mark-all button disabled |
+| Opening         | click                                                             | re-reads the notices from disk; elapsed times re-tick every 30 s                                                                |
+| An unknown kind | a stored kind this version does not know (an older or newer file) | never drawn, never counted                                                                                                      |
 
 **The screen**
 
-| State | Trigger | Drawn |
-| --- | --- | --- |
-| Empty, "Todos" | no notices | bell-slash icon, "Nenhum aviso por aqui", "Quando algo acontecer sozinho — ou precisar de você — aparece aqui." |
-| Empty, search | a term that matches nothing | magnifier icon, "Nada com “<term>”", "A busca olha o título, o texto e a origem do aviso." |
-| Empty, chips | chosen sources that match nothing | magnifier icon, "Nenhum aviso dessas origens", with the same note |
-| Empty, "Não lidos" | nothing unread | check-circle icon, "Você leu tudo", "Os avisos lidos continuam na aba Todos por 30 dias." |
-| Empty, "Pedem você" | no asking kind | check-circle icon, "Nada esperando por você", "O que sobrou é registro: coisas que aconteceram e não pedem decisão." |
-| No rows at all | any empty state | the detail panel is absent |
-| Selected row | click | accent border and tint; the detail shows it |
-| None selected yet | on entry | the detail shows the first row, without marking it read |
-| Silenced kind | the kind was silenced | its rows are dimmed and carry "silenciado" instead of "<N>×"; they still count in the screen's numbers |
-| Folded row | more than one identical notice in a day | the "<N>×" badge, "aconteceu <N> vezes neste dia", and a timeline in the detail |
-| Grouping off | switch off | one row per notice |
-| Narrow window | below 1180 px | no detail panel and no selected look; clicking a row follows its notice at once (and marks it read) |
+| State                        | Trigger                                        | Drawn                                                                                                                            |
+| ---------------------------- | ---------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| Empty, "Todos"               | no notices                                     | bell-slash icon, "Nenhum aviso por aqui", "Quando algo acontecer sozinho — ou precisar de você — aparece aqui."                  |
+| Empty, search                | a term that matches nothing                    | magnifier icon, "Nada com “<term>”", "A busca olha o título, o texto e a origem do aviso."                                       |
+| Empty, chips                 | chosen sources that match nothing              | magnifier icon, "Nenhum aviso dessas origens", with the same note                                                                |
+| Empty, "Não lidos"           | nothing unread                                 | check-circle icon, "Você leu tudo", "Os avisos lidos continuam na aba Todos por 30 dias."                                        |
+| Empty, "Pedem você"          | no asking kind                                 | check-circle icon, "Nada esperando por você", "O que sobrou é registro: coisas que aconteceram e não pedem decisão."             |
+| No rows at all               | any empty state                                | the detail panel is absent                                                                                                       |
+| Selected row                 | click                                          | accent border and tint; the detail shows it                                                                                      |
+| None selected yet            | on entry                                       | the detail shows the first row, without marking it read                                                                          |
+| Silenced kind                | the kind was silenced                          | its rows are dimmed and carry "silenciado" instead of "<N>×"; they still count in the screen's numbers                           |
+| Folded row                   | more than one identical notice in a day        | the "<N>×" badge, "aconteceu <N> vezes neste dia", and a timeline in the detail                                                  |
+| Grouping off                 | switch off                                     | one row per notice                                                                                                               |
+| Narrow window                | below 1180 px                                  | no detail panel and no selected look; clicking a row follows its notice at once (and marks it read)                              |
 | A write that did not persist | reading, archiving or silencing failed on disk | nothing is shown: these are optimistic, and the notice returns to its previous state the next time the list is re-read from disk |
 
 When the screen is empty, the search term decides which empty face shows first, then the chips, then the tab.
@@ -194,31 +196,31 @@ When the screen is empty, the search term decides which empty face shows first, 
 
 **Bell and panel**
 
-| Gesture | Effect | Confirmation · reversible |
-| --- | --- | --- |
-| Click the bell | opens or closes the panel | — |
-| `Esc`, or a click outside | closes the panel | — |
-| Click an item | closes the panel, marks that notice read and opens its target | — · reversible on the Avisos screen |
-| "Marcar todos como lidos" | marks **every** notice read, silenced kinds included | none · reversible one row at a time on the Avisos screen |
-| "Ver todos os avisos" | closes the panel and opens `/notices` | — |
+| Gesture                   | Effect                                                        | Confirmation · reversible                                |
+| ------------------------- | ------------------------------------------------------------- | -------------------------------------------------------- |
+| Click the bell            | opens or closes the panel                                     | —                                                        |
+| `Esc`, or a click outside | closes the panel                                              | —                                                        |
+| Click an item             | closes the panel, marks that notice read and opens its target | — · reversible on the Avisos screen                      |
+| "Marcar todos como lidos" | marks **every** notice read, silenced kinds included          | none · reversible one row at a time on the Avisos screen |
+| "Ver todos os avisos"     | closes the panel and opens `/notices`                         | —                                                        |
 
 **The Avisos screen**
 
-| Gesture | Where | Effect | Confirmation · reversible |
-| --- | --- | --- | --- |
-| Opening the screen | — | re-reads the notices from disk | — |
-| Click a row (wide window) | list | selects it and marks every notice folded in it read ("looking is reading") | — · the read toggle walks it back |
-| `Enter` on a focused row | list | same as a click | — |
-| Click a row (narrow window) | list | marks it read and opens its target | — |
-| Read toggle | row or detail | if every folded notice is read, all become unread; otherwise all become read | — · yes |
-| "Silenciar este tipo" / "Voltar a avisar" | row or detail | per **kind**, not per row: every notice of that kind dims and stops counting on the bell | none · yes, from any row of that kind |
-| "Arquivar" | row or detail | archives every notice folded in the row and marks them read. The row leaves every view, and no screen offers a way back; the file keeps the notices until the cap or the 30 days remove them | ⚠️ **none** · not from the screen |
-| "Abrir <target>" | detail foot | marks the row read and opens the kind's screen | — |
-| "aconteceu <N> vezes neste dia" / "esconder os horários" | folded row | shows or hides the time chips | — |
-| Tabs, chips, search | toolbar | filter the list; `Ctrl ⇧ K` focuses the search | — |
-| "Agrupar repetições" | toolbar | folds or unfolds repeats | — |
-| "Marcar todos como lidos" | header | same as the panel's | none |
-| "Ver o histórico completo nos Logs" | under the list | opens [Logs](11-logs.md) on the app's journal | — |
+| Gesture                                                  | Where          | Effect                                                                                                                                                                                       | Confirmation · reversible             |
+| -------------------------------------------------------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
+| Opening the screen                                       | —              | re-reads the notices from disk                                                                                                                                                               | —                                     |
+| Click a row (wide window)                                | list           | selects it and marks every notice folded in it read ("looking is reading")                                                                                                                   | — · the read toggle walks it back     |
+| `Enter` on a focused row                                 | list           | same as a click                                                                                                                                                                              | —                                     |
+| Click a row (narrow window)                              | list           | marks it read and opens its target                                                                                                                                                           | —                                     |
+| Read toggle                                              | row or detail  | if every folded notice is read, all become unread; otherwise all become read                                                                                                                 | — · yes                               |
+| "Silenciar este tipo" / "Voltar a avisar"                | row or detail  | per **kind**, not per row: every notice of that kind dims and stops counting on the bell                                                                                                     | none · yes, from any row of that kind |
+| "Arquivar"                                               | row or detail  | archives every notice folded in the row and marks them read. The row leaves every view, and no screen offers a way back; the file keeps the notices until the cap or the 30 days remove them | ⚠️ **none** · not from the screen     |
+| "Abrir <target>"                                         | detail foot    | marks the row read and opens the kind's screen                                                                                                                                               | —                                     |
+| "aconteceu <N> vezes neste dia" / "esconder os horários" | folded row     | shows or hides the time chips                                                                                                                                                                | —                                     |
+| Tabs, chips, search                                      | toolbar        | filter the list; `Ctrl ⇧ K` focuses the search                                                                                                                                               | —                                     |
+| "Agrupar repetições"                                     | toolbar        | folds or unfolds repeats                                                                                                                                                                     | —                                     |
+| "Marcar todos como lidos"                                | header         | same as the panel's                                                                                                                                                                          | none                                  |
+| "Ver o histórico completo nos Logs"                      | under the list | opens [Logs](11-logs.md) on the app's journal                                                                                                                                                | —                                     |
 
 The tab, search term, chips, grouping, selection and expanded rows last only while the screen is open; coming back resets them.
 
@@ -271,15 +273,15 @@ Today is 10/09/2026 (a Thursday), 14:40.
 
 **Screen.** Summary "3 avisos não lidos · 9 nos últimos 30 dias · nada foi decidido sozinho". Tabs: "Todos", "Não lidos (3)", "Pedem você (4)". Six chips.
 
-| Section | Time | Row | Tone · source | State |
-| --- | --- | --- | --- | --- |
-| HOJE · 10/09/2026 — 3 avisos | 14:34 | O monitor registrou erros novos, detail "+3" | parou · NFe Pack | unread |
-| | 13:39 | Uma extração falhou | parou · Esteira | unread |
-| | 13:22 | A janela se trancou sozinha, "3×"; times 13:22 · 11:05 · 09:47 | chegou coisa · Sistema | read |
-| ONTEM · 09/09/2026 — 2 avisos | 17:45 | Novidades no portal, "+2 cotações · +3 mensagens" | chegou coisa · Spook | unread |
-| | 08:02 | O NFePackMonitor não subiu com o app | parou · NFe Pack | read |
-| TERÇA-FEIRA · 08/09/2026 — 2 avisos | 16:10 | Notas enviadas ao portal | chegou coisa · Spook | read |
-| | 10:31 | Extração concluída | chegou coisa · Esteira | read, "silenciado" |
+| Section                             | Time  | Row                                                            | Tone · source          | State              |
+| ----------------------------------- | ----- | -------------------------------------------------------------- | ---------------------- | ------------------ |
+| HOJE · 10/09/2026 — 3 avisos        | 14:34 | O monitor registrou erros novos, detail "+3"                   | parou · NFe Pack       | unread             |
+|                                     | 13:39 | Uma extração falhou                                            | parou · Esteira        | unread             |
+|                                     | 13:22 | A janela se trancou sozinha, "3×"; times 13:22 · 11:05 · 09:47 | chegou coisa · Sistema | read               |
+| ONTEM · 09/09/2026 — 2 avisos       | 17:45 | Novidades no portal, "+2 cotações · +3 mensagens"              | chegou coisa · Spook   | unread             |
+|                                     | 08:02 | O NFePackMonitor não subiu com o app                           | parou · NFe Pack       | read               |
+| TERÇA-FEIRA · 08/09/2026 — 2 avisos | 16:10 | Notas enviadas ao portal                                       | chegou coisa · Spook   | read               |
+|                                     | 10:31 | Extração concluída                                             | chegou coisa · Esteira | read, "silenciado" |
 
 **Detail of the first row:**
 

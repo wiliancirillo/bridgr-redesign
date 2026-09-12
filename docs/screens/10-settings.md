@@ -50,17 +50,17 @@ a portal screen pointing at the Spook, or the user menu's "Preferências".
        States). It is the first thing in every section.
      - The **section's own content** (Sections 1–9).
 
-| # | Rail label | `?section=` | Icon (Phosphor) | Header hint (verbatim) | Built |
-|---|---|---|---|---|---|
-| 1 | Sobre | `about` | info | "Nove assuntos — o que já é real neste app é a porta de entrada" | yes (the entry point) |
-| 2 | Aparência | `appearance` | palette | "Tema, galerias e densidade" | yes |
-| 3 | Doca | `dock` | tray | "De onde os informes chegam" | yes |
-| 4 | MedLens | `medlens` | eye | "Serviço, credencial, IA e gasto" | yes |
-| 5 | Fantasma | `fantasma` | robot | "Pastas, credenciais e sessão" | yes |
-| 6 | Spook | `spook` | plugs-connected | "Endereço e credencial do serviço de portais" | yes |
-| 7 | NFe Pack | `nfepack` | receipt | "Serviço e pasta do monitor de NF-e" | yes |
-| 8 | Adapters | `adapters` | plugs | "Clientes, prompt de extração e colinha" | yes (no prompt editor, see Section 8) |
-| 9 | Exportação | `export` | export | "Formato e planilha de registro" | **no** (empty room) |
+| #   | Rail label | `?section=`  | Icon (Phosphor) | Header hint (verbatim)                                           | Built                                 |
+| --- | ---------- | ------------ | --------------- | ---------------------------------------------------------------- | ------------------------------------- |
+| 1   | Sobre      | `about`      | info            | "Nove assuntos — o que já é real neste app é a porta de entrada" | yes (the entry point)                 |
+| 2   | Aparência  | `appearance` | palette         | "Tema, galerias e densidade"                                     | yes                                   |
+| 3   | Doca       | `dock`       | tray            | "De onde os informes chegam"                                     | yes                                   |
+| 4   | MedLens    | `medlens`    | eye             | "Serviço, credencial, IA e gasto"                                | yes                                   |
+| 5   | Fantasma   | `fantasma`   | robot           | "Pastas, credenciais e sessão"                                   | yes                                   |
+| 6   | Spook      | `spook`      | plugs-connected | "Endereço e credencial do serviço de portais"                    | yes                                   |
+| 7   | NFe Pack   | `nfepack`    | receipt         | "Serviço e pasta do monitor de NF-e"                             | yes                                   |
+| 8   | Adapters   | `adapters`   | plugs           | "Clientes, prompt de extração e colinha"                         | yes (no prompt editor, see Section 8) |
+| 9   | Exportação | `export`     | export          | "Formato e planilha de registro"                                 | **no** (empty room)                   |
 
 ## Data shown
 
@@ -79,44 +79,44 @@ section's data is in its part. What every section shares:
 
 ### Deep links
 
-| From | Lands on |
-|---|---|
-| Sidebar › Sistema › "Configurações" | Sobre |
-| Titlebar user menu › "Configurações" | Sobre |
-| Titlebar user menu › "Preferências" | Aparência |
-| Perfil › card "Preferências" › shortcut "Aparência" | Aparência |
-| Status bar: MailBridgr/Doca block | Doca |
-| Status bar: MedLens block | MedLens |
-| Status bar: Fantasma block | Fantasma |
-| Status bar: Spook block | Spook |
-| Status bar: NFePackMonitor block | NFe Pack |
-| Status bar: version chip `v0.1.0` (tooltip "Sobre este app") | Sobre |
+| From                                                                                               | Lands on                      |
+| -------------------------------------------------------------------------------------------------- | ----------------------------- |
+| Sidebar › Sistema › "Configurações"                                                                | Sobre                         |
+| Titlebar user menu › "Configurações"                                                               | Sobre                         |
+| Titlebar user menu › "Preferências"                                                                | Aparência                     |
+| Perfil › card "Preferências" › shortcut "Aparência"                                                | Aparência                     |
+| Status bar: MailBridgr/Doca block                                                                  | Doca                          |
+| Status bar: MedLens block                                                                          | MedLens                       |
+| Status bar: Fantasma block                                                                         | Fantasma                      |
+| Status bar: Spook block                                                                            | Spook                         |
+| Status bar: NFePackMonitor block                                                                   | NFe Pack                      |
+| Status bar: version chip `v0.1.0` (tooltip "Sobre este app")                                       | Sobre                         |
 | Bell notices `medlens_autostart_failed` · `fantasma_autostart_failed` · `nfepack_autostart_failed` | MedLens · Fantasma · NFe Pack |
-| `/opmenexo` and its order dialog, wherever they point at the Spook | Spook |
+| `/opmenexo` and its order dialog, wherever they point at the Spook                                 | Spook                         |
 
 A missing or unknown `?section=` value opens **Sobre**, never an error.
 Changing section is ordinary navigation, so it creates history entries.
 
 ## States
 
-| State | Trigger | What is drawn |
-|---|---|---|
-| Entry | `/settings` with no or an unknown `section` | Sobre; rail item "Sobre" current |
-| Preference write failed | the disk refused a `config.json` write | The setting **still applies for this session**. A danger strip at the top of the content reads "A preferência vale nesta sessão, mas não foi gravada:" followed by the refusal text, and a danger toast carries the same sentence (the toast reaches whoever changed a setting from any other screen). The next write that works clears it. |
-| Section left | picking another section | its polls stop; only the service and secret stores keep their last answers |
-| Narrow window | near the 1024 × 768 minimum | Nothing adapts. The rail keeps ~198 px and the content column shrinks. The two-column pairs (user + password, primary + secondary model, notes folder + pause) stay side by side and compress. The palette cards (~200 px each), the Gasto header and the metrics tiles wrap. Dialogs cap at 92 % of the window width and 84 % of its height. |
+| State                   | Trigger                                     | What is drawn                                                                                                                                                                                                                                                                                                                                 |
+| ----------------------- | ------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Entry                   | `/settings` with no or an unknown `section` | Sobre; rail item "Sobre" current                                                                                                                                                                                                                                                                                                              |
+| Preference write failed | the disk refused a `config.json` write      | The setting **still applies for this session**. A danger strip at the top of the content reads "A preferência vale nesta sessão, mas não foi gravada:" followed by the refusal text, and a danger toast carries the same sentence (the toast reaches whoever changed a setting from any other screen). The next write that works clears it.   |
+| Section left            | picking another section                     | its polls stop; only the service and secret stores keep their last answers                                                                                                                                                                                                                                                                    |
+| Narrow window           | near the 1024 × 768 minimum                 | Nothing adapts. The rail keeps ~198 px and the content column shrinks. The two-column pairs (user + password, primary + secondary model, notes folder + pause) stay side by side and compress. The palette cards (~200 px each), the Gasto header and the metrics tiles wrap. Dialogs cap at 92 % of the window width and 84 % of its height. |
 
 Refusals are shown as the other side wrote them: often an English sentence,
 sometimes with a file path. See Business rules 7.
 
 ## Actions
 
-| Gesture | Where | Effect | Feedback |
-|---|---|---|---|
-| Pick a section | rail | opens it; URL becomes `?section=<id>` | the item is marked current |
-| Change a preference (text, switch, segment, palette card, checkbox) | any section | **written immediately; this screen has no global "Salvar".** Text fields commit on `change` (leaving the field, or Enter); switches, segments, cards and checkboxes commit on click. | Silent on success, because the screen already shows the effect; on failure, the strip and the toast |
-| Type a secret | secret fields | stored in the system wallet when the field is left non-empty; the field then empties itself | badge "gravada"; wallet refusals inline |
-| The only two explicit saves | Colinha dialog "Gravar" · OPMENEXO clients dialog "Salvar" | Both edit files that another program reads, so they validate and write only on the button. | toasts, in their parts |
+| Gesture                                                             | Where                                                      | Effect                                                                                                                                                                               | Feedback                                                                                            |
+| ------------------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------- |
+| Pick a section                                                      | rail                                                       | opens it; URL becomes `?section=<id>`                                                                                                                                                | the item is marked current                                                                          |
+| Change a preference (text, switch, segment, palette card, checkbox) | any section                                                | **written immediately; this screen has no global "Salvar".** Text fields commit on `change` (leaving the field, or Enter); switches, segments, cards and checkboxes commit on click. | Silent on success, because the screen already shows the effect; on failure, the strip and the toast |
+| Type a secret                                                       | secret fields                                              | stored in the system wallet when the field is left non-empty; the field then empties itself                                                                                          | badge "gravada"; wallet refusals inline                                                             |
+| The only two explicit saves                                         | Colinha dialog "Gravar" · OPMENEXO clients dialog "Salvar" | Both edit files that another program reads, so they validate and write only on the button.                                                                                           | toasts, in their parts                                                                              |
 
 No section has a filter field, so `Ctrl ⇧ K` does nothing here. In-section
 keys: the registry-code fields (↑ ↓ Enter Esc) and the TOML editor (`Ctrl+S`).
@@ -235,18 +235,19 @@ The entry point of the screen, reached from the sidebar, from the user menu's
    **autostart pair**: a small label plus a switch. **[functional]** The switch
    sits on the row of the program it speaks for.
 
-   | Icon | What it does (verbatim) | Program | Switch |
-   |---|---|---|---|
-   | tray | "Doca vigiada, anexo por anexo" | MailBridgr | never |
-   | eye | "Leitura das contas e aprendizado por correção" | MedLens | when the MedLens folder is set |
-   | check-square-offset | "Conferência com o documento ao lado e portão de completude" | Bridgr Pro | never |
-   | robot | "Lançamento no Everest, uma conta por vez" | Fantasma | when the Fantasma project folder is set |
-   | plugs-connected | "Portais lidos e respondidos daqui" | Spook | when the Spook **folder** is set (an address alone does not count) |
-   | receipt | "Baixa de NF-e e DANFE, ciclo a ciclo" | NFePackMonitor | when the NFePackMonitor folder is set |
+   | Icon                | What it does (verbatim)                                      | Program        | Switch                                                             |
+   | ------------------- | ------------------------------------------------------------ | -------------- | ------------------------------------------------------------------ |
+   | tray                | "Doca vigiada, anexo por anexo"                              | MailBridgr     | never                                                              |
+   | eye                 | "Leitura das contas e aprendizado por correção"              | MedLens        | when the MedLens folder is set                                     |
+   | check-square-offset | "Conferência com o documento ao lado e portão de completude" | Bridgr Pro     | never                                                              |
+   | robot               | "Lançamento no Everest, uma conta por vez"                   | Fantasma       | when the Fantasma project folder is set                            |
+   | plugs-connected     | "Portais lidos e respondidos daqui"                          | Spook          | when the Spook **folder** is set (an address alone does not count) |
+   | receipt             | "Baixa de NF-e e DANFE, ciclo a ciclo"                       | NFePackMonitor | when the NFePackMonitor folder is set                              |
 
    Label: "Sobe com o app". After the operator flips that row's switch during
    this visit, the label reads "Vale no próximo início do app". The switch's
    accessible name is "Sobe com o app — <program>".
+
 3. **Identity line** at the foot, after a hairline, in faint mono:
    `Bridgr Pro · 0.1.0 · br.alphamedical.bridgrpro` (name · version · bundle
    identifier, as the running binary knows them).
@@ -267,9 +268,9 @@ The entry point of the screen, reached from the sidebar, from the user menu's
 
 ### Actions
 
-| Gesture | Precondition | Effect | Confirmation | Reversible | Feedback |
-|---|---|---|---|---|---|
-| Flip "Sobe com o app" | that service's folder is set | stores the choice; it governs only the **next** app start | none | yes, flip back | the label changes; no toast |
+| Gesture               | Precondition                 | Effect                                                    | Confirmation | Reversible     | Feedback                    |
+| --------------------- | ---------------------------- | --------------------------------------------------------- | ------------ | -------------- | --------------------------- |
+| Flip "Sobe com o app" | that service's folder is set | stores the choice; it governs only the **next** app start | none         | yes, flip back | the label changes; no toast |
 
 Nothing is raised or stopped now. The switch on each service's own card stays
 the one way to raise a service by hand.
@@ -350,6 +351,7 @@ they live on [Perfil](16-profile-and-lock.md).
 
    The chosen card has an accent outline and a faint accent tint, with its name
    in accent.
+
 4. **Density checkbox** (a bordered row): "Densidade compacta", with the hint
    "Aperta a interface inteira — listas, tabelas, barra lateral e barra de
    título."
@@ -362,12 +364,12 @@ they live on [Perfil](16-profile-and-lock.md).
 
 ### Data shown
 
-| Theme (built-in) | Base | ground | surface | accent | ink | Hexes on the card |
-|---|---|---|---|---|---|---|
-| Breeze Light | light | #eff0f1 | #fcfcfc | #3daee9 | #232629 | `#eff0f1 · #3daee9` |
-| GitHub Light | light | #ffffff | #f6f8fa | #0969da | #1f2328 | `#ffffff · #0969da` |
-| Breeze Dark | dark | #232629 | #31363b | #3daee9 | #eff0f1 | `#232629 · #3daee9` |
-| GitHub Dark | dark | #0d1117 | #161b22 | #2f81f7 | #e6edf3 | `#0d1117 · #2f81f7` |
+| Theme (built-in) | Base  | ground  | surface | accent  | ink     | Hexes on the card   |
+| ---------------- | ----- | ------- | ------- | ------- | ------- | ------------------- |
+| Breeze Light     | light | #eff0f1 | #fcfcfc | #3daee9 | #232629 | `#eff0f1 · #3daee9` |
+| GitHub Light     | light | #ffffff | #f6f8fa | #0969da | #1f2328 | `#ffffff · #0969da` |
+| Breeze Dark      | dark  | #232629 | #31363b | #3daee9 | #eff0f1 | `#232629 · #3daee9` |
+| GitHub Dark      | dark  | #0d1117 | #161b22 | #2f81f7 | #e6edf3 | `#0d1117 · #2f81f7` |
 
 - Breeze is the palette the app was drawn against; the GitHub pair are alternatives.
 - In each gallery the built-ins come first, then the custom themes from
@@ -387,12 +389,12 @@ they live on [Perfil](16-profile-and-lock.md).
 
 ### Actions
 
-| Gesture | Effect | Feedback |
-|---|---|---|
-| "Sistema" / "Claro" / "Escuro" | the mode is stored and applied at once; "Sistema" follows the desktop's light/dark live | the app repaints |
-| Click a palette card | stores that base's palette; the app repaints at once if that base is in force; **the mode is not touched** | the card is marked |
-| "Densidade compacta" | the whole interface, chrome included, switches between standard and compact spacing | immediate |
-| "Abrir o config.json" | if the file's `themes` list is empty, first writes the four built-ins into it as models; then opens the file with the desktop's handler | the file opens outside the app; a failure appears under the button |
+| Gesture                        | Effect                                                                                                                                  | Feedback                                                           |
+| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| "Sistema" / "Claro" / "Escuro" | the mode is stored and applied at once; "Sistema" follows the desktop's light/dark live                                                 | the app repaints                                                   |
+| Click a palette card           | stores that base's palette; the app repaints at once if that base is in force; **the mode is not touched**                              | the card is marked                                                 |
+| "Densidade compacta"           | the whole interface, chrome included, switches between standard and compact spacing                                                     | immediate                                                          |
+| "Abrir o config.json"          | if the file's `themes` list is empty, first writes the four built-ins into it as models; then opens the file with the desktop's handler | the file opens outside the app; a failure appears under the button |
 
 ### Business rules
 
@@ -411,6 +413,7 @@ they live on [Perfil](16-profile-and-lock.md).
      both themes.
 
    (`theme.svelte.ts`)
+
 4. A theme without a valid base (`light`/`dark`) is ignored. A file entry
    named like a built-in is shadowed, so the seeded models do not double the
    gallery. To make a theme from a model, copy it under another name.
@@ -630,19 +633,19 @@ Three blocks, top to bottom.
 
 ### Data shown
 
-| Field | Meaning | Presentation |
-|---|---|---|
-| Service state | the `/health` answer | "no ar" · "subindo…" · "no ar — subiu fora deste app" · "parado" · "…" (never asked) |
-| Version | from `/health` | chip `v…`, only when known |
-| Missing capabilities | what this build needs that `/health` did not list | amber line, ids separated by commas, e.g. "Este MedLens não tem: adapters.prompt, adapters.learning" |
-| Credential | the app's own console credential, checked by the service | "aceita pelo serviço" (green) · "nenhuma emitida ainda — o app emite a que ele mesmo usa" · "recusada (401). No ar sem credencial dá 401 em tudo com cara de serviço fora — reemita antes de culpar a rede." (danger border and text) · "sem como conferir com o serviço parado" |
-| Total | spend of the key configured **now** | `US$` with a decimal comma; 2 decimals, or 4 when the value is below one cent |
-| Extractions | spend rows of this key | pt-BR thousands ("1.234") |
-| Last 7 days | sum over the last 7 × 24 h | `US$` |
-| Other keys | rows paid by other API keys, not in the total | the amber sentence |
-| Por dia | sum per local calendar day | 14 bars, zero days included |
-| Por modelo | total, count, average, share | sorted by total |
-| Extrações | when (`dd/mm/aaaa hh:mm:ss`, local), file name, model id, input + output tokens, cost | numbers and model in mono |
+| Field                | Meaning                                                                               | Presentation                                                                                                                                                                                                                                                                     |
+| -------------------- | ------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Service state        | the `/health` answer                                                                  | "no ar" · "subindo…" · "no ar — subiu fora deste app" · "parado" · "…" (never asked)                                                                                                                                                                                             |
+| Version              | from `/health`                                                                        | chip `v…`, only when known                                                                                                                                                                                                                                                       |
+| Missing capabilities | what this build needs that `/health` did not list                                     | amber line, ids separated by commas, e.g. "Este MedLens não tem: adapters.prompt, adapters.learning"                                                                                                                                                                             |
+| Credential           | the app's own console credential, checked by the service                              | "aceita pelo serviço" (green) · "nenhuma emitida ainda — o app emite a que ele mesmo usa" · "recusada (401). No ar sem credencial dá 401 em tudo com cara de serviço fora — reemita antes de culpar a rede." (danger border and text) · "sem como conferir com o serviço parado" |
+| Total                | spend of the key configured **now**                                                   | `US$` with a decimal comma; 2 decimals, or 4 when the value is below one cent                                                                                                                                                                                                    |
+| Extractions          | spend rows of this key                                                                | pt-BR thousands ("1.234")                                                                                                                                                                                                                                                        |
+| Last 7 days          | sum over the last 7 × 24 h                                                            | `US$`                                                                                                                                                                                                                                                                            |
+| Other keys           | rows paid by other API keys, not in the total                                         | the amber sentence                                                                                                                                                                                                                                                               |
+| Por dia              | sum per local calendar day                                                            | 14 bars, zero days included                                                                                                                                                                                                                                                      |
+| Por modelo           | total, count, average, share                                                          | sorted by total                                                                                                                                                                                                                                                                  |
+| Extrações            | when (`dd/mm/aaaa hh:mm:ss`, local), file name, model id, input + output tokens, cost | numbers and model in mono                                                                                                                                                                                                                                                        |
 
 ⚠️ In real use, the "Arquivo" column shows informe file names, which can carry
 a patient's name. Mockups use only the cast's file names.
@@ -671,14 +674,14 @@ a patient's name. Mockups use only the cast's file names.
 
 **Gasto card**
 
-| State | What is drawn |
-|---|---|
-| Not asked yet (service state unknown) | only "Gasto" and the refresh button; no sentence |
-| Service known to be down, nothing loaded | "Sem dados — o MedLens precisa estar no ar."; refresh disabled |
-| Asking | the refresh icon spins, disabled |
-| Loaded, zero rows | total `US$ 0,00`, "0 extrações · …", the tabs, and the body "Nenhum gasto registrado com esta chave ainda." (plus the partial-history line if other keys paid something) |
-| Loaded | the current tab's body |
-| Failed | a danger box with the refusal replaces the body; the header keeps any earlier values |
+| State                                    | What is drawn                                                                                                                                                            |
+| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Not asked yet (service state unknown)    | only "Gasto" and the refresh button; no sentence                                                                                                                         |
+| Service known to be down, nothing loaded | "Sem dados — o MedLens precisa estar no ar."; refresh disabled                                                                                                           |
+| Asking                                   | the refresh icon spins, disabled                                                                                                                                         |
+| Loaded, zero rows                        | total `US$ 0,00`, "0 extrações · …", the tabs, and the body "Nenhum gasto registrado com esta chave ainda." (plus the partial-history line if other keys paid something) |
+| Loaded                                   | the current tab's body                                                                                                                                                   |
+| Failed                                   | a danger box with the refusal replaces the body; the header keeps any earlier values                                                                                     |
 
 The card loads once each time the service comes up (it follows the panel's
 poll). After that, only "Atualizar" reloads it.
@@ -690,16 +693,16 @@ credential. Before that, the inputs take free text with no list.
 
 ### Actions
 
-| Gesture | Where | Precondition | Effect | Feedback |
-|---|---|---|---|---|
-| Switch on | service card | folder set; service down | raises MedLens: starts it, waits for `/health`, ensures the credential, pushes the AI settings | spinner (accessible name "Ligando…"); toast "MedLens no ar."; refusal in the strip |
-| Switch off | service card | up and started by this app | stops it | spinner ("Desligando…"); toast "MedLens desligado." |
-| "Emitir" / "Emitir outra" | credential card | service up | issues a new console credential through MedLens's own CLI and stores it in the wallet | "Emitindo…"; toast "Credencial emitida." |
-| Edit the folder | field | — | stored | silent |
-| Paste the OpenRouter key | secret field | non-empty | wallet, then (if connected) pushed to MedLens, then read back | the toast sequence below |
-| Edit a model | field | — | stored; pushed to MedLens at once when connected (quietly), otherwise at the next rise | silent |
-| Change tab | Gasto | data loaded | changes the view; not stored | — |
-| "Atualizar" | Gasto | service up, not already asking | reloads the spend | spinning icon |
+| Gesture                   | Where           | Precondition                   | Effect                                                                                         | Feedback                                                                           |
+| ------------------------- | --------------- | ------------------------------ | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| Switch on                 | service card    | folder set; service down       | raises MedLens: starts it, waits for `/health`, ensures the credential, pushes the AI settings | spinner (accessible name "Ligando…"); toast "MedLens no ar."; refusal in the strip |
+| Switch off                | service card    | up and started by this app     | stops it                                                                                       | spinner ("Desligando…"); toast "MedLens desligado."                                |
+| "Emitir" / "Emitir outra" | credential card | service up                     | issues a new console credential through MedLens's own CLI and stores it in the wallet          | "Emitindo…"; toast "Credencial emitida."                                           |
+| Edit the folder           | field           | —                              | stored                                                                                         | silent                                                                             |
+| Paste the OpenRouter key  | secret field    | non-empty                      | wallet, then (if connected) pushed to MedLens, then read back                                  | the toast sequence below                                                           |
+| Edit a model              | field           | —                              | stored; pushed to MedLens at once when connected (quietly), otherwise at the next rise         | silent                                                                             |
+| Change tab                | Gasto           | data loaded                    | changes the view; not stored                                                                   | —                                                                                  |
+| "Atualizar"               | Gasto           | service up, not already asking | reloads the spend                                                                              | spinning icon                                                                      |
 
 None of these gestures asks for confirmation.
 
@@ -777,10 +780,10 @@ as days); the tab control; table styling.
   registro continua no MedLens."
 - Por modelo:
 
-  | Model | Note | Spend | Share |
-  |---|---|---|---|
-  | `anthropic/claude-3.7-sonnet` | "298 extrações · média US$ 0,03" | US$ 9,02 | 72% |
-  | `google/gemini-2.5-flash` | "44 extrações · média US$ 0,08" | US$ 3,46 | 28% |
+  | Model                         | Note                             | Spend    | Share |
+  | ----------------------------- | -------------------------------- | -------- | ----- |
+  | `anthropic/claude-3.7-sonnet` | "298 extrações · média US$ 0,03" | US$ 9,02 | 72%   |
+  | `google/gemini-2.5-flash`     | "44 extrações · média US$ 0,08"  | US$ 3,46 | 28%   |
 
 - Extrações row: `09/09/2026 14:02:11` · `informe_vale_verde_2026-09-02.pdf` ·
   `anthropic/claude-3.7-sonnet` · 18.432 · US$ 0,03.
@@ -857,18 +860,18 @@ maintained here. The status bar's Fantasma block and the
 
 Session label, sub-line and tone (busy overrides the label):
 
-| Condition | Label | Tone | Sub-line |
-|---|---|---|---|
-| never asked | "…" | idle | (empty) |
-| off, not fully configured | "parado" | idle | "Preencha pastas, usuários e senhas para poder ligar." |
-| off | "parado" | idle | "O robô não está rodando nesta máquina. Ligar sobe o container e entra no Everest." |
-| starting | "subindo…" | accent icon | "Subindo o container e abrindo a sessão — pode levar um tempo." |
-| up: container running, ERP not logged in | "sem sessão" | amber border and icon | "Container de pé, mas o Everest não está logado — cada comando pediria login." |
-| ready | "pronto" | green icon | "Container de pé e Everest logado. As mãos estão prontas." |
-| shutting down | "desligando…" | accent icon | "Derrubando o container…" |
-| foreign | "de fora do app" | idle | "Este Fantasma foi ligado por outro programa — usar, sim; derrubar daqui, não." |
-| busy (in any state) | "ocupado" | accent icon | "Trabalhando agora — nenhum gesto passa até terminar." |
-| release window after a take-down | (the state's label) | — | "O Everest ainda segura a sessão anterior — <n>s para liberar." (counts down; seconds rounded up) |
+| Condition                                | Label               | Tone                  | Sub-line                                                                                          |
+| ---------------------------------------- | ------------------- | --------------------- | ------------------------------------------------------------------------------------------------- |
+| never asked                              | "…"                 | idle                  | (empty)                                                                                           |
+| off, not fully configured                | "parado"            | idle                  | "Preencha pastas, usuários e senhas para poder ligar."                                            |
+| off                                      | "parado"            | idle                  | "O robô não está rodando nesta máquina. Ligar sobe o container e entra no Everest."               |
+| starting                                 | "subindo…"          | accent icon           | "Subindo o container e abrindo a sessão — pode levar um tempo."                                   |
+| up: container running, ERP not logged in | "sem sessão"        | amber border and icon | "Container de pé, mas o Everest não está logado — cada comando pediria login."                    |
+| ready                                    | "pronto"            | green icon            | "Container de pé e Everest logado. As mãos estão prontas."                                        |
+| shutting down                            | "desligando…"       | accent icon           | "Derrubando o container…"                                                                         |
+| foreign                                  | "de fora do app"    | idle                  | "Este Fantasma foi ligado por outro programa — usar, sim; derrubar daqui, não."                   |
+| busy (in any state)                      | "ocupado"           | accent icon           | "Trabalhando agora — nenhum gesto passa até terminar."                                            |
+| release window after a take-down         | (the state's label) | —                     | "O Everest ainda segura a sessão anterior — <n>s para liberar." (counts down; seconds rounded up) |
 
 - Sub-line priority: countdown, then busy, then the state sentence.
 - "Fully configured" = both folders, both user names and both passwords stored.
@@ -892,14 +895,14 @@ counting the release window.
 
 ### Actions
 
-| Gesture | Precondition | Effect | Confirmation | Reversible | Feedback |
-|---|---|---|---|---|---|
-| Switch on | fully configured, off, release window over, not busy | writes the robot's `.env`, raises the container, claims it, logs into the ERP, verifies the remote-desktop window | none | only through Derrubar (costs 2 min) | spinner ("Ligando…"); toast "Fantasma pronto."; refusal in the strip |
-| Switch off | ready or up, started by this app, not busy | opens the inline confirmation; **nothing stops yet** | — | — | the box |
-| "Deixar de pé" | confirmation open | closes the box | — | — | — |
-| "Derrubar agora" | confirmation open | takes the container down and starts the 2-minute release window | this button is the confirmation | no: the ERP holds the session about 2 min | spinner ("Derrubando…"); toast "Fantasma derrubado."; then the countdown |
-| Edit folders or user names | — | stored | — | yes | silent |
-| Type a password | non-empty | wallet | — | overwrite only | badge "gravada" |
+| Gesture                    | Precondition                                         | Effect                                                                                                            | Confirmation                    | Reversible                                | Feedback                                                                 |
+| -------------------------- | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------- | ----------------------------------------- | ------------------------------------------------------------------------ |
+| Switch on                  | fully configured, off, release window over, not busy | writes the robot's `.env`, raises the container, claims it, logs into the ERP, verifies the remote-desktop window | none                            | only through Derrubar (costs 2 min)       | spinner ("Ligando…"); toast "Fantasma pronto."; refusal in the strip     |
+| Switch off                 | ready or up, started by this app, not busy           | opens the inline confirmation; **nothing stops yet**                                                              | —                               | —                                         | the box                                                                  |
+| "Deixar de pé"             | confirmation open                                    | closes the box                                                                                                    | —                               | —                                         | —                                                                        |
+| "Derrubar agora"           | confirmation open                                    | takes the container down and starts the 2-minute release window                                                   | this button is the confirmation | no: the ERP holds the session about 2 min | spinner ("Derrubando…"); toast "Fantasma derrubado."; then the countdown |
+| Edit folders or user names | —                                                    | stored                                                                                                            | —                               | yes                                       | silent                                                                   |
+| Type a password            | non-empty                                            | wallet                                                                                                            | —                               | overwrite only                            | badge "gravada"                                                          |
 
 Confirmation text (verbatim): "Derrubar mata a sessão do Everest, e ele leva
 cerca de 2 minutos para soltá-la — religar antes falha com “sessão em uso”.
@@ -1056,7 +1059,7 @@ height), opened by "Editar":
 Editor placeholder when empty (verbatim, except the flow id: the app's
 placeholder carries an example id, replaced here by a fictitious one):
 
-```
+```toml
 [default.portals.opmenexo.clients.hospital-exemplo]
 company_id = 12345
 # statuses = ["FA"]
@@ -1074,14 +1077,14 @@ Editor colours:
 
 ### Data shown
 
-| Field | Meaning | Presentation |
-|---|---|---|
-| Service label | configured? reachable? can this app raise it? | "…" (never asked) · "sem endereço configurado" · "no ar" · "parado" (local, off) · "não respondeu" (remote and silent) |
-| Tone | same order | idle · idle · green · idle · amber |
-| Capabilities | the count the service reports | "<n> capacidades" |
-| Credential | this app's token, checked by the service | "aceita pelo serviço" (green) · "aceita, mas só de leitura — emitida antes de o app enviar nota. Emita outra para poder enviar." (amber) · "nenhuma guardada" · "recusada pelo serviço" (danger) · "não deu para perguntar" |
-| Auto-read minutes | an app preference | empty = 0 = off; 1 to 4 become 5; 5 and above kept as typed |
-| Clients block | the raw text between the app's markers in the Spook's `settings.toml` | TOML, verbatim, comments included |
+| Field             | Meaning                                                               | Presentation                                                                                                                                                                                                                |
+| ----------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Service label     | configured? reachable? can this app raise it?                         | "…" (never asked) · "sem endereço configurado" · "no ar" · "parado" (local, off) · "não respondeu" (remote and silent)                                                                                                      |
+| Tone              | same order                                                            | idle · idle · green · idle · amber                                                                                                                                                                                          |
+| Capabilities      | the count the service reports                                         | "<n> capacidades"                                                                                                                                                                                                           |
+| Credential        | this app's token, checked by the service                              | "aceita pelo serviço" (green) · "aceita, mas só de leitura — emitida antes de o app enviar nota. Emita outra para poder enviar." (amber) · "nenhuma guardada" · "recusada pelo serviço" (danger) · "não deu para perguntar" |
+| Auto-read minutes | an app preference                                                     | empty = 0 = off; 1 to 4 become 5; 5 and above kept as typed                                                                                                                                                                 |
+| Clients block     | the raw text between the app's markers in the Spook's `settings.toml` | TOML, verbatim, comments included                                                                                                                                                                                           |
 
 - "Configured" = a folder **or** an address is set.
 - A blank address with a folder set means this app's own local Spook
@@ -1107,31 +1110,31 @@ During any Spook gesture it reads "Emitindo…" with a spinner.
 
 **Dialog**
 
-| State | What is drawn |
-|---|---|
-| Loading | "Lendo o arquivo…" |
-| Read failed | the refusal **replaces** the editor; only "Recarregar" is offered |
-| Block absent | the "ainda não tem o bloco" line above the editor |
-| Loaded, unchanged | "Salvar" disabled |
-| Edited | "Salvar" enabled |
-| Saving | "Salvando…" with a spinner |
-| Refused | the refusal strip; the typed text is kept |
+| State             | What is drawn                                                     |
+| ----------------- | ----------------------------------------------------------------- |
+| Loading           | "Lendo o arquivo…"                                                |
+| Read failed       | the refusal **replaces** the editor; only "Recarregar" is offered |
+| Block absent      | the "ainda não tem o bloco" line above the editor                 |
+| Loaded, unchanged | "Salvar" disabled                                                 |
+| Edited            | "Salvar" enabled                                                  |
+| Saving            | "Salvando…" with a spinner                                        |
+| Refused           | the refusal strip; the typed text is kept                         |
 
 ### Actions
 
-| Gesture | Precondition | Effect | Feedback |
-|---|---|---|---|
-| Switch on | local folder, portal user and stored portal password | raises the Spook with the portal login injected (never written to disk) | spinner; no toast; refusal in the strip |
-| Switch off | raised by this app | stops it | spinner; no toast |
-| "Emitir" / "Reemitir" | can be raised from here | issues this app's API token through the Spook's CLI, with portal read **and** write scopes; stores it in the wallet | "Emitindo…"; toast "Credencial emitida e guardada no cofre." |
-| Edit folder, address or user | — | stored; the next poll re-reads them | silent |
-| Type the portal password | non-empty | wallet | badge |
-| "Editar" | folder set | opens the dialog and reads the block from the file **now** | "Lendo o arquivo…" |
-| Minutes | dialog | stored immediately, independent of "Salvar" | silent |
-| Type in the editor | loaded | local text; "Salvar" enables when it differs | — |
-| "Salvar" or `Ctrl+S` | loaded (`Ctrl+S` saves even when nothing changed) | validated on the Rust side; the block is written between the markers, atomically | "Salvando…"; toast "Clientes salvos no settings.toml."; refusal verbatim in the strip |
-| "Recarregar" | not saving | re-reads the file, discarding edits | — |
-| Close (X, `Esc`, click outside) | always | closes; unsaved edits are dropped without warning | — |
+| Gesture                         | Precondition                                         | Effect                                                                                                              | Feedback                                                                              |
+| ------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| Switch on                       | local folder, portal user and stored portal password | raises the Spook with the portal login injected (never written to disk)                                             | spinner; no toast; refusal in the strip                                               |
+| Switch off                      | raised by this app                                   | stops it                                                                                                            | spinner; no toast                                                                     |
+| "Emitir" / "Reemitir"           | can be raised from here                              | issues this app's API token through the Spook's CLI, with portal read **and** write scopes; stores it in the wallet | "Emitindo…"; toast "Credencial emitida e guardada no cofre."                          |
+| Edit folder, address or user    | —                                                    | stored; the next poll re-reads them                                                                                 | silent                                                                                |
+| Type the portal password        | non-empty                                            | wallet                                                                                                              | badge                                                                                 |
+| "Editar"                        | folder set                                           | opens the dialog and reads the block from the file **now**                                                          | "Lendo o arquivo…"                                                                    |
+| Minutes                         | dialog                                               | stored immediately, independent of "Salvar"                                                                         | silent                                                                                |
+| Type in the editor              | loaded                                               | local text; "Salvar" enables when it differs                                                                        | —                                                                                     |
+| "Salvar" or `Ctrl+S`            | loaded (`Ctrl+S` saves even when nothing changed)    | validated on the Rust side; the block is written between the markers, atomically                                    | "Salvando…"; toast "Clientes salvos no settings.toml."; refusal verbatim in the strip |
+| "Recarregar"                    | not saving                                           | re-reads the file, discarding edits                                                                                 | —                                                                                     |
+| Close (X, `Esc`, click outside) | always                                               | closes; unsaved edits are dropped without warning                                                                   | —                                                                                     |
 
 Refusals the dialog can show (verbatim from the Rust side, in English):
 
@@ -1193,6 +1196,7 @@ Service refusals in the panel's strip:
    - a filter of the wrong shape.
 
    An empty block is valid.
+
 7. **Saved means in force on the next portal read**, with no restart.
 8. **The auto-read clock is an app preference: off by default, 5 minutes at
    least** (Bridgr decision 032). Below that, the portal is hammered for no
@@ -1224,7 +1228,7 @@ operator's request.
   stored. Clock: 15.
 - Editor (fictitious ids):
 
-```
+```toml
 # Hospital Vale Verde — só notas aguardando NF
 [default.portals.opmenexo.clients.vale-verde]
 company_id = 71001
@@ -1320,12 +1324,12 @@ section.
 
 ### Data shown
 
-| Field | Meaning | Presentation |
-|---|---|---|
-| State | read from the process table (the monitor has no port) | "…" · "sem pasta configurada" · "baixando" (started by this app, green) · "no ar — subiu fora deste app" (foreign, green) · "parado" (idle) |
+| Field        | Meaning                                                      | Presentation                                                                                                                                                             |
+| ------------ | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| State        | read from the process table (the monitor has no port)        | "…" · "sem pasta configurada" · "baixando" (started by this app, green) · "no ar — subiu fora deste app" (foreign, green) · "parado" (idle)                              |
 | Último ciclo | the monitor's heartbeat, written after each successful cycle | "nenhum ciclo registrado ainda", or "10/09/2026 · 14:31 · 3 notas no ciclo · 1284 ciclos no total" (each piece only when present; numbers without a thousands separator) |
-| Metrics | counters the monitor exports every 10 good cycles | pt-BR thousands; a counter missing from the file is "—", never 0 |
-| Stamp | when that export was written | "exportadas em …" |
+| Metrics      | counters the monitor exports every 10 good cycles            | pt-BR thousands; a counter missing from the file is "—", never 0                                                                                                         |
+| Stamp        | when that export was written                                 | "exportadas em …"                                                                                                                                                        |
 
 ### States
 
@@ -1342,12 +1346,12 @@ Metrics: never exported; partial (dashes); full.
 
 ### Actions
 
-| Gesture | Precondition | Effect | Feedback |
-|---|---|---|---|
-| Switch on | folder set, not running | raises the monitor with the typed values injected (notes folder, pause, user, the password from the wallet) | spinner; no toast; refusal in the strip |
-| Switch off | started by this app | stops it (the only way down: otherwise it keeps downloading after the app closes) | spinner; no toast |
-| Edit fields | — | stored; they take effect at the next rise | silent |
-| Pause field | — | blank, 0 or anything not numeric is stored as 0, meaning the monitor's default | silent |
+| Gesture     | Precondition            | Effect                                                                                                      | Feedback                                |
+| ----------- | ----------------------- | ----------------------------------------------------------------------------------------------------------- | --------------------------------------- |
+| Switch on   | folder set, not running | raises the monitor with the typed values injected (notes folder, pause, user, the password from the wallet) | spinner; no toast; refusal in the strip |
+| Switch off  | started by this app     | stops it (the only way down: otherwise it keeps downloading after the app closes)                           | spinner; no toast                       |
+| Edit fields | —                       | stored; they take effect at the next rise                                                                   | silent                                  |
+| Pause field | —                       | blank, 0 or anything not numeric is stored as 0, meaning the monitor's default                              | silent                                  |
 
 Refusals the strip can show:
 
@@ -1449,16 +1453,16 @@ colinha, the order header the robot needs?
      and a second grammar would force a translation at every filling;
    - footer: "Cancelar" · "Gravar" (floppy icon).
 
-| Field (label) | Catalogue searched | Placeholder (catalogue collected) |
-|---|---|---|
-| Depósito | Depósitos | "código ou nome…" |
-| Cliente | Locais de uso | "código ou nome…" |
-| Comissionado | Comissionados | "código ou nome…" |
-| Tipo Pedido | Tipos de pedido | "código ou nome…" |
-| Tabela | Tabelas de preço | `015` |
-| Depósito do pedido | Depósitos | `2` |
-| Cond. de Venda | Condições de venda | "código ou nome…" |
-| Local de Uso | Locais de uso | "código ou nome…" |
+| Field (label)      | Catalogue searched | Placeholder (catalogue collected) |
+| ------------------ | ------------------ | --------------------------------- |
+| Depósito           | Depósitos          | "código ou nome…"                 |
+| Cliente            | Locais de uso      | "código ou nome…"                 |
+| Comissionado       | Comissionados      | "código ou nome…"                 |
+| Tipo Pedido        | Tipos de pedido    | "código ou nome…"                 |
+| Tabela             | Tabelas de preço   | `015`                             |
+| Depósito do pedido | Depósitos          | `2`                               |
+| Cond. de Venda     | Condições de venda | "código ou nome…"                 |
+| Local de Uso       | Locais de uso      | "código ou nome…"                 |
 
 When a field's catalogue was never collected, its placeholder reads "colete o
 catálogo: <Catálogo>" (for example "colete o catálogo: Comissionados").
@@ -1474,10 +1478,10 @@ fixo no Fantasma."
 
 Pill, computed from the colinha file over **all eight** fields:
 
-| Pill | Condition | Tone |
-|---|---|---|
-| "colinha completa" | all eight filled | green |
-| "colinha incompleta" | some filled, some missing | amber |
+| Pill                  | Condition                         | Tone                                 |
+| --------------------- | --------------------------------- | ------------------------------------ |
+| "colinha completa"    | all eight filled                  | green                                |
+| "colinha incompleta"  | some filled, some missing         | amber                                |
 | "colinha não montada" | none filled, or no colinha at all | quiet grey: absence, never a warning |
 
 The meta line lists the missing fields in the order of the table above, and
@@ -1486,7 +1490,7 @@ only for "incompleta".
 Registry-code field:
 
 - Out of focus, it shows `<code> · <registry name>` (for example `4 ·
-  CONSIGNADO VALE VERDE`). When the catalogue has no name for the code, it
+CONSIGNADO VALE VERDE`). When the catalogue has no name for the code, it
   shows the raw code in mono. The full text is also the hover tooltip.
 - In focus, it shows the raw code, selected. Typing searches code, name and
   alias, with up to 8 hits in a floating list (code in accent mono, then the
@@ -1529,14 +1533,14 @@ While saving, "Gravar" reads "Gravando…" and "Cancelar" is disabled.
 
 ### Actions
 
-| Gesture | Precondition | Effect | Feedback |
-|---|---|---|---|
-| Tick or untick a row | — | shows or hides the adapter in Triagem's menus, stored immediately; extractions are untouched | silent |
-| "Colinha" | — | opens the dialog on a local copy of the stored colinha | — |
-| Type or pick a code | dialog | ↑ ↓ move through the hits, Enter picks, Esc gives up and restores the value, leaving the field commits what was typed | the name appears beside the code, or the unknown warning |
-| "Gravar" | no unknown code | stores the colinha and regenerates the file the robot reads | "Gravando…"; toast "Colinha gravada — o arquivo do Fantasma foi regenerado."; the dialog closes |
-| "Gravar" disabled | an unknown code | tooltip "Há código que não existe no catálogo — enviar errado é pior que não enviar" (when enabled: "Grava a colinha e regenera o arquivo que o Fantasma lê") | — |
-| "Cancelar", or a click outside | — | closes and drops the edits | — |
+| Gesture                        | Precondition    | Effect                                                                                                                                                        | Feedback                                                                                        |
+| ------------------------------ | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| Tick or untick a row           | —               | shows or hides the adapter in Triagem's menus, stored immediately; extractions are untouched                                                                  | silent                                                                                          |
+| "Colinha"                      | —               | opens the dialog on a local copy of the stored colinha                                                                                                        | —                                                                                               |
+| Type or pick a code            | dialog          | ↑ ↓ move through the hits, Enter picks, Esc gives up and restores the value, leaving the field commits what was typed                                         | the name appears beside the code, or the unknown warning                                        |
+| "Gravar"                       | no unknown code | stores the colinha and regenerates the file the robot reads                                                                                                   | "Gravando…"; toast "Colinha gravada — o arquivo do Fantasma foi regenerado."; the dialog closes |
+| "Gravar" disabled              | an unknown code | tooltip "Há código que não existe no catálogo — enviar errado é pior que não enviar" (when enabled: "Grava a colinha e regenera o arquivo que o Fantasma lê") | —                                                                                               |
+| "Cancelar", or a click outside | —               | closes and drops the edits                                                                                                                                    | —                                                                                               |
 
 ### Business rules
 
@@ -1583,27 +1587,27 @@ Row composition, pill shapes, dialog size.
 
 Rows:
 
-| Name | Id and meta line | Pill |
-|---|---|---|
-| Hospital Vale Verde | `vale_verde` | "colinha completa" |
-| Hospital Santa Aurora | `santa_aurora` · "colinha: falta Comissionado, Cond. de Venda" | "colinha incompleta" |
-| Instituto Ortopédico Horizonte | `horizonte` | "colinha não montada" |
-| Hospital Infantil Sol Nascente (unticked) | `sol_nascente` | "colinha não montada" |
+| Name                                      | Id and meta line                                               | Pill                  |
+| ----------------------------------------- | -------------------------------------------------------------- | --------------------- |
+| Hospital Vale Verde                       | `vale_verde`                                                   | "colinha completa"    |
+| Hospital Santa Aurora                     | `santa_aurora` · "colinha: falta Comissionado, Cond. de Venda" | "colinha incompleta"  |
+| Instituto Ortopédico Horizonte            | `horizonte`                                                    | "colinha não montada" |
+| Hospital Infantil Sol Nascente (unticked) | `sol_nascente`                                                 | "colinha não montada" |
 
 Colinha of Vale Verde, with fictitious registry rows. The colinha's numeric
 fields hold plain numbers, so the cast's deposits `01`/`04` appear here as `1`
 and `4`; only Tabela keeps its leading zero.
 
-| Field | Shown |
-|---|---|
-| Depósito | `4 · CONSIGNADO VALE VERDE` |
-| Cliente | `1204 · HOSPITAL VALE VERDE` |
-| Comissionado | `37 · COMERCIAL EXEMPLO` |
-| Tipo Pedido | `7 · CONSIGNAÇÃO OPME` |
-| Tabela | `015 · TABELA OPME` |
-| Depósito do pedido | `2 · CONSIGNADO` |
-| Cond. de Venda | `30 · 30 DIAS` |
-| Local de Uso | `1204 · HOSPITAL VALE VERDE` |
+| Field              | Shown                        |
+| ------------------ | ---------------------------- |
+| Depósito           | `4 · CONSIGNADO VALE VERDE`  |
+| Cliente            | `1204 · HOSPITAL VALE VERDE` |
+| Comissionado       | `37 · COMERCIAL EXEMPLO`     |
+| Tipo Pedido        | `7 · CONSIGNAÇÃO OPME`       |
+| Tabela             | `015 · TABELA OPME`          |
+| Depósito do pedido | `2 · CONSIGNADO`             |
+| Cond. de Venda     | `30 · 30 DIAS`               |
+| Local de Uso       | `1204 · HOSPITAL VALE VERDE` |
 
 Unknown variant: Comissionado `9999`, with "não existe no catálogo de
 Comissionados" and the blocking notice.
@@ -1701,14 +1705,14 @@ None.
 The four service sections here and the [Primeira montagem](15-welcome.md)
 wizard draw the **same components**, so what one writes the other shows.
 
-| Component | In Settings | In the wizard |
-|---|---|---|
-| FolderField | Doca (2), MedLens, Fantasma (2), Spook, NFe Pack (2) | inside the MedLens, Fantasma and Spook fields |
-| SecretField | MedLens (1), Fantasma (2), Spook (1), NFe Pack (1) | MedLens, Fantasma, Spook |
-| ServiceToggle | Sobre (autostart, up to 4), and the MedLens, Fantasma, Spook and NFe Pack cards | the MedLens, Spook and Fantasma cards; also the [NFePackMonitor](12-nfe-pack-monitor.md) console |
-| MedLens panel + fields | panel **above** fields | MedLens step: fields **above** panel |
-| Fantasma panel + fields | panel above fields | Fantasma step: fields above panel |
-| Spook panel + fields | Spook section, plus the clients card (Settings only) | Spook step (the connection only) |
+| Component               | In Settings                                                                     | In the wizard                                                                                    |
+| ----------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| FolderField             | Doca (2), MedLens, Fantasma (2), Spook, NFe Pack (2)                            | inside the MedLens, Fantasma and Spook fields                                                    |
+| SecretField             | MedLens (1), Fantasma (2), Spook (1), NFe Pack (1)                              | MedLens, Fantasma, Spook                                                                         |
+| ServiceToggle           | Sobre (autostart, up to 4), and the MedLens, Fantasma, Spook and NFe Pack cards | the MedLens, Spook and Fantasma cards; also the [NFePackMonitor](12-nfe-pack-monitor.md) console |
+| MedLens panel + fields  | panel **above** fields                                                          | MedLens step: fields **above** panel                                                             |
+| Fantasma panel + fields | panel above fields                                                              | Fantasma step: fields above panel                                                                |
+| Spook panel + fields    | Spook section, plus the clients card (Settings only)                            | Spook step (the connection only)                                                                 |
 
 ### FolderField
 
@@ -1735,25 +1739,25 @@ a button "Escolher" (folder-open icon); a note under it (always present).
 - The field validates nothing. Each service checks its folder when asked to
   rise, and a wrong folder is refused in the card's failure strip:
 
-  | Service | The folder must contain |
-  |---|---|
-  | MedLens | `pyproject.toml` |
-  | Spook | `pyproject.toml` and `src/spook` |
+  | Service        | The folder must contain                   |
+  | -------------- | ----------------------------------------- |
+  | MedLens        | `pyproject.toml`                          |
+  | Spook          | `pyproject.toml` and `src/spook`          |
   | NFePackMonitor | `pyproject.toml` and `src/nfepackmonitor` |
-  | Fantasma | `compose.yaml` or `docker-compose.yml` |
+  | Fantasma       | `compose.yaml` or `docker-compose.yml`    |
 
 ### SecretField
 
 **Anatomy.** A label, plus a small quiet-accent badge "gravada" when a secret
 is stored; a password input (mono, never autocompleted); an optional note.
 
-| State | The input shows |
-|---|---|
-| nothing stored | empty; the format hint as placeholder if the field has one (only the OpenRouter key: `sk-or-v1-…`) |
-| stored | empty, with `••••••••••` as a **placeholder** in firmer ink and letter spacing: it reads like a masked password but is not a value |
-| typing | the typed characters, masked |
-| just saved | empties itself; the badge appears or stays |
-| wallet refused | the section's failure strip (below) |
+| State          | The input shows                                                                                                                    |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| nothing stored | empty; the format hint as placeholder if the field has one (only the OpenRouter key: `sk-or-v1-…`)                                 |
+| stored         | empty, with `••••••••••` as a **placeholder** in firmer ink and letter spacing: it reads like a masked password but is not a value |
+| typing         | the typed characters, masked                                                                                                       |
+| just saved     | empties itself; the badge appears or stays                                                                                         |
+| wallet refused | the section's failure strip (below)                                                                                                |
 
 **Behaviour.**
 
@@ -1786,12 +1790,12 @@ The failure wording differs by section:
 the **ok (green)** role, the same green as the "no ar" state. Off = a neutral
 track.
 
-| State | Drawn |
-|---|---|
-| off / on | thumb left / right |
-| busy | the thumb becomes a spinning notch; locked; the accessible name becomes the busy label ("Ligando…", "Desligando…", "Derrubando…") |
-| disabled | half opacity; the reason as a hover tooltip **when one is given** |
-| focus | accent ring |
+| State    | Drawn                                                                                                                             |
+| -------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| off / on | thumb left / right                                                                                                                |
+| busy     | the thumb becomes a spinning notch; locked; the accessible name becomes the busy label ("Ligando…", "Desligando…", "Derrubando…") |
+| disabled | half opacity; the reason as a hover tooltip **when one is given**                                                                 |
+| focus    | accent ring                                                                                                                       |
 
 **Behaviour.** The switch is **controlled**: it shows the service's state, not
 the click. Flipping it only sends the request and snaps back; the switch moves
@@ -1814,13 +1818,13 @@ The words are the title ("Serviço", "Sessão" or "Credencial") plus " · <state
 in regular weight, an optional version chip, and one or two sub-lines. The
 gesture at the right is a switch or a button.
 
-| Tone | Icon | Card border |
-|---|---|---|
-| idle (stopped, absent, never asked) | neutral grey | normal |
-| ok (up, accepted) | green | normal |
-| starting | amber on MedLens; accent on Fantasma | normal |
-| warn (Spook remote and silent; Spook read-only credential; Fantasma "sem sessão") | amber | amber only on the Fantasma's "sem sessão" |
-| danger (credential refused) | red | red-tinted |
+| Tone                                                                              | Icon                                 | Card border                               |
+| --------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------- |
+| idle (stopped, absent, never asked)                                               | neutral grey                         | normal                                    |
+| ok (up, accepted)                                                                 | green                                | normal                                    |
+| starting                                                                          | amber on MedLens; accent on Fantasma | normal                                    |
+| warn (Spook remote and silent; Spook read-only credential; Fantasma "sem sessão") | amber                                | amber only on the Fantasma's "sem sessão" |
+| danger (credential refused)                                                       | red                                  | red-tinted                                |
 
 - Absence is drawn calm (grey), never in accent.
 - Green appears only after the service answered. "Never asked" shows "…" and

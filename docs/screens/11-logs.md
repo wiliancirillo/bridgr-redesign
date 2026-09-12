@@ -10,12 +10,12 @@ _O que os serviços disseram?_ (`question.logs`; the sentence itself is not draw
 
 Outside the conveyor, and read-only: nothing on this screen changes anything. The operator arrives with a symptom from somewhere else:
 
-| From | Lands on source |
-| --- | --- |
-| Sidebar › Sistema › Logs | Aplicativo |
+| From                                                                                                                                              | Lands on source                                               |
+| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| Sidebar › Sistema › Logs                                                                                                                          | Aplicativo                                                    |
 | [Dashboard](01-dashboard.md), Serviços card: a service's "Logs" door (MedLens and Spook when their block reads up; the Fantasma per its own rule) | `?source=medlens`, `?source=spook`, `?source=fantasmaSession` |
-| [Busca](18-search.md): a hit in "Linhas de log" | `?source=<the hit's source>`: the source only, not the line |
-| [Avisos](17-notices.md): "Ver o histórico completo nos Logs" | Aplicativo |
+| [Busca](18-search.md): a hit in "Linhas de log"                                                                                                   | `?source=<the hit's source>`: the source only, not the line   |
+| [Avisos](17-notices.md): "Ver o histórico completo nos Logs"                                                                                      | Aplicativo                                                    |
 
 The NF-e monitor's full cycle-by-cycle log lives on [NFePackMonitor](12-nfe-pack-monitor.md); here that source shows errors only.
 
@@ -30,55 +30,55 @@ The NF-e monitor's full cycle-by-cycle log lives on [NFePackMonitor](12-nfe-pack
    - a count, right-aligned (see Data shown).
 3. **Body.** One bordered panel in monospace (11.5 px today), one row per line: the line number in a right-aligned 44 px gutter (faint, not selectable), then the text (wraps; long tokens break). Rows tint on hover. **The newest line is at the top.** **[functional]** newest-first order with the number gutter. When there is nothing to show, the panel is replaced by a bordered box with one centred sentence (see States).
 
-| Segment | Hint under the title (verbatim) | What is read | Cut |
-| --- | --- | --- | --- |
-| Aplicativo | "O diário do próprio app — o que aconteceu nesta estação, evento por evento." | the app's own journal: one file per UTC day in the app's data folder | the last 1000 lines across the daily files; files older than 30 days are deleted at startup |
-| MedLens · Serviço | "O log do uvicorn, na pasta do projeto — o que o serviço de leitura disse, cru." | `logs/medlens.log` inside the configured MedLens folder | the last 1000 lines |
-| Spook · Serviço | "Tudo o que o Spook imprimiu — a subida e cada leitura do portal depois dela, cru." | `logs/spook-spawn.log` in the app's data folder: everything printed by the Spook this app raised | the last 1000 lines |
-| NFe Pack · Serviço | "Só os erros do monitor, crus — o log completo, ciclo a ciclo, vive na tela NFePackMonitor." | `logs/nfepackmonitor.log` inside the configured monitor folder | only the lines carrying the logger's own `] [ERROR]` or `] [CRITICAL]` stamp, selected **before** the 1000-line cap |
-| Fantasma · Sessão | "O que este app fez com o robô — ligar, entrar no Everest, derrubar." | `logs/fantasma-session.log` in the app's data folder, written by this app's robot driver | the last 1000 lines |
+| Segment            | Hint under the title (verbatim)                                                              | What is read                                                                                     | Cut                                                                                                                 |
+| ------------------ | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------- |
+| Aplicativo         | "O diário do próprio app — o que aconteceu nesta estação, evento por evento."                | the app's own journal: one file per UTC day in the app's data folder                             | the last 1000 lines across the daily files; files older than 30 days are deleted at startup                         |
+| MedLens · Serviço  | "O log do uvicorn, na pasta do projeto — o que o serviço de leitura disse, cru."             | `logs/medlens.log` inside the configured MedLens folder                                          | the last 1000 lines                                                                                                 |
+| Spook · Serviço    | "Tudo o que o Spook imprimiu — a subida e cada leitura do portal depois dela, cru."          | `logs/spook-spawn.log` in the app's data folder: everything printed by the Spook this app raised | the last 1000 lines                                                                                                 |
+| NFe Pack · Serviço | "Só os erros do monitor, crus — o log completo, ciclo a ciclo, vive na tela NFePackMonitor." | `logs/nfepackmonitor.log` inside the configured monitor folder                                   | only the lines carrying the logger's own `] [ERROR]` or `] [CRITICAL]` stamp, selected **before** the 1000-line cap |
+| Fantasma · Sessão  | "O que este app fez com o robô — ligar, entrar no Everest, derrubar."                        | `logs/fantasma-session.log` in the app's data folder, written by this app's robot driver         | the last 1000 lines                                                                                                 |
 
 ## Data shown
 
-| Field | Meaning | Presentation | Example |
-| --- | --- | --- | --- |
-| Aplicativo line | one journal event | `dd/mm/aaaa hh:mm:ss` (local time, with seconds), two spaces, the event identifier, then ` — detail` when the event has a detail | `09/09/2026 13:58:12  preferences_saved — profile.avatar, profile.avatar_seed` |
-| Event | what happened, as a stored English `snake_case` identifier | shown as stored: not translated, not humanized | `session_locked` |
-| Detail | an optional short English complement | after an em dash | `openrouter_key` |
-| Service line | one line of the service's own file | verbatim, never parsed | see the samples |
-| Line number | position inside the window read: 1 = the oldest line returned | chronological, kept through the newest-first inversion and through the filter. ⚠️ It is not the file's absolute line number: once the file outgrows the 1000-line window, the numbers move with the window. For NFe Pack it counts error lines only | `214` |
-| Count | how many lines the source returned | "N linhas" without a filter, "shown / N linhas" with one; no thousands separator | `214 linhas` · `2 / 214 linhas` |
+| Field           | Meaning                                                       | Presentation                                                                                                                                                                                                                                        | Example                                                                        |
+| --------------- | ------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| Aplicativo line | one journal event                                             | `dd/mm/aaaa hh:mm:ss` (local time, with seconds), two spaces, the event identifier, then ` — detail` when the event has a detail                                                                                                                    | `09/09/2026 13:58:12  preferences_saved — profile.avatar, profile.avatar_seed` |
+| Event           | what happened, as a stored English `snake_case` identifier    | shown as stored: not translated, not humanized                                                                                                                                                                                                      | `session_locked`                                                               |
+| Detail          | an optional short English complement                          | after an em dash                                                                                                                                                                                                                                    | `openrouter_key`                                                               |
+| Service line    | one line of the service's own file                            | verbatim, never parsed                                                                                                                                                                                                                              | see the samples                                                                |
+| Line number     | position inside the window read: 1 = the oldest line returned | chronological, kept through the newest-first inversion and through the filter. ⚠️ It is not the file's absolute line number: once the file outgrows the 1000-line window, the numbers move with the window. For NFe Pack it counts error lines only | `214`                                                                          |
+| Count           | how many lines the source returned                            | "N linhas" without a filter, "shown / N linhas" with one; no thousands separator                                                                                                                                                                    | `214 linhas` · `2 / 214 linhas`                                                |
 
 ## States
 
-| State | Trigger | What is drawn |
-| --- | --- | --- |
-| Empty: Aplicativo | journal absent or empty | "Nada registrado ainda. Os eventos do app aparecem aqui conforme acontecem." |
-| Empty: MedLens · Serviço | no folder configured, or the service never rose (no file) | "Sem o serviço ter subido nesta máquina, não há arquivo — o log do uvicorn nasce na primeira subida." |
-| Empty: Spook · Serviço | this app never raised the Spook (no file) | "Este app nunca subiu o Spook nesta máquina — um Spook de outra pessoa escreve o log dela, não aqui." |
-| Empty: NFe Pack · Serviço | no folder, no file, or no error line in it | "Nenhum erro no log do monitor — o log completo, ciclo a ciclo, vive na tela NFePackMonitor." |
-| Empty: Fantasma · Sessão | the robot was never driven from this machine (no file) | "O robô nunca foi dirigido desta máquina — as linhas nascem no primeiro Ligar." |
-| Filtered to nothing | the source has lines and the filter matches none | "Nenhuma linha passa no filtro." The count reads `0 / N linhas` and Copiar is disabled |
-| Service not configured | the MedLens or monitor folder is blank | the source's empty sentence: the screen does not tell "not configured" from "no file" |
-| Before the first read answers | the screen just opened | the current source's empty sentence; there is no "reading…" state (the reads are local files and answer quickly) |
-| Following (default) | toggle on | re-read every 2 s; whenever the number of shown lines changes, the panel scrolls back to the top |
-| Not following | toggle off | nothing is re-read until "Reler" |
-| Copied | the clipboard accepted | "Copiado" for 1.5 s, then "Copiar" again; a refused clipboard changes nothing, and clicking again is the retry |
-| Read refused | a read rejects (possible only when the app's own data or configuration folder is unavailable) | no error state is drawn; the previous lines stay |
-| Narrow window | — | no breakpoint: the header and toolbar never wrap (the filter is 320 px wide and the five segments do not shrink), so check 1024 px |
+| State                         | Trigger                                                                                       | What is drawn                                                                                                                      |
+| ----------------------------- | --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| Empty: Aplicativo             | journal absent or empty                                                                       | "Nada registrado ainda. Os eventos do app aparecem aqui conforme acontecem."                                                       |
+| Empty: MedLens · Serviço      | no folder configured, or the service never rose (no file)                                     | "Sem o serviço ter subido nesta máquina, não há arquivo — o log do uvicorn nasce na primeira subida."                              |
+| Empty: Spook · Serviço        | this app never raised the Spook (no file)                                                     | "Este app nunca subiu o Spook nesta máquina — um Spook de outra pessoa escreve o log dela, não aqui."                              |
+| Empty: NFe Pack · Serviço     | no folder, no file, or no error line in it                                                    | "Nenhum erro no log do monitor — o log completo, ciclo a ciclo, vive na tela NFePackMonitor."                                      |
+| Empty: Fantasma · Sessão      | the robot was never driven from this machine (no file)                                        | "O robô nunca foi dirigido desta máquina — as linhas nascem no primeiro Ligar."                                                    |
+| Filtered to nothing           | the source has lines and the filter matches none                                              | "Nenhuma linha passa no filtro." The count reads `0 / N linhas` and Copiar is disabled                                             |
+| Service not configured        | the MedLens or monitor folder is blank                                                        | the source's empty sentence: the screen does not tell "not configured" from "no file"                                              |
+| Before the first read answers | the screen just opened                                                                        | the current source's empty sentence; there is no "reading…" state (the reads are local files and answer quickly)                   |
+| Following (default)           | toggle on                                                                                     | re-read every 2 s; whenever the number of shown lines changes, the panel scrolls back to the top                                   |
+| Not following                 | toggle off                                                                                    | nothing is re-read until "Reler"                                                                                                   |
+| Copied                        | the clipboard accepted                                                                        | "Copiado" for 1.5 s, then "Copiar" again; a refused clipboard changes nothing, and clicking again is the retry                     |
+| Read refused                  | a read rejects (possible only when the app's own data or configuration folder is unavailable) | no error state is drawn; the previous lines stay                                                                                   |
+| Narrow window                 | —                                                                                             | no breakpoint: the header and toolbar never wrap (the filter is 320 px wide and the five segments do not shrink), so check 1024 px |
 
 ## Actions
 
-| Gesture | Where | Precondition | Effect | Feedback |
-| --- | --- | --- | --- | --- |
-| Choose a source | segmented control | — | reads that source at once and restarts the 2 s follow; the filter text is kept; the URL is not rewritten | the hint line and the pressed segment change |
-| Filter | toolbar field | — | keeps the lines whose drawn text contains the typed text, case-insensitive (for Aplicativo the stamp, event and detail are all searchable); lines are not renumbered | the count becomes `shown / N linhas` |
-| Clear the filter | the X inside the field | the field holds text | empties it | — |
-| `Ctrl ⇧ K` | anywhere on the screen | — | focuses and selects the filter | — |
-| Reler | toolbar | — | one re-read of the current source | none (no spinner); the lines just change |
-| Seguir / Seguindo | toolbar | — | toggles the 2 s re-read and the pin to the top | label and tint |
-| Copiar | toolbar | at least one line shown | copies the shown lines' text: filtered, newest first, one per line, **without** the numbers | "Copiado" for 1.5 s |
-| Deep link | the URL's `?source=` with `app`, `medlens`, `spook`, `nfepack` or `fantasmaSession` | — | opens on that source; any other value opens Aplicativo; read once, when the screen opens | — |
+| Gesture           | Where                                                                               | Precondition            | Effect                                                                                                                                                               | Feedback                                     |
+| ----------------- | ----------------------------------------------------------------------------------- | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
+| Choose a source   | segmented control                                                                   | —                       | reads that source at once and restarts the 2 s follow; the filter text is kept; the URL is not rewritten                                                             | the hint line and the pressed segment change |
+| Filter            | toolbar field                                                                       | —                       | keeps the lines whose drawn text contains the typed text, case-insensitive (for Aplicativo the stamp, event and detail are all searchable); lines are not renumbered | the count becomes `shown / N linhas`         |
+| Clear the filter  | the X inside the field                                                              | the field holds text    | empties it                                                                                                                                                           | —                                            |
+| `Ctrl ⇧ K`        | anywhere on the screen                                                              | —                       | focuses and selects the filter                                                                                                                                       | —                                            |
+| Reler             | toolbar                                                                             | —                       | one re-read of the current source                                                                                                                                    | none (no spinner); the lines just change     |
+| Seguir / Seguindo | toolbar                                                                             | —                       | toggles the 2 s re-read and the pin to the top                                                                                                                       | label and tint                               |
+| Copiar            | toolbar                                                                             | at least one line shown | copies the shown lines' text: filtered, newest first, one per line, **without** the numbers                                                                          | "Copiado" for 1.5 s                          |
+| Deep link         | the URL's `?source=` with `app`, `medlens`, `spook`, `nfepack` or `fantasmaSession` | —                       | opens on that source; any other value opens Aplicativo; read once, when the screen opens                                                                             | —                                            |
 
 No gesture here writes anything, so there is no confirmation and nothing to undo.
 
@@ -115,7 +115,7 @@ The source picker's form (segments, tabs, a list, a select); where the toolbar s
 
 Aplicativo, newest first (the event names are real identifiers; the stamps are fictitious):
 
-```
+```text
 214  09/09/2026 14:32:07  notice_posted — nfepack_errors
 213  09/09/2026 14:05:51  bill_queued
 212  09/09/2026 13:58:12  preferences_saved — profile.avatar, profile.avatar_seed
@@ -128,7 +128,7 @@ Aplicativo, newest first (the event names are real identifiers; the stamps are f
 
 Service sources. ⚠️ The exact line formats of the services were not verified; draw them as opaque text:
 
-```
+```text
 NFe Pack · Serviço   [2026-09-09 14:31:58] [ERROR] Authentication failed
 MedLens · Serviço    INFO:     127.0.0.1:51822 - "GET /health HTTP/1.1" 200 OK
 ```

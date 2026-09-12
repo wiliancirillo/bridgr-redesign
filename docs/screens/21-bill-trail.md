@@ -23,18 +23,18 @@ question is "e agora?"). A **Do começo** control reverses it and keeps the day 
 
 Each line is four columns:
 
-| Column | Width | Holds |
-| --- | --- | --- |
-| time | 56 px | `HH:MM`, mono |
-| actor | 83 px | initials + name for a person, icon + name for a service |
-| spine | 23 px | the dot, with a halo in the page colour |
-| body | rest | what happened, plus an embedded block when there is one |
+| Column | Width | Holds                                                   |
+| ------ | ----- | ------------------------------------------------------- |
+| time   | 56 px | `HH:MM`, mono                                           |
+| actor  | 83 px | initials + name for a person, icon + name for a service |
+| spine  | 23 px | the dot, with a halo in the page colour                 |
+| body   | rest  | what happened, plus an embedded block when there is one |
 
 **The actor comes before the act.** It is the first question in front of a strange bill: did
 the robot do this alone, or did somebody tell it to?
 
-Dot tones, the same four as everywhere: neutral *something happened*, accent *something
-arrived*, amber *a person decided*, green *a person checked*.
+Dot tones, the same four as everywhere: neutral _something happened_, accent _something
+arrived_, amber _a person decided_, green _a person checked_.
 
 ## Embedded blocks
 
@@ -59,8 +59,8 @@ closing the story with "provavelmente deu certo".
 3. **A short trail is not an empty state.** A bill that arrived today has two lines and no
    apology; the last line says where it stopped moving on its own.
 4. **Refusals come first, verbatim** — `selado: o arquivo do registro está ilegível — o selo
-   não confere`; `selado: esta conta não existe mais`; `a peça desta conta saiu da doca — a
-   trilha para na extração`. The last is the most common: the piece was deleted from
+não confere`; `selado: esta conta não existe mais`; `a peça desta conta saiu da doca — a
+trilha para na extração`. The last is the most common: the piece was deleted from
    Ignorados and took the beginning of the story with it.
 
 ## Sample data
@@ -68,8 +68,7 @@ closing the story with "provavelmente deu certo".
 JOÃO CARLOS PRADO · atend. 2026004602 · Hospital Vale Verde · AMPARO SAÚDE · uso 02/09/2026 ·
 7 items · faturada, nota 100246. Trail: file arrived 09/09 09:12 (MailBridgr,
 faturamento@valeverde.example) → MedLens read 7 items 14:28 → gate held 14:31 (1 item with no
-ERP code) → 3 corrections 14:43 → approved 14:47 → delivered 14:51 → run 1 partial 15:04 (5 of
-7) → 2 lots delivered 10/09 11:40 → run 2 13:58 → note downloaded 14:02 → invoiced 14:05.
+ERP code) → 3 corrections 14:43 → approved 14:47 → delivered 14:51 → run 1 partial 15:04 (5 of 7) → 2 lots delivered 10/09 11:40 → run 2 13:58 → note downloaded 14:02 → invoiced 14:05.
 
 ## What this needs that does not exist yet
 

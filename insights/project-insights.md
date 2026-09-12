@@ -522,7 +522,7 @@ translate when those files are next touched, not as a sweep.
   values, so a custom accent keeps Breeze-blue sorted headers and numeric
   cells.
 - **No bundled typeface** — Verified: `--font-body: Inter, system-ui,
-  sans-serif` with no font file in the app (CSP allows only local fonts), so
+sans-serif` with no font file in the app (CSP allows only local fonts), so
   the face depends on the machine.
 - **Two byte formatters disagree** — Verified: `OrderDialog.shownSize` ("kB",
   dot) vs `format.shownBytes` ("KB", comma).

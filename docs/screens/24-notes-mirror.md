@@ -22,14 +22,14 @@ exists precisely to name where the two disagree.
 
 ## The two mirrors
 
-| What is wanted | ERP mirror | Notes mirror | Which decides |
-| --- | --- | --- | --- |
-| Description and unit | today's registry | what was invoiced | **ERP mirror** |
-| The material exists in the registry | all of them | only the invoiced ones | **ERP mirror** |
-| Lot, fabrication, validity | — | per note item | **notes** (no competition) |
-| Quantity and price that left | price table only | what was charged | **notes** |
-| Which client got which lot | — | yes | **notes** |
-| How current it is | last collection | last note read | both stamps stay visible |
+| What is wanted                      | ERP mirror       | Notes mirror           | Which decides              |
+| ----------------------------------- | ---------------- | ---------------------- | -------------------------- |
+| Description and unit                | today's registry | what was invoiced      | **ERP mirror**             |
+| The material exists in the registry | all of them      | only the invoiced ones | **ERP mirror**             |
+| Lot, fabrication, validity          | —                | per note item          | **notes** (no competition) |
+| Quantity and price that left        | price table only | what was charged       | **notes**                  |
+| Which client got which lot          | —                | yes                    | **notes**                  |
+| How current it is                   | last collection  | last note read         | both stamps stay visible   |
 
 **Where the notes replace a Everest consult:** lot, validity, quantity sent, price charged,
 who received. The ERP mirror never had those fields — a query to find a lot is a query that
@@ -41,7 +41,7 @@ and it is exactly the one the gate must find when approving a new bill.
 ## Anatomy
 
 - **Header**: notes read, materials, lots, and the period covered. The primary button reads
-  **"Ler as notas novas"** with a line under it: *não passa pelo Fantasma*.
+  **"Ler as notas novas"** with a line under it: _não passa pelo Fantasma_.
 - **Tabs**: Materiais · Lotes · Notas.
 - **The grid** (the house grid): código · descrição na nota mais recente · unidade · ANVISA ·
   notas · lotes · **contra o espelho**. Opening a row expands it inline with the lots

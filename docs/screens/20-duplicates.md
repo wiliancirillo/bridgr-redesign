@@ -17,19 +17,19 @@ second invoice. That is the failure this screen exists to prevent.
 
 ## Two kinds of duplicate, two designs
 
-| | Cold case | Dangerous case |
-| --- | --- | --- |
-| What happened | neither reading was ever sent | one reading has a pedido in the Everest |
-| The decision | which reading follows the belt | what to re-send, and into which pedido |
-| Tone | accent — nothing is written to the ERP | amber — the gesture writes to the ERP |
-| Reversible | yes, the other piece goes to Ignorados | no |
+|               | Cold case                              | Dangerous case                          |
+| ------------- | -------------------------------------- | --------------------------------------- |
+| What happened | neither reading was ever sent          | one reading has a pedido in the Everest |
+| The decision  | which reading follows the belt         | what to re-send, and into which pedido  |
+| Tone          | accent — nothing is written to the ERP | amber — the gesture writes to the ERP   |
+| Reversible    | yes, the other piece goes to Ignorados | no                                      |
 
 Treating them alike is what produced the eleven bills invoiced twice.
 
 ## The bench — three panels, always in this order
 
 1. **O que o sistema trouxe** — the two MedLens readings side by side, with a middle column
-   naming *what differs* (atendimento, item count, file). The operator ticks which one holds.
+   naming _what differs_ (atendimento, item count, file). The operator ticks which one holds.
 2. **O que eu tentei enviar** — every run, **lot by lot**, with the Everest's answer verbatim.
    This is the panel that answers "what already exists"; without it the adjustment is a guess.
 3. **O ajuste** — the lots as an editable grid (depósito, quantity), with the ones the Everest
@@ -43,7 +43,7 @@ Treating them alike is what produced the eleven bills invoiced twice.
    already built (`SELECT … FROM Pedido WHERE cd_paciente = '…' AND dt_uso = '…'`) and a
    manual "registrar o desfecho à mão".
 2. **"A conta inteira" with an existing pedido demands the pedido number**, typed, of the one
-   the operator cancelled in the Everest. The path exists — sometimes the pedido *was*
+   the operator cancelled in the Everest. The path exists — sometimes the pedido _was_
    cancelled — but it costs typing: the difference between a decision and a click.
 3. **The Fantasma busy or without a session queues the send**, it never denies it. The robot's
    refusal stays the final truth.
@@ -71,7 +71,7 @@ MARTA LEMOS FERREIRA, uso 01/09/2026, two readings: `lote_setembro_01.pdf` (aten
 ## What this needs that does not exist yet
 
 1. **The Everest's answer per lot, stored.** Billing records the bill's outcome; panel 2
-   needs the line for each lot — that is what says what *not* to re-send.
+   needs the line for each lot — that is what says what _not_ to re-send.
 2. **A partial send in the Fantasma.** Today the queue takes a whole bill. "Incluir no pedido
    existente" is a new robot gesture; without it the only honest path is cancel-and-resend.
 3. **The resolved pair, with a reason.** Two ids and a short text, no patient name.

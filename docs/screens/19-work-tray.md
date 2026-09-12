@@ -3,8 +3,7 @@
 > Where: a handle in the status bar, right of the service blocks; it opens a drawer
 > above the toast stack. No sidebar item and no route — the tray is part of the shell.
 >
-> **Status: proposed.** Designed in the reborn deck (`Bridgr Reborn - Bandeja de
-> trabalho.dc.html`), not built. Nothing in `docs/04-shell.md` describes it yet.
+> **Status: proposed.** Designed in the reborn deck (`Bridgr Reborn - Bandeja de trabalho.dc.html`), not built. Nothing in `docs/04-shell.md` describes it yet.
 
 ## The question
 
@@ -21,11 +20,11 @@ where it was.
 Sits in the status bar, after the five service blocks, before the PIN block. Three
 states, and only these:
 
-| State | Reads | Tone |
-| --- | --- | --- |
-| something in flight | "2 em voo · 3 pedem gente" | accent, with a tinted pill |
-| nothing in flight, something waiting | "3 pedem gente" | amber text, no fill |
-| nothing at all | "Em voo · nada em voo agora" | muted, dimmed |
+| State                                | Reads                        | Tone                       |
+| ------------------------------------ | ---------------------------- | -------------------------- |
+| something in flight                  | "2 em voo · 3 pedem gente"   | accent, with a tinted pill |
+| nothing in flight, something waiting | "3 pedem gente"              | amber text, no fill        |
+| nothing at all                       | "Em voo · nada em voo agora" | muted, dimmed              |
 
 The handle is the only part of the status bar that keeps its words in a narrow window
 (the service blocks drop to icons below 980 px): it is the one block that counts work

@@ -15,15 +15,15 @@ waiting for a human — and toasts — feedback of an act just done
 
 Present on every route. Two situations reduce it:
 
-| Piece                                                | Normal | Wizard `/welcome`                           | Locked window                           |
-| ---------------------------------------------------- | ------ | ------------------------------------------- | --------------------------------------- |
-| Titlebar: logo, name, "· context", window controls    | ✓      | ✓ (context "· Primeira montagem")           | ✓ (context of the route behind the lock) |
-| Search field                                         | ✓      | absent                                      | absent                                  |
-| Bell                                                 | ✓      | absent                                      | drawn, disabled                         |
-| User button and menu                                 | ✓      | absent                                      | drawn, disabled                         |
-| Sidebar                                              | ✓      | absent                                      | absent (the whole body is replaced)     |
-| Status bar                                           | ✓      | absent                                      | absent                                  |
-| Toasts                                               | ✓      | ✓                                           | absent                                  |
+| Piece                                              | Normal | Wizard `/welcome`                 | Locked window                            |
+| -------------------------------------------------- | ------ | --------------------------------- | ---------------------------------------- |
+| Titlebar: logo, name, "· context", window controls | ✓      | ✓ (context "· Primeira montagem") | ✓ (context of the route behind the lock) |
+| Search field                                       | ✓      | absent                            | absent                                   |
+| Bell                                               | ✓      | absent                            | drawn, disabled                          |
+| User button and menu                               | ✓      | absent                            | drawn, disabled                          |
+| Sidebar                                            | ✓      | absent                            | absent (the whole body is replaced)      |
+| Status bar                                         | ✓      | absent                            | absent                                   |
+| Toasts                                             | ✓      | ✓                                 | absent                                   |
 
 The wizard is in [screens/15-welcome.md](screens/15-welcome.md); the locked
 window in [screens/16-profile-and-lock.md](screens/16-profile-and-lock.md).
@@ -112,24 +112,24 @@ window is short. Groups in this order; each group after the first opens with
 an uppercase **kicker** (9.5 px, wide tracking, 40 % ink) followed by a
 hairline that fades to transparent over 48 px. The first group has no kicker.
 
-| Kicker            | Label (verbatim)  | Route                               | Icon                     | Extras                                                             |
-| ----------------- | ----------------- | ----------------------------------- | ------------------------ | ------------------------------------------------------------------ |
-| —                 | Dashboard         | `/dashboard`                        | `ph-gauge`               |                                                                    |
-| **Esteira**       | Triagem           | `/triage`                           | `ph-tray-arrow-down`     |                                                                    |
-|                   | Revisão           | `/review`, `/review/[id]`           | `ph-check-square-offset` |                                                                    |
-|                   | Faturamento       | `/billing`                          | `ph-receipt`             |                                                                    |
-| **Fora da esteira** | Ignorados       | `/discarded`                        | `ph-archive`             |                                                                    |
-|                   | Consulta          | `/query`                            | `ph-brackets-curly`      | parent, fold caret                                                 |
-|                   | └ Relatórios      | `/sheets`, `/sheets/[id]`           | `ph-chart-bar`           | sub-item of Consulta                                               |
-|                   | Catálogos         | `/catalogs`                         | `ph-table`               | parent, fold caret                                                 |
-|                   | └ Listas          | `/shortlists`, `/shortlists/[id]`   | `ph-list-checks`         | sub-item of Catálogos                                              |
-| **Sistema**       | Configurações     | `/settings`                         | `ph-gear-six`            |                                                                    |
-|                   | Logs              | `/logs`                             | `ph-terminal-window`     |                                                                    |
-| **Ideias futuras** | NFePackMonitor   | `/nfe-pack-monitor`                 | `ph-receipt-x`           | needs the monitor's folder (disabled otherwise)                    |
-|                   | Inpart Saúde      | `/inpart`                           | `ph-first-aid-kit`       | badge "estudo"                                                     |
-|                   | Opmenexo          | `/opmenexo`                         | `ph-plugs-connected`     | needs the Spook: a folder **or** an address (disabled otherwise)   |
-|                   | Duplicidades      | `/duplicates`                       | `ph-copy-simple`         | badge "estudo"                                                     |
-|                   | Costantini        | `/costantini`                       | `ph-buildings`           | badge "estudo"                                                     |
+| Kicker              | Label (verbatim) | Route                             | Icon                     | Extras                                                           |
+| ------------------- | ---------------- | --------------------------------- | ------------------------ | ---------------------------------------------------------------- |
+| —                   | Dashboard        | `/dashboard`                      | `ph-gauge`               |                                                                  |
+| **Esteira**         | Triagem          | `/triage`                         | `ph-tray-arrow-down`     |                                                                  |
+|                     | Revisão          | `/review`, `/review/[id]`         | `ph-check-square-offset` |                                                                  |
+|                     | Faturamento      | `/billing`                        | `ph-receipt`             |                                                                  |
+| **Fora da esteira** | Ignorados        | `/discarded`                      | `ph-archive`             |                                                                  |
+|                     | Consulta         | `/query`                          | `ph-brackets-curly`      | parent, fold caret                                               |
+|                     | └ Relatórios     | `/sheets`, `/sheets/[id]`         | `ph-chart-bar`           | sub-item of Consulta                                             |
+|                     | Catálogos        | `/catalogs`                       | `ph-table`               | parent, fold caret                                               |
+|                     | └ Listas         | `/shortlists`, `/shortlists/[id]` | `ph-list-checks`         | sub-item of Catálogos                                            |
+| **Sistema**         | Configurações    | `/settings`                       | `ph-gear-six`            |                                                                  |
+|                     | Logs             | `/logs`                           | `ph-terminal-window`     |                                                                  |
+| **Ideias futuras**  | NFePackMonitor   | `/nfe-pack-monitor`               | `ph-receipt-x`           | needs the monitor's folder (disabled otherwise)                  |
+|                     | Inpart Saúde     | `/inpart`                         | `ph-first-aid-kit`       | badge "estudo"                                                   |
+|                     | Opmenexo         | `/opmenexo`                       | `ph-plugs-connected`     | needs the Spook: a folder **or** an address (disabled otherwise) |
+|                     | Duplicidades     | `/duplicates`                     | `ph-copy-simple`         | badge "estudo"                                                   |
+|                     | Costantini       | `/costantini`                     | `ph-buildings`           | badge "estudo"                                                   |
 
 Destinations with no sidebar item: `/profile` (user menu), `/welcome` (the
 first-assembly door), `/notices` (the bell), `/search` (the titlebar field).
@@ -187,47 +187,47 @@ icon (12 px, coloured by tone) + name (78 % ink, weight 500) + a sentence
 washes the whole block (the state colour at 11 %). Clicking a block opens that
 service's section of Configurações ([screens/10-settings.md](screens/10-settings.md)).
 
-| Block      | Icon                                            | Opens                     | Tooltip (verbatim)                                                        |
-| ---------- | ----------------------------------------------- | ------------------------- | ------------------------------------------------------------------------- |
-| MailBridgr | `ph-tray`                                       | Configurações › Doca      | "MailBridgr entrega; a Doca vigia quando existir. Abre Configurações · Doca" |
-| MedLens    | `ph-eye` when ok, `ph-eye-slash` otherwise      | Configurações › MedLens   | "MedLens — os olhos da esteira. Abre Configurações · MedLens"              |
-| Fantasma   | `ph-robot`                                      | Configurações › Fantasma  | "Fantasma — as mãos no Everest. Abre Configurações · Fantasma"             |
-| Spook      | `ph-plugs-connected`                            | Configurações › Spook     | "Spook — os portais. Abre Configurações · Spook"                          |
-| NFe Pack   | `ph-receipt`                                    | Configurações › NFe Pack  | "NFePackMonitor — as notas do portal ACOM. Abre Configurações · NFe Pack"  |
+| Block      | Icon                                       | Opens                    | Tooltip (verbatim)                                                           |
+| ---------- | ------------------------------------------ | ------------------------ | ---------------------------------------------------------------------------- |
+| MailBridgr | `ph-tray`                                  | Configurações › Doca     | "MailBridgr entrega; a Doca vigia quando existir. Abre Configurações · Doca" |
+| MedLens    | `ph-eye` when ok, `ph-eye-slash` otherwise | Configurações › MedLens  | "MedLens — os olhos da esteira. Abre Configurações · MedLens"                |
+| Fantasma   | `ph-robot`                                 | Configurações › Fantasma | "Fantasma — as mãos no Everest. Abre Configurações · Fantasma"               |
+| Spook      | `ph-plugs-connected`                       | Configurações › Spook    | "Spook — os portais. Abre Configurações · Spook"                             |
+| NFe Pack   | `ph-receipt`                               | Configurações › NFe Pack | "NFePackMonitor — as notas do portal ACOM. Abre Configurações · NFe Pack"    |
 
 **The sentences, and the tone each one takes** (the single source is
 `service-blocks.ts`; the Dashboard's Serviços card draws the same ones —
 [screens/01-dashboard.md](screens/01-dashboard.md)):
 
-| Block      | Condition                                                           | Sentence                              | Tone   |
-| ---------- | ------------------------------------------------------------------- | ------------------------------------- | ------ |
-| MailBridgr | the profile's e-mail was confirmed by code                          | "canal confirmado · doca a caminho"   | ok     |
-|            | otherwise                                                           | "doca ainda não vigiada"              | idle   |
-| MedLens    | no answer yet                                                       | "…"                                   | idle   |
-|            | starting                                                            | "subindo…"                            | busy   |
-|            | up, credential refused                                              | "sem credencial — 401 em tudo"        | warn   |
-|            | up (ours)                                                           | "no ar"                               | ok     |
-|            | up, raised outside the app                                          | "no ar · de fora do app"              | ok     |
-|            | stopped                                                             | "parado"                              | idle   |
-| Fantasma   | folders, user names or credentials missing (checked first)          | "falta configurar"                    | warn   |
-|            | no answer yet                                                       | "…"                                   | idle   |
-|            | working right now (overrides every state below)                     | "ocupado"                             | busy   |
-|            | container up and ERP logged in                                      | "pronto"                              | ok     |
-|            | container up, no ERP session                                        | "sem sessão"                          | warn   |
-|            | starting / shutting down                                            | "subindo…" / "desligando…"            | busy   |
-|            | raised by another program                                           | "de fora do app"                      | idle   |
-|            | off                                                                 | "parado"                              | idle   |
-| Spook      | no answer yet                                                       | "…"                                   | idle   |
-|            | not configured                                                      | "sem endereço"                        | idle   |
-|            | this app could raise it, not answering                              | "parado"                              | idle   |
-|            | configured elsewhere, not answering                                 | "sem resposta"                        | warn   |
-|            | answering, credential refused                                       | "credencial recusada"                 | danger |
-|            | answering, no credential stored                                     | "sem credencial"                      | warn   |
-|            | answering                                                           | "no ar"                               | ok     |
-| NFe Pack   | no answer yet                                                       | "…"                                   | idle   |
-|            | no folder                                                           | "sem pasta"                           | idle   |
-|            | running (ours / raised outside the app)                             | "baixando" / "baixando · de fora do app" | ok  |
-|            | not running                                                         | "parado"                              | idle   |
+| Block      | Condition                                                  | Sentence                                 | Tone   |
+| ---------- | ---------------------------------------------------------- | ---------------------------------------- | ------ |
+| MailBridgr | the profile's e-mail was confirmed by code                 | "canal confirmado · doca a caminho"      | ok     |
+|            | otherwise                                                  | "doca ainda não vigiada"                 | idle   |
+| MedLens    | no answer yet                                              | "…"                                      | idle   |
+|            | starting                                                   | "subindo…"                               | busy   |
+|            | up, credential refused                                     | "sem credencial — 401 em tudo"           | warn   |
+|            | up (ours)                                                  | "no ar"                                  | ok     |
+|            | up, raised outside the app                                 | "no ar · de fora do app"                 | ok     |
+|            | stopped                                                    | "parado"                                 | idle   |
+| Fantasma   | folders, user names or credentials missing (checked first) | "falta configurar"                       | warn   |
+|            | no answer yet                                              | "…"                                      | idle   |
+|            | working right now (overrides every state below)            | "ocupado"                                | busy   |
+|            | container up and ERP logged in                             | "pronto"                                 | ok     |
+|            | container up, no ERP session                               | "sem sessão"                             | warn   |
+|            | starting / shutting down                                   | "subindo…" / "desligando…"               | busy   |
+|            | raised by another program                                  | "de fora do app"                         | idle   |
+|            | off                                                        | "parado"                                 | idle   |
+| Spook      | no answer yet                                              | "…"                                      | idle   |
+|            | not configured                                             | "sem endereço"                           | idle   |
+|            | this app could raise it, not answering                     | "parado"                                 | idle   |
+|            | configured elsewhere, not answering                        | "sem resposta"                           | warn   |
+|            | answering, credential refused                              | "credencial recusada"                    | danger |
+|            | answering, no credential stored                            | "sem credencial"                         | warn   |
+|            | answering                                                  | "no ar"                                  | ok     |
+| NFe Pack   | no answer yet                                              | "…"                                      | idle   |
+|            | no folder                                                  | "sem pasta"                              | idle   |
+|            | running (ours / raised outside the app)                    | "baixando" / "baixando · de fora do app" | ok     |
+|            | not running                                                | "parado"                                 | idle   |
 
 Tones today: ok = green icon; warn = amber icon + amber wash; danger = red
 icon + red wash; busy = accent icon; idle = icon at 38 % ink. The block names
@@ -286,75 +286,75 @@ Full description: [screens/16-profile-and-lock.md](screens/16-profile-and-lock.m
 
 ## Data shown
 
-| Element               | Source                                       | Presentation rule                                             | Example                                  |
-| --------------------- | -------------------------------------------- | ------------------------------------------------------------- | ---------------------------------------- |
-| "· context"           | the route                                    | the destination's label; blank for an unknown route           | "· Revisão"                              |
-| First name            | profile name, first word                     | "Sem nome" (quiet) when blank                                 | "Camila"                                 |
-| Face                  | profile avatar mode + seed + stored photo    | photo › drawn style › initials › person glyph                 | CR                                       |
-| Menu header           | profile name and role                        | role line absent when blank                                   | "Camila Duarte Rocha" / "Faturista OPME" |
-| Bell badge            | unread notices ([17](screens/17-notices.md)) | hidden at zero                                                | 3                                        |
-| Menu's way out        | the wallet: is a PIN stored?                 | "Encerrar sessão" (PIN) / "Encerrar o app" (no PIN)           |                                          |
-| Service sentences     | the five statuses (table above)              | "…" until the first answer                                    | "no ar"                                  |
-| "PIN ativo"           | the wallet                                   | absent without a PIN, and until the wallet answers            | "PIN ativo"                              |
-| Version               | the app itself                               | absent until read                                             | "v0.1.0"                                 |
-| Disabled / dimmed item | stored configuration / live status          | disabled = never configured; dimmed = configured, not running |                                          |
+| Element                | Source                                       | Presentation rule                                             | Example                                  |
+| ---------------------- | -------------------------------------------- | ------------------------------------------------------------- | ---------------------------------------- |
+| "· context"            | the route                                    | the destination's label; blank for an unknown route           | "· Revisão"                              |
+| First name             | profile name, first word                     | "Sem nome" (quiet) when blank                                 | "Camila"                                 |
+| Face                   | profile avatar mode + seed + stored photo    | photo › drawn style › initials › person glyph                 | CR                                       |
+| Menu header            | profile name and role                        | role line absent when blank                                   | "Camila Duarte Rocha" / "Faturista OPME" |
+| Bell badge             | unread notices ([17](screens/17-notices.md)) | hidden at zero                                                | 3                                        |
+| Menu's way out         | the wallet: is a PIN stored?                 | "Encerrar sessão" (PIN) / "Encerrar o app" (no PIN)           |                                          |
+| Service sentences      | the five statuses (table above)              | "…" until the first answer                                    | "no ar"                                  |
+| "PIN ativo"            | the wallet                                   | absent without a PIN, and until the wallet answers            | "PIN ativo"                              |
+| Version                | the app itself                               | absent until read                                             | "v0.1.0"                                 |
+| Disabled / dimmed item | stored configuration / live status           | disabled = never configured; dimmed = configured, not running |                                          |
 
 **Counters:** the bell badge is the only count in the shell. The sidebar has
 none; the status bar has none.
 
 ## States
 
-| State                         | Trigger                                    | What is drawn                                                                                              |
-| ----------------------------- | ------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| Windowed                      | default                                    | rounded corners + hairline border                                                                          |
-| Maximized                     | Maximizar, or the desktop                  | square corners, no border; middle control shows `ph-corners-in` "Restaurar"                                 |
-| Narrow window                 | ≤ 1180 px wide, mode "Automática"          | the rail; the context and first name ellipsize; the search field shrinks                                   |
-| Compact density               | Configurações › Aparência                  | smaller chrome (sizes above)                                                                               |
-| Dark / light / palette        | Aparência or the desktop                   | tokens repaint; state colours keep their meaning                                                           |
-| First moments after start     | nothing answered yet                       | sentences "…" (the Fantasma block says "falta configurar" instead when it is not configured); no "PIN ativo"; no version; no dimmed icons |
-| No profile name               | profile never filled                       | "Sem nome" in quiet ink, person glyph                                                                      |
-| Service never configured      | configuration                              | sidebar item disabled with its reason; idle sentence ("sem endereço", "sem pasta"); the Fantasma's is the amber "falta configurar" |
-| Service stopped               | live status                                | sidebar icon dimmed; "parado"                                                                              |
-| Service raised elsewhere      | live status                                | "· de fora do app" suffix, or "de fora do app" for the Fantasma                                            |
-| Service starting / busy       | live status                                | accent icon, "subindo…", "ocupado", "desligando…"                                                          |
-| Needs attention               | live status                                | amber or red wash on that block                                                                            |
-| Menu or bell open             | click                                      | popover under the control; closes on outside click or Esc                                                 |
-| Search focused                | click or Ctrl K                            | accent-tinted border, `kbd` hidden                                                                         |
-| Wizard                        | `/welcome`                                 | reduced shell (table at the top)                                                                           |
-| Locked                        | PIN lock                                   | titlebar + lock screen; bell and user button disabled; no search                                           |
-| Preference not written        | disk refused                               | the change stays for the session; danger toast                                                             |
+| State                     | Trigger                           | What is drawn                                                                                                                             |
+| ------------------------- | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| Windowed                  | default                           | rounded corners + hairline border                                                                                                         |
+| Maximized                 | Maximizar, or the desktop         | square corners, no border; middle control shows `ph-corners-in` "Restaurar"                                                               |
+| Narrow window             | ≤ 1180 px wide, mode "Automática" | the rail; the context and first name ellipsize; the search field shrinks                                                                  |
+| Compact density           | Configurações › Aparência         | smaller chrome (sizes above)                                                                                                              |
+| Dark / light / palette    | Aparência or the desktop          | tokens repaint; state colours keep their meaning                                                                                          |
+| First moments after start | nothing answered yet              | sentences "…" (the Fantasma block says "falta configurar" instead when it is not configured); no "PIN ativo"; no version; no dimmed icons |
+| No profile name           | profile never filled              | "Sem nome" in quiet ink, person glyph                                                                                                     |
+| Service never configured  | configuration                     | sidebar item disabled with its reason; idle sentence ("sem endereço", "sem pasta"); the Fantasma's is the amber "falta configurar"        |
+| Service stopped           | live status                       | sidebar icon dimmed; "parado"                                                                                                             |
+| Service raised elsewhere  | live status                       | "· de fora do app" suffix, or "de fora do app" for the Fantasma                                                                           |
+| Service starting / busy   | live status                       | accent icon, "subindo…", "ocupado", "desligando…"                                                                                         |
+| Needs attention           | live status                       | amber or red wash on that block                                                                                                           |
+| Menu or bell open         | click                             | popover under the control; closes on outside click or Esc                                                                                 |
+| Search focused            | click or Ctrl K                   | accent-tinted border, `kbd` hidden                                                                                                        |
+| Wizard                    | `/welcome`                        | reduced shell (table at the top)                                                                                                          |
+| Locked                    | PIN lock                          | titlebar + lock screen; bell and user button disabled; no search                                                                          |
+| Preference not written    | disk refused                      | the change stays for the session; danger toast                                                                                            |
 
 ## Actions
 
-| Gesture                  | Where                         | Precondition / disabled reason                               | Effect                                                                 | Confirmation | Reversible                            | Feedback              | Shortcut                            |
-| ------------------------ | ----------------------------- | ------------------------------------------------------------ | ---------------------------------------------------------------------- | ------------ | ------------------------------------- | --------------------- | ----------------------------------- |
-| Drag                     | titlebar, non-interactive parts | —                                                          | moves the window                                                       | —            | yes                                   | —                     | —                                   |
-| Double-click             | titlebar                      | unverified: the drag-region default of the window toolkit (toggle maximize) | —                                                     | —            | —                                     | —                     | —                                   |
-| Minimizar                | window controls               | —                                                            | minimizes                                                              | —            | yes                                   | —                     | —                                   |
-| Maximizar / Restaurar    | window controls               | —                                                            | toggles maximized                                                      | —            | yes                                   | corners change        | —                                   |
-| Fechar                   | window controls               | —                                                            | with a PIN stored: locks first (the lock is kept on disk), then closes; without: closes | none | a PIN-locked close reopens locked | —                     | —                                   |
-| Search                   | titlebar field                | not in the wizard, not locked; a blank term does nothing     | opens `/search` with the term                                          | —            | Esc on the results returns            | results screen        | Ctrl K focuses and selects; Enter runs; Esc leaves the field |
-| Bell                     | titlebar                      | disabled under the lock; absent in the wizard                | opens the notices panel                                                | —            | —                                     | —                     | Esc closes                          |
-| User button              | titlebar                      | disabled under the lock; absent in the wizard                | opens the menu                                                         | —            | —                                     | —                     | Esc closes                          |
-| Perfil / Preferências / Configurações | user menu        | —                                                            | navigates (Preferências lands on Aparência)                            | —            | —                                     | —                     | —                                   |
-| Encerrar sessão          | user menu (PIN stored)        | —                                                            | locks the window now                                                   | none         | unlock with the PIN or the MailBridgr code | the lock screen  | —                                   |
-| Encerrar o app           | user menu (no PIN)            | —                                                            | closes the app                                                         | none         | relaunch                              | —                     | —                                   |
-| Sidebar item             | sidebar                       | disabled items do nothing; the reason is on hover            | navigates                                                              | —            | —                                     | the lit line moves    | —                                   |
-| Fold caret               | parent rows                   | absent in the rail                                           | shows / hides the sub-items                                            | —            | yes (session only)                    | caret turns           | —                                   |
-| Service block            | status bar                    | —                                                            | opens that service's Configurações section                             | —            | —                                     | —                     | —                                   |
-| "PIN ativo"              | status bar                    | only while a PIN is stored                                   | opens the Perfil                                                       | —            | —                                     | —                     | —                                   |
-| Version                  | status bar                    | once read                                                    | opens Configurações (Sobre)                                            | —            | —                                     | —                     | —                                   |
-| Toast                    | bottom-right                  | —                                                            | dismisses it                                                           | —            | —                                     | —                     | —                                   |
+| Gesture                               | Where                           | Precondition / disabled reason                                              | Effect                                                                                  | Confirmation | Reversible                                 | Feedback           | Shortcut                                                     |
+| ------------------------------------- | ------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | ------------ | ------------------------------------------ | ------------------ | ------------------------------------------------------------ |
+| Drag                                  | titlebar, non-interactive parts | —                                                                           | moves the window                                                                        | —            | yes                                        | —                  | —                                                            |
+| Double-click                          | titlebar                        | unverified: the drag-region default of the window toolkit (toggle maximize) | —                                                                                       | —            | —                                          | —                  | —                                                            |
+| Minimizar                             | window controls                 | —                                                                           | minimizes                                                                               | —            | yes                                        | —                  | —                                                            |
+| Maximizar / Restaurar                 | window controls                 | —                                                                           | toggles maximized                                                                       | —            | yes                                        | corners change     | —                                                            |
+| Fechar                                | window controls                 | —                                                                           | with a PIN stored: locks first (the lock is kept on disk), then closes; without: closes | none         | a PIN-locked close reopens locked          | —                  | —                                                            |
+| Search                                | titlebar field                  | not in the wizard, not locked; a blank term does nothing                    | opens `/search` with the term                                                           | —            | Esc on the results returns                 | results screen     | Ctrl K focuses and selects; Enter runs; Esc leaves the field |
+| Bell                                  | titlebar                        | disabled under the lock; absent in the wizard                               | opens the notices panel                                                                 | —            | —                                          | —                  | Esc closes                                                   |
+| User button                           | titlebar                        | disabled under the lock; absent in the wizard                               | opens the menu                                                                          | —            | —                                          | —                  | Esc closes                                                   |
+| Perfil / Preferências / Configurações | user menu                       | —                                                                           | navigates (Preferências lands on Aparência)                                             | —            | —                                          | —                  | —                                                            |
+| Encerrar sessão                       | user menu (PIN stored)          | —                                                                           | locks the window now                                                                    | none         | unlock with the PIN or the MailBridgr code | the lock screen    | —                                                            |
+| Encerrar o app                        | user menu (no PIN)              | —                                                                           | closes the app                                                                          | none         | relaunch                                   | —                  | —                                                            |
+| Sidebar item                          | sidebar                         | disabled items do nothing; the reason is on hover                           | navigates                                                                               | —            | —                                          | the lit line moves | —                                                            |
+| Fold caret                            | parent rows                     | absent in the rail                                                          | shows / hides the sub-items                                                             | —            | yes (session only)                         | caret turns        | —                                                            |
+| Service block                         | status bar                      | —                                                                           | opens that service's Configurações section                                              | —            | —                                          | —                  | —                                                            |
+| "PIN ativo"                           | status bar                      | only while a PIN is stored                                                  | opens the Perfil                                                                        | —            | —                                          | —                  | —                                                            |
+| Version                               | status bar                      | once read                                                                   | opens Configurações (Sobre)                                                             | —            | —                                          | —                  | —                                                            |
+| Toast                                 | bottom-right                    | —                                                                           | dismisses it                                                                            | —            | —                                          | —                  | —                                                            |
 
 **Global keyboard** — these are all the app-wide bindings:
 
-| Keys                  | Where it works                           | Effect                                                                 |
-| --------------------- | ---------------------------------------- | ---------------------------------------------------------------------- |
-| `Ctrl K`              | unlocked, outside the wizard             | focuses and selects the search field — plain `Ctrl K` only             |
-| `Enter` / `Esc`       | in the search field                      | runs the search / leaves the field                                     |
-| `Esc`                 | anywhere                                 | closes the user menu and the bell panel                                |
-| `Ctrl ⇧ K`            | a screen with a filter                   | that screen's filter ([05-components.md](05-components.md)) — never the shell's |
-| `0`–`9`, `⌫`, `Enter` | the locked window                        | types, erases and submits the PIN                                      |
+| Keys                  | Where it works               | Effect                                                                          |
+| --------------------- | ---------------------------- | ------------------------------------------------------------------------------- |
+| `Ctrl K`              | unlocked, outside the wizard | focuses and selects the search field — plain `Ctrl K` only                      |
+| `Enter` / `Esc`       | in the search field          | runs the search / leaves the field                                              |
+| `Esc`                 | anywhere                     | closes the user menu and the bell panel                                         |
+| `Ctrl ⇧ K`            | a screen with a filter       | that screen's filter ([05-components.md](05-components.md)) — never the shell's |
+| `0`–`9`, `⌫`, `Enter` | the locked window            | types, erases and submits the PIN                                               |
 
 No binding exists for Configurações, for locking, or for a shortcuts overlay.
 

@@ -37,18 +37,19 @@ Two columns filling the window under the titlebar.
   number; the step's icon instead of the number on the current step, with an
   accent border and ink), the label, and a one-line summary under it.
 
-  | # | Label (verbatim) | Summary (verbatim)                    | Icon on the current disc |
-  | - | ---------------- | ------------------------------------- | ------------------------ |
-  | 1 | Você             | quem assina o que passa aqui          | `ph-user-circle`         |
-  | 2 | MedLens          | os olhos — lê os anexos               | `ph-eye`                 |
-  | 3 | Spook            | Portais — opcional                    | `ph-plugs-connected`     |
-  | 4 | Fantasma         | as mãos — lança no Everest            | `ph-robot`               |
-  | 5 | Tudo pronto?     | o que a esteira já consegue fazer     | `ph-flag-checkered`      |
+  | #   | Label (verbatim) | Summary (verbatim)                | Icon on the current disc |
+  | --- | ---------------- | --------------------------------- | ------------------------ |
+  | 1   | Você             | quem assina o que passa aqui      | `ph-user-circle`         |
+  | 2   | MedLens          | os olhos — lê os anexos           | `ph-eye`                 |
+  | 3   | Spook            | Portais — opcional                | `ph-plugs-connected`     |
+  | 4   | Fantasma         | as mãos — lança no Everest        | `ph-robot`               |
+  | 5   | Tudo pronto?     | o que a esteira já consegue fazer | `ph-flag-checkered`      |
 
   A step that cannot be reached yet is drawn at 45 % and disabled, with the
   tooltip "Faltam campos nos passos anteriores.". Completed steps carry no mark
   of their own today — the rail shows only "current", "reachable" and
   "unreachable".
+
 - **Rail foot — development builds only**: "Ver o app sem montar nada"
   (`ph-arrow-right`) and under it "O app abre, mas nada será lido nem
   lançado." In an installed (production) build this block does not exist.
@@ -176,29 +177,29 @@ para o app"** (`ph-arrow-right`).
 **State pills — stored facts only** (config and the wallet's yes/no), never a
 live service state:
 
-| Step         | Condition                                              | Pill (verbatim)          | Tone  |
-| ------------ | ------------------------------------------------------ | ------------------------ | ----- |
-| Você         | the e-mail was confirmed by code                       | "e-mail confirmado"      | ok    |
-|              | name and e-mail both blank                             | "sem conta"              | idle  |
-|              | otherwise                                              | "e-mail não confirmado"  | idle  |
-| MedLens      | the wallet holds the OpenRouter key                    | "chave gravada"          | ok    |
-|              | otherwise                                              | "sem chave"              | idle  |
-| Spook        | address blank                                          | "em branco"              | idle  |
-|              | address filled and a Spook credential stored           | "endereço e token"       | ok    |
-|              | address filled, no credential                          | "falta o token"          | warn  |
-| Fantasma     | every Fantasma field and both credentials present      | "campos completos"       | ok    |
-|              | otherwise                                              | "faltam campos"          | idle  |
-| Tudo pronto? | always                                                 | "montagem parcial"       | warn  |
+| Step         | Condition                                         | Pill (verbatim)         | Tone |
+| ------------ | ------------------------------------------------- | ----------------------- | ---- |
+| Você         | the e-mail was confirmed by code                  | "e-mail confirmado"     | ok   |
+|              | name and e-mail both blank                        | "sem conta"             | idle |
+|              | otherwise                                         | "e-mail não confirmado" | idle |
+| MedLens      | the wallet holds the OpenRouter key               | "chave gravada"         | ok   |
+|              | otherwise                                         | "sem chave"             | idle |
+| Spook        | address blank                                     | "em branco"             | idle |
+|              | address filled and a Spook credential stored      | "endereço e token"      | ok   |
+|              | address filled, no credential                     | "falta o token"         | warn |
+| Fantasma     | every Fantasma field and both credentials present | "campos completos"      | ok   |
+|              | otherwise                                         | "faltam campos"         | idle |
+| Tudo pronto? | always                                            | "montagem parcial"      | warn |
 
 **What each step requires** (one function answers every gate):
 
-| Step     | Complete when                                                                                              |
-| -------- | ---------------------------------------------------------------------------------------------------------- |
-| Você     | name, role and e-mail are filled — the **confirmation is not required**                                   |
-| MedLens  | folder filled, OpenRouter key stored in the wallet, primary and secondary model filled                     |
-| Spook    | the address and a stored Spook credential are **both present or both absent** — half is refused           |
-| Fantasma | project folder, queue folder, RDP user, Everest user filled; RDP and Everest credentials stored            |
-| Finish   | the four above together                                                                                    |
+| Step     | Complete when                                                                                   |
+| -------- | ----------------------------------------------------------------------------------------------- |
+| Você     | name, role and e-mail are filled — the **confirmation is not required**                         |
+| MedLens  | folder filled, OpenRouter key stored in the wallet, primary and secondary model filled          |
+| Spook    | the address and a stored Spook credential are **both present or both absent** — half is refused |
+| Fantasma | project folder, queue folder, RDP user, Everest user filled; RDP and Everest credentials stored |
+| Finish   | the four above together                                                                         |
 
 While the wallet has not answered, every step that needs it counts as
 incomplete — never assumed complete.
@@ -207,46 +208,46 @@ incomplete — never assumed complete.
 
 ## States
 
-| State                         | Trigger                                              | What is drawn                                                                                       |
-| ----------------------------- | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| First open                    | nothing stored                                       | step 1, pill "sem conta", "Avançar" disabled, steps 2–5 disabled in the rail                        |
-| Step incomplete               | a required fact missing                              | "Avançar" disabled, tooltip "Preencha os campos deste passo para avançar."                           |
-| Step unreachable              | an earlier step incomplete                           | rail step at 45 %, tooltip "Faltam campos nos passos anteriores."                                    |
-| Reopened on a later launch    | assembly not finished                                | starts at step 1; stored fields are already filled; the rail lets the operator jump ahead          |
-| E-mail blank                  | —                                                    | "Confirmar e-mail" disabled                                                                         |
-| Code panel: waiting           | no code generated yet                                | "Aguardando o código ser gerado no Thunderbird…" (re-checked every 2 s while the panel is open)     |
-| Code panel: other address     | the code was generated for a different e-mail        | the other-e-mail sentence; no field                                                                 |
-| Code panel: expired           | the code's 5 minutes passed                          | "O código expirou — gere outro no Thunderbird."                                                     |
-| Code panel: ready             | a valid code is pending                              | "Código" field + "Confirmar" (disabled while blank or while checking)                               |
-| Wrong code                    | attempt failed                                       | "Código errado — restam 3 tentativas." (the number is the attempts left); the typed code stays      |
-| Attempts exhausted            | fifth failure                                        | "Tentativas esgotadas. Gere um código novo no Thunderbird."                                         |
-| No pending code               | confirmed with nothing pending                       | "Nenhum código pendente — gere um no Thunderbird."                                                  |
-| Could not check               | the app could not read its own data                  | the system's message, verbatim                                                                      |
-| Confirmed                     | right code                                           | panel closes; the button becomes "e-mail confirmado"; pill turns green                             |
-| Wallet refused                | the system wallet refused a secret                   | "O cofre recusou: {motivo}"                                                                          |
-| Service cards                 | the live services                                    | as in [10-settings.md](10-settings.md) (starting, up, foreign, stopped, refused credential…)         |
-| Last step                     | steps 1–4 complete                                   | summary rows; pill "montagem parcial" (amber) in every case; "Ir para o app" enabled                |
-| Development build             | —                                                    | the skip block in the rail foot                                                                     |
-| Already assembled             | finished before                                      | never drawn — `/welcome` redirects to the Dashboard                                                 |
-| Unreadable configuration      | the settings file cannot be read                     | treated as a first run: the wizard opens                                                            |
-| Narrow window (1024 px)       | —                                                    | same layout: the rail keeps 296 px, field pairs stay side by side                                   |
+| State                      | Trigger                                       | What is drawn                                                                                   |
+| -------------------------- | --------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| First open                 | nothing stored                                | step 1, pill "sem conta", "Avançar" disabled, steps 2–5 disabled in the rail                    |
+| Step incomplete            | a required fact missing                       | "Avançar" disabled, tooltip "Preencha os campos deste passo para avançar."                      |
+| Step unreachable           | an earlier step incomplete                    | rail step at 45 %, tooltip "Faltam campos nos passos anteriores."                               |
+| Reopened on a later launch | assembly not finished                         | starts at step 1; stored fields are already filled; the rail lets the operator jump ahead       |
+| E-mail blank               | —                                             | "Confirmar e-mail" disabled                                                                     |
+| Code panel: waiting        | no code generated yet                         | "Aguardando o código ser gerado no Thunderbird…" (re-checked every 2 s while the panel is open) |
+| Code panel: other address  | the code was generated for a different e-mail | the other-e-mail sentence; no field                                                             |
+| Code panel: expired        | the code's 5 minutes passed                   | "O código expirou — gere outro no Thunderbird."                                                 |
+| Code panel: ready          | a valid code is pending                       | "Código" field + "Confirmar" (disabled while blank or while checking)                           |
+| Wrong code                 | attempt failed                                | "Código errado — restam 3 tentativas." (the number is the attempts left); the typed code stays  |
+| Attempts exhausted         | fifth failure                                 | "Tentativas esgotadas. Gere um código novo no Thunderbird."                                     |
+| No pending code            | confirmed with nothing pending                | "Nenhum código pendente — gere um no Thunderbird."                                              |
+| Could not check            | the app could not read its own data           | the system's message, verbatim                                                                  |
+| Confirmed                  | right code                                    | panel closes; the button becomes "e-mail confirmado"; pill turns green                          |
+| Wallet refused             | the system wallet refused a secret            | "O cofre recusou: {motivo}"                                                                     |
+| Service cards              | the live services                             | as in [10-settings.md](10-settings.md) (starting, up, foreign, stopped, refused credential…)    |
+| Last step                  | steps 1–4 complete                            | summary rows; pill "montagem parcial" (amber) in every case; "Ir para o app" enabled            |
+| Development build          | —                                             | the skip block in the rail foot                                                                 |
+| Already assembled          | finished before                               | never drawn — `/welcome` redirects to the Dashboard                                             |
+| Unreadable configuration   | the settings file cannot be read              | treated as a first run: the wizard opens                                                        |
+| Narrow window (1024 px)    | —                                             | same layout: the rail keeps 296 px, field pairs stay side by side                               |
 
 ## Actions
 
-| Gesture                           | Where                    | Precondition / disabled reason                                          | Effect                                                                                                   | Confirmation | Reversible                                          | Feedback                                                    | Shortcut          |
-| --------------------------------- | ------------------------ | ----------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | ------------ | --------------------------------------------------- | ----------------------------------------------------------- | ----------------- |
-| Type in a field                   | any step                 | —                                                                       | saved when the field is left (or Enter), trimmed; no Save button                                         | —            | edit again (here, or later in Configurações/Perfil) | the pill and gates update                                   | —                 |
-| Change the e-mail                 | Você                     | —                                                                       | saves it and **clears** its confirmation                                                                 | —            | confirm again                                       | pill back to "e-mail não confirmado"                        | —                 |
-| Confirmar e-mail                  | Você                     | e-mail filled; panel not already open                                   | opens the code panel and starts watching for a code                                                      | —            | Cancelar                                            | panel states                                                | —                 |
-| Confirmar (code)                  | code panel               | a code typed; not already checking                                      | verified by the app; on success stamps the confirmation                                                  | —            | —                                                   | verdict line, or the panel closes                           | Enter in the field |
-| Cancelar                          | code panel               | —                                                                       | closes the panel, stops watching                                                                         | —            | reopen                                              | —                                                           | —                 |
-| Type a secret                     | secret fields            | a blank field never writes                                              | stored in the system wallet; the field empties itself                                                    | —            | type a new one                                      | badge "gravada"; for the key, toasts about where it reached | —                 |
-| Escolher                          | folder fields            | —                                                                       | the desktop's folder chooser, titled with the field's label; cancelling keeps the value                  | —            | —                                                   | danger toast with the system's message if it fails          | —                 |
-| Service switch, Emitir, Derrubar  | service panels           | see [10-settings.md](10-settings.md)                                    | raise/stop the service, issue a credential                                                               | Derrubar asks inline | —                                          | toasts and card states                                      | —                 |
-| Step in the rail                  | rail                     | reachable only when every earlier step is complete                      | jumps to that step                                                                                       | —            | —                                                   | —                                                           | —                 |
-| Voltar / Avançar                  | footer                   | Voltar off on step 1; Avançar only when the current step is complete    | previous / next step                                                                                     | —            | —                                                   | —                                                           | —                 |
-| Ir para o app                     | footer, step 5           | the whole assembly complete (re-checked at the click)                   | records the finish, journals it, opens the Dashboard; from now on the app opens on the Dashboard        | none         | **no** — the wizard never returns; fields stay editable in Configurações and Perfil | the Dashboard                        | —                 |
-| Ver o app sem montar nada         | rail foot (dev builds)   | —                                                                       | opens the Dashboard for **this session only**; the next launch knocks again                              | —            | —                                                   | —                                                           | —                 |
+| Gesture                          | Where                  | Precondition / disabled reason                                       | Effect                                                                                           | Confirmation         | Reversible                                                                          | Feedback                                                    | Shortcut           |
+| -------------------------------- | ---------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | -------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------- | ------------------ |
+| Type in a field                  | any step               | —                                                                    | saved when the field is left (or Enter), trimmed; no Save button                                 | —                    | edit again (here, or later in Configurações/Perfil)                                 | the pill and gates update                                   | —                  |
+| Change the e-mail                | Você                   | —                                                                    | saves it and **clears** its confirmation                                                         | —                    | confirm again                                                                       | pill back to "e-mail não confirmado"                        | —                  |
+| Confirmar e-mail                 | Você                   | e-mail filled; panel not already open                                | opens the code panel and starts watching for a code                                              | —                    | Cancelar                                                                            | panel states                                                | —                  |
+| Confirmar (code)                 | code panel             | a code typed; not already checking                                   | verified by the app; on success stamps the confirmation                                          | —                    | —                                                                                   | verdict line, or the panel closes                           | Enter in the field |
+| Cancelar                         | code panel             | —                                                                    | closes the panel, stops watching                                                                 | —                    | reopen                                                                              | —                                                           | —                  |
+| Type a secret                    | secret fields          | a blank field never writes                                           | stored in the system wallet; the field empties itself                                            | —                    | type a new one                                                                      | badge "gravada"; for the key, toasts about where it reached | —                  |
+| Escolher                         | folder fields          | —                                                                    | the desktop's folder chooser, titled with the field's label; cancelling keeps the value          | —                    | —                                                                                   | danger toast with the system's message if it fails          | —                  |
+| Service switch, Emitir, Derrubar | service panels         | see [10-settings.md](10-settings.md)                                 | raise/stop the service, issue a credential                                                       | Derrubar asks inline | —                                                                                   | toasts and card states                                      | —                  |
+| Step in the rail                 | rail                   | reachable only when every earlier step is complete                   | jumps to that step                                                                               | —                    | —                                                                                   | —                                                           | —                  |
+| Voltar / Avançar                 | footer                 | Voltar off on step 1; Avançar only when the current step is complete | previous / next step                                                                             | —                    | —                                                                                   | —                                                           | —                  |
+| Ir para o app                    | footer, step 5         | the whole assembly complete (re-checked at the click)                | records the finish, journals it, opens the Dashboard; from now on the app opens on the Dashboard | none                 | **no** — the wizard never returns; fields stay editable in Configurações and Perfil | the Dashboard                                               | —                  |
+| Ver o app sem montar nada        | rail foot (dev builds) | —                                                                    | opens the Dashboard for **this session only**; the next launch knocks again                      | —                    | —                                                                                   | —                                                           | —                  |
 
 ## Business rules
 

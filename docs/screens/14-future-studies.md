@@ -6,11 +6,11 @@
 
 Each room states the question its study would answer, verbatim:
 
-| Route          | Label (sidebar and title) | Question on screen                                              |
-| -------------- | ------------------------- | --------------------------------------------------------------- |
-| `/inpart`      | Inpart Saúde              | "Estudo: o que a Inpart Saúde precisa daqui."                   |
-| `/duplicates`  | Duplicidades              | "Estudo: procurar duplicidade para trás, não só no portão."     |
-| `/costantini`  | Costantini                | "Estudo: o que o Costantini precisa daqui."                     |
+| Route         | Label (sidebar and title) | Question on screen                                          |
+| ------------- | ------------------------- | ----------------------------------------------------------- |
+| `/inpart`     | Inpart Saúde              | "Estudo: o que a Inpart Saúde precisa daqui."               |
+| `/duplicates` | Duplicidades              | "Estudo: procurar duplicidade para trás, não só no portão." |
+| `/costantini` | Costantini                | "Estudo: o que o Costantini precisa daqui."                 |
 
 ## Where it sits in the work
 
@@ -36,6 +36,7 @@ screens and studies ([../04-shell.md](../04-shell.md)).
   3. a quiet line: **"Esta tela ainda não foi construída."** (11 px).
 
   Nothing else: no data, no button, no illustration.
+
 - The shell is complete around it: the item lit in the sidebar with its badge
   still showing, the titlebar context "· Duplicidades" (etc.), the window title
   "Bridgr Pro · Duplicidades".

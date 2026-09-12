@@ -38,13 +38,13 @@ The header always carries two stamps: whether the month is still running ("12 de
 
 Five numbers that must close, with what fell out written under each:
 
-| Step | Sample | Under it |
-| --- | --- | --- |
-| Chegaram | 74 | peças na doca |
-| Viraram conta | 68 | 3 não foram lidas · 3 postas de lado |
-| Aprovadas | 51 | 9 não conferidas · 5 no portão · 3 não enviar |
-| Faturadas | 41 | conferidas no Everest |
-| Em aberto | 24 | + 3 fechadas por decisão |
+| Step          | Sample | Under it                                      |
+| ------------- | ------ | --------------------------------------------- |
+| Chegaram      | 74     | peças na doca                                 |
+| Viraram conta | 68     | 3 não foram lidas · 3 postas de lado          |
+| Aprovadas     | 51     | 9 não conferidas · 5 no portão · 3 não enviar |
+| Faturadas     | 41     | conferidas no Everest                         |
+| Em aberto     | 24     | + 3 fechadas por decisão                      |
 
 `41 + 24 + 3 = 68`. **The arithmetic must close**: on a closing screen the first thing the
 operator does is add the columns.

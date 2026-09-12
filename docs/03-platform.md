@@ -18,14 +18,14 @@ Pro (`src/app.css`, `src/lib/theme.svelte.ts`, `src-tauri/tauri.conf.json`,
 
 ## The window
 
-| Fact                  | Value                                                                                    |
-| --------------------- | ---------------------------------------------------------------------------------------- |
-| Default size          | 1440 × 900                                                                               |
-| Minimum size          | 1024 × 768                                                                               |
-| Decorations           | none from the system: the app draws its own titlebar in HTML, draggable, with its own window controls |
-| Shadow                | drawn by **GTK** (client-side decorations), never by the app                             |
-| Corners               | rounded by CSS on the root element (today 8 px), squared when maximized, tiled or fullscreen |
-| Sidebar               | folds into a narrow icon rail below **1180 px** of window width (and by preference)      |
+| Fact         | Value                                                                                                 |
+| ------------ | ----------------------------------------------------------------------------------------------------- |
+| Default size | 1440 × 900                                                                                            |
+| Minimum size | 1024 × 768                                                                                            |
+| Decorations  | none from the system: the app draws its own titlebar in HTML, draggable, with its own window controls |
+| Shadow       | drawn by **GTK** (client-side decorations), never by the app                                          |
+| Corners      | rounded by CSS on the root element (today 8 px), squared when maximized, tiled or fullscreen          |
+| Sidebar      | folds into a narrow icon rail below **1180 px** of window width (and by preference)                   |
 
 ⚠️ **Never a `box-shadow` on the window itself.** Drawing the shadow inside an
 oversized transparent window (a "halo") breaks snapping, tiling, maximize and
@@ -69,7 +69,7 @@ are:
 - Today's font stack is `Inter, system-ui, sans-serif`, and ⚠️ **Inter is not
   bundled** — it renders only where it is installed; elsewhere the desktop's
   default face appears. The monospace stack (`ui-monospace, "SF Mono",
-  "JetBrains Mono", Menlo, monospace`) is not bundled either. A typeface the
+"JetBrains Mono", Menlo, monospace`) is not bundled either. A typeface the
   new design depends on must be bundled with the app.
 - Icons are **Phosphor**, bundled as a web font, in the regular and fill
   weights (bold is not shipped). A different set must also be bundled.
@@ -105,18 +105,18 @@ delivered in this shape.
 
 Keep the roles (or propose a mapping to new ones); the values are free.
 
-| Group            | Tokens                                                                                     | Role                                                                   |
-| ---------------- | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------- |
-| Base             | `--color-bg`, `--color-surface`, `--color-text`, `--color-divider`, `--color-accent`       | ground, raised surface, ink, lines, interaction                        |
-| Accent ramp      | `--color-accent-200/300/400/700/900`                                                       | sorted header, numeric cells, tints; flips between dark and light      |
-| Neutral ramp     | `--color-neutral-100/200/300/400/600/700/800/900`                                           | text on tinted fills, quiet fills, hairlines; flips between themes     |
-| State roles      | `--st-warn`, `--st-danger`, `--st-ok`, each with `-fg` (text on tint) and `-bg` (the tint)  | human needed · destructive/failed · somebody checked                   |
-| Document viewer  | `--desk`, `--desk-inner`, `--paper`, `--paper-ink`, `--paper-rule`, `--paper-band`, `--paper-dim` | the surface a document lies on (darker than the ground); the sheet |
-| Misc             | `--fill-quiet`, `--barra` (scrollbar thumb), `--code-ink`, `--brand-spark` (the logo's sparkle — brand, not state) | |
-| Type             | `--font-body`, `--font-heading`, `--mono`, `--font-body-size`                              |                                                                        |
-| Space            | `--space-1` … `--space-6`                                                                  | one compact scale                                                      |
-| Shape            | `--radius-sm/md/lg`; `--shadow-sm/md/lg`                                                   | radius 4 / 8 / 14 today; elevation for menus and dialogs only          |
-| Chrome sizes     | `--titlebar-h`, `--sidebar-w`, `--rail-w`, `--nav-item-y`                                  | tokens so density reaches the frame too                                |
+| Group           | Tokens                                                                                                             | Role                                                               |
+| --------------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| Base            | `--color-bg`, `--color-surface`, `--color-text`, `--color-divider`, `--color-accent`                               | ground, raised surface, ink, lines, interaction                    |
+| Accent ramp     | `--color-accent-200/300/400/700/900`                                                                               | sorted header, numeric cells, tints; flips between dark and light  |
+| Neutral ramp    | `--color-neutral-100/200/300/400/600/700/800/900`                                                                  | text on tinted fills, quiet fills, hairlines; flips between themes |
+| State roles     | `--st-warn`, `--st-danger`, `--st-ok`, each with `-fg` (text on tint) and `-bg` (the tint)                         | human needed · destructive/failed · somebody checked               |
+| Document viewer | `--desk`, `--desk-inner`, `--paper`, `--paper-ink`, `--paper-rule`, `--paper-band`, `--paper-dim`                  | the surface a document lies on (darker than the ground); the sheet |
+| Misc            | `--fill-quiet`, `--barra` (scrollbar thumb), `--code-ink`, `--brand-spark` (the logo's sparkle — brand, not state) |                                                                    |
+| Type            | `--font-body`, `--font-heading`, `--mono`, `--font-body-size`                                                      |                                                                    |
+| Space           | `--space-1` … `--space-6`                                                                                          | one compact scale                                                  |
+| Shape           | `--radius-sm/md/lg`; `--shadow-sm/md/lg`                                                                           | radius 4 / 8 / 14 today; elevation for menus and dialogs only      |
+| Chrome sizes    | `--titlebar-h`, `--sidebar-w`, `--rail-w`, `--nav-item-y`                                                          | tokens so density reaches the frame too                            |
 
 Secondary ink is not a grey token: it is the text colour faded with
 `color-mix()` at a small ladder of strengths (≈40 %, 45–48 %, 55 %, 70–72 %).

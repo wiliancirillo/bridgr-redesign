@@ -35,12 +35,12 @@ already invoiced. Since then:
 
 ## 3. Colours carry meaning, and only these
 
-| Role                  | Means                                                                   | Never used for                                    |
-| --------------------- | ----------------------------------------------------------------------- | ------------------------------------------------- |
-| **Warn (amber)**      | A human must decide something here, now                                 | Selection, decoration, "information"              |
-| **OK (green)**        | Somebody checked, and it is fine                                        | A default, an unknown, "configured"               |
-| **Danger (red)**      | Destructive gesture, or a failure that happened                         | A business ending that is not a failure           |
-| **Accent**            | Interaction and selection                                               | A state of the data                               |
+| Role             | Means                                           | Never used for                          |
+| ---------------- | ----------------------------------------------- | --------------------------------------- |
+| **Warn (amber)** | A human must decide something here, now         | Selection, decoration, "information"    |
+| **OK (green)**   | Somebody checked, and it is fine                | A default, an unknown, "configured"     |
+| **Danger (red)** | Destructive gesture, or a failure that happened | A business ending that is not a failure |
+| **Accent**       | Interaction and selection                       | A state of the data                     |
 
 - **A tint is never the only signal.** A flagged row also says why, in the
   row; a state also has a word.

@@ -58,13 +58,13 @@ Details: [01-product.md](01-product.md).
 
 ## What is fixed and what is free
 
-| Fixed — it is function                                                                                                   | Free — it is look                                                           |
-| ------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------- |
-| The rules in [02-invariants.md](02-invariants.md) and each screen's **Must survive the redesign**                         | Palette, typography, iconography, shape, elevation, motion                  |
-| Arrangements marked **[functional]** in a screen's anatomy (e.g. the document beside the fields it is conferred against) | The arrangement of everything else; how each component is styled           |
-| State semantics: amber = a human must decide here; green = somebody checked; accent = selection; red = destructive/failed | How each state is drawn — as long as it never relies on colour alone        |
-| The platform constraints in [03-platform.md](03-platform.md)                                                              | Illustration, the tone of empty states, the feel of density                 |
-| The conveyor's order: Triagem → Revisão → Faturamento                                                                     | Navigation grouping and naming beyond that — proposals welcome              |
+| Fixed — it is function                                                                                                    | Free — it is look                                                    |
+| ------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| The rules in [02-invariants.md](02-invariants.md) and each screen's **Must survive the redesign**                         | Palette, typography, iconography, shape, elevation, motion           |
+| Arrangements marked **[functional]** in a screen's anatomy (e.g. the document beside the fields it is conferred against)  | The arrangement of everything else; how each component is styled     |
+| State semantics: amber = a human must decide here; green = somebody checked; accent = selection; red = destructive/failed | How each state is drawn — as long as it never relies on colour alone |
+| The platform constraints in [03-platform.md](03-platform.md)                                                              | Illustration, the tone of empty states, the feel of density          |
+| The conveyor's order: Triagem → Revisão → Faturamento                                                                     | Navigation grouping and naming beyond that — proposals welcome       |
 
 ## How to read a screen document
 

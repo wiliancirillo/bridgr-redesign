@@ -4,31 +4,31 @@
 
 ## One grid, wrapped once
 
-- **Every table in the app is the same component.** The table logic (row model, sorting) comes from a *headless* library — `@tanstack/table-core`, pinned to its v8 line — while the markup and the CSS are the app's own. That is what lets the grid follow the theme tokens, and every theme the operator writes, with nothing to override. [001 § 2]
-- **Around it, one shell and one state object.** `GridSurface` (tools row, selection bar, grid, pager) and `GridView` (filter, sort, columns, widths, paging, selection) serve all six grid screens. A screen brings only what its rows *mean* — the noun in the count, the gestures on ticked rows, the per-row buttons — as props and snippets. There were three hand-written copies before, and they drifted in ways no single screen showed: **a fourth copy of a table is a defect, not a shortcut**. [014 § 8]
+- **Every table in the app is the same component.** The table logic (row model, sorting) comes from a _headless_ library — `@tanstack/table-core`, pinned to its v8 line — while the markup and the CSS are the app's own. That is what lets the grid follow the theme tokens, and every theme the operator writes, with nothing to override. [001 § 2]
+- **Around it, one shell and one state object.** `GridSurface` (tools row, selection bar, grid, pager) and `GridView` (filter, sort, columns, widths, paging, selection) serve all six grid screens. A screen brings only what its rows _mean_ — the noun in the count, the gestures on ticked rows, the per-row buttons — as props and snippets. There were three hand-written copies before, and they drifted in ways no single screen showed: **a fourth copy of a table is a defect, not a shortcut**. [014 § 8]
 - **The same principle** governs the screen of saved documents (`SavedList`, shared by Relatórios and Listas) and the in-place confirmation (`ConfirmButton`).
-- **Two coordinate spaces** matter to anyone drawing columns: a column's *original* position (where the data was born — what files and saved layouts store) and its *projected* position (after hiding and reordering — what the screen shows). Hiding and reordering happen before the grid; the grid draws exactly what it is given.
+- **Two coordinate spaces** matter to anyone drawing columns: a column's _original_ position (where the data was born — what files and saved layouts store) and its _projected_ position (after hiding and reordering — what the screen shows). Hiding and reordering happen before the grid; the grid draws exactly what it is given.
 - **For the redesign**: redesign each component once and every screen inherits it. The screen files ([screens/](screens/)) describe only how each screen configures these pieces.
 
 ## Map
 
-| Component | What it is | Used by |
-| --- | --- | --- |
-| Grid | The table | Inside GridSurface (six screens); directly in the Opmenexo order subtela (materials grid, quotation answer sheet) |
-| GridSurface + GridView | Tools row, selection bar, grid and pager — and the view state behind them | Consulta, Relatórios (one sheet), Catálogos, Listas (one list), Opmenexo, NFePackMonitor |
-| ColumnsMenu | The "Colunas" popover | Inside GridSurface |
-| FilterField | A filter box, owner of the screen's one `Ctrl ⇧ K` | GridSurface, SavedList, Logs, Avisos, Triagem; the Consulta's trail |
-| SavedList + SavedItem | A screen of saved documents | Relatórios, Listas |
-| ConfirmButton | The in-place question before a destructive act | Selection bars of Consulta, Relatórios (one sheet), Listas (one list); the Listas warning block; Opmenexo and its order subtela |
-| EmptyState | The in-content empty | GridSurface, SavedList, Consulta, Triagem, Revisão, Faturamento, Ignorados, Catálogos, Opmenexo, Listas (one list) |
-| EmptyScreen | A route whose screen is not built | The three future studies |
-| DatePicker | The house calendar | Revisão (one bill) — the bill header's date fields |
-| SqlEditor | The SQL editor | Consulta; the Catálogos SQL dialog |
+| Component              | What it is                                                                | Used by                                                                                                                         |
+| ---------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| Grid                   | The table                                                                 | Inside GridSurface (six screens); directly in the Opmenexo order subtela (materials grid, quotation answer sheet)               |
+| GridSurface + GridView | Tools row, selection bar, grid and pager — and the view state behind them | Consulta, Relatórios (one sheet), Catálogos, Listas (one list), Opmenexo, NFePackMonitor                                        |
+| ColumnsMenu            | The "Colunas" popover                                                     | Inside GridSurface                                                                                                              |
+| FilterField            | A filter box, owner of the screen's one `Ctrl ⇧ K`                        | GridSurface, SavedList, Logs, Avisos, Triagem; the Consulta's trail                                                             |
+| SavedList + SavedItem  | A screen of saved documents                                               | Relatórios, Listas                                                                                                              |
+| ConfirmButton          | The in-place question before a destructive act                            | Selection bars of Consulta, Relatórios (one sheet), Listas (one list); the Listas warning block; Opmenexo and its order subtela |
+| EmptyState             | The in-content empty                                                      | GridSurface, SavedList, Consulta, Triagem, Revisão, Faturamento, Ignorados, Catálogos, Opmenexo, Listas (one list)              |
+| EmptyScreen            | A route whose screen is not built                                         | The three future studies                                                                                                        |
+| DatePicker             | The house calendar                                                        | Revisão (one bill) — the bill header's date fields                                                                              |
+| SqlEditor              | The SQL editor                                                            | Consulta; the Catálogos SQL dialog                                                                                              |
 
 ## House primitives these components lean on
 
 - **Checkbox** — drawn once for the whole app (`app.css`), never per screen and never left to GTK (WebKitGTK paints native controls in GTK's theme, not the app's). A 15 px square, small radius, border at 35 % ink (accent on hover); ticked = accent fill with a white check; indeterminate = accent fill with a white **minus**.
-- **Sign of life** — the `girando` spinner (one turn per 1.1 s; static when the system asks for reduced motion). A long action shows it *before* it answers.
+- **Sign of life** — the `girando` spinner (one turn per 1.1 s; static when the system asks for reduced motion). A long action shows it _before_ it answers.
 - **Popovers** (page size, Colunas, the saved-list order, the sheet's ⋮) — surface fill, radius md, large shadow, opening under their button; a press outside or Escape closes them. Menus are drawn by the app, never native `<select>` popups (GTK would paint those too).
 - **Bar button (`sel-act`)** — the small outlined button of the selection bar: accent outline at 40 %, accent-200 text, 11 px; a `danger` variant for destructive gestures.
 
@@ -38,12 +38,12 @@
 
 **Anatomy** — one table that scrolls inside its own box, in both directions. Left to right:
 
-| Part | Drawing | Notes |
-| --- | --- | --- |
-| Tick column | 34 px; the house checkbox in the header cell and in each row | Only when the screen offers gestures on a selection |
-| Data columns | Header cell + body cells | — |
-| Filler column | Empty; takes the leftover width | Keeps real columns at their content width and the row buttons pinned right; never sortable, hideable, reordered or exported |
-| Row-actions column | The row's own buttons, right-aligned, as narrow as they are | Outside the table model — never sortable, hidden, reordered or exported |
+| Part               | Drawing                                                      | Notes                                                                                                                       |
+| ------------------ | ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------- |
+| Tick column        | 34 px; the house checkbox in the header cell and in each row | Only when the screen offers gestures on a selection                                                                         |
+| Data columns       | Header cell + body cells                                     | —                                                                                                                           |
+| Filler column      | Empty; takes the leftover width                              | Keeps real columns at their content width and the row buttons pinned right; never sortable, hideable, reordered or exported |
+| Row-actions column | The row's own buttons, right-aligned, as narrow as they are  | Outside the table model — never sortable, hidden, reordered or exported                                                     |
 
 - **Header cell** — 30 px tall, **frozen at the top** while scrolling. The column's name in uppercase monospace 10.5 px, tracking .06 em, 50 % ink, followed by a direction icon: two-way arrows at 35 % while unsorted, ↑ or ↓ at full strength once sorted (the name then turns accent-200). Hover: quiet fill. Tooltip **"Ordenar por <NOME>"**. A name longer than its column truncates with an ellipsis (the whole name is in the tooltip). A numeric column right-aligns its header too.
 - **Resize grip** — an invisible 7 px strip on the right edge of each header cell; under the pointer or during a drag it shows as a 2 px accent line, with the column-resize cursor. Accessible name **"Redimensionar coluna"**, tooltip **"Arraste para redimensionar; duplo clique volta ao automático."** Drawn only when the screen listens (every GridSurface screen does).
@@ -51,41 +51,42 @@
 
 **Cell voices**
 
-| Voice | When | Drawing |
-| --- | --- | --- |
-| Plain text | Default | 82 % ink. Font: Inter on every GridSurface screen; the grid's own default, monospace, shows in the order subtela's materials grid |
-| Code / number | Every non-blank cell of the column, across the **whole** dataset, reads as a number (`1.234,56`, `1234`, `000412`). A column with no values is not numeric. **A date is never numeric** (`dd/mm/aaaa` is read as a date) | Right-aligned, monospace, tabular figures, accent-300 |
-| Identity (first column) | On by default | Accent ink, **frozen to the left** while scrolling right, on its own surface fill. Off where the first column is prose (the order subtela) |
-| Empty | Blank cell | "—" at 28 % ink, tooltip **"célula vazia"** — never "NULL": the ERP's export cannot tell empty from NULL, and saying NULL would invent a fact |
-| Custom | The screen supplies a cell renderer | The quotation answer sheet draws inputs in its editable columns; every other cell stays text ([13-opmenexo](screens/13-opmenexo.md)) |
+| Voice                   | When                                                                                                                                                                                                                     | Drawing                                                                                                                                       |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| Plain text              | Default                                                                                                                                                                                                                  | 82 % ink. Font: Inter on every GridSurface screen; the grid's own default, monospace, shows in the order subtela's materials grid             |
+| Code / number           | Every non-blank cell of the column, across the **whole** dataset, reads as a number (`1.234,56`, `1234`, `000412`). A column with no values is not numeric. **A date is never numeric** (`dd/mm/aaaa` is read as a date) | Right-aligned, monospace, tabular figures, accent-300                                                                                         |
+| Identity (first column) | On by default                                                                                                                                                                                                            | Accent ink, **frozen to the left** while scrolling right, on its own surface fill. Off where the first column is prose (the order subtela)    |
+| Empty                   | Blank cell                                                                                                                                                                                                               | "—" at 28 % ink, tooltip **"célula vazia"** — never "NULL": the ERP's export cannot tell empty from NULL, and saying NULL would invent a fact |
+| Custom                  | The screen supplies a cell renderer                                                                                                                                                                                      | The quotation answer sheet draws inputs in its editable columns; every other cell stays text ([13-opmenexo](screens/13-opmenexo.md))          |
 
 **Row states**
 
-| State | Drawing | Notes |
-| --- | --- | --- |
-| Hover | Quiet fill across the row | — |
-| Ticked | Accent at 22 % across the row + a 2 px accent bar inside the first cell's left edge | Wins over flagged and highlighted. Accent, never amber: a selection is a state, not an alert. It was 10 % once, and the operator could not tell a ticked row from a plain one |
-| Flagged | `--st-warn` at 9 % + a 2 px warn bar | Only for a row that needs a human decision, and the row must also say why in words — the tint is never the only signal (e.g. a Listas item "não está no espelho") |
-| Highlighted | Accent at 8 % + a 2 px accent bar | "This row carries your change" — the answer sheet also writes "alterada" in the row |
+| State       | Drawing                                                                             | Notes                                                                                                                                                                         |
+| ----------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Hover       | Quiet fill across the row                                                           | —                                                                                                                                                                             |
+| Ticked      | Accent at 22 % across the row + a 2 px accent bar inside the first cell's left edge | Wins over flagged and highlighted. Accent, never amber: a selection is a state, not an alert. It was 10 % once, and the operator could not tell a ticked row from a plain one |
+| Flagged     | `--st-warn` at 9 % + a 2 px warn bar                                                | Only for a row that needs a human decision, and the row must also say why in words — the tint is never the only signal (e.g. a Listas item "não está no espelho")             |
+| Highlighted | Accent at 8 % + a 2 px accent bar                                                   | "This row carries your change" — the answer sheet also writes "alterada" in the row                                                                                           |
 
 **Density** — "confortável" (default) or "compacto": compact takes the rows' vertical padding down to 3 px; the header keeps its height (it is a landmark). The choice is a stored preference shared by every grid, separate from the app-wide density in Configurações — "more rows" and "a tighter app" are two different wishes. [006 § 2]
 
 **Interactions**
 
-| Gesture | Effect |
-| --- | --- |
-| Click a header | Sort by that column. First click: ascending — or descending when the first row the grid holds has that cell empty (the library's automatic rule); second click: the other direction; third: unsorted. Verified in the installed library's code, not live |
-| Shift + click a header | The library adds a **second** sort key: two headers show arrows, but only the first key orders the rows, names the pager's "ordenado por" and is saved — a latent defect (verified in code, not live) |
-| Sorting rules | Empty cells always last, in both directions; numbers as numbers (42 before 1024); dates as dates (15/12/2025 before 02/01/2026); text by pt-BR collation (accents and case handled, digits inside text in numeric order) |
-| Header checkbox | Ticks or unticks every row **of this page**; shows a minus when only some are ticked. Accessible names **"Marcar os desta página"** / **"Desmarcar os desta página"**; tooltip **"Marca só o que está nesta página."** |
-| Row checkbox | Toggles that row (accessible name "Marcar <chave>") |
-| Shift + click (checkbox or row) | A range from the last row touched to this one, within the page; the clicked row's new state applies to the whole range (the file-manager grammar) |
-| Ctrl/⌘ + click on a row | Toggles that row |
-| Plain click on a row | Nothing — the cells' text stays selectable for copying |
-| Drag a header edge | The width follows the pointer and is saved on release; minimum 44 px |
-| Double-click a header edge | Back to the automatic width |
+| Gesture                         | Effect                                                                                                                                                                                                                                                   |
+| ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Click a header                  | Sort by that column. First click: ascending — or descending when the first row the grid holds has that cell empty (the library's automatic rule); second click: the other direction; third: unsorted. Verified in the installed library's code, not live |
+| Shift + click a header          | The library adds a **second** sort key: two headers show arrows, but only the first key orders the rows, names the pager's "ordenado por" and is saved — a latent defect (verified in code, not live)                                                    |
+| Sorting rules                   | Empty cells always last, in both directions; numbers as numbers (42 before 1024); dates as dates (15/12/2025 before 02/01/2026); text by pt-BR collation (accents and case handled, digits inside text in numeric order)                                 |
+| Header checkbox                 | Ticks or unticks every row **of this page**; shows a minus when only some are ticked. Accessible names **"Marcar os desta página"** / **"Desmarcar os desta página"**; tooltip **"Marca só o que está nesta página."**                                   |
+| Row checkbox                    | Toggles that row (accessible name "Marcar <chave>")                                                                                                                                                                                                      |
+| Shift + click (checkbox or row) | A range from the last row touched to this one, within the page; the clicked row's new state applies to the whole range (the file-manager grammar)                                                                                                        |
+| Ctrl/⌘ + click on a row         | Toggles that row                                                                                                                                                                                                                                         |
+| Plain click on a row            | Nothing — the cells' text stays selectable for copying                                                                                                                                                                                                   |
+| Drag a header edge              | The width follows the pointer and is saved on release; minimum 44 px                                                                                                                                                                                     |
+| Double-click a header edge      | Back to the automatic width                                                                                                                                                                                                                              |
 
 **Rules it carries**
+
 - Selection is stored by row **key**, never by position — sorting would re-aim a position at another row. No key → no selection and no row buttons: a row that is not an entity cannot be ticked.
 - The screen may hand rows already sorted and paged; the grid then only draws the arrows and reports the click — one sorter, never two.
 - The alignment verdict may come from the screen (whole dataset), so a page turn never flips a column's alignment.
@@ -118,6 +119,7 @@
 **States** — default; filtering (page back to 1); no match (header + empty state; pager "0–0 de 0"); rows ticked (bar); the select-all offer (only when every row on the page is ticked **and** the filter still holds unticked rows — the moment the page-sized gesture runs out — carrying the count it would tick); a popover open (Colunas or page size; a press outside or Escape closes it); narrow pane (the tools wrap).
 
 **Rules `GridView` applies on every screen**
+
 - **Filter**: case-insensitive substring over the **visible** columns only — a hidden column never answers a search the operator cannot see matching.
 - **Sort**: one column; empty cells last; the rules of § 1. It follows its column by identity across hiding and reordering, and clears when its column is hidden (a grid sorted by an invisible column is a lie with an arrow on it).
 - **Columns**: display order and the hidden set by original position; widths by original position. "Desfazer edições" restores order, visibility and widths (the sort stays), plus the screen's own edits (removed rows) in the same gesture.
@@ -129,14 +131,14 @@
 
 **Used by**
 
-| Screen | What it adds |
-| --- | --- |
-| [Consulta](screens/06-query.md) | Ticks with "Excluir selecionadas" and "Exportar seleção"; removed-rows chip; "ordenado por" |
-| [Relatórios — one sheet](screens/07-sheets.md) | The same |
-| [Catálogos](screens/08-catalogs.md) | Ticks with "Salvar como lista" and more; no row removal |
-| [Listas — one list](screens/09-shortlists.md) | Ticks with "Tirar da lista (N)"; flagged rows |
-| [Opmenexo](screens/13-opmenexo.md) | Ticks, per-row buttons, flagged rows |
-| [NFePackMonitor](screens/12-nfe-pack-monitor.md) | Per-row buttons; the count on its own line |
+| Screen                                           | What it adds                                                                                |
+| ------------------------------------------------ | ------------------------------------------------------------------------------------------- |
+| [Consulta](screens/06-query.md)                  | Ticks with "Excluir selecionadas" and "Exportar seleção"; removed-rows chip; "ordenado por" |
+| [Relatórios — one sheet](screens/07-sheets.md)   | The same                                                                                    |
+| [Catálogos](screens/08-catalogs.md)              | Ticks with "Salvar como lista" and more; no row removal                                     |
+| [Listas — one list](screens/09-shortlists.md)    | Ticks with "Tirar da lista (N)"; flagged rows                                               |
+| [Opmenexo](screens/13-opmenexo.md)               | Ticks, per-row buttons, flagged rows                                                        |
+| [NFePackMonitor](screens/12-nfe-pack-monitor.md) | Per-row buttons; the count on its own line                                                  |
 
 **Must keep** — filter, count, Colunas, density and page size together over the grid; the bar, the grid and the pager reading as one object in one frame; the bar in the accent (a state, not an alert) with the danger exception; the select-all offer appearing only when the page runs out, carrying its count; the no-match message inside the box with the header kept; the selection spanning all rows; one `Ctrl ⇧ K` per surface.
 
@@ -147,6 +149,7 @@
 **Purpose.** One popover for what is one question in the operator's head: which columns, and in what order.
 
 **Anatomy**
+
 - **Button**: a columns icon + **"Colunas"** + a badge **"7 de 9"** (visible of all — it says, permanently, both "some are hidden" and "there are more to choose from") + a caret (pointing up while open); tinted while open.
 - **Popover** (250 px, right-aligned under the button):
   - the master row **"Selecionar tudo"** — a filled checked square when nothing is hidden, a minus square when some are (never an empty box: "nothing shown" cannot happen);
@@ -158,14 +161,14 @@
 
 **Interactions**
 
-| Gesture | Effect |
-| --- | --- |
-| Click a pick | Show or hide that column (never the last visible one) |
-| Click "Selecionar tudo" | Some hidden → show all; none hidden → hide all but the first column of the current order |
-| Drag a row by its grip | Moves the column to the gap the line marks; a drop in its own gaps changes nothing |
-| Focus a grip + ArrowUp / ArrowDown | Moves it one step — the keyboard's way in, since a drag is pointer-only |
-| "Desfazer edições" | Order, visibility and widths back to how the data was born, plus the screen's own edits (removed rows) |
-| Press outside / Escape | Closes (handled by the surface) |
+| Gesture                            | Effect                                                                                                 |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Click a pick                       | Show or hide that column (never the last visible one)                                                  |
+| Click "Selecionar tudo"            | Some hidden → show all; none hidden → hide all but the first column of the current order               |
+| Drag a row by its grip             | Moves the column to the gap the line marks; a drop in its own gaps changes nothing                     |
+| Focus a grip + ArrowUp / ArrowDown | Moves it one step — the keyboard's way in, since a drag is pointer-only                                |
+| "Desfazer edições"                 | Order, visibility and widths back to how the data was born, plus the screen's own edits (removed rows) |
+| Press outside / Escape             | Closes (handled by the surface)                                                                        |
 
 **Rules** — the grid can never reach zero columns (an inexplicable void, and getting out would need this very menu); a hidden column keeps its place in the order, so it returns where it was; no native checkbox inside (GTK would paint it in its own theme); the footer is a button rather than a note because it is the recovery that makes row removal safe. The master row and the footer are recorded departures from the design (decision 006 § 2).
 
@@ -198,6 +201,7 @@
 **One line (`SavedItem`)** — an id; a title; a quiet second line (a redacted SQL, a catalog's name); a count label for the right-hand column ("21 linhas · 9 col."); an amount (what the summary adds up and what the third order sorts by); the last-change stamp; pinned or not.
 
 **Anatomy**
+
 1. **Header** — the title with the screen's question under it; right: one primary button that leads **out**, to where documents are made ("+ Novo recorte").
 2. **Tools row** (only when loaded with ≥ 1 document) — the primary filter; a segmented pair **"Todos N"** | **"Fixados N"**; a spacer; the caller's summary; the order button (sort icon, current order, caret) with a menu of three orders — **"Mais recentes"**, **"Nome (A–Z)"** and the caller's third ("Mais linhas") — the current one checked.
 3. **List** — one line per document (not cards: names read down a column, numbers compare in their own column): an icon (accent when pinned) · the title (13.5 px, 500) + the tag **"fixado"** (uppercase) when pinned · the second line in mono with an ellipsis · a 150 px right column with the count label over **"alterado em <dd/mm/aaaa hh:mm:ss>"** · icon buttons: pin (**"Fixar no topo"** / **"Desafixar"**, filled when pinned), the caller's extra buttons, trash (**"Excluir relatório"**, danger hover). A pinned line also takes an accent-tinted border; any line's border tints on hover. Clicking the line opens the document.
@@ -221,6 +225,7 @@
 **Purpose.** A gesture that asks before it acts, in place.
 
 **Anatomy and states**
+
 - **Idle** — a bar button (the `sel-act` look, optional icon + label, e.g. "🗑 Excluir selecionadas (3)"); the `danger` variant takes a red outline and red ink and hovers to a red tint.
 - **Asking** — the button is replaced, in the same spot, by a strip that wraps onto more lines if it needs to: the question (meant in a secondary ink — the token it names is not defined today, so it renders in the surrounding text colour), then the cancel answer and the confirm answer (small outlined buttons; the confirm one in red when `danger`, the cancel one never).
 - **Disabled** applies to both the idle button and the confirm answer.
@@ -270,6 +275,7 @@
 **Purpose.** The house calendar. The native `input[type=date]` is **forbidden**: WebKitGTK's calendar ignores the theme and does not close on a click outside.
 
 **Anatomy**
+
 - **Trigger** — a calendar icon button (13 px, 45 % ink, accent on hover); accessible name and tooltip **"Abrir o calendário"**. It sits beside the caller's date field; the field shows `dd/mm/aaaa` (or "—" when empty) and is edited as text on its own.
 - **Popover** (252 px wide; surface, divider border, radius 10 px, medium shadow, 10 px padding), placed under the trigger, kept inside the window with an 8 px margin, and flipped above when there is no room below:
   - a bar with the month and year, capitalised (**"Setembro de 2026"**), and two accent caret buttons (**"Mês anterior"**, **"Mês seguinte"**);
@@ -290,7 +296,7 @@
 
 ## 10. SqlEditor
 
-A CodeMirror 6 editor painted entirely with the app's tokens — no library stylesheet, including the completion popup, the one piece of the library's DOM that reaches the screen — so it follows every theme. It validates nothing; it *shows*: syntax colours, comments painted as errors, non-ASCII characters marked in red. Used by the [Consulta](screens/06-query.md) (with the ERP map's completion and `Ctrl+Enter` to run — described there) and by the Catálogos SQL dialog, whose two editors (the page query and the count) show the four SQL hints under them as a lightbulb list — hints, never a gate ([08-catalogs](screens/08-catalogs.md)).
+A CodeMirror 6 editor painted entirely with the app's tokens — no library stylesheet, including the completion popup, the one piece of the library's DOM that reaches the screen — so it follows every theme. It validates nothing; it _shows_: syntax colours, comments painted as errors, non-ASCII characters marked in red. Used by the [Consulta](screens/06-query.md) (with the ERP map's completion and `Ctrl+Enter` to run — described there) and by the Catálogos SQL dialog, whose two editors (the page query and the count) show the four SQL hints under them as a lightbulb list — hints, never a gate ([08-catalogs](screens/08-catalogs.md)).
 
 ## Cross-component design opportunities
 
