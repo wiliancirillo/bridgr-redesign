@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" rel="stylesheet">
+<link href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css" rel="stylesheet">
+<style>
+body { margin: 0; background: #0a0b0d; }
+a { color: #6ea3e0; }
+a:hover { color: #9cc0ec; }
+</style>
+</helmet>
+
+<div style="font-family:'IBM Plex Sans',system-ui,sans-serif;background:#0a0b0d;color:#e6e9ec;padding:56px;display:flex;flex-direction:column;gap:72px;align-items:flex-start">
+
+  <div style="display:flex;flex-direction:column;gap:10px;max-width:980px">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(230,233,236,.4)">Bridgr Pro · reborn · rodada 9</div>
+    <div style="font-size:30px;font-weight:600;letter-spacing:-.01em">Configurações — o console do ecossistema</div>
+    <div style="font-size:14px;line-height:1.6;color:rgba(230,233,236,.66);text-wrap:pretty">Nove assuntos, nenhum botão Salvar: <span style="color:#e6e9ec">tudo vale no clique e a tela já mostra o efeito</span>; quando o disco recusa, a preferência continua valendo nesta sessão e a recusa é dita em voz alta. Segredo nunca volta à tela, campo em branco significa "não mexi", e verde só aparece depois que alguém perguntou.</div>
+  </div>
+
+  <!-- ============ 1 · TELA, SEÇÃO SOBRE ============ -->
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <div style="font-size:18px;font-weight:600">1 · A tela em Sobre, com a trilha agrupada por tipo</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(230,233,236,.4)">1440 × 900 · os nove ?section= continuam endereçáveis</div>
+    </div>
+
+    <div style="width:1440px;height:900px;border-radius:8px;border:1px solid #2b2f36;background:#14161a;overflow:hidden;display:flex;flex-direction:column;font-size:13.5px;color:#e6e9ec">
+      <div style="height:42px;flex:none;display:flex;align-items:center;gap:14px;padding:0 6px 0 12px;border-bottom:1px solid #2b2f36">
+        <div style="display:flex;align-items:center;gap:8px">
+          <svg width="20" height="22" viewBox="0 0 24 24" fill="none"><path d="M3.5 21.5V12a8.5 8.5 0 0 1 17 0v9.5" stroke="#6ea3e0" stroke-width="2"></path><path d="M1 22.5h22" stroke="#6ea3e0" stroke-width="2" stroke-linecap="round"></path><path d="M20 1.5l1.1 2.9 2.9 1.1-2.9 1.1L20 9.5l-1.1-2.9L16 5.5l2.9-1.1z" fill="#f0913a"></path></svg>
+          <div style="font-size:13.5px;font-weight:500">Bridgr Pro</div>
+          <div style="font-size:11px;color:rgba(230,233,236,.45)">· Configurações</div>
+        </div>
+        <div style="flex:1;display:flex;justify-content:center">
+          <div style="width:430px;height:26px;display:flex;align-items:center;gap:7px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;padding:0 8px">
+            <i class="ph ph-magnifying-glass" style="font-size:13px;color:rgba(230,233,236,.45)"></i>
+            <div style="flex:1;font-size:11.5px;color:rgba(230,233,236,.4);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Buscar paciente, atendimento, arquivo ou código do ERP…</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:rgba(230,233,236,.45);background:#23272e;border:1px solid #2b2f36;border-radius:3px;padding:1px 5px">Ctrl K</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:4px">
+          <div style="width:27px;height:25px;display:flex;align-items:center;justify-content:center"><i class="ph ph-bell" style="font-size:15px;color:rgba(230,233,236,.72)"></i></div>
+          <div style="display:flex;align-items:center;gap:7px;height:26px;padding:0 7px;border-radius:6px;background:#1b1e23"><div style="width:19px;height:19px;border-radius:10px;background:#1b3350;color:#bfd8f5;font-size:9px;font-weight:600;display:flex;align-items:center;justify-content:center">CR</div><div style="font-size:12px">Camila</div><i class="ph ph-caret-down" style="font-size:10px;color:rgba(230,233,236,.45)"></i></div>
+          <div style="display:flex;align-items:center;gap:2px;margin-left:6px">
+            <div style="width:26px;height:22px;display:flex;align-items:center;justify-content:center"><i class="ph ph-minus" style="font-size:13px;color:rgba(230,233,236,.72)"></i></div>
+            <div style="width:26px;height:22px;display:flex;align-items:center;justify-content:center"><i class="ph ph-square" style="font-size:12px;color:rgba(230,233,236,.72)"></i></div>
+            <div style="width:26px;height:22px;display:flex;align-items:center;justify-content:center"><i class="ph ph-x" style="font-size:13px;color:rgba(230,233,236,.72)"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="flex:1;display:flex;min-height:0">
+        <div style="width:236px;flex:none;border-right:1px solid #2b2f36;padding:8px;display:flex;flex-direction:column;gap:1px">
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-gauge" style="font-size:15px"></i>Dashboard</div>
+          <div style="display:flex;align-items:center;gap:8px;padding:16px 10px 6px"><div style="font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(230,233,236,.4)">Esteira</div><div style="flex:1;height:1px;background:linear-gradient(90deg,#2b2f36,rgba(43,47,54,0))"></div></div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-tray-arrow-down" style="font-size:15px"></i>Triagem</div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-check-square-offset" style="font-size:15px"></i>Revisão</div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-receipt" style="font-size:15px"></i>Faturamento</div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-copy" style="font-size:15px"></i><div style="flex:1">Duplicidades</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#f4d9a3;background:#33291a;border-radius:10px;padding:1px 6px">2</div></div>
+          <div style="display:flex;align-items:center;gap:8px;padding:16px 10px 6px"><div style="font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(230,233,236,.4)">Fora da esteira</div><div style="flex:1;height:1px;background:linear-gradient(90deg,#2b2f36,rgba(43,47,54,0))"></div></div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-archive" style="font-size:15px"></i>Ignorados</div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-brackets-curly" style="font-size:15px"></i><div style="flex:1">Consulta</div><i class="ph ph-caret-down" style="font-size:10px;opacity:.4;transform:rotate(-90deg)"></i></div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-table" style="font-size:15px"></i><div style="flex:1">Catálogos</div><i class="ph ph-caret-down" style="font-size:10px;opacity:.4;transform:rotate(-90deg)"></i></div>
+          <div style="display:flex;align-items:center;gap:8px;padding:16px 10px 6px"><div style="font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(230,233,236,.4)">Sistema</div><div style="flex:1;height:1px;background:linear-gradient(90deg,#2b2f36,rgba(43,47,54,0))"></div></div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;background:rgba(110,163,224,.13);box-shadow:inset 2px 0 0 #6ea3e0;color:#bfd8f5;font-size:12.5px;font-weight:500"><i class="ph-fill ph-gear-six" style="font-size:15px"></i>Configurações</div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-terminal-window" style="font-size:15px"></i>Logs</div>
+        </div>
+
+        <div style="flex:1;min-width:0;display:flex;flex-direction:column;min-height:0">
+          <div style="flex:none;display:flex;align-items:flex-end;gap:16px;padding:14px 18px 12px;border-bottom:1px solid #2b2f36">
+            <div style="flex:1;display:flex;flex-direction:column;gap:3px">
+              <div style="font-size:19px;font-weight:600;letter-spacing:-.01em">Configurações</div>
+              <div style="font-size:12px;color:rgba(230,233,236,.55)">Nove assuntos — o que já é real neste app é a porta de entrada</div>
+            </div>
+            <div style="flex:none;display:flex;align-items:center;gap:7px;font-size:10.5px;color:rgba(230,233,236,.45)"><i class="ph ph-lightning" style="font-size:12px"></i>Cada mudança vale no clique — não existe Salvar nesta tela</div>
+          </div>
+
+          <div style="flex:1;display:flex;min-height:0">
+            <div style="width:198px;flex:none;border-right:1px solid #2b2f36;padding:10px 8px;display:flex;flex-direction:column;gap:1px;overflow:hidden">
+              <div style="display:flex;align-items:center;gap:8px;padding:4px 8px 6px"><div style="font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(230,233,236,.38)">O app</div><div style="flex:1;height:1px;background:linear-gradient(90deg,#2b2f36,rgba(43,47,54,0))"></div></div>
+              <div style="display:flex;align-items:center;gap:9px;padding:6px 9px;border-radius:6px;background:rgba(110,163,224,.13);color:#bfd8f5;font-size:12px;font-weight:500"><i class="ph-fill ph-info" style="font-size:14px"></i>Sobre</div>
+              <div style="display:flex;align-items:center;gap:9px;padding:6px 9px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12px"><i class="ph ph-palette" style="font-size:14px"></i>Aparência</div>
+              <div style="display:flex;align-items:center;gap:8px;padding:14px 8px 6px"><div style="font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(230,233,236,.38)">Entrada da esteira</div><div style="flex:1;height:1px;background:linear-gradient(90deg,#2b2f36,rgba(43,47,54,0))"></div></div>
+              <div style="display:flex;align-items:center;gap:9px;padding:6px 9px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12px"><i class="ph ph-tray" style="font-size:14px"></i>Doca</div>
+              <div style="display:flex;align-items:center;gap:9px;padding:6px 9px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12px"><i class="ph ph-plugs" style="font-size:14px"></i><div style="flex:1">Adapters</div><i class="ph-fill ph-warning" style="font-size:11px;color:#e0a33c"></i></div>
+              <div style="display:flex;align-items:center;gap:8px;padding:14px 8px 6px"><div style="font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(230,233,236,.38)">Serviços</div><div style="flex:1;height:1px;background:linear-gradient(90deg,#2b2f36,rgba(43,47,54,0))"></div></div>
+              <div style="display:flex;align-items:center;gap:9px;padding:6px 9px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12px"><i class="ph ph-eye" style="font-size:14px"></i><div style="flex:1">MedLens</div><div style="width:6px;height:6px;border-radius:4px;background:#57b184"></div></div>
+              <div style="display:flex;align-items:center;gap:9px;padding:6px 9px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12px"><i class="ph ph-robot" style="font-size:14px"></i><div style="flex:1">Fantasma</div><div style="width:6px;height:6px;border-radius:4px;background:#57b184"></div></div>
+              <div style="display:flex;align-items:center;gap:9px;padding:6px 9px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12px"><i class="ph ph-plugs-connected" style="font-size:14px"></i><div style="flex:1">Spook</div><div style="width:6px;height:6px;border-radius:4px;background:#e0a33c"></div></div>
+              <div style="display:flex;align-items:center;gap:9px;padding:6px 9px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12px"><i class="ph ph-receipt" style="font-size:14px"></i><div style="flex:1">NFe Pack</div><div style="width:6px;height:6px;border-radius:4px;background:#57b184"></div></div>
+              <div style="display:flex;align-items:center;gap:8px;padding:14px 8px 6px"><div style="font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(230,233,236,.38)">Saída</div><div style="flex:1;height:1px;background:linear-gradient(90deg,#2b2f36,rgba(43,47,54,0))"></div></div>
+              <div style="display:flex;align-items:center;gap:9px;padding:6px 9px;border-radius:6px;color:rgba(230,233,236,.5);font-size:12px"><i class="ph ph-export" style="font-size:14px"></i><div style="flex:1">Exportação</div><div style="font-size:9px;color:rgba(230,233,236,.38)">vazia</div></div>
+              <div style="flex:1"></div>
+              <div style="font-size:9.5px;line-height:1.6;color:rgba(230,233,236,.35);padding:8px 9px;text-wrap:pretty">O ponto ao lado do serviço é o estado de agora — nada é pintado antes da primeira resposta.</div>
+            </div>
+
+            <div style="flex:1;min-width:0;min-height:0;overflow:hidden;padding:18px">
+              <div style="max-width:660px;display:flex;flex-direction:column;gap:14px">
+
+                <div style="border:1px solid #2b2f36;border-radius:9px;background:#16181d;padding:14px 15px;display:flex;flex-direction:column;gap:8px">
+                  <div style="font-size:13.5px;font-weight:500">O que já é real neste app</div>
+                  <div style="font-size:12px;line-height:1.65;color:rgba(230,233,236,.6);text-wrap:pretty">O Bridgr Pro é a estação humana da esteira: MailBridgr entrega os anexos, o MedLens lê, você tria e confere, o Fantasma lança no Everest. Ele não emite nota e não dirige o robô — enfileira e observa. O Spook fala com os portais e o NFePackMonitor baixa as notas; o interruptor de cada linha diz quem sobe junto com o app.</div>
+                </div>
+
+                <div style="border:1px solid #2b2f36;border-radius:9px;background:#16181d;display:flex;flex-direction:column;overflow:hidden">
+                  <div style="display:flex;align-items:center;gap:11px;padding:11px 14px;border-bottom:1px solid #1e2126">
+                    <i class="ph ph-tray" style="font-size:16px;color:#6ea3e0;flex:none"></i>
+                    <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><div style="font-size:12.5px">Doca vigiada, anexo por anexo</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:rgba(230,233,236,.4)">MailBridgr</div></div>
+                    <div style="flex:none;font-size:10.5px;color:rgba(230,233,236,.35)">extensão do Thunderbird — o app nunca a sobe</div>
+                  </div>
+                  <div style="display:flex;align-items:center;gap:11px;padding:11px 14px;border-bottom:1px solid #1e2126">
+                    <i class="ph ph-eye" style="font-size:16px;color:#6ea3e0;flex:none"></i>
+                    <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><div style="font-size:12.5px">Leitura das contas e aprendizado por correção</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:rgba(230,233,236,.4)">MedLens</div></div>
+                    <div style="flex:none;display:flex;align-items:center;gap:9px"><div style="font-size:11px;color:rgba(230,233,236,.6)">Sobe com o app</div><div style="width:38px;height:22px;border-radius:12px;background:rgba(110,163,224,.55);display:flex;align-items:center;justify-content:flex-end;padding:0 3px"><div style="width:16px;height:16px;border-radius:9px;background:#e6e9ec"></div></div></div>
+                  </div>
+                  <div style="display:flex;align-items:center;gap:11px;padding:11px 14px;border-bottom:1px solid #1e2126">
+                    <i class="ph ph-check-square-offset" style="font-size:16px;color:#6ea3e0;flex:none"></i>
+                    <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><div style="font-size:12.5px">Conferência com o documento ao lado e portão de completude</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:rgba(230,233,236,.4)">Bridgr Pro</div></div>
+                    <div style="flex:none;font-size:10.5px;color:rgba(230,233,236,.35)">este app</div>
+                  </div>
+                  <div style="display:flex;align-items:center;gap:11px;padding:11px 14px;border-bottom:1px solid #1e2126">
+                    <i class="ph ph-robot" style="font-size:16px;color:#6ea3e0;flex:none"></i>
+                    <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><div style="font-size:12.5px">Lançamento no Everest, uma conta por vez</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:rgba(230,233,236,.4)">Fantasma</div></div>
+                    <div style="flex:none;display:flex;align-items:center;gap:9px"><div style="font-size:11px;color:rgba(230,233,236,.6)">Sobe com o app</div><div style="width:38px;height:22px;border-radius:12px;background:#2b2f36;display:flex;align-items:center;padding:0 3px"><div style="width:16px;height:16px;border-radius:9px;background:#6a727e"></div></div></div>
+                  </div>
+                  <div style="display:flex;align-items:center;gap:11px;padding:11px 14px;border-bottom:1px solid #1e2126">
+                    <i class="ph ph-plugs-connected" style="font-size:16px;color:#6ea3e0;flex:none"></i>
+                    <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><div style="font-size:12.5px">Portais lidos e respondidos daqui</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:rgba(230,233,236,.4)">Spook</div></div>
+                    <div style="flex:none;display:flex;align-items:center;gap:9px"><div style="font-size:11px;color:rgba(230,233,236,.6)">Sobe com o app</div><div style="width:38px;height:22px;border-radius:12px;background:rgba(110,163,224,.55);display:flex;align-items:center;justify-content:flex-end;padding:0 3px"><div style="width:16px;height:16px;border-radius:9px;background:#e6e9ec"></div></div></div>
+                  </div>
+                  <div style="display:flex;align-items:center;gap:11px;padding:11px 14px">
+                    <i class="ph ph-receipt" style="font-size:16px;color:#6ea3e0;flex:none"></i>
+                    <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><div style="font-size:12.5px">Baixa de NF-e e DANFE, ciclo a ciclo</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:rgba(230,233,236,.4)">NFePackMonitor</div></div>
+                    <div style="flex:none;display:flex;align-items:center;gap:9px"><div style="font-size:11px;color:#9cc0ec">Vale no próximo início do app</div><div style="width:38px;height:22px;border-radius:12px;background:rgba(110,163,224,.55);display:flex;align-items:center;justify-content:flex-end;padding:0 3px"><div style="width:16px;height:16px;border-radius:9px;background:#e6e9ec"></div></div></div>
+                  </div>
+                </div>
+
+                <div style="display:flex;align-items:center;gap:10px;padding-top:2px">
+                  <div style="flex:1;height:1px;background:#23272e"></div>
+                  <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:rgba(230,233,236,.38)">Bridgr Pro · 0.1.0 · br.alphamedical.bridgrpro</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div style="height:28px;flex:none;border-top:1px solid #2b2f36;background:rgba(255,255,255,.03);display:flex;align-items:center;padding:0 10px;gap:2px;font-size:10.5px">
+        <div style="display:flex;align-items:center;gap:6px;padding:3px 8px"><i class="ph ph-tray" style="font-size:12px;color:#57b184"></i><span style="font-weight:500;color:rgba(230,233,236,.78)">MailBridgr</span><span style="color:rgba(230,233,236,.52)">canal confirmado</span></div>
+        <div style="display:flex;align-items:center;gap:6px;padding:3px 8px"><i class="ph ph-eye" style="font-size:12px;color:#57b184"></i><span style="font-weight:500;color:rgba(230,233,236,.78)">MedLens</span><span style="color:rgba(230,233,236,.52)">no ar</span></div>
+        <div style="display:flex;align-items:center;gap:6px;padding:3px 8px"><i class="ph ph-robot" style="font-size:12px;color:#57b184"></i><span style="font-weight:500;color:rgba(230,233,236,.78)">Fantasma</span><span style="color:rgba(230,233,236,.52)">pronto</span></div>
+        <div style="display:flex;align-items:center;gap:6px;padding:3px 8px;border-radius:5px;background:rgba(224,163,60,.11)"><i class="ph ph-plugs-connected" style="font-size:12px;color:#e0a33c"></i><span style="font-weight:500;color:rgba(230,233,236,.78)">Spook</span><span style="color:#f4d9a3">só leitura</span></div>
+        <div style="display:flex;align-items:center;gap:6px;padding:3px 8px"><i class="ph ph-package" style="font-size:12px;color:#57b184"></i><span style="font-weight:500;color:rgba(230,233,236,.78)">NFe Pack</span><span style="color:rgba(230,233,236,.52)">baixando</span></div>
+        <div style="flex:1"></div>
+        <div style="display:flex;align-items:center;gap:5px;padding:3px 8px;border-radius:5px;background:rgba(110,163,224,.11)"><i class="ph ph-stack-simple" style="font-size:12px;color:#6ea3e0"></i><span style="color:#9cc0ec">2 em voo · 3 pedem gente</span></div>
+        <div style="display:flex;align-items:center;gap:5px;padding:3px 8px"><i class="ph ph-lock" style="font-size:12px;color:#57b184"></i><span style="color:rgba(230,233,236,.72)">PIN ativo</span></div>
+        <div style="display:flex;align-items:center;gap:5px;padding:3px 8px"><i class="ph ph-info" style="font-size:12px;color:rgba(230,233,236,.38)"></i><span style="color:rgba(230,233,236,.52)">v0.1.0</span></div>
+      </div>
+    </div>
+
+    <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;gap:28px;max-width:1440px;font-size:11.5px;line-height:1.7;color:rgba(230,233,236,.55)">
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">A trilha agrupada conta o que a tela é.</span> Quatro consoles de serviço, duas entradas da esteira, duas preferências e uma sala vazia — os nove <span style="font-family:'IBM Plex Mono',monospace">?section=</span> seguem intactos, só ganharam títulos.</div>
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">O ponto ao lado do serviço.</span> Verde, âmbar ou vermelho conforme a última resposta; antes da primeira, nada. É como se escolhe o serviço quebrado sem abrir os quatro.</div>
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">"Sobe com o app" não é verde.</span> É preferência guardada, não fato conferido — então o interruptor do Sobre usa accent, e o verde continua reservado para "o serviço respondeu".</div>
+      </div>
+    </sc-if>
+  </div>
+
+  <!-- ============ 2 · APARÊNCIA + DOCA ============ -->
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <div style="font-size:18px;font-weight:600">2 · Aparência e Doca</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(230,233,236,.4)">tema e paleta são perguntas separadas · em branco é o caso comum</div>
+    </div>
+
+    <div style="display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap">
+
+      <div style="width:700px;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:18px;display:flex;flex-direction:column;gap:16px">
+        <div style="display:flex;flex-direction:column;gap:2px">
+          <div style="font-size:16px;font-weight:600">Aparência</div>
+          <div style="font-size:11.5px;color:rgba(230,233,236,.5)">Tema, galerias e densidade</div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:14px">
+          <div style="width:96px;flex:none;font-size:12px;color:rgba(230,233,236,.8)">Tema</div>
+          <div style="display:flex;gap:3px;padding:2px;background:#1b1e23;border:1px solid #2b2f36;border-radius:7px">
+            <div style="padding:5px 15px;border-radius:5px;background:rgba(110,163,224,.15);box-shadow:inset 0 0 0 1px rgba(110,163,224,.6);font-size:12px;color:#bfd8f5">Sistema</div>
+            <div style="padding:5px 15px;border-radius:5px;font-size:12px;color:rgba(230,233,236,.6)">Claro</div>
+            <div style="padding:5px 15px;border-radius:5px;font-size:12px;color:rgba(230,233,236,.6)">Escuro</div>
+          </div>
+          <div style="font-size:10.5px;color:rgba(230,233,236,.4)">segue a luz do desktop, ao vivo</div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:9px">
+          <div style="font-size:12px;color:rgba(230,233,236,.8)">Paleta clara</div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <div style="width:200px;border:1px solid #6ea3e0;background:rgba(110,163,224,.07);border-radius:8px;padding:10px;display:flex;flex-direction:column;gap:8px">
+              <div style="display:flex;gap:4px;height:26px"><div style="flex:1;border-radius:4px;background:#eff0f1"></div><div style="flex:1;border-radius:4px;background:#fcfcfc"></div><div style="flex:1;border-radius:4px;background:#3daee9"></div><div style="flex:1;border-radius:4px;background:#232629"></div></div>
+              <div style="display:flex;align-items:center;gap:6px"><i class="ph-fill ph-check-circle" style="font-size:13px;color:#6ea3e0"></i><div style="font-size:12px;color:#bfd8f5;font-weight:500">Breeze Light</div></div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(230,233,236,.4)">#eff0f1 · #3daee9</div>
+            </div>
+            <div style="width:200px;border:1px solid #2b2f36;background:#16181d;border-radius:8px;padding:10px;display:flex;flex-direction:column;gap:8px">
+              <div style="display:flex;gap:4px;height:26px"><div style="flex:1;border-radius:4px;background:#ffffff"></div><div style="flex:1;border-radius:4px;background:#f6f8fa"></div><div style="flex:1;border-radius:4px;background:#0969da"></div><div style="flex:1;border-radius:4px;background:#1f2328"></div></div>
+              <div style="font-size:12px;color:rgba(230,233,236,.85)">GitHub Light</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(230,233,236,.4)">#ffffff · #0969da</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:9px">
+          <div style="font-size:12px;color:rgba(230,233,236,.8)">Paleta escura</div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <div style="width:200px;border:1px solid #6ea3e0;background:rgba(110,163,224,.07);border-radius:8px;padding:10px;display:flex;flex-direction:column;gap:8px">
+              <div style="display:flex;gap:4px;height:26px"><div style="flex:1;border-radius:4px;background:#0d1117"></div><div style="flex:1;border-radius:4px;background:#161b22"></div><div style="flex:1;border-radius:4px;background:#2f81f7"></div><div style="flex:1;border-radius:4px;background:#e6edf3"></div></div>
+              <div style="display:flex;align-items:center;gap:6px"><i class="ph-fill ph-check-circle" style="font-size:13px;color:#6ea3e0"></i><div style="font-size:12px;color:#bfd8f5;font-weight:500">GitHub Dark</div></div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(230,233,236,.4)">#0d1117 · #2f81f7</div>
+            </div>
+            <div style="width:200px;border:1px solid #2b2f36;background:#16181d;border-radius:8px;padding:10px;display:flex;flex-direction:column;gap:8px">
+              <div style="display:flex;gap:4px;height:26px"><div style="flex:1;border-radius:4px;background:#232629"></div><div style="flex:1;border-radius:4px;background:#31363b"></div><div style="flex:1;border-radius:4px;background:#3daee9"></div><div style="flex:1;border-radius:4px;background:#eff0f1"></div></div>
+              <div style="font-size:12px;color:rgba(230,233,236,.85)">Breeze Dark</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(230,233,236,.4)">#232629 · #3daee9</div>
+            </div>
+            <div style="width:200px;border:1px solid #2b2f36;background:#16181d;border-radius:8px;padding:10px;display:flex;flex-direction:column;gap:8px">
+              <div style="display:flex;gap:4px;height:26px"><div style="flex:1;border-radius:4px;background:#1b1f24"></div><div style="flex:1;border-radius:4px;background:#242a31"></div><div style="flex:1;border-radius:4px;background:#4fb3a9"></div><div style="flex:1;border-radius:4px;background:#e8eaed"></div></div>
+              <div style="display:flex;align-items:center;gap:7px"><div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:rgba(230,233,236,.85)">noite-vale</div><div style="font-size:9px;color:rgba(230,233,236,.4);border:1px solid #2b2f36;border-radius:4px;padding:0 4px">do config.json</div></div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(230,233,236,.4)">#1b1f24 · #4fb3a9</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:9px;font-size:10.5px;color:rgba(230,233,236,.45)"><i class="ph ph-shield-check" style="font-size:12px"></i>Âmbar, verde, vermelho e o papel do documento nenhum tema repinta — carregam sentido, não gosto.</div>
+        </div>
+
+        <div style="display:flex;align-items:flex-start;gap:11px;border:1px solid #2b2f36;border-radius:8px;background:#16181d;padding:11px 13px">
+          <div style="width:16px;height:16px;border-radius:4px;border:1px solid #434a53;flex:none;margin-top:1px"></div>
+          <div style="flex:1;display:flex;flex-direction:column;gap:3px"><div style="font-size:12.5px">Densidade compacta</div><div style="font-size:10.5px;color:rgba(230,233,236,.5);text-wrap:pretty">Aperta a interface inteira — listas, tabelas, barra lateral e barra de título.</div></div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:10px;padding-top:4px;border-top:1px solid #23272e">
+          <div style="font-size:11px;line-height:1.6;color:rgba(230,233,236,.5);text-wrap:pretty;padding-top:10px">Novos temas entram em config.json: copie um dos modelos gravados lá, dê outro nome e repinte os tokens — cada tema escolhe uma base e pinta por cima dela.</div>
+          <div style="align-self:flex-start;height:29px;display:flex;align-items:center;gap:8px;padding:0 12px;border:1px solid #6ea3e0;border-radius:6px;font-size:12px;color:#6ea3e0"><i class="ph ph-file-code" style="font-size:13px"></i>Abrir o config.json</div>
+        </div>
+      </div>
+
+      <div style="width:487px;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:18px;display:flex;flex-direction:column;gap:16px">
+        <div style="display:flex;flex-direction:column;gap:2px">
+          <div style="font-size:16px;font-weight:600">Doca</div>
+          <div style="font-size:11.5px;color:rgba(230,233,236,.5)">De onde os informes chegam</div>
+        </div>
+
+        <div style="display:flex;align-items:flex-start;gap:9px;padding:9px 11px;border:1px solid rgba(224,106,99,.5);background:rgba(224,106,99,.09);border-radius:7px">
+          <i class="ph-fill ph-warning-circle" style="font-size:14px;color:#e06a63;flex:none;margin-top:1px"></i>
+          <div style="flex:1;display:flex;flex-direction:column;gap:3px">
+            <div style="font-size:11.5px;color:#f2b3ae">A preferência vale nesta sessão, mas não foi gravada:</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.55;color:rgba(230,233,236,.85);user-select:all;text-wrap:pretty">failed to write config.json: Permission denied (os error 13) — /home/camila/.config/bridgr-pro/config.json</div>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:7px">
+          <div style="font-size:12px;color:rgba(230,233,236,.8)">Pasta de entregas (inbox do spool)</div>
+          <div style="display:flex;gap:7px">
+            <div style="flex:1;min-width:0;height:30px;display:flex;align-items:center;padding:0 10px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:rgba(230,233,236,.38)">padrão: a pasta de dados do próprio app</div>
+            <div style="flex:none;height:30px;display:flex;align-items:center;gap:7px;padding:0 11px;border:1px solid #2b2f36;border-radius:6px;font-size:11.5px;color:rgba(230,233,236,.85)"><i class="ph ph-folder-open" style="font-size:13px"></i>Escolher</div>
+          </div>
+          <div style="font-size:10.5px;line-height:1.6;color:rgba(230,233,236,.5);text-wrap:pretty">Em branco usa o padrão — o mesmo caminho que o MailBridgr resolve sozinho. Só preencha se o spool morar em outro lugar.</div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:7px">
+          <div style="font-size:12px;color:rgba(230,233,236,.8)">Pasta vigiada</div>
+          <div style="display:flex;gap:7px">
+            <div style="flex:1;min-width:0;height:30px;display:flex;align-items:center;padding:0 10px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:11.5px">~/Documentos/Informes soltos</div>
+            <div style="flex:none;height:30px;display:flex;align-items:center;gap:7px;padding:0 11px;border:1px solid #2b2f36;border-radius:6px;font-size:11.5px;color:rgba(230,233,236,.85)"><i class="ph ph-folder-open" style="font-size:13px"></i>Escolher</div>
+          </div>
+          <div style="font-size:10.5px;line-height:1.6;color:rgba(230,233,236,.5);text-wrap:pretty">Arquivo copiado aqui com o app aberto aparece na doca em até 4 s — PDF e foto, sem e-mail no meio. Em branco, a entrada não existe.</div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:2px;padding-top:14px;border-top:1px solid #23272e">
+          <div style="font-size:16px;font-weight:600">Exportação</div>
+          <div style="font-size:11.5px;color:rgba(230,233,236,.5)">Formato e planilha de registro</div>
+        </div>
+        <div style="border:1px dashed #2b2f36;border-radius:9px;padding:26px 16px;display:flex;flex-direction:column;align-items:center;gap:9px">
+          <i class="ph ph-export" style="font-size:30px;color:rgba(230,233,236,.22)"></i>
+          <div style="font-size:12px;color:rgba(230,233,236,.6)">Formato e planilha de registro</div>
+          <div style="font-size:11px;color:rgba(230,233,236,.4)">Esta tela ainda não foi construída.</div>
+        </div>
+      </div>
+    </div>
+
+    <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;gap:28px;max-width:1203px;font-size:11.5px;line-height:1.7;color:rgba(230,233,236,.55)">
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">Cada cartão pinta as cores dele</span>, não as em vigor — galeria que se parece com o tema aplicado não mostra nada. E clicar numa paleta não mexe no modo: são duas perguntas.</div>
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">A faixa de recusa cabe em duas linhas</span> e o texto é selecionável: a frase vem do lado que recusou, em inglês e com caminho de arquivo, e ela precisa ser copiável para o chamado.</div>
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">A sala vazia não finge ser configurável.</span> Exportação ganha o mesmo tratamento das outras salas não construídas: ícone apagado, a dica e uma frase honesta.</div>
+      </div>
+    </sc-if>
+  </div>
+
+  <!-- ============ 3 · MEDLENS ============ -->
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <div style="font-size:18px;font-weight:600">3 · MedLens: serviço, credencial, IA e gasto</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(230,233,236,.4)">o único console com painel, campos e dinheiro</div>
+    </div>
+
+    <div style="display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap">
+      <div style="width:700px;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:18px;display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;flex-direction:column;gap:2px">
+          <div style="font-size:16px;font-weight:600">MedLens</div>
+          <div style="font-size:11.5px;color:rgba(230,233,236,.5)">Serviço, credencial, IA e gasto</div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:12px;border:1px solid #2b2f36;border-radius:9px;background:#16181d;padding:12px 13px">
+          <i class="ph ph-eye" style="font-size:17px;color:#57b184;flex:none"></i>
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
+            <div style="display:flex;align-items:center;gap:8px"><div style="font-size:13px"><span style="font-weight:500">Serviço</span> · no ar</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(230,233,236,.45);background:#23272e;border-radius:4px;padding:1px 5px">v1.8.0</div></div>
+            <div style="font-size:11px;color:rgba(230,233,236,.5)">uvicorn em 127.0.0.1:8000 — sobe com o app, desce com ele</div>
+          </div>
+          <div style="width:38px;height:22px;flex:none;border-radius:12px;background:rgba(87,177,132,.75);display:flex;align-items:center;justify-content:flex-end;padding:0 3px"><div style="width:16px;height:16px;border-radius:9px;background:#f2f5f7"></div></div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:12px;border:1px solid #2b2f36;border-radius:9px;background:#16181d;padding:12px 13px">
+          <i class="ph ph-key" style="font-size:17px;color:#57b184;flex:none"></i>
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
+            <div style="font-size:13px"><span style="font-weight:500">Credencial</span> · aceita pelo serviço</div>
+            <div style="font-size:11px;color:rgba(230,233,236,.5)">emitida por este app pela CLI do MedLens — ninguém digita esta credencial</div>
+          </div>
+          <div style="flex:none;height:27px;display:flex;align-items:center;padding:0 11px;border:1px solid #2b2f36;border-radius:6px;font-size:11.5px;color:rgba(230,233,236,.85)">Emitir outra</div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:7px">
+          <div style="font-size:12px;color:rgba(230,233,236,.8)">Pasta do projeto MedLens</div>
+          <div style="display:flex;gap:7px">
+            <div style="flex:1;min-width:0;height:30px;display:flex;align-items:center;padding:0 10px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:11.5px">~/Projetos/medlens</div>
+            <div style="flex:none;height:30px;display:flex;align-items:center;gap:7px;padding:0 11px;border:1px solid #2b2f36;border-radius:6px;font-size:11.5px;color:rgba(230,233,236,.85)"><i class="ph ph-folder-open" style="font-size:13px"></i>Escolher</div>
+          </div>
+          <div style="font-size:10.5px;line-height:1.6;color:rgba(230,233,236,.5)">De onde o app sobe o serviço (uv run uvicorn). É a pasta com o pyproject.toml do MedLens.</div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:7px">
+          <div style="display:flex;align-items:center;gap:8px"><div style="font-size:12px;color:rgba(230,233,236,.8)">Chave da OpenRouter</div><div style="font-size:9.5px;color:#9cc0ec;background:rgba(110,163,224,.13);border-radius:4px;padding:1px 6px">gravada</div></div>
+          <div style="height:30px;display:flex;align-items:center;padding:0 10px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.18em;color:rgba(230,233,236,.6)">••••••••••</div>
+          <div style="font-size:10.5px;line-height:1.6;color:rgba(230,233,236,.5);text-wrap:pretty">Fica só nesta máquina, no cofre do sistema. Depois de gravada, campo em branco significa não mexi — nunca apagar.</div>
+        </div>
+
+        <div style="display:flex;gap:11px">
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:7px">
+            <div style="font-size:12px;color:rgba(230,233,236,.8)">Modelo primário</div>
+            <div style="height:30px;display:flex;align-items:center;gap:7px;padding:0 10px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px"><div style="flex:1;min-width:0;font-family:'IBM Plex Mono',monospace;font-size:11.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">anthropic/claude-3.7-sonnet</div><i class="ph ph-caret-down" style="font-size:10px;color:rgba(230,233,236,.4)"></i></div>
+          </div>
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:7px">
+            <div style="font-size:12px;color:rgba(230,233,236,.8)">Modelo secundário</div>
+            <div style="height:30px;display:flex;align-items:center;gap:7px;padding:0 10px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px"><div style="flex:1;min-width:0;font-family:'IBM Plex Mono',monospace;font-size:11.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">google/gemini-2.5-flash</div><i class="ph ph-caret-down" style="font-size:10px;color:rgba(230,233,236,.4)"></i></div>
+          </div>
+        </div>
+        <div style="font-size:10.5px;color:rgba(230,233,236,.45);text-wrap:pretty">Texto livre com o catálogo da OpenRouter por trás: id fora da lista é modelo recém-lançado, não erro de digitação.</div>
+      </div>
+
+      <div style="width:487px;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:18px;display:flex;flex-direction:column;gap:13px">
+        <div style="display:flex;align-items:center;gap:11px;flex-wrap:wrap">
+          <div style="font-size:15px;font-weight:600">Gasto</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:16px;color:#9cc0ec">US$ 12,48</div>
+          <div style="flex:1;min-width:0;font-size:10.5px;color:rgba(230,233,236,.45)">342 extrações · US$ 3,17 nos últimos 7 dias</div>
+          <div style="width:24px;height:24px;display:flex;align-items:center;justify-content:center;border:1px solid #2b2f36;border-radius:5px"><i class="ph ph-arrows-clockwise" style="font-size:12px;color:rgba(230,233,236,.7)"></i></div>
+        </div>
+
+        <div style="display:flex;gap:3px;padding:2px;background:#1b1e23;border:1px solid #2b2f36;border-radius:7px;align-self:flex-start">
+          <div style="padding:4px 12px;border-radius:5px;font-size:11.5px;color:rgba(230,233,236,.6)">Por dia</div>
+          <div style="padding:4px 12px;border-radius:5px;background:rgba(110,163,224,.15);box-shadow:inset 0 0 0 1px rgba(110,163,224,.6);font-size:11.5px;color:#bfd8f5">Por modelo</div>
+          <div style="padding:4px 12px;border-radius:5px;font-size:11.5px;color:rgba(230,233,236,.6)">Extrações</div>
+        </div>
+
+        <div style="display:flex;align-items:flex-start;gap:8px;padding:8px 10px;border:1px solid rgba(224,163,60,.45);background:#33291a;border-radius:7px">
+          <i class="ph-fill ph-warning" style="font-size:13px;color:#e0a33c;flex:none;margin-top:1px"></i>
+          <div style="flex:1;font-size:11px;line-height:1.55;color:#f4d9a3;text-wrap:pretty">57 extrações ficaram de fora — foram pagas por outra chave de API; o registro continua no MedLens.</div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:13px">
+          <div style="display:flex;flex-direction:column;gap:5px">
+            <div style="display:flex;align-items:baseline;gap:8px">
+              <div style="flex:1;min-width:0;font-family:'IBM Plex Mono',monospace;font-size:11.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">anthropic/claude-3.7-sonnet</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px">US$ 9,02</div>
+              <div style="width:30px;text-align:right;font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:rgba(230,233,236,.45)">72%</div>
+            </div>
+            <div style="height:5px;border-radius:3px;background:#23272e;overflow:hidden"><div style="width:100%;height:100%;background:#6ea3e0"></div></div>
+            <div style="font-size:10.5px;color:rgba(230,233,236,.45)">298 extrações · média US$ 0,03</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:5px">
+            <div style="display:flex;align-items:baseline;gap:8px">
+              <div style="flex:1;min-width:0;font-family:'IBM Plex Mono',monospace;font-size:11.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">google/gemini-2.5-flash</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px">US$ 3,46</div>
+              <div style="width:30px;text-align:right;font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:rgba(230,233,236,.45)">28%</div>
+            </div>
+            <div style="height:5px;border-radius:3px;background:#23272e;overflow:hidden"><div style="width:38%;height:100%;background:#2f5480"></div></div>
+            <div style="font-size:10.5px;color:rgba(230,233,236,.45)">44 extrações · média US$ 0,08</div>
+          </div>
+        </div>
+
+        <div style="border:1px solid #2b2f36;border-radius:8px;overflow:hidden;margin-top:2px">
+          <div style="display:flex;align-items:center;gap:10px;padding:7px 11px;background:#1b1e23;border-bottom:1px solid #2b2f36;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:rgba(230,233,236,.5)">
+            <div style="width:112px;flex:none">Quando</div>
+            <div style="flex:1;min-width:0">Arquivo</div>
+            <div style="width:62px;flex:none;text-align:right">Tokens</div>
+            <div style="width:58px;flex:none;text-align:right">Custo</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;padding:7px 11px;border-bottom:1px solid #1e2126;font-family:'IBM Plex Mono',monospace;font-size:10.5px">
+            <div style="width:112px;flex:none;color:rgba(230,233,236,.6)">09/09/2026 14:02</div>
+            <div style="flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">informe_vale_verde_2026-09-02.pdf</div>
+            <div style="width:62px;flex:none;text-align:right;color:rgba(230,233,236,.7)">18.432</div>
+            <div style="width:58px;flex:none;text-align:right">US$ 0,03</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;padding:7px 11px;font-family:'IBM Plex Mono',monospace;font-size:10.5px">
+            <div style="width:112px;flex:none;color:rgba(230,233,236,.6)">09/09/2026 13:48</div>
+            <div style="flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">etiquetas_sala3.jpg</div>
+            <div style="width:62px;flex:none;text-align:right;color:rgba(230,233,236,.7)">9.117</div>
+            <div style="width:58px;flex:none;text-align:right">US$ 0,08</div>
+          </div>
+        </div>
+        <div style="font-size:10px;color:rgba(230,233,236,.4)">Mostrando as 100 mais recentes de 342.</div>
+
+        <div style="display:flex;align-items:flex-start;gap:8px;padding-top:9px;border-top:1px solid #23272e">
+          <i class="ph ph-info" style="font-size:13px;color:rgba(230,233,236,.4);flex:none;margin-top:1px"></i>
+          <div style="flex:1;font-size:10.5px;line-height:1.6;color:rgba(230,233,236,.5);text-wrap:pretty">Só chamadas do MedLens: a Consulta e o Fantasma não gastam API. O gasto é o que a OpenRouter cobrou, registrado a cada leitura.</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="width:1203px;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:12px">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">Os outros estados do painel</div>
+      <div style="display:flex;gap:11px;flex-wrap:wrap">
+        <div style="width:380px;display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;align-items:center;gap:11px;border:1px solid #2b2f36;border-radius:9px;background:#16181d;padding:11px 12px">
+            <i class="ph ph-eye" style="font-size:16px;color:#5b6270;flex:none"></i>
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><div style="font-size:12.5px"><span style="font-weight:500">Serviço</span> · <span style="font-family:'IBM Plex Mono',monospace;color:rgba(230,233,236,.5)">…</span></div><div style="font-size:10.5px;color:rgba(230,233,236,.45)">ninguém perguntou ainda — nada é afirmado</div></div>
+            <div style="width:38px;height:22px;flex:none;border-radius:12px;background:#23272e;opacity:.5;display:flex;align-items:center;padding:0 3px"><div style="width:16px;height:16px;border-radius:9px;background:#565d68"></div></div>
+          </div>
+          <div style="font-size:10.5px;color:rgba(230,233,236,.45);text-wrap:pretty">Sem pasta configurada o interruptor não pode agir — e a razão agora está escrita nele: <span style="color:#e6e9ec">"Preencha a pasta do projeto para poder ligar."</span></div>
+        </div>
+
+        <div style="width:380px;display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;align-items:center;gap:11px;border:1px solid #2b2f36;border-radius:9px;background:#16181d;padding:11px 12px">
+            <i class="ph ph-eye" style="font-size:16px;color:#57b184;flex:none"></i>
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><div style="font-size:12.5px"><span style="font-weight:500">Serviço</span> · no ar — subiu fora deste app</div><div style="font-size:10.5px;color:rgba(230,233,236,.5);text-wrap:pretty">Este MedLens foi ligado por outro programa — usar, sim; derrubar daqui, não.</div></div>
+            <div style="width:38px;height:22px;flex:none;border-radius:12px;background:rgba(87,177,132,.4);display:flex;align-items:center;justify-content:flex-end;padding:0 3px;position:relative"><div style="width:16px;height:16px;border-radius:9px;background:#a8b0ba"></div><i class="ph ph-lock-simple" style="position:absolute;left:6px;font-size:10px;color:rgba(230,233,236,.6)"></i></div>
+          </div>
+          <div style="font-size:10.5px;color:rgba(230,233,236,.45)">Ligado e travado: o cadeado no trilho diz que o gesto não é desta estação.</div>
+        </div>
+
+        <div style="width:380px;display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;align-items:center;gap:11px;border:1px solid rgba(224,163,60,.5);border-radius:9px;background:#16181d;padding:11px 12px">
+            <i class="ph ph-eye" style="font-size:16px;color:#e0a33c;flex:none"></i>
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px"><div style="font-size:12.5px"><span style="font-weight:500">Serviço</span> · subindo…</div><div style="font-size:10.5px;color:#f4d9a3;text-wrap:pretty">Este MedLens não tem: adapters.prompt</div></div>
+            <div style="width:38px;height:22px;flex:none;border-radius:12px;background:#23272e;display:flex;align-items:center;padding:0 3px"><div style="width:16px;height:16px;border-radius:9px;background:#6a727e;display:flex;align-items:center;justify-content:center"><i class="ph ph-circle-notch" style="font-size:11px;color:#14161a"></i></div></div>
+          </div>
+          <div style="font-size:10.5px;color:rgba(230,233,236,.45)">O sinal de vida fica no próprio controle, antes de o comando responder.</div>
+        </div>
+
+        <div style="width:380px;display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;align-items:center;gap:11px;border:1px solid rgba(224,106,99,.5);border-radius:9px;background:rgba(224,106,99,.07);padding:11px 12px">
+            <i class="ph ph-key" style="font-size:16px;color:#e06a63;flex:none"></i>
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px"><div style="font-size:12.5px"><span style="font-weight:500">Credencial</span> · recusada (401)</div><div style="font-size:10.5px;color:#f2b3ae;line-height:1.5;text-wrap:pretty">No ar sem credencial dá 401 em tudo com cara de serviço fora — reemita antes de culpar a rede.</div></div>
+            <div style="flex:none;height:26px;display:flex;align-items:center;padding:0 10px;border:1px solid #2b2f36;border-radius:6px;font-size:11px;color:rgba(230,233,236,.85)">Emitir outra</div>
+          </div>
+          <div style="font-size:10.5px;color:rgba(230,233,236,.45)">Recusa nunca é desenhada como problema de rede.</div>
+        </div>
+
+        <div style="width:380px;display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;align-items:center;gap:11px;border:1px solid #2b2f36;border-radius:9px;background:#16181d;padding:11px 12px">
+            <i class="ph ph-key" style="font-size:16px;color:#5b6270;flex:none"></i>
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><div style="font-size:12.5px"><span style="font-weight:500">Credencial</span> · nenhuma emitida ainda</div><div style="font-size:10.5px;color:rgba(230,233,236,.5)">o app emite a que ele mesmo usa</div></div>
+            <div style="flex:none;height:26px;display:flex;align-items:center;gap:6px;padding:0 10px;border:1px solid #2b2f36;border-radius:6px;font-size:11px;color:rgba(230,233,236,.6);opacity:.55"><i class="ph ph-circle-notch" style="font-size:11px"></i>Emitindo…</div>
+          </div>
+          <div style="font-size:10.5px;color:rgba(230,233,236,.45)">Cada gesto tem o seu próprio sinal: emitir não faz o interruptor girar.</div>
+        </div>
+
+        <div style="width:380px;display:flex;flex-direction:column;gap:8px">
+          <div style="border:1px solid rgba(224,106,99,.5);background:rgba(224,106,99,.09);border-radius:8px;padding:9px 11px;display:flex;align-items:flex-start;gap:8px">
+            <i class="ph-fill ph-warning-circle" style="font-size:13px;color:#e06a63;flex:none;margin-top:1px"></i>
+            <div style="flex:1;font-family:'IBM Plex Mono',monospace;font-size:10.5px;line-height:1.55;color:rgba(230,233,236,.9);user-select:all;text-wrap:pretty">MedLens: ~/Projetos/medlens does not look like the MedLens project (no pyproject.toml)</div>
+          </div>
+          <div style="font-size:10.5px;color:rgba(230,233,236,.45)">A recusa do outro lado, palavra por palavra, embaixo do que foi recusado.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 4 · FANTASMA ============ -->
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <div style="font-size:18px;font-weight:600">4 · Fantasma: a sessão e o custo de derrubá-la</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(230,233,236,.4)">a confirmação nasce embaixo do gesto que a pediu</div>
+    </div>
+
+    <div style="display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap">
+      <div style="width:700px;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:18px;display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;flex-direction:column;gap:2px">
+          <div style="font-size:16px;font-weight:600">Fantasma</div>
+          <div style="font-size:11.5px;color:rgba(230,233,236,.5)">Pastas, credenciais e sessão</div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:12px;border:1px solid #2b2f36;border-radius:9px;background:#16181d;padding:12px 13px">
+          <i class="ph ph-robot" style="font-size:17px;color:#57b184;flex:none"></i>
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
+            <div style="display:flex;align-items:center;gap:8px"><div style="font-size:13px"><span style="font-weight:500">Sessão</span> · pronto</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(230,233,236,.45);background:#23272e;border-radius:4px;padding:1px 5px">v2.3.0</div></div>
+            <div style="font-size:11px;color:rgba(230,233,236,.5)">Container de pé e Everest logado. As mãos estão prontas.</div>
+          </div>
+          <div style="width:38px;height:22px;flex:none;border-radius:12px;background:rgba(87,177,132,.75);display:flex;align-items:center;justify-content:flex-end;padding:0 3px"><div style="width:16px;height:16px;border-radius:9px;background:#f2f5f7"></div></div>
+        </div>
+
+        <div style="display:flex;gap:11px">
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:7px">
+            <div style="font-size:12px;color:rgba(230,233,236,.8)">Pasta do projeto</div>
+            <div style="display:flex;gap:7px">
+              <div style="flex:1;min-width:0;height:30px;display:flex;align-items:center;padding:0 10px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">~/Projetos/fantasma</div>
+              <div style="flex:none;width:30px;height:30px;display:flex;align-items:center;justify-content:center;border:1px solid #2b2f36;border-radius:6px"><i class="ph ph-folder-open" style="font-size:13px;color:rgba(230,233,236,.8)"></i></div>
+            </div>
+            <div style="font-size:10.5px;color:rgba(230,233,236,.5)">É aqui que mora o .env que o docker compose lê.</div>
+          </div>
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:7px">
+            <div style="font-size:12px;color:rgba(230,233,236,.8)">Pasta-fila</div>
+            <div style="display:flex;gap:7px">
+              <div style="flex:1;min-width:0;height:30px;display:flex;align-items:center;padding:0 10px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">/srv/fila-fantasma</div>
+              <div style="flex:none;width:30px;height:30px;display:flex;align-items:center;justify-content:center;border:1px solid #2b2f36;border-radius:6px"><i class="ph ph-folder-open" style="font-size:13px;color:rgba(230,233,236,.8)"></i></div>
+            </div>
+            <div style="font-size:10.5px;color:rgba(230,233,236,.5)">Aprovar grava o JSON da conta aqui.</div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:11px">
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:7px">
+            <div style="font-size:12px;color:rgba(230,233,236,.8)">Usuário do RDP</div>
+            <div style="height:30px;display:flex;align-items:center;padding:0 10px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:11.5px">camila.rocha</div>
+          </div>
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:7px">
+            <div style="font-size:12px;color:rgba(230,233,236,.8)">Usuário do Everest</div>
+            <div style="height:30px;display:flex;align-items:center;padding:0 10px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:11.5px">camila.rocha</div>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:7px">
+          <div style="display:flex;gap:11px">
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:7px">
+              <div style="display:flex;align-items:center;gap:8px"><div style="font-size:12px;color:rgba(230,233,236,.8)">Credencial do RDP</div><div style="font-size:9.5px;color:#9cc0ec;background:rgba(110,163,224,.13);border-radius:4px;padding:1px 6px">gravada</div></div>
+              <div style="height:30px;display:flex;align-items:center;padding:0 10px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.18em;color:rgba(230,233,236,.6)">••••••••••</div>
+            </div>
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:7px">
+              <div style="display:flex;align-items:center;gap:8px"><div style="font-size:12px;color:rgba(230,233,236,.8)">Credencial do Everest</div><div style="font-size:9.5px;color:#9cc0ec;background:rgba(110,163,224,.13);border-radius:4px;padding:1px 6px">gravada</div></div>
+              <div style="height:30px;display:flex;align-items:center;padding:0 10px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.18em;color:rgba(230,233,236,.6)">••••••••••</div>
+            </div>
+          </div>
+          <div style="font-size:10.5px;color:rgba(230,233,236,.5)">Em branco significa não mexi — nunca apague.</div>
+        </div>
+      </div>
+
+      <div style="width:487px;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:18px;display:flex;flex-direction:column;gap:14px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">Derrubar, e os estados do meio</div>
+
+        <div style="display:flex;flex-direction:column;gap:9px">
+          <div style="display:flex;align-items:center;gap:11px;border:1px solid #2b2f36;border-radius:9px;background:#16181d;padding:11px 12px">
+            <i class="ph ph-robot" style="font-size:16px;color:#57b184;flex:none"></i>
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><div style="font-size:12.5px"><span style="font-weight:500">Sessão</span> · pronto</div><div style="font-size:10.5px;color:rgba(230,233,236,.5)">Container de pé e Everest logado.</div></div>
+            <div style="width:38px;height:22px;flex:none;border-radius:12px;background:rgba(87,177,132,.75);display:flex;align-items:center;justify-content:flex-end;padding:0 3px"><div style="width:16px;height:16px;border-radius:9px;background:#f2f5f7"></div></div>
+          </div>
+          <div style="border:1px solid rgba(224,163,60,.5);background:#33291a;border-radius:8px;padding:11px 12px;display:flex;flex-direction:column;gap:10px">
+            <div style="font-size:11.5px;line-height:1.6;color:#f4d9a3;text-wrap:pretty">Derrubar mata a sessão do Everest, e ele leva cerca de 2 minutos para soltá-la — religar antes falha com "sessão em uso". Nada que já foi lançado se desfaz.</div>
+            <div style="display:flex;gap:7px;justify-content:flex-end">
+              <div style="height:27px;display:flex;align-items:center;padding:0 11px;border:1px solid #2b2f36;border-radius:6px;background:#1b1e23;font-size:11.5px;color:rgba(230,233,236,.85)">Deixar de pé</div>
+              <div style="height:27px;display:flex;align-items:center;padding:0 11px;border:1px solid rgba(224,106,99,.6);border-radius:6px;font-size:11.5px;color:#f2b3ae">Derrubar agora</div>
+            </div>
+          </div>
+          <div style="font-size:10.5px;color:rgba(230,233,236,.45);text-wrap:pretty">Enquanto a caixa está aberta o interruptor <span style="color:#e6e9ec">continua ligado</span>: nada parou ainda.</div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:11px;border:1px solid #2b2f36;border-radius:9px;background:#16181d;padding:11px 12px">
+          <i class="ph ph-robot" style="font-size:16px;color:#6ea3e0;flex:none"></i>
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><div style="font-size:12.5px"><span style="font-weight:500">Sessão</span> · ocupado</div><div style="font-size:10.5px;color:#9cc0ec">Trabalhando agora — nenhum gesto passa até terminar.</div></div>
+          <div style="width:38px;height:22px;flex:none;border-radius:12px;background:rgba(87,177,132,.4);display:flex;align-items:center;justify-content:flex-end;padding:0 3px;opacity:.6"><div style="width:16px;height:16px;border-radius:9px;background:#a8b0ba"></div></div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:11px;border:1px solid rgba(224,163,60,.5);border-radius:9px;background:#16181d;padding:11px 12px">
+          <i class="ph ph-robot" style="font-size:16px;color:#e0a33c;flex:none"></i>
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><div style="font-size:12.5px"><span style="font-weight:500">Sessão</span> · sem sessão</div><div style="font-size:10.5px;color:#f4d9a3;text-wrap:pretty">Container de pé, mas o Everest não está logado — cada comando pediria login.</div></div>
+          <div style="width:38px;height:22px;flex:none;border-radius:12px;background:rgba(87,177,132,.75);display:flex;align-items:center;justify-content:flex-end;padding:0 3px"><div style="width:16px;height:16px;border-radius:9px;background:#f2f5f7"></div></div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;align-items:center;gap:11px;border:1px solid #2b2f36;border-radius:9px;background:#16181d;padding:11px 12px">
+            <i class="ph ph-robot" style="font-size:16px;color:#5b6270;flex:none"></i>
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><div style="font-size:12.5px"><span style="font-weight:500">Sessão</span> · parado</div><div style="font-size:10.5px;color:rgba(230,233,236,.5)">O Everest ainda segura a sessão anterior — 87s para liberar.</div></div>
+            <div style="width:38px;height:22px;flex:none;border-radius:12px;background:#23272e;display:flex;align-items:center;padding:0 3px;position:relative">
+              <div style="width:16px;height:16px;border-radius:9px;background:#3a4048;border:2px solid #6ea3e0;border-right-color:#2b2f36;border-bottom-color:#2b2f36"></div>
+            </div>
+          </div>
+          <div style="font-size:10.5px;color:rgba(230,233,236,.45);text-wrap:pretty">A contagem mora no próprio interruptor — um anel que esvazia diz por que ele não anda, sem precisar de legenda.</div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="border:1px solid rgba(224,106,99,.5);background:rgba(224,106,99,.09);border-radius:8px;padding:9px 11px;display:flex;align-items:flex-start;gap:8px">
+            <i class="ph-fill ph-warning-circle" style="font-size:13px;color:#e06a63;flex:none;margin-top:1px"></i>
+            <div style="flex:1;font-family:'IBM Plex Mono',monospace;font-size:10.5px;line-height:1.55;color:rgba(230,233,236,.9);user-select:all;text-wrap:pretty">Fantasma: este Fantasma foi ligado por outro programa — derrubá-lo mataria a sessão do Everest de quem o iniciou</div>
+          </div>
+          <div style="font-size:10.5px;color:rgba(230,233,236,.45)">O serviço mistura idiomas; a faixa mostra o que ele escreveu.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 5 · SPOOK ============ -->
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <div style="font-size:18px;font-weight:600">5 · Spook: quatro fatos, quatro frases — e o bloco de clientes</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(230,233,236,.4)">a verdade fica no arquivo · o diálogo lê na hora que abre</div>
+    </div>
+
+    <div style="display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap">
+      <div style="width:700px;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:18px;display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;flex-direction:column;gap:2px">
+          <div style="font-size:16px;font-weight:600">Spook</div>
+          <div style="font-size:11.5px;color:rgba(230,233,236,.5)">Endereço e credencial do serviço de portais</div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:12px;border:1px solid #2b2f36;border-radius:9px;background:#16181d;padding:12px 13px">
+          <i class="ph ph-plugs-connected" style="font-size:17px;color:#57b184;flex:none"></i>
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
+            <div style="display:flex;align-items:center;gap:8px"><div style="font-size:13px"><span style="font-weight:500">Serviço</span> · no ar</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(230,233,236,.45);background:#23272e;border-radius:4px;padding:1px 5px">v0.4.2</div></div>
+            <div style="font-size:11px;color:rgba(230,233,236,.5)">O Spook responde onde este endereço apontar.</div>
+            <div style="font-size:11px;color:rgba(230,233,236,.5)">15 capacidades</div>
+          </div>
+          <div style="width:38px;height:22px;flex:none;border-radius:12px;background:rgba(87,177,132,.75);display:flex;align-items:center;justify-content:flex-end;padding:0 3px"><div style="width:16px;height:16px;border-radius:9px;background:#f2f5f7"></div></div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:12px;border:1px solid rgba(224,163,60,.5);border-radius:9px;background:#16181d;padding:12px 13px">
+          <i class="ph ph-key" style="font-size:17px;color:#e0a33c;flex:none"></i>
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
+            <div style="font-size:13px"><span style="font-weight:500">Credencial</span> · aceita, mas só de leitura</div>
+            <div style="font-size:11px;color:#f4d9a3;line-height:1.5;text-wrap:pretty">Emitida antes de o app enviar nota. Emita outra para poder enviar.</div>
+          </div>
+          <div style="flex:none;height:27px;display:flex;align-items:center;padding:0 11px;border:1px solid #6ea3e0;border-radius:6px;font-size:11.5px;color:#6ea3e0">Reemitir</div>
+        </div>
+
+        <div style="display:flex;gap:11px">
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:7px">
+            <div style="font-size:12px;color:rgba(230,233,236,.8)">Pasta do projeto Spook</div>
+            <div style="display:flex;gap:7px">
+              <div style="flex:1;min-width:0;height:30px;display:flex;align-items:center;padding:0 10px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">~/Projetos/spook</div>
+              <div style="flex:none;width:30px;height:30px;display:flex;align-items:center;justify-content:center;border:1px solid #2b2f36;border-radius:6px"><i class="ph ph-folder-open" style="font-size:13px;color:rgba(230,233,236,.8)"></i></div>
+            </div>
+            <div style="font-size:10.5px;line-height:1.55;color:rgba(230,233,236,.5);text-wrap:pretty">De onde o app sobe o serviço (uv run spook serve). É a pasta com o pyproject.toml e src/spook.</div>
+          </div>
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:7px">
+            <div style="font-size:12px;color:rgba(230,233,236,.8)">Endereço</div>
+            <div style="height:30px;display:flex;align-items:center;padding:0 10px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:rgba(230,233,236,.38)">http://127.0.0.1:8765</div>
+            <div style="font-size:10.5px;line-height:1.55;color:rgba(230,233,236,.5);text-wrap:pretty">Onde o Spook atende. Com a pasta preenchida, em branco é o Spook que este app sobe em 127.0.0.1:8765; sem pasta e sem endereço, a conexão não existe.</div>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:7px">
+          <div style="display:flex;gap:11px">
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:7px">
+              <div style="font-size:12px;color:rgba(230,233,236,.8)">Usuário do portal (OPMENEXO)</div>
+              <div style="height:30px;display:flex;align-items:center;padding:0 10px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:11.5px">camila.rocha</div>
+            </div>
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:7px">
+              <div style="display:flex;align-items:center;gap:8px"><div style="font-size:12px;color:rgba(230,233,236,.8)">Senha do portal</div><div style="font-size:9.5px;color:#9cc0ec;background:rgba(110,163,224,.13);border-radius:4px;padding:1px 6px">gravada</div></div>
+              <div style="height:30px;display:flex;align-items:center;padding:0 10px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.18em;color:rgba(230,233,236,.6)">••••••••••</div>
+            </div>
+          </div>
+          <div style="font-size:10.5px;line-height:1.6;color:rgba(230,233,236,.5);text-wrap:pretty">O login do portal que o Spook usa — o que antes ia à mão no .env dele. A senha entra no serviço quando o app o sobe e nunca é escrita em disco.</div>
+        </div>
+
+        <div style="border:1px solid #2b2f36;border-radius:9px;background:#16181d;display:flex;flex-direction:column;overflow:hidden">
+          <div style="display:flex;align-items:center;gap:11px;padding:11px 13px;border-bottom:1px solid #1e2126">
+            <i class="ph ph-buildings" style="font-size:15px;color:rgba(230,233,236,.55)"></i>
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><div style="font-size:12.5px;font-weight:500">Clientes do OPMENEXO</div><div style="font-size:10.5px;color:rgba(230,233,236,.5)">o bloco que este app mantém dentro do settings.toml do Spook</div></div>
+            <div style="flex:none;height:26px;display:flex;align-items:center;gap:6px;padding:0 10px;border:1px solid #2b2f36;border-radius:6px;font-size:11.5px;color:rgba(230,233,236,.85)"><i class="ph ph-pencil-simple" style="font-size:12px"></i>Editar</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;padding:11px 13px">
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px"><div style="font-size:12px">Releitura automática do portal</div><div style="font-size:10.5px;color:rgba(230,233,236,.5);text-wrap:pretty">0 desliga; abaixo de 5 min o portal é martelado sem novidade que alguém possa usar. Pausa com o app trancado e nunca corre durante um envio.</div></div>
+            <div style="flex:none;display:flex;align-items:center;gap:7px">
+              <div style="width:56px;height:30px;display:flex;align-items:center;justify-content:flex-end;padding:0 10px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:12px">15</div>
+              <div style="font-size:11px;color:rgba(230,233,236,.5)">min</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="width:487px;display:flex;flex-direction:column;gap:14px">
+        <div style="background:#16181d;border:1px solid #2b2f36;border-radius:9px;box-shadow:0 18px 40px rgba(0,0,0,.45);overflow:hidden;display:flex;flex-direction:column">
+          <div style="display:flex;align-items:flex-start;gap:11px;padding:13px 14px;border-bottom:1px solid #23272e">
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
+              <div style="font-size:13.5px;font-weight:500">Clientes do OPMENEXO</div>
+              <div style="font-size:10.5px;color:rgba(230,233,236,.5);text-wrap:pretty">Editado direto no arquivo do Spook, entre os marcadores deste app. O resto do settings.toml — as lições escritas à mão — não é tocado.</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(230,233,236,.38)">~/Projetos/spook/settings.toml</div>
+            </div>
+            <i class="ph ph-x" style="font-size:14px;color:rgba(230,233,236,.5);flex:none;margin-top:2px"></i>
+          </div>
+
+          <div style="padding:12px 14px;display:flex;flex-direction:column;gap:10px">
+            <div style="background:#101216;border:1px solid #2b2f36;border-radius:7px;padding:11px 12px;font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.75;overflow:hidden">
+              <div><span style="color:#6a727e"># Hospital Vale Verde — só notas aguardando NF</span></div>
+              <div><span style="color:rgba(230,233,236,.85)">[</span><span style="color:#bfd8f5">default.portals.opmenexo.clients.vale-verde</span><span style="color:rgba(230,233,236,.85)">]</span></div>
+              <div><span style="color:#6ea3e0">company_id</span><span style="color:rgba(230,233,236,.6)"> = </span><span style="color:#e0a33c">71001</span></div>
+              <div><span style="color:#6ea3e0">statuses</span><span style="color:rgba(230,233,236,.6)"> = [</span><span style="color:#57b184">"FA"</span><span style="color:rgba(230,233,236,.6)">, </span><span style="color:#57b184">"SP"</span><span style="color:rgba(230,233,236,.6)">]</span></div>
+              <div><span style="color:#6ea3e0">invoice_flows</span><span style="color:rgba(230,233,236,.6)"> = [</span><span style="color:#e0a33c">5120</span><span style="color:rgba(230,233,236,.6)">]</span></div>
+              <div style="height:19px"></div>
+              <div><span style="color:rgba(230,233,236,.85)">[</span><span style="color:#bfd8f5">default.portals.opmenexo.clients.santa-aurora</span><span style="color:rgba(230,233,236,.85)">]</span></div>
+              <div><span style="color:#6ea3e0">flows</span><span style="color:rgba(230,233,236,.6)"> = [</span><span style="color:#e0a33c">41</span><span style="color:rgba(230,233,236,.6)">]</span></div>
+            </div>
+
+            <div style="display:flex;align-items:flex-start;gap:8px;padding:9px 11px;border:1px solid rgba(224,106,99,.5);background:rgba(224,106,99,.09);border-radius:7px">
+              <i class="ph-fill ph-warning-circle" style="font-size:13px;color:#e06a63;flex:none;margin-top:1px"></i>
+              <div style="flex:1;display:flex;flex-direction:column;gap:4px">
+                <div style="font-size:11px;color:#f2b3ae">O bloco foi recusado — nada foi escrito no arquivo:</div>
+                <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;line-height:1.55;color:rgba(230,233,236,.9);user-select:all;text-wrap:pretty">the clients block was refused: client `santa-aurora`: `company_id` is required — the Spook silently skips a profile without it, and that client's work becomes invisible</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:9px;padding:11px 14px;border-top:1px solid #23272e;background:rgba(255,255,255,.016)">
+            <div style="flex:1;font-size:10.5px;color:rgba(230,233,236,.45)">Gravado vale na próxima leitura do portal, sem reiniciar nada.</div>
+            <div style="height:28px;display:flex;align-items:center;gap:6px;padding:0 10px;border:1px solid #2b2f36;border-radius:6px;font-size:11.5px;color:rgba(230,233,236,.8)"><i class="ph ph-arrow-counter-clockwise" style="font-size:12px"></i>Recarregar</div>
+            <div style="height:28px;display:flex;align-items:center;padding:0 11px;border:1px solid #2b2f36;border-radius:6px;font-size:11.5px;color:rgba(230,233,236,.85)">Cancelar</div>
+            <div style="height:28px;display:flex;align-items:center;gap:6px;padding:0 12px;border-radius:6px;background:#6ea3e0;color:#14161a;font-size:11.5px;font-weight:500"><i class="ph ph-floppy-disk" style="font-size:12px"></i>Salvar</div>
+          </div>
+        </div>
+
+        <div style="background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:11px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">As quatro frases do serviço</div>
+          <div style="display:flex;align-items:center;gap:10px"><div style="width:7px;height:7px;border-radius:4px;background:#5b6270;flex:none"></div><div style="flex:1;font-size:11.5px">sem endereço configurado</div><div style="font-size:10px;color:rgba(230,233,236,.4)">não configurado</div></div>
+          <div style="display:flex;align-items:center;gap:10px"><div style="width:7px;height:7px;border-radius:4px;background:#5b6270;flex:none"></div><div style="flex:1;font-size:11.5px">parado</div><div style="font-size:10px;color:rgba(230,233,236,.4)">local e desligado — calmo</div></div>
+          <div style="display:flex;align-items:center;gap:10px"><div style="width:7px;height:7px;border-radius:4px;background:#e0a33c;flex:none"></div><div style="flex:1;font-size:11.5px;color:#f4d9a3">não respondeu</div><div style="font-size:10px;color:rgba(230,233,236,.4)">remoto e calado — avisa</div></div>
+          <div style="display:flex;align-items:center;gap:10px"><div style="width:7px;height:7px;border-radius:4px;background:#e06a63;flex:none"></div><div style="flex:1;font-size:11.5px;color:#f2b3ae">recusada pelo serviço</div><div style="font-size:10px;color:rgba(230,233,236,.4)">credencial, não rede</div></div>
+          <div style="font-size:10.5px;line-height:1.6;color:rgba(230,233,236,.45);text-wrap:pretty;padding-top:3px;border-top:1px solid #23272e">Sem usuário e senha do portal o app não sobe o Spook — de pé sem conseguir entrar no portal é pior que de pé nenhum. A razão fica no próprio interruptor.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 6 · NFE PACK + ADAPTERS ============ -->
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <div style="font-size:18px;font-weight:600">6 · NFe Pack e Adapters</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(230,233,236,.4)">processo vivo não é portal funcionando · código inventado não grava</div>
+    </div>
+
+    <div style="display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap">
+      <div style="width:580px;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:18px;display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;flex-direction:column;gap:2px">
+          <div style="font-size:16px;font-weight:600">NFe Pack</div>
+          <div style="font-size:11.5px;color:rgba(230,233,236,.5)">Serviço e pasta do monitor de NF-e</div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:12px;border:1px solid #2b2f36;border-radius:9px;background:#16181d;padding:12px 13px">
+          <i class="ph ph-receipt" style="font-size:17px;color:#57b184;flex:none"></i>
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
+            <div style="font-size:13px"><span style="font-weight:500">Serviço</span> · baixando</div>
+            <div style="font-size:11px;color:rgba(230,233,236,.5)">As NF-e do portal ACOM — sobe com o app e fica no ar; só Desligar derruba</div>
+            <div style="display:flex;align-items:center;gap:7px;font-size:11px;color:rgba(230,233,236,.6)"><span style="color:rgba(230,233,236,.45)">Último ciclo:</span><span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px">10/09/2026 · 14:31 · 3 notas no ciclo · 1.284 ciclos no total</span></div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:10.5px;color:#57b184"><i class="ph ph-pulse" style="font-size:11px"></i>há 3 min · dentro da pausa de 10 s</div>
+          </div>
+          <div style="width:38px;height:22px;flex:none;border-radius:12px;background:rgba(87,177,132,.75);display:flex;align-items:center;justify-content:flex-end;padding:0 3px"><div style="width:16px;height:16px;border-radius:9px;background:#f2f5f7"></div></div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:7px">
+          <div style="font-size:12px;color:rgba(230,233,236,.8)">Pasta do projeto NFePackMonitor</div>
+          <div style="display:flex;gap:7px">
+            <div style="flex:1;min-width:0;height:30px;display:flex;align-items:center;padding:0 10px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:11.5px">~/Projetos/nfepackmonitor</div>
+            <div style="flex:none;height:30px;display:flex;align-items:center;gap:7px;padding:0 11px;border:1px solid #2b2f36;border-radius:6px;font-size:11.5px;color:rgba(230,233,236,.85)"><i class="ph ph-folder-open" style="font-size:13px"></i>Escolher</div>
+          </div>
+          <div style="font-size:10.5px;line-height:1.55;color:rgba(230,233,236,.5);text-wrap:pretty">De onde o app sobe o serviço (uv run scrape). É a pasta com o pyproject.toml e src/nfepackmonitor.</div>
+        </div>
+
+        <div style="display:flex;gap:11px">
+          <div style="flex:2;min-width:0;display:flex;flex-direction:column;gap:7px">
+            <div style="font-size:12px;color:rgba(230,233,236,.8)">Pasta das notas</div>
+            <div style="display:flex;gap:7px">
+              <div style="flex:1;min-width:0;height:30px;display:flex;align-items:center;padding:0 10px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:rgba(230,233,236,.38);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">padrão do monitor: storage/</div>
+              <div style="flex:none;width:30px;height:30px;display:flex;align-items:center;justify-content:center;border:1px solid #2b2f36;border-radius:6px"><i class="ph ph-folder-open" style="font-size:13px;color:rgba(230,233,236,.8)"></i></div>
+            </div>
+            <div style="font-size:10.5px;line-height:1.55;color:rgba(230,233,236,.5);text-wrap:pretty">Onde as NF-e e DANFEs baixadas ficam salvas. Em branco: o padrão do monitor (storage/ dentro do projeto). O log não tem campo — o app lê o padrão e mostra em Logs.</div>
+          </div>
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:7px">
+            <div style="font-size:12px;color:rgba(230,233,236,.8)">Intervalo (s)</div>
+            <div style="height:30px;display:flex;align-items:center;justify-content:flex-end;padding:0 10px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:rgba(230,233,236,.38)">10</div>
+            <div style="font-size:10.5px;line-height:1.55;color:rgba(230,233,236,.5);text-wrap:pretty">Pausa entre um ciclo e o próximo. Em branco: o padrão do settings.toml do monitor (hoje 10 s).</div>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:7px">
+          <div style="display:flex;gap:11px">
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:7px">
+              <div style="font-size:12px;color:rgba(230,233,236,.8)">Usuário do portal (ACOM)</div>
+              <div style="height:30px;display:flex;align-items:center;padding:0 10px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:11.5px">camila.rocha</div>
+            </div>
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:7px">
+              <div style="display:flex;align-items:center;gap:8px"><div style="font-size:12px;color:rgba(230,233,236,.8)">Senha do portal</div><div style="font-size:9.5px;color:#9cc0ec;background:rgba(110,163,224,.13);border-radius:4px;padding:1px 6px">gravada</div></div>
+              <div style="height:30px;display:flex;align-items:center;padding:0 10px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.18em;color:rgba(230,233,236,.6)">••••••••••</div>
+            </div>
+          </div>
+          <div style="font-size:10.5px;line-height:1.6;color:rgba(230,233,236,.5);text-wrap:pretty">O login do webmonitor que o NFePackMonitor usa. Em branco significa que você não mexeu — e campos vazios deixam o .env do próprio monitor valendo.</div>
+        </div>
+
+        <div style="border:1px solid #2b2f36;border-radius:9px;background:#16181d;overflow:hidden">
+          <div style="display:flex;align-items:center;gap:10px;padding:11px 13px;border-bottom:1px solid #1e2126"><div style="flex:1;font-size:12.5px;font-weight:500">Métricas</div><div style="font-size:10.5px;color:rgba(230,233,236,.45)">exportadas em 10/09/2026 · 14:20</div></div>
+          <div style="padding:13px;display:grid;grid-template-columns:repeat(3,1fr);gap:13px">
+            <div style="display:flex;flex-direction:column;gap:3px"><div style="font-family:'IBM Plex Mono',monospace;font-size:18px">1.284</div><div style="font-size:10px;color:rgba(230,233,236,.5)">ciclos</div></div>
+            <div style="display:flex;flex-direction:column;gap:3px"><div style="font-family:'IBM Plex Mono',monospace;font-size:18px">1.279</div><div style="font-size:10px;color:rgba(230,233,236,.5)">bem-sucedidos</div></div>
+            <div style="display:flex;flex-direction:column;gap:3px"><div style="font-family:'IBM Plex Mono',monospace;font-size:18px;color:#f4d9a3">5</div><div style="font-size:10px;color:rgba(230,233,236,.5)">falhas</div></div>
+            <div style="display:flex;flex-direction:column;gap:3px"><div style="font-family:'IBM Plex Mono',monospace;font-size:18px">3.912</div><div style="font-size:10px;color:rgba(230,233,236,.5)">notas baixadas</div></div>
+            <div style="display:flex;flex-direction:column;gap:3px"><div style="font-family:'IBM Plex Mono',monospace;font-size:18px">42 s</div><div style="font-size:10px;color:rgba(230,233,236,.5)">duração do último ciclo</div></div>
+            <div style="display:flex;flex-direction:column;gap:3px"><div style="font-family:'IBM Plex Mono',monospace;font-size:18px;color:rgba(230,233,236,.45)">—</div><div style="font-size:10px;color:rgba(230,233,236,.5)">notas no último ciclo</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="width:607px;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:18px;display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;flex-direction:column;gap:2px">
+          <div style="font-size:16px;font-weight:600">Adapters</div>
+          <div style="font-size:11.5px;color:rgba(230,233,236,.5)">Clientes e colinha</div>
+        </div>
+
+        <div style="font-size:11.5px;line-height:1.65;color:rgba(230,233,236,.6);text-wrap:pretty">O catálogo é do MedLens — esta lista é o que ele diz saber processar. A caixa escolhe quais aparecem no menu da Triagem; desligar não apaga extração: o que já foi extraído continua na Revisão.</div>
+
+        <div style="border:1px solid #2b2f36;border-radius:9px;background:#16181d;display:flex;flex-direction:column;overflow:hidden">
+          <div style="display:flex;align-items:center;gap:11px;padding:11px 13px;border-bottom:1px solid #1e2126">
+            <div style="width:16px;height:16px;border-radius:4px;background:#6ea3e0;flex:none;display:flex;align-items:center;justify-content:center"><i class="ph-bold ph-check" style="font-size:11px;color:#14161a"></i></div>
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><div style="font-size:12.5px">Hospital Vale Verde</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:rgba(230,233,236,.4)">vale_verde</div></div>
+            <div style="flex:none;display:flex;align-items:center;gap:5px;font-size:10.5px;color:#a6dcbf;border:1px solid rgba(87,177,132,.6);border-radius:5px;padding:2px 8px"><i class="ph ph-check" style="font-size:10px"></i>colinha completa</div>
+            <div style="flex:none;height:26px;display:flex;align-items:center;gap:6px;padding:0 10px;border:1px solid #2b2f36;border-radius:6px;font-size:11px;color:rgba(230,233,236,.85)"><i class="ph ph-clipboard-text" style="font-size:12px"></i>Colinha</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:11px;padding:11px 13px;border-bottom:1px solid #1e2126">
+            <div style="width:16px;height:16px;border-radius:4px;background:#6ea3e0;flex:none;display:flex;align-items:center;justify-content:center"><i class="ph-bold ph-check" style="font-size:11px;color:#14161a"></i></div>
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><div style="font-size:12.5px">Hospital Santa Aurora</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:rgba(230,233,236,.4)">santa_aurora<span style="font-family:'IBM Plex Sans',sans-serif;color:#f4d9a3"> · colinha: falta Comissionado, Cond. de Venda</span></div></div>
+            <div style="flex:none;font-size:10.5px;color:#f4d9a3;background:#33291a;border:1px solid rgba(224,163,60,.45);border-radius:5px;padding:2px 8px">colinha incompleta</div>
+            <div style="flex:none;height:26px;display:flex;align-items:center;gap:6px;padding:0 10px;border:1px solid #2b2f36;border-radius:6px;font-size:11px;color:rgba(230,233,236,.85)"><i class="ph ph-clipboard-text" style="font-size:12px"></i>Colinha</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:11px;padding:11px 13px;border-bottom:1px solid #1e2126">
+            <div style="width:16px;height:16px;border-radius:4px;background:#6ea3e0;flex:none;display:flex;align-items:center;justify-content:center"><i class="ph-bold ph-check" style="font-size:11px;color:#14161a"></i></div>
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><div style="font-size:12.5px">Instituto Ortopédico Horizonte</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:rgba(230,233,236,.4)">horizonte</div></div>
+            <div style="flex:none;font-size:10.5px;color:rgba(230,233,236,.5);background:#23272e;border-radius:5px;padding:2px 8px">colinha não montada</div>
+            <div style="flex:none;height:26px;display:flex;align-items:center;gap:6px;padding:0 10px;border:1px solid #2b2f36;border-radius:6px;font-size:11px;color:rgba(230,233,236,.85)"><i class="ph ph-clipboard-text" style="font-size:12px"></i>Colinha</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:11px;padding:11px 13px;opacity:.62">
+            <div style="width:16px;height:16px;border-radius:4px;border:1px solid #434a53;flex:none"></div>
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><div style="font-size:12.5px">Hospital Infantil Sol Nascente</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:rgba(230,233,236,.4)">sol_nascente</div></div>
+            <div style="flex:none;font-size:10.5px;color:rgba(230,233,236,.5);background:#23272e;border-radius:5px;padding:2px 8px">colinha não montada</div>
+            <div style="flex:none;height:26px;display:flex;align-items:center;gap:6px;padding:0 10px;border:1px solid #2b2f36;border-radius:6px;font-size:11px;color:rgba(230,233,236,.85)"><i class="ph ph-clipboard-text" style="font-size:12px"></i>Colinha</div>
+          </div>
+        </div>
+
+        <div style="font-size:10.5px;color:rgba(230,233,236,.45);text-wrap:pretty">Sem o MedLens no ar a lista não vem: "Nenhum adapter — o MedLens precisa estar no ar para responder a lista. Ligue-o em MedLens → Serviço." As colinhas em disco continuam desenhando.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 7 · DIÁLOGO DA COLINHA ============ -->
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <div style="font-size:18px;font-weight:600">7 · A colinha, no formato da tela do ERP</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(230,233,236,.4)">rótulo à direita · código curto · nome do cadastro ao lado</div>
+    </div>
+
+    <div style="display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap">
+      <div style="width:640px;background:#16181d;border:1px solid #2b2f36;border-radius:9px;box-shadow:0 18px 40px rgba(0,0,0,.45);overflow:hidden;display:flex;flex-direction:column">
+        <div style="display:flex;align-items:flex-start;gap:11px;padding:13px 15px;border-bottom:1px solid #23272e">
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
+            <div style="font-size:13.5px;font-weight:500">Colinha · Hospital Vale Verde</div>
+            <div style="font-size:10.5px;line-height:1.55;color:rgba(230,233,236,.5);text-wrap:pretty">O que o Fantasma precisa saber para trabalhar uma conta deste cliente. É o padrão do adapter — a conta pode divergir dele sem mudá-lo.</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(230,233,236,.38)">vale_verde</div>
+          </div>
+          <i class="ph ph-x" style="font-size:14px;color:rgba(230,233,236,.5);flex:none;margin-top:2px"></i>
+        </div>
+
+        <div style="padding:14px 15px;display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;align-items:center;gap:11px"><div style="width:112px;flex:none;text-align:right;font-size:11.5px;color:rgba(230,233,236,.65)">Depósito</div><div style="width:78px;flex:none;height:28px;display:flex;align-items:center;padding:0 9px;background:#1b1e23;border:1px solid #2b2f36;border-radius:5px;font-family:'IBM Plex Mono',monospace;font-size:12px">4</div><div style="flex:1;min-width:0;font-size:11.5px;color:rgba(230,233,236,.7);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">CONSIGNADO VALE VERDE</div></div>
+          <div style="display:flex;align-items:center;gap:11px"><div style="width:112px;flex:none;text-align:right;font-size:11.5px;color:rgba(230,233,236,.65)">Cliente</div><div style="width:78px;flex:none;height:28px;display:flex;align-items:center;padding:0 9px;background:#1b1e23;border:1px solid #2b2f36;border-radius:5px;font-family:'IBM Plex Mono',monospace;font-size:12px">1204</div><div style="flex:1;min-width:0;font-size:11.5px;color:rgba(230,233,236,.7);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">HOSPITAL VALE VERDE</div></div>
+          <div style="display:flex;align-items:flex-start;gap:11px">
+            <div style="width:112px;flex:none;text-align:right;font-size:11.5px;color:rgba(230,233,236,.65);padding-top:6px">Comissionado</div>
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:5px">
+              <div style="display:flex;align-items:center;gap:11px">
+                <div style="width:78px;flex:none;height:28px;display:flex;align-items:center;padding:0 9px;background:#1b1e23;border:1px solid #e06a63;border-radius:5px;font-family:'IBM Plex Mono',monospace;font-size:12px">9999</div>
+                <div style="flex:1;min-width:0;font-size:11.5px;color:#f2b3ae">não existe no catálogo de Comissionados</div>
+              </div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:11px"><div style="width:112px;flex:none;text-align:right;font-size:11.5px;color:rgba(230,233,236,.65)">Tipo Pedido</div><div style="width:78px;flex:none;height:28px;display:flex;align-items:center;padding:0 9px;background:#1b1e23;border:1px solid #2b2f36;border-radius:5px;font-family:'IBM Plex Mono',monospace;font-size:12px">7</div><div style="flex:1;min-width:0;font-size:11.5px;color:rgba(230,233,236,.7)">CONSIGNAÇÃO OPME</div></div>
+          <div style="display:flex;align-items:center;gap:11px"><div style="width:112px;flex:none;text-align:right;font-size:11.5px;color:rgba(230,233,236,.65)">Tabela</div><div style="width:78px;flex:none;height:28px;display:flex;align-items:center;padding:0 9px;background:#1b1e23;border:1px solid #2b2f36;border-radius:5px;font-family:'IBM Plex Mono',monospace;font-size:12px">015</div><div style="flex:1;min-width:0;display:flex;align-items:center;gap:8px"><div style="font-size:11.5px;color:rgba(230,233,236,.7)">TABELA OPME</div><div style="font-size:9.5px;color:rgba(230,233,236,.4);border:1px solid #2b2f36;border-radius:4px;padding:0 5px">texto: 015 não é 15</div></div></div>
+          <div style="display:flex;align-items:center;gap:11px"><div style="width:112px;flex:none;text-align:right;font-size:11.5px;color:rgba(230,233,236,.65)">Depósito do pedido</div><div style="width:78px;flex:none;height:28px;display:flex;align-items:center;padding:0 9px;background:#1b1e23;border:1px solid #2b2f36;border-radius:5px;font-family:'IBM Plex Mono',monospace;font-size:12px">2</div><div style="flex:1;min-width:0;font-size:11.5px;color:rgba(230,233,236,.7)">CONSIGNADO</div></div>
+          <div style="display:flex;align-items:center;gap:11px"><div style="width:112px;flex:none;text-align:right;font-size:11.5px;color:rgba(230,233,236,.65)">Cond. de Venda</div><div style="width:78px;flex:none;height:28px;display:flex;align-items:center;padding:0 9px;background:#1b1e23;border:1px solid #2b2f36;border-radius:5px;font-family:'IBM Plex Mono',monospace;font-size:12px">30</div><div style="flex:1;min-width:0;font-size:11.5px;color:rgba(230,233,236,.7)">30 DIAS</div></div>
+          <div style="display:flex;align-items:center;gap:11px"><div style="width:112px;flex:none;text-align:right;font-size:11.5px;color:rgba(230,233,236,.65)">Local de Uso</div><div style="width:78px;flex:none;height:28px;display:flex;align-items:center;padding:0 9px;background:#1b1e23;border:1px solid #2b2f36;border-radius:5px;font-family:'IBM Plex Mono',monospace;font-size:12px">1204</div><div style="flex:1;min-width:0;font-size:11.5px;color:rgba(230,233,236,.7)">HOSPITAL VALE VERDE</div></div>
+
+          <div style="font-size:10.5px;line-height:1.65;color:rgba(230,233,236,.5);text-wrap:pretty;padding-top:6px">O depósito é a ponte: o app conhece o adapter, o Fantasma pensa em depósito. O cliente é para quem a conta é faturada; o local de uso é onde o material foi usado, normalmente o próprio depósito. O depósito do pedido não é nenhum dos dois: é o estoque consignado, 2 em todos os conhecidos. O portador não aparece aqui porque é sempre 100 (carteira) — está fixo no Fantasma.</div>
+
+          <div style="display:flex;align-items:flex-start;gap:8px;padding:9px 11px;border:1px solid rgba(224,106,99,.5);background:rgba(224,106,99,.09);border-radius:7px">
+            <i class="ph-fill ph-warning-circle" style="font-size:13px;color:#e06a63;flex:none;margin-top:1px"></i>
+            <div style="flex:1;font-size:11px;line-height:1.6;color:#f2b3ae;text-wrap:pretty"><span style="font-weight:600;color:#f8cdc9">Comissionado</span>: código que não existe no catálogo. Isto vira cabeçalho de pedido no ERP — um código inventado não falha na hora, fatura errado, e o erro aparece longe. Corrija ou apague antes de gravar.</div>
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:9px;padding:11px 15px;border-top:1px solid #23272e;background:rgba(255,255,255,.016)">
+          <div style="flex:1;font-size:10.5px;color:rgba(230,233,236,.45);text-wrap:pretty">Gravar regenera o arquivo em <span style="font-family:'IBM Plex Mono',monospace">~/Projetos/fantasma</span> que o robô lê.</div>
+          <div style="height:28px;display:flex;align-items:center;padding:0 11px;border:1px solid #2b2f36;border-radius:6px;font-size:11.5px;color:rgba(230,233,236,.85)">Cancelar</div>
+          <div style="height:28px;display:flex;align-items:center;gap:6px;padding:0 12px;border-radius:6px;background:#6ea3e0;color:#14161a;font-size:11.5px;font-weight:500;opacity:.4"><i class="ph ph-floppy-disk" style="font-size:12px"></i>Gravar</div>
+        </div>
+      </div>
+
+      <div style="width:547px;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:12px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">Os outros avisos do diálogo</div>
+
+        <div style="display:flex;align-items:flex-start;gap:8px;padding:9px 11px;border:1px solid rgba(224,163,60,.45);background:#33291a;border-radius:7px">
+          <i class="ph-fill ph-warning" style="font-size:13px;color:#e0a33c;flex:none;margin-top:1px"></i>
+          <div style="flex:1;font-size:11px;line-height:1.6;color:#f4d9a3;text-wrap:pretty"><span style="font-weight:600">Cond. de Venda, Local de Uso</span>: preenchido, mas sem catálogo coletado — ninguém conferiu esses códigos. Colete em Catálogos para o app conferir por você.</div>
+        </div>
+
+        <div style="display:flex;align-items:flex-start;gap:8px;padding:9px 11px;border:1px solid rgba(224,163,60,.45);background:#33291a;border-radius:7px">
+          <i class="ph-fill ph-warning" style="font-size:13px;color:#e0a33c;flex:none;margin-top:1px"></i>
+          <div style="flex:1;font-size:11px;line-height:1.6;color:#f4d9a3;text-wrap:pretty">Sem o depósito esta colinha fica gravada aqui, mas não vai para o Fantasma: é por ele que o robô liga o informe ao cliente.</div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:7px;padding-top:10px;border-top:1px solid #23272e">
+          <div style="font-size:11.5px;color:rgba(230,233,236,.8)">Campo em busca: o código vem do cadastro, não da memória</div>
+          <div style="display:flex;align-items:center;gap:11px">
+            <div style="width:112px;flex:none;text-align:right;font-size:11.5px;color:rgba(230,233,236,.65)">Cond. de Venda</div>
+            <div style="flex:1;min-width:0;position:relative">
+              <div style="height:28px;display:flex;align-items:center;padding:0 9px;background:#1b1e23;border:1px solid #6ea3e0;border-radius:5px;font-family:'IBM Plex Mono',monospace;font-size:12px">30 d</div>
+              <div style="position:absolute;left:0;right:0;top:32px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;box-shadow:0 12px 26px rgba(0,0,0,.5);overflow:hidden;z-index:2">
+                <div style="display:flex;align-items:center;gap:9px;padding:6px 9px;background:rgba(110,163,224,.13)"><div style="width:40px;flex:none;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#9cc0ec">30</div><div style="flex:1;font-size:11px">30 DIAS</div></div>
+                <div style="display:flex;align-items:center;gap:9px;padding:6px 9px"><div style="width:40px;flex:none;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#9cc0ec">37</div><div style="flex:1;font-size:11px;color:rgba(230,233,236,.8)">30/60 DIAS</div></div>
+                <div style="display:flex;align-items:center;gap:9px;padding:6px 9px"><div style="width:40px;flex:none;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#9cc0ec">38</div><div style="flex:1;font-size:11px;color:rgba(230,233,236,.8)">30/60/90 DIAS</div></div>
+              </div>
+            </div>
+          </div>
+          <div style="font-size:10.5px;color:rgba(230,233,236,.45);padding-top:84px;text-wrap:pretty">↑ ↓ andam, Enter escolhe, Esc desiste e devolve o valor. Fora de foco a linha lê <span style="font-family:'IBM Plex Mono',monospace">30 · 30 DIAS</span>; em foco, só o código, selecionado.</div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:7px;padding-top:10px;border-top:1px solid #23272e">
+          <div style="font-size:11.5px;color:rgba(230,233,236,.8)">Catálogo nunca coletado</div>
+          <div style="display:flex;align-items:center;gap:11px"><div style="width:112px;flex:none;text-align:right;font-size:11.5px;color:rgba(230,233,236,.65)">Comissionado</div><div style="flex:1;min-width:0;height:28px;display:flex;align-items:center;padding:0 9px;background:#1b1e23;border:1px solid #2b2f36;border-radius:5px;font-size:11.5px;color:rgba(230,233,236,.38)">colete o catálogo: Comissionados</div></div>
+        </div>
+      </div>
+    </div>
+
+    <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;gap:28px;max-width:1203px;font-size:11.5px;line-height:1.7;color:rgba(230,233,236,.55)">
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">Código inventado não grava.</span> O que sai daqui vira cabeçalho de pedido no ERP e não falha na hora — fatura errado, longe. Só o que pôde ser conferido conta: sem catálogo, grava e a tela diz que ninguém conferiu.</div>
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">O formato é o da tela do ERP</span> — rótulo, código curto, nome do cadastro. A operadora conhece esses campos de lá; uma segunda gramática forçaria tradução a cada preenchimento.</div>
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">O rodapé diz para onde a colinha vai.</span> Com o Fantasma configurado, o arquivo dele é regenerado; sem isso, ela fica só no app — e isso deixou de ser invisível.</div>
+      </div>
+    </sc-if>
+  </div>
+
+</div>
+
+
+<div style="font-family:'IBM Plex Sans',system-ui,sans-serif;background:#0a0b0d;color:#e6e9ec;padding:16px 56px 56px;display:flex;flex-direction:column;gap:16px;align-items:flex-start">
+  <div style="display:flex;align-items:baseline;gap:12px">
+    <div style="font-size:18px;font-weight:600">8 · No tema claro</div>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(230,233,236,.4)">ponto de estado na trilha, cartão de serviço, segredo e recusa</div>
+  </div>
+  <div style="width:960px;background:#f3f4f5;border:1px solid #dfe3e7;border-radius:10px;padding:18px;color:#1b1f24;display:flex;gap:16px">
+    <div style="width:190px;flex:none;background:#ffffff;border:1px solid #dfe3e7;border-radius:8px;padding:8px;display:flex;flex-direction:column;gap:1px">
+      <div style="font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(27,31,36,.45);padding:4px 8px 6px">Serviços</div>
+      <div style="display:flex;align-items:center;gap:9px;padding:6px 9px;border-radius:6px;background:rgba(47,106,176,.1);box-shadow:inset 0 0 0 1px rgba(47,106,176,.35);color:#14487d;font-size:12px;font-weight:500"><i class="ph-fill ph-eye" style="font-size:14px"></i><div style="flex:1">MedLens</div><div style="width:6px;height:6px;border-radius:4px;background:#1c7a4e"></div></div>
+      <div style="display:flex;align-items:center;gap:9px;padding:6px 9px;border-radius:6px;color:rgba(27,31,36,.75);font-size:12px"><i class="ph ph-robot" style="font-size:14px"></i><div style="flex:1">Fantasma</div><div style="width:6px;height:6px;border-radius:4px;background:#1c7a4e"></div></div>
+      <div style="display:flex;align-items:center;gap:9px;padding:6px 9px;border-radius:6px;color:rgba(27,31,36,.75);font-size:12px"><i class="ph ph-plugs-connected" style="font-size:14px"></i><div style="flex:1">Spook</div><div style="width:6px;height:6px;border-radius:4px;background:#c99a3d"></div></div>
+      <div style="font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(27,31,36,.45);padding:12px 8px 6px">Saída</div>
+      <div style="display:flex;align-items:center;gap:9px;padding:6px 9px;border-radius:6px;color:rgba(27,31,36,.45);font-size:12px"><i class="ph ph-export" style="font-size:14px"></i><div style="flex:1">Exportação</div><div style="font-size:9px">vazia</div></div>
+    </div>
+
+    <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;align-items:center;gap:12px;border:1px solid #dfe3e7;border-radius:9px;background:#ffffff;padding:12px 13px">
+        <i class="ph ph-eye" style="font-size:17px;color:#1c7a4e;flex:none"></i>
+        <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
+          <div style="display:flex;align-items:center;gap:8px"><div style="font-size:13px"><span style="font-weight:500">Serviço</span> · no ar</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(27,31,36,.5);background:#eceef1;border-radius:4px;padding:1px 5px">v1.8.0</div></div>
+          <div style="font-size:11px;color:rgba(27,31,36,.55)">uvicorn em 127.0.0.1:8000 — sobe com o app, desce com ele</div>
+        </div>
+        <div style="width:38px;height:22px;flex:none;border-radius:12px;background:#1c7a4e;display:flex;align-items:center;justify-content:flex-end;padding:0 3px"><div style="width:16px;height:16px;border-radius:9px;background:#ffffff"></div></div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <div style="display:flex;align-items:center;gap:8px"><div style="font-size:11.5px;color:rgba(27,31,36,.75)">Chave da OpenRouter</div><div style="font-size:9.5px;color:#14487d;background:rgba(47,106,176,.1);border-radius:4px;padding:1px 6px">gravada</div></div>
+        <div style="height:30px;display:flex;align-items:center;padding:0 10px;background:#ffffff;border:1px solid #dfe3e7;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.18em;color:rgba(27,31,36,.6)">••••••••••</div>
+        <div style="font-size:10px;line-height:1.55;color:rgba(27,31,36,.5);text-wrap:pretty">Depois de gravada, campo em branco significa não mexi — nunca apagar.</div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:12px;border:1px solid #c99a3d;border-radius:9px;background:#ffffff;padding:11px 12px">
+        <i class="ph ph-key" style="font-size:16px;color:#8a5c0c;flex:none"></i>
+        <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px">
+          <div style="font-size:12.5px"><span style="font-weight:500">Credencial</span> · aceita, mas só de leitura</div>
+          <div style="font-size:10.5px;color:#6b4708">Emita outra para poder enviar.</div>
+        </div>
+        <div style="flex:none;height:26px;display:flex;align-items:center;padding:0 11px;border:1px solid #2f6ab0;border-radius:6px;font-size:11px;color:#2f6ab0">Reemitir</div>
+      </div>
+
+      <div style="display:flex;align-items:flex-start;gap:9px;padding:10px 12px;border:1px solid rgba(168,58,50,.4);background:rgba(168,58,50,.07);border-radius:8px">
+        <i class="ph-fill ph-warning-circle" style="font-size:14px;color:#a83a32;flex:none;margin-top:1px"></i>
+        <div style="flex:1;display:flex;flex-direction:column;gap:4px">
+          <div style="font-size:11.5px;color:#8f2d26">A preferência vale nesta sessão, mas não foi gravada:</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.55;color:#7d2c25;user-select:all;text-wrap:pretty">failed to write config.json: Permission denied (os error 13)</div>
+        </div>
+      </div>
+
+      <div style="font-size:10.5px;line-height:1.6;color:rgba(27,31,36,.55);text-wrap:pretty">O ponto de estado na trilha mantém os quatro tons; o interruptor ligado é verde sólido, e "Sobe com o app" continua accent — preferência guardada não é fato conferido.</div>
+    </div>
+  </div>
+</div>
+<div style="font-family:'IBM Plex Sans',system-ui,sans-serif;background:#0a0b0d;color:#e6e9ec;padding:16px 56px 56px;display:flex;flex-direction:column;gap:16px;align-items:flex-start">
+  <div style="display:flex;flex-direction:column;gap:8px;max-width:940px">
+    <div style="font-size:20px;font-weight:600;letter-spacing:-.01em">9 · Atalhos — seção nova</div>
+    <div style="font-size:13px;line-height:1.65;color:rgba(230,233,236,.66);text-wrap:pretty">Em vez de um atalho fixo por tela, um lugar só onde todos moram e podem ser trocados. Entra em <span style="color:#e6e9ec">O app → Atalhos</span>, ao lado de Sobre.</div>
+  </div>
+
+  <div style="width:1000px;box-sizing:border-box;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:18px;display:flex;gap:16px;color:#e6e9ec">
+    <div style="width:190px;flex:none;border:1px solid #2b2f36;border-radius:8px;background:#16181d;padding:8px;display:flex;flex-direction:column;gap:1px">
+      <div style="font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(230,233,236,.4);padding:4px 8px 6px">O app</div>
+      <div style="display:flex;align-items:center;gap:9px;padding:6px 9px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12px"><i class="ph ph-info" style="font-size:14px"></i>Sobre</div>
+      <div style="display:flex;align-items:center;gap:9px;padding:6px 9px;border-radius:6px;background:rgba(110,163,224,.13);box-shadow:inset 2px 0 0 #6ea3e0;color:#bfd8f5;font-size:12px;font-weight:500"><i class="ph-fill ph-keyboard" style="font-size:14px"></i>Atalhos</div>
+      <div style="display:flex;align-items:center;gap:9px;padding:6px 9px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12px"><i class="ph ph-paint-brush" style="font-size:14px"></i>Aparência</div>
+    </div>
+
+    <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;align-items:flex-start;gap:14px">
+        <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
+          <div style="font-size:16px;font-weight:600">Atalhos</div>
+          <div style="font-size:11.5px;color:rgba(230,233,236,.55)">Que tecla faz o quê nesta estação</div>
+        </div>
+        <div style="flex:none;height:28px;display:flex;align-items:center;gap:6px;padding:0 11px;border:1px solid #2b2f36;border-radius:6px;font-size:11.5px;color:rgba(230,233,236,.85)"><i class="ph ph-arrow-counter-clockwise" style="font-size:12px"></i>Voltar aos de fábrica</div>
+      </div>
+
+      <div style="border:1px solid #2b2f36;border-radius:8px;background:#16181d;overflow:hidden">
+        <div style="display:flex;align-items:center;padding:0 12px;height:30px;background:#1b1e23;border-bottom:1px solid #2b2f36;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:rgba(230,233,236,.5)">
+          <div style="flex:1;min-width:0">Ação</div>
+          <div style="width:128px;flex:none">Tecla</div>
+          <div style="width:150px;flex:none">Onde funciona</div>
+          <div style="width:30px;flex:none"></div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:8px;padding:5px 12px;height:34px;border-bottom:1px solid #1e2126;font-size:11.5px">
+          <div style="flex:1;min-width:0;color:rgba(230,233,236,.82)">Abrir a bandeja de trabalho</div>
+          <div style="width:128px;flex:none"><div style="height:24px;display:inline-flex;align-items:center;padding:0 8px;border:1px solid #2b2f36;background:#1b1e23;border-radius:5px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#bfd8f5">Ctrl J</div></div>
+          <div style="width:150px;flex:none;font-size:10.5px;color:rgba(230,233,236,.55)">em qualquer tela</div>
+          <div style="width:30px;flex:none;display:flex;justify-content:flex-end"><i class="ph ph-pencil-simple" style="font-size:13px;color:rgba(230,233,236,.5)"></i></div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:8px;padding:5px 12px;height:34px;border-bottom:1px solid #1e2126;background:rgba(110,163,224,.09);box-shadow:inset 2px 0 0 #6ea3e0;font-size:11.5px">
+          <div style="flex:1;min-width:0;color:rgba(230,233,236,.82)">Aprovar a conta em foco</div>
+          <div style="width:128px;flex:none"><div style="height:24px;display:inline-flex;align-items:center;gap:6px;padding:0 8px;border:1px solid #6ea3e0;background:#1b1e23;border-radius:5px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#e6e9ec">Ctrl ⏎<div style="width:1px;height:11px;background:#6ea3e0"></div></div></div>
+          <div style="width:150px;flex:none;font-size:10.5px;color:#9cc0ec">gravando…</div>
+          <div style="width:30px;flex:none;display:flex;justify-content:flex-end"><i class="ph ph-x" style="font-size:12px;color:rgba(230,233,236,.5)"></i></div>
+        </div>
+
+        <div style="display:flex;align-items:flex-start;gap:9px;padding:9px 12px;border-bottom:1px solid #1e2126;background:#33291a">
+          <i class="ph-fill ph-warning" style="font-size:13px;color:#e0a33c;flex:none;margin-top:1px"></i>
+          <div style="flex:1;font-size:11px;line-height:1.55;color:#f4d9a3;text-wrap:pretty"><span style="font-family:'IBM Plex Mono',monospace">Ctrl ⏎</span> já é <span style="font-weight:600">Consultar</span>, na Consulta. Duas ações na mesma tecla: a de dentro da tela ganha, e a global fica muda ali.</div>
+          <div style="flex:none;display:flex;align-items:center;gap:6px">
+            <div style="height:25px;display:flex;align-items:center;padding:0 11px;border-radius:5px;background:#e0a33c;color:#14161a;font-size:11px;font-weight:500">Escolher outra</div>
+            <div style="height:25px;display:flex;align-items:center;padding:0 9px;border:1px solid rgba(230,233,236,.22);border-radius:5px;font-size:11px;color:#f4d9a3">Usar assim</div>
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:8px;padding:5px 12px;height:34px;border-bottom:1px solid #1e2126;font-size:11.5px">
+          <div style="flex:1;min-width:0;color:rgba(230,233,236,.82)">Busca global</div>
+          <div style="width:128px;flex:none"><div style="height:24px;display:inline-flex;align-items:center;padding:0 8px;border:1px solid #2b2f36;background:#1b1e23;border-radius:5px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(230,233,236,.75)">Ctrl K</div></div>
+          <div style="width:150px;flex:none;font-size:10.5px;color:rgba(230,233,236,.55)">em qualquer tela</div>
+          <div style="width:30px;flex:none;display:flex;justify-content:flex-end"><i class="ph ph-pencil-simple" style="font-size:13px;color:rgba(230,233,236,.5)"></i></div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:8px;padding:5px 12px;height:34px;border-bottom:1px solid #1e2126;font-size:11.5px">
+          <div style="flex:1;min-width:0;color:rgba(230,233,236,.82)">Filtro desta tela</div>
+          <div style="width:128px;flex:none"><div style="height:24px;display:inline-flex;align-items:center;padding:0 8px;border:1px solid #2b2f36;background:#1b1e23;border-radius:5px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(230,233,236,.75)">Ctrl ⇧ K</div></div>
+          <div style="width:150px;flex:none;font-size:10.5px;color:rgba(230,233,236,.55)">telas com grade</div>
+          <div style="width:30px;flex:none;display:flex;justify-content:flex-end"><i class="ph ph-pencil-simple" style="font-size:13px;color:rgba(230,233,236,.5)"></i></div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:8px;padding:5px 12px;height:34px;font-size:11.5px">
+          <div style="flex:1;min-width:0;color:rgba(230,233,236,.82)">Trancar a janela agora</div>
+          <div style="width:128px;flex:none"><div style="height:24px;display:inline-flex;align-items:center;padding:0 8px;border:1px solid #2b2f36;background:#1b1e23;border-radius:5px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(230,233,236,.75)">Ctrl ⇧ L</div></div>
+          <div style="width:150px;flex:none;font-size:10.5px;color:rgba(230,233,236,.55)">em qualquer tela</div>
+          <div style="width:30px;flex:none;display:flex;justify-content:flex-end"><i class="ph ph-pencil-simple" style="font-size:13px;color:rgba(230,233,236,.5)"></i></div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:flex-start;gap:9px;padding:10px 12px;border:1px solid rgba(224,106,99,.5);background:rgba(224,106,99,.09);border-radius:8px">
+        <i class="ph-fill ph-warning-circle" style="font-size:14px;color:#e06a63;flex:none;margin-top:1px"></i>
+        <div style="flex:1;display:flex;flex-direction:column;gap:4px">
+          <div style="font-size:11.5px;color:#f2b3ae">O sistema não entregou esta tecla:</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.55;color:rgba(230,233,236,.9);user-select:all;text-wrap:pretty">o atalho Ctrl ⇧ L já está tomado pelo ambiente de janelas — escolha outra</div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:5px">
+        <div style="display:flex;gap:9px;font-size:10.5px;line-height:1.55;color:rgba(230,233,236,.6)"><span style="color:#6ea3e0;flex:none">·</span><div style="flex:1;text-wrap:pretty">Gravar é <span style="color:rgba(230,233,236,.8)">pressionar</span>, não digitar: a linha entra em accent, mostra o cursor e a próxima combinação vale.</div></div>
+        <div style="display:flex;gap:9px;font-size:10.5px;line-height:1.55;color:rgba(230,233,236,.6)"><span style="color:#6ea3e0;flex:none">·</span><div style="flex:1;text-wrap:pretty">Conflito <span style="color:rgba(230,233,236,.8)">não bloqueia</span> — diz quem ganha e deixa seguir; só a recusa do ambiente é intransponível.</div></div>
+        <div style="display:flex;gap:9px;font-size:10.5px;line-height:1.55;color:rgba(230,233,236,.6)"><span style="color:#6ea3e0;flex:none">·</span><div style="flex:1;text-wrap:pretty">A coluna "onde funciona" existe porque atalho global e de tela são bichos diferentes, e a operadora precisa saber qual é qual.</div></div>
+      </div>
+    </div>
+  </div>
+</div></x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showNotes&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Apresentação&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return { showNotes: this.props.showNotes ?? true };
+  }
+}
+</script>
+</body>
+</html>

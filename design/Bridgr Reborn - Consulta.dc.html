@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" rel="stylesheet">
+<link href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css" rel="stylesheet">
+<style>
+body { margin: 0; background: #0a0b0d; }
+a { color: #6ea3e0; }
+a:hover { color: #9cc0ec; }
+</style>
+</helmet>
+
+<div style="font-family:'IBM Plex Sans',system-ui,sans-serif;background:#0a0b0d;color:#e6e9ec;padding:56px;display:flex;flex-direction:column;gap:72px;align-items:flex-start">
+
+  <div style="display:flex;flex-direction:column;gap:10px;max-width:980px">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(230,233,236,.4)">Bridgr Pro · reborn · rodada 11</div>
+    <div style="font-size:30px;font-weight:600;letter-spacing:-.01em">Consulta ao Everest — o que o ERP sabe que a esteira não responde</div>
+    <div style="font-size:14px;line-height:1.6;color:rgba(230,233,236,.66);text-wrap:pretty">Um <span style="font-family:'IBM Plex Mono',monospace">SELECT</span> pelo backdoor do Fantasma, dezenas de segundos por pergunta, e a resposta vive só na memória desta sessão. <span style="color:#e6e9ec">Quem valida o SQL é o Fantasma</span> — este lado nunca recusa em nome dele, só mostra as duas faltas cuja mensagem de erro não diz a causa: comentário e caractere fora do ASCII.</div>
+  </div>
+
+  <!-- ============ 1 · TELA COM RESPOSTA ============ -->
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <div style="font-size:18px;font-weight:600">1 · A resposta na tela, com três linhas marcadas</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(230,233,236,.4)">1440 × 900 · rail de 452 px · a grade da casa</div>
+    </div>
+
+    <div style="width:1440px;height:900px;border-radius:8px;border:1px solid #2b2f36;background:#14161a;overflow:hidden;display:flex;flex-direction:column;font-size:13.5px;color:#e6e9ec">
+      <div style="height:42px;flex:none;display:flex;align-items:center;gap:14px;padding:0 6px 0 12px;border-bottom:1px solid #2b2f36">
+        <div style="display:flex;align-items:center;gap:8px">
+          <svg width="20" height="22" viewBox="0 0 24 24" fill="none"><path d="M3.5 21.5V12a8.5 8.5 0 0 1 17 0v9.5" stroke="#6ea3e0" stroke-width="2"></path><path d="M1 22.5h22" stroke="#6ea3e0" stroke-width="2" stroke-linecap="round"></path><path d="M20 1.5l1.1 2.9 2.9 1.1-2.9 1.1L20 9.5l-1.1-2.9L16 5.5l2.9-1.1z" fill="#f0913a"></path></svg>
+          <div style="font-size:13.5px;font-weight:500">Bridgr Pro</div>
+          <div style="font-size:11px;color:rgba(230,233,236,.45)">· Consulta</div>
+        </div>
+        <div style="flex:1;display:flex;justify-content:center">
+          <div style="width:430px;height:26px;display:flex;align-items:center;gap:7px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;padding:0 8px">
+            <i class="ph ph-magnifying-glass" style="font-size:13px;color:rgba(230,233,236,.45)"></i>
+            <div style="flex:1;font-size:11.5px;color:rgba(230,233,236,.4);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Buscar paciente, atendimento, arquivo ou código do ERP…</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:rgba(230,233,236,.45);background:#23272e;border:1px solid #2b2f36;border-radius:3px;padding:1px 5px">Ctrl K</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:4px">
+          <div style="width:27px;height:25px;display:flex;align-items:center;justify-content:center"><i class="ph ph-bell" style="font-size:15px;color:rgba(230,233,236,.72)"></i></div>
+          <div style="display:flex;align-items:center;gap:7px;height:26px;padding:0 7px;border-radius:6px;background:#1b1e23"><div style="width:19px;height:19px;border-radius:10px;background:#1b3350;color:#bfd8f5;font-size:9px;font-weight:600;display:flex;align-items:center;justify-content:center">CR</div><div style="font-size:12px">Camila</div><i class="ph ph-caret-down" style="font-size:10px;color:rgba(230,233,236,.45)"></i></div>
+          <div style="display:flex;align-items:center;gap:2px;margin-left:6px">
+            <div style="width:26px;height:22px;display:flex;align-items:center;justify-content:center"><i class="ph ph-minus" style="font-size:13px;color:rgba(230,233,236,.72)"></i></div>
+            <div style="width:26px;height:22px;display:flex;align-items:center;justify-content:center"><i class="ph ph-square" style="font-size:12px;color:rgba(230,233,236,.72)"></i></div>
+            <div style="width:26px;height:22px;display:flex;align-items:center;justify-content:center"><i class="ph ph-x" style="font-size:13px;color:rgba(230,233,236,.72)"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="flex:1;display:flex;min-height:0">
+        <div style="width:236px;flex:none;border-right:1px solid #2b2f36;padding:8px;display:flex;flex-direction:column;gap:1px">
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-gauge" style="font-size:15px"></i>Dashboard</div>
+          <div style="display:flex;align-items:center;gap:8px;padding:16px 10px 6px"><div style="font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(230,233,236,.4)">Esteira</div><div style="flex:1;height:1px;background:linear-gradient(90deg,#2b2f36,rgba(43,47,54,0))"></div></div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-tray-arrow-down" style="font-size:15px"></i>Triagem</div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-check-square-offset" style="font-size:15px"></i>Revisão</div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-receipt" style="font-size:15px"></i>Faturamento</div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-copy" style="font-size:15px"></i><div style="flex:1">Duplicidades</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#f4d9a3;background:#33291a;border-radius:10px;padding:1px 6px">2</div></div>
+          <div style="display:flex;align-items:center;gap:8px;padding:16px 10px 6px"><div style="font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(230,233,236,.4)">Fora da esteira</div><div style="flex:1;height:1px;background:linear-gradient(90deg,#2b2f36,rgba(43,47,54,0))"></div></div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-archive" style="font-size:15px"></i>Ignorados</div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;background:rgba(110,163,224,.13);box-shadow:inset 2px 0 0 #6ea3e0;color:#bfd8f5;font-size:12.5px;font-weight:500"><i class="ph-fill ph-brackets-curly" style="font-size:15px"></i><div style="flex:1">Consulta</div><i class="ph ph-caret-down" style="font-size:10px;opacity:.6"></i></div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px 7px 34px;border-radius:6px;color:rgba(230,233,236,.6);font-size:12px"><i class="ph ph-files" style="font-size:14px"></i>Relatórios</div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-table" style="font-size:15px"></i><div style="flex:1">Catálogos</div><i class="ph ph-caret-down" style="font-size:10px;opacity:.4;transform:rotate(-90deg)"></i></div>
+          <div style="display:flex;align-items:center;gap:8px;padding:16px 10px 6px"><div style="font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(230,233,236,.4)">Sistema</div><div style="flex:1;height:1px;background:linear-gradient(90deg,#2b2f36,rgba(43,47,54,0))"></div></div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-gear-six" style="font-size:15px"></i>Configurações</div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-terminal-window" style="font-size:15px"></i>Logs</div>
+        </div>
+
+        <div style="flex:1;min-width:0;display:flex;flex-direction:column;min-height:0">
+          <div style="flex:none;display:flex;align-items:flex-end;gap:16px;padding:14px 18px 12px;border-bottom:1px solid #2b2f36">
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
+              <div style="font-size:19px;font-weight:600;letter-spacing:-.01em">Consulta ao Everest</div>
+              <div style="font-size:12px;color:rgba(230,233,236,.55)">Pelo backdoor do Fantasma — somente leitura</div>
+            </div>
+            <div style="flex:none;display:flex;align-items:center;gap:7px;height:25px;padding:0 10px;border-radius:13px;background:rgba(110,163,224,.13);border:1px solid rgba(110,163,224,.4)">
+              <i class="ph ph-clock" style="font-size:12px;color:#6ea3e0"></i>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#bfd8f5">23,9s</div>
+            </div>
+          </div>
+
+          <div style="flex:1;display:flex;min-height:0">
+
+            <div style="width:452px;flex:none;border-right:1px solid #2b2f36;display:flex;flex-direction:column;min-height:0;padding:14px;gap:11px">
+
+              <div style="flex:none;border:1px solid #2b2f36;border-radius:8px;background:#16181d;overflow:hidden">
+                <div style="display:flex;align-items:center;gap:10px;padding:7px 11px;background:#1b1e23;border-bottom:1px solid #2b2f36">
+                  <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.5)">SQL</div>
+                  <div style="flex:1"></div>
+                  <div style="font-size:10px;color:rgba(230,233,236,.45)">somente SELECT · sem acento</div>
+                </div>
+                <div style="padding:10px 11px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;line-height:1.75;height:208px;overflow:hidden;position:relative">
+                  <div><span style="color:#6ea3e0;font-weight:500">SELECT TOP</span> <span style="color:#e0a33c">20</span> <span style="color:rgba(230,233,236,.85)">a.cd_atendimento, a.nm_paciente, a.dt_uso,</span></div>
+                  <div style="padding-left:56px"><span style="color:rgba(230,233,236,.85)">c.nm_convenio, c.cd_convenio, i.lote, i.qtde</span></div>
+                  <div><span style="color:#6ea3e0;font-weight:500">FROM</span> <span style="color:rgba(230,233,236,.85)">Atendimento a</span></div>
+                  <div><span style="color:#6ea3e0;font-weight:500">JOIN</span> <span style="color:rgba(230,233,236,.85)">Convenio c </span><span style="color:#6ea3e0;font-weight:500">ON</span> <span style="color:rgba(230,233,236,.85)">c.cd_convenio </span><span style="color:rgba(230,233,236,.55)">=</span><span style="color:rgba(230,233,236,.85)"> a.cd_convenio</span></div>
+                  <div><span style="color:#6ea3e0;font-weight:500">JOIN</span> <span style="color:rgba(230,233,236,.85)">ItemConsumo i </span><span style="color:#6ea3e0;font-weight:500">ON</span> <span style="color:rgba(230,233,236,.85)">i.cd_atendimento </span><span style="color:rgba(230,233,236,.55)">=</span><span style="color:rgba(230,233,236,.85)"> a.cd_atendimento</span></div>
+                  <div><span style="color:#6ea3e0;font-weight:500">WHERE</span> <span style="color:rgba(230,233,236,.85)">a.dt_uso </span><span style="color:rgba(230,233,236,.55)">&gt;=</span> <span style="color:#8fbf9f">'2026-09-01'</span></div>
+                  <div style="position:absolute;right:5px;bottom:4px;width:11px;height:11px;border-right:2px solid rgba(230,233,236,.28);border-bottom:2px solid rgba(230,233,236,.28)"></div>
+                </div>
+              </div>
+
+              <div style="flex:none;display:flex;align-items:center;gap:10px">
+                <div style="height:30px;display:flex;align-items:center;gap:7px;padding:0 13px;border:1px solid #6ea3e0;border-radius:6px;font-size:12px;color:#6ea3e0;font-weight:500"><i class="ph-fill ph-play" style="font-size:11px"></i>Consultar</div>
+                <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(230,233,236,.4);background:#23272e;border:1px solid #2b2f36;border-radius:3px;padding:2px 6px">Ctrl ⏎</div>
+                <div style="flex:1"></div>
+                <div style="display:flex;align-items:center;gap:6px;font-size:10.5px;color:#a6dcbf"><div style="width:5px;height:5px;border-radius:3px;background:#57b184"></div>Fantasma pronto<span style="color:rgba(230,233,236,.4)">· há 4 s</span></div>
+              </div>
+
+              <div style="flex:none;border:1px solid #2b2f36;border-radius:7px;padding:9px 11px;font-size:10.5px;line-height:1.65;color:rgba(230,233,236,.6);text-wrap:pretty">Só SELECT (ou WITH), uma instrução por vez, sem comentário e sem acento — acento quebra a consulta no caminho até o editor do Everest. <span style="color:rgba(230,233,236,.85)">Quem recusa é o Fantasma</span>, antes de tocar a tela.</div>
+
+              <div style="flex:none;display:flex;align-items:center;gap:7px;font-size:10px;color:rgba(230,233,236,.42)"><i class="ph ph-graph" style="font-size:11px"></i>Autocomplete sobre 3.212 tabelas do Everest, mapeadas em 05/08/2026</div>
+
+              <div style="flex:1;min-height:0;display:flex;flex-direction:column;gap:8px;padding-top:3px;border-top:1px solid #23272e">
+                <div style="display:flex;align-items:center;gap:9px">
+                  <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.45)">Consultas</div>
+                  <div style="flex:1"></div>
+                  <div style="width:188px;height:26px;display:flex;align-items:center;gap:7px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;padding:0 8px">
+                    <i class="ph ph-funnel" style="font-size:11px;color:rgba(230,233,236,.45)"></i>
+                    <div style="flex:1;min-width:0;font-size:10.5px;color:rgba(230,233,236,.4);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Filtrar por trecho do SQL…</div>
+                  </div>
+                </div>
+
+                <div style="flex:1;min-height:0;display:flex;flex-direction:column;gap:6px;overflow:hidden">
+                  <div style="border:1px solid rgba(110,163,224,.5);background:rgba(110,163,224,.1);border-radius:7px;padding:8px 10px;display:flex;align-items:flex-start;gap:9px">
+                    <div style="width:6px;height:6px;border-radius:4px;background:#57b184;flex:none;margin-top:5px"></div>
+                    <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
+                      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#bfd8f5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">SELECT TOP 20 a.cd_atendimento, a.nm_paciente, … WHERE a.dt_uso &gt;= '…'</div>
+                      <div style="font-size:10px;color:rgba(191,216,245,.7)">10/09/2026 09:14:03 · 42 linhas · 23,9s</div>
+                    </div>
+                    <i class="ph ph-x" style="font-size:11px;color:rgba(230,233,236,.4);flex:none;margin-top:3px"></i>
+                  </div>
+
+                  <div style="border:1px solid #2b2f36;border-radius:7px;padding:8px 10px;display:flex;align-items:flex-start;gap:9px">
+                    <div style="width:6px;height:6px;border-radius:4px;background:#e06a63;flex:none;margin-top:5px"></div>
+                    <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
+                      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:rgba(230,233,236,.8);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">SELECT lote, qtde FROM ItemConsumo WHERE referencia = '…'</div>
+                      <div style="display:flex;align-items:center;gap:7px;flex-wrap:wrap"><div style="font-size:10px;color:rgba(230,233,236,.45)">10/09/2026 09:02:47 · falhou · 11,2s</div><div style="font-size:9.5px;color:#f2b3ae;border:1px solid rgba(224,106,99,.45);border-radius:4px;padding:0 5px">ver a recusa</div></div>
+                    </div>
+                    <i class="ph ph-x" style="font-size:11px;color:rgba(230,233,236,.4);flex:none;margin-top:3px"></i>
+                  </div>
+
+                  <div style="border:1px solid #2b2f36;border-radius:7px;padding:8px 10px;display:flex;align-items:flex-start;gap:9px">
+                    <div style="width:6px;height:6px;border-radius:4px;background:#5b6270;flex:none;margin-top:5px"></div>
+                    <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
+                      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:rgba(230,233,236,.8);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">SELECT COUNT(*) FROM Pedido WHERE cd_convenio IN ('…', '…')</div>
+                      <div style="font-size:10px;color:rgba(230,233,236,.45)">09/09/2026 17:40:12 · o app fechou no meio</div>
+                    </div>
+                    <i class="ph ph-x" style="font-size:11px;color:rgba(230,233,236,.4);flex:none;margin-top:3px"></i>
+                  </div>
+
+                  <div style="border:1px solid #2b2f36;border-radius:7px;padding:8px 10px;display:flex;align-items:flex-start;gap:9px;opacity:.72">
+                    <div style="width:6px;height:6px;border-radius:4px;background:#57b184;flex:none;margin-top:5px"></div>
+                    <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
+                      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:rgba(230,233,236,.8);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">SELECT cd_deposito, nm_deposito FROM Deposito</div>
+                      <div style="font-size:10px;color:rgba(230,233,236,.45)">09/09/2026 16:11:55 · 9 linhas · 19,4s</div>
+                    </div>
+                    <i class="ph ph-x" style="font-size:11px;color:rgba(230,233,236,.4);flex:none;margin-top:3px"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="flex:1;min-width:0;min-height:0;display:flex;flex-direction:column;padding:14px 16px 0;gap:10px">
+
+              <div style="flex:none;display:flex;align-items:center;gap:11px;flex-wrap:wrap">
+                <div style="display:flex;align-items:center;gap:8px;min-width:0">
+                  <i class="ph ph-brackets-curly" style="font-size:13px;color:rgba(230,233,236,.4);flex:none"></i>
+                  <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:rgba(230,233,236,.5);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:330px">SELECT TOP 20 a.cd_atendimento, a.nm_paciente, … WHERE a.dt_uso &gt;= '…'</div>
+                </div>
+                <div style="flex:1"></div>
+                <div style="height:27px;display:flex;align-items:center;gap:6px;padding:0 10px;border:1px solid #2b2f36;border-radius:6px;font-size:11.5px;color:rgba(230,233,236,.85)"><i class="ph ph-copy" style="font-size:12px"></i>Copiar tudo</div>
+                <div style="height:27px;display:flex;align-items:center;gap:6px;padding:0 10px;border:1px solid #2b2f36;border-radius:6px;font-size:11.5px;color:rgba(230,233,236,.85)"><i class="ph ph-floppy-disk" style="font-size:12px"></i>Salvar como relatório</div>
+              </div>
+
+              <div style="flex:none;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+                <div style="width:320px;height:29px;display:flex;align-items:center;gap:7px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;padding:0 9px">
+                  <i class="ph ph-funnel" style="font-size:13px;color:rgba(230,233,236,.45)"></i>
+                  <div style="flex:1;min-width:0;font-size:11.5px;color:rgba(230,233,236,.4)">Filtrar resultado…</div>
+                  <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:rgba(230,233,236,.4);background:#23272e;border-radius:3px;padding:1px 4px">Ctrl ⇧ K</div>
+                </div>
+                <div style="font-size:11.5px;color:rgba(230,233,236,.6)"><span style="font-family:'IBM Plex Mono',monospace">39</span> de <span style="font-family:'IBM Plex Mono',monospace">42</span> linhas · <span style="color:rgba(230,233,236,.45)">3 removidas</span></div>
+                <div style="display:flex;align-items:center;gap:5px;font-size:10.5px;color:#9cc0ec;background:rgba(110,163,224,.13);border:1px solid rgba(110,163,224,.4);border-radius:5px;padding:2px 7px"><i class="ph ph-eye-slash" style="font-size:11px"></i>2 colunas vazias ocultas</div>
+                <div style="flex:1"></div>
+                <div style="height:29px;display:flex;align-items:center;gap:6px;padding:0 10px;border:1px solid #2b2f36;border-radius:6px;font-size:11.5px;color:rgba(230,233,236,.8)"><i class="ph ph-columns" style="font-size:12px"></i>Colunas<div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#9cc0ec;background:rgba(110,163,224,.14);border-radius:3px;padding:0 4px">7 de 7</div></div>
+                <div style="display:flex;gap:2px;padding:2px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px">
+                  <div style="width:26px;height:23px;display:flex;align-items:center;justify-content:center;border-radius:4px;background:#2b2f36;box-shadow:0 1px 3px rgba(0,0,0,.4)"><i class="ph ph-rows" style="font-size:12px;color:#e6e9ec"></i></div>
+                  <div style="width:26px;height:23px;display:flex;align-items:center;justify-content:center;border-radius:4px"><i class="ph ph-list-dashes" style="font-size:12px;color:rgba(230,233,236,.55)"></i></div>
+                </div>
+                <div style="height:29px;display:flex;align-items:center;gap:6px;padding:0 9px;border:1px solid #2b2f36;border-radius:6px;font-size:11.5px;color:rgba(230,233,236,.8)"><span style="font-family:'IBM Plex Mono',monospace">50</span><i class="ph ph-caret-down" style="font-size:9px;opacity:.5"></i></div>
+                <div style="font-size:11px;color:rgba(230,233,236,.5)">por página</div>
+              </div>
+
+              <div style="flex:1;min-height:0;border:1px solid #2b2f36;border-radius:8px;background:#16181d;overflow:hidden;display:flex;flex-direction:column">
+
+                <div style="flex:none;display:flex;align-items:center;gap:9px;padding:8px 12px;background:rgba(110,163,224,.11);border-bottom:1px solid rgba(110,163,224,.35);flex-wrap:wrap">
+                  <div style="font-size:11.5px;color:#bfd8f5">3 linhas selecionadas</div>
+                  <div style="height:24px;display:flex;align-items:center;gap:6px;padding:0 9px;border:1px solid rgba(224,106,99,.55);border-radius:5px;font-size:11px;color:#f2b3ae"><i class="ph ph-trash" style="font-size:12px"></i>Excluir selecionadas (3)</div>
+                  <div style="height:24px;display:flex;align-items:center;gap:6px;padding:0 9px;border:1px solid rgba(110,163,224,.4);border-radius:5px;font-size:11px;color:#bfd8f5"><i class="ph ph-download-simple" style="font-size:12px"></i>Exportar seleção</div>
+                  <div style="flex:1"></div>
+                  <div style="height:24px;display:flex;align-items:center;padding:0 9px;font-size:11px;color:rgba(230,233,236,.6)">Limpar</div>
+                </div>
+
+                <div style="flex:none;display:flex;align-items:center;padding:0 12px;height:30px;background:#1b1e23;border-bottom:1px solid #2b2f36;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:rgba(230,233,236,.5)">
+                  <div style="width:34px;flex:none"><div style="width:15px;height:15px;border-radius:3px;background:#6ea3e0;display:flex;align-items:center;justify-content:center"><i class="ph-bold ph-minus" style="font-size:9px;color:#14161a"></i></div></div>
+                  <div style="width:116px;flex:none;text-align:right;padding-right:14px">CD_ATENDIMENTO</div>
+                  <div style="width:196px;flex:none;display:flex;align-items:center;gap:5px;color:#bfd8f5">NM_PACIENTE<i class="ph-bold ph-caret-up" style="font-size:8px"></i></div>
+                  <div style="width:98px;flex:none;display:flex;align-items:center;gap:5px">DT_USO<i class="ph ph-arrows-down-up" style="font-size:9px;opacity:.35"></i></div>
+                  <div style="width:154px;flex:none;display:flex;align-items:center;gap:5px">NM_CONVENIO<i class="ph ph-arrows-down-up" style="font-size:9px;opacity:.35"></i></div>
+                  <div style="width:106px;flex:none;text-align:right;padding-right:14px">CD_CONVENIO</div>
+                  <div style="width:104px;flex:none;display:flex;align-items:center;gap:5px">LOTE<i class="ph ph-arrows-down-up" style="font-size:9px;opacity:.35"></i></div>
+                  <div style="width:62px;flex:none;text-align:right;padding-right:14px">QTDE</div>
+                  <div style="flex:1;min-width:0"></div>
+                </div>
+
+                <div style="flex:1;min-height:0;overflow:hidden;display:flex;flex-direction:column">
+                  <div style="display:flex;align-items:center;padding:0 12px;height:32px;border-bottom:1px solid #1e2126;background:rgba(110,163,224,.22);box-shadow:inset 2px 0 0 #6ea3e0;font-size:11.5px">
+                    <div style="width:34px;flex:none"><div style="width:15px;height:15px;border-radius:3px;background:#6ea3e0;display:flex;align-items:center;justify-content:center"><i class="ph-bold ph-check" style="font-size:10px;color:#14161a"></i></div></div>
+                    <div style="width:116px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#6ea3e0">2026004517</div>
+                    <div style="width:196px;flex:none;color:rgba(230,233,236,.82);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">MARTA LEMOS FERREIRA</div>
+                    <div style="width:98px;flex:none;color:rgba(230,233,236,.82)">02/09/2026</div>
+                    <div style="width:154px;flex:none;color:rgba(230,233,236,.82);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">VIDA PLENA SAÚDE</div>
+                    <div style="width:106px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#9cc0ec">000412</div>
+                    <div style="width:104px;flex:none;color:rgba(230,233,236,.82)">0000451288</div>
+                    <div style="width:62px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#9cc0ec">2</div>
+                    <div style="flex:1;min-width:0"></div>
+                  </div>
+                  <div style="display:flex;align-items:center;padding:0 12px;height:32px;border-bottom:1px solid #1e2126;background:rgba(110,163,224,.22);box-shadow:inset 2px 0 0 #6ea3e0;font-size:11.5px">
+                    <div style="width:34px;flex:none"><div style="width:15px;height:15px;border-radius:3px;background:#6ea3e0;display:flex;align-items:center;justify-content:center"><i class="ph-bold ph-check" style="font-size:10px;color:#14161a"></i></div></div>
+                    <div style="width:116px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#6ea3e0">2026004602</div>
+                    <div style="width:196px;flex:none;color:rgba(230,233,236,.82);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">JOÃO CARLOS PRADO</div>
+                    <div style="width:98px;flex:none;color:rgba(230,233,236,.82)">02/09/2026</div>
+                    <div style="width:154px;flex:none;color:rgba(230,233,236,.82);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">AMPARO SAÚDE</div>
+                    <div style="width:106px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#9cc0ec">000391</div>
+                    <div style="width:104px;flex:none;color:rgba(230,233,236,.82)">A7K2219</div>
+                    <div style="width:62px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#9cc0ec">1</div>
+                    <div style="flex:1;min-width:0"></div>
+                  </div>
+                  <div style="display:flex;align-items:center;padding:0 12px;height:32px;border-bottom:1px solid #1e2126;background:rgba(110,163,224,.22);box-shadow:inset 2px 0 0 #6ea3e0;font-size:11.5px">
+                    <div style="width:34px;flex:none"><div style="width:15px;height:15px;border-radius:3px;background:#6ea3e0;display:flex;align-items:center;justify-content:center"><i class="ph-bold ph-check" style="font-size:10px;color:#14161a"></i></div></div>
+                    <div style="width:116px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#6ea3e0">2026004633</div>
+                    <div style="width:196px;flex:none;color:rgba(230,233,236,.82);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">LUÍSA ANDRADE REIS</div>
+                    <div style="width:98px;flex:none;color:rgba(230,233,236,.82)">03/09/2026</div>
+                    <div style="width:154px;flex:none;color:rgba(230,233,236,.82)">SUS</div>
+                    <div style="width:106px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#9cc0ec">000001</div>
+                    <div style="width:104px;flex:none;color:rgba(230,233,236,.82)">C24B0917</div>
+                    <div style="width:62px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#9cc0ec">1</div>
+                    <div style="flex:1;min-width:0"></div>
+                  </div>
+                  <div style="display:flex;align-items:center;padding:0 12px;height:32px;border-bottom:1px solid #1e2126;font-size:11.5px">
+                    <div style="width:34px;flex:none"><div style="width:15px;height:15px;border-radius:3px;border:1px solid #434a53"></div></div>
+                    <div style="width:116px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#6ea3e0">2026004651</div>
+                    <div style="width:196px;flex:none;color:rgba(230,233,236,.82);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">PEDRO HENRIQUE SALLES</div>
+                    <div style="width:98px;flex:none;color:rgba(230,233,236,.82)">03/09/2026</div>
+                    <div style="width:154px;flex:none;color:rgba(230,233,236,.82)">PARTICULAR</div>
+                    <div style="width:106px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#9cc0ec">000002</div>
+                    <div style="width:104px;flex:none;color:rgba(230,233,236,.82)">0000902211</div>
+                    <div style="width:62px;flex:none;text-align:right;padding-right:14px;color:rgba(230,233,236,.28)">—</div>
+                    <div style="flex:1;min-width:0"></div>
+                  </div>
+                  <div style="display:flex;align-items:center;padding:0 12px;height:32px;border-bottom:1px solid #1e2126;font-size:11.5px">
+                    <div style="width:34px;flex:none"><div style="width:15px;height:15px;border-radius:3px;border:1px solid #434a53"></div></div>
+                    <div style="width:116px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#6ea3e0">2026004688</div>
+                    <div style="width:196px;flex:none;color:rgba(230,233,236,.82);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">ANA BEATRIZ MOURA</div>
+                    <div style="width:98px;flex:none;color:rgba(230,233,236,.82)">04/09/2026</div>
+                    <div style="width:154px;flex:none;color:rgba(230,233,236,.82);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">AMPARO SAÚDE</div>
+                    <div style="width:106px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#9cc0ec">000391</div>
+                    <div style="width:104px;flex:none;color:rgba(230,233,236,.82)">0000451301</div>
+                    <div style="width:62px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#9cc0ec">4</div>
+                    <div style="flex:1;min-width:0"></div>
+                  </div>
+                  <div style="display:flex;align-items:center;padding:0 12px;height:32px;border-bottom:1px solid #1e2126;font-size:11.5px">
+                    <div style="width:34px;flex:none"><div style="width:15px;height:15px;border-radius:3px;border:1px solid #434a53"></div></div>
+                    <div style="width:116px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#6ea3e0">2026004712</div>
+                    <div style="width:196px;flex:none;color:rgba(230,233,236,.82);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">RICARDO TEIXEIRA LOBO</div>
+                    <div style="width:98px;flex:none;color:rgba(230,233,236,.82)">04/09/2026</div>
+                    <div style="width:154px;flex:none;color:rgba(230,233,236,.82);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">VIDA PLENA SAÚDE</div>
+                    <div style="width:106px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#9cc0ec">000412</div>
+                    <div style="width:104px;flex:none;color:rgba(230,233,236,.82)">B19F4402</div>
+                    <div style="width:62px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#9cc0ec">2</div>
+                    <div style="flex:1;min-width:0"></div>
+                  </div>
+                  <div style="display:flex;align-items:center;padding:0 12px;height:32px;border-bottom:1px solid #1e2126;font-size:11.5px">
+                    <div style="width:34px;flex:none"><div style="width:15px;height:15px;border-radius:3px;border:1px solid #434a53"></div></div>
+                    <div style="width:116px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#6ea3e0">2026004733</div>
+                    <div style="width:196px;flex:none;color:rgba(230,233,236,.82);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">CARLOS EDUARDO LIMA</div>
+                    <div style="width:98px;flex:none;color:rgba(230,233,236,.82)">05/09/2026</div>
+                    <div style="width:154px;flex:none;color:rgba(230,233,236,.82)">SUS</div>
+                    <div style="width:106px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#9cc0ec">000001</div>
+                    <div style="width:104px;flex:none;color:rgba(230,233,236,.82)">C24B1188</div>
+                    <div style="width:62px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#9cc0ec">1</div>
+                    <div style="flex:1;min-width:0"></div>
+                  </div>
+                  <div style="display:flex;align-items:center;padding:0 12px;height:32px;font-size:11.5px">
+                    <div style="width:34px;flex:none"><div style="width:15px;height:15px;border-radius:3px;border:1px solid #434a53"></div></div>
+                    <div style="width:116px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#6ea3e0">2026004759</div>
+                    <div style="width:196px;flex:none;color:rgba(230,233,236,.82);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">HELENA RODRIGUES PAZ</div>
+                    <div style="width:98px;flex:none;color:rgba(230,233,236,.82)">05/09/2026</div>
+                    <div style="width:154px;flex:none;color:rgba(230,233,236,.82)">PARTICULAR</div>
+                    <div style="width:106px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#9cc0ec">000002</div>
+                    <div style="width:104px;flex:none;color:rgba(230,233,236,.82)">A7K2288</div>
+                    <div style="width:62px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#9cc0ec">3</div>
+                    <div style="flex:1;min-width:0"></div>
+                  </div>
+                </div>
+
+                <div style="flex:none;display:flex;align-items:center;gap:14px;padding:0 12px;height:34px;border-top:1px solid #2b2f36;background:#1b1e23;font-size:11px">
+                  <div style="display:flex;align-items:center;gap:5px;color:rgba(230,233,236,.4)"><i class="ph ph-arrow-left" style="font-size:11px"></i>Anterior</div>
+                  <div style="font-family:'IBM Plex Mono',monospace;color:rgba(230,233,236,.82)">1–39 de 39</div>
+                  <div style="display:flex;align-items:center;gap:5px;color:rgba(230,233,236,.4)">Próxima<i class="ph ph-arrow-right" style="font-size:11px"></i></div>
+                  <div style="flex:1"></div>
+                  <div style="display:flex;align-items:center;gap:5px;color:rgba(230,233,236,.45)">ordenado por <span style="font-family:'IBM Plex Mono',monospace;color:rgba(230,233,236,.7)">NM_PACIENTE</span><i class="ph-bold ph-caret-up" style="font-size:8px"></i></div>
+                </div>
+              </div>
+
+              <div style="flex:none;display:flex;align-items:flex-start;gap:8px;padding:8px 0 12px">
+                <i class="ph ph-lock-simple" style="font-size:12px;color:rgba(230,233,236,.38);flex:none;margin-top:2px"></i>
+                <div style="flex:1;font-size:10.5px;line-height:1.6;color:rgba(230,233,236,.45);text-wrap:pretty">O resultado mora na memória desta sessão — em disco só quando você salva um relatório, e aí vai cifrado, por gesto seu. O histórico guarda só o metadado do que foi perguntado.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="height:28px;flex:none;border-top:1px solid #2b2f36;background:rgba(255,255,255,.03);display:flex;align-items:center;padding:0 10px;gap:2px;font-size:10.5px">
+        <div style="display:flex;align-items:center;gap:6px;padding:3px 8px"><i class="ph ph-tray" style="font-size:12px;color:#57b184"></i><span style="font-weight:500;color:rgba(230,233,236,.78)">MailBridgr</span><span style="color:rgba(230,233,236,.52)">canal confirmado</span></div>
+        <div style="display:flex;align-items:center;gap:6px;padding:3px 8px"><i class="ph ph-eye" style="font-size:12px;color:#57b184"></i><span style="font-weight:500;color:rgba(230,233,236,.78)">MedLens</span><span style="color:rgba(230,233,236,.52)">no ar</span></div>
+        <div style="display:flex;align-items:center;gap:6px;padding:3px 8px"><i class="ph ph-robot" style="font-size:12px;color:#57b184"></i><span style="font-weight:500;color:rgba(230,233,236,.78)">Fantasma</span><span style="color:rgba(230,233,236,.52)">pronto</span></div>
+        <div style="display:flex;align-items:center;gap:6px;padding:3px 8px"><i class="ph ph-plugs-connected" style="font-size:12px;color:rgba(230,233,236,.38)"></i><span style="font-weight:500;color:rgba(230,233,236,.78)">Spook</span><span style="color:rgba(230,233,236,.52)">sem endereço</span></div>
+        <div style="display:flex;align-items:center;gap:6px;padding:3px 8px"><i class="ph ph-package" style="font-size:12px;color:#57b184"></i><span style="font-weight:500;color:rgba(230,233,236,.78)">NFe Pack</span><span style="color:rgba(230,233,236,.52)">baixando</span></div>
+        <div style="flex:1"></div>
+        <div style="display:flex;align-items:center;gap:5px;padding:3px 8px;border-radius:5px;background:rgba(110,163,224,.11)"><i class="ph ph-stack-simple" style="font-size:12px;color:#6ea3e0"></i><span style="color:#9cc0ec">2 em voo · 3 pedem gente</span></div>
+        <div style="display:flex;align-items:center;gap:5px;padding:3px 8px"><i class="ph ph-lock" style="font-size:12px;color:#57b184"></i><span style="color:rgba(230,233,236,.72)">PIN ativo</span></div>
+        <div style="display:flex;align-items:center;gap:5px;padding:3px 8px"><i class="ph ph-info" style="font-size:12px;color:rgba(230,233,236,.38)"></i><span style="color:rgba(230,233,236,.52)">v0.1.0</span></div>
+      </div>
+    </div>
+
+    <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;gap:28px;max-width:1440px;font-size:11.5px;line-height:1.7;color:rgba(230,233,236,.55)">
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">A pergunta aparece sobre a resposta.</span> O painel nunca mostrava qual SQL a produziu, e o editor pode ter mudado desde então — a legenda é o texto do cartão aceso, e é ela que diz a procedência.</div>
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">Um contador, não dois.</span> Cabeçalho e ferramentas diziam "42 linhas" cada; depois de remover linhas divergiam sem explicar. Agora: <span style="font-family:'IBM Plex Mono',monospace">39 de 42 linhas · 3 removidas</span>.</div>
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">A prontidão do Fantasma com idade.</span> Ao lado do Consultar, espelhando a barra de status — com "há 4 s" para não fingir leitura fresca. O botão nunca desabilita por leitura velha: a recusa continua sendo a verdade.</div>
+      </div>
+    </sc-if>
+  </div>
+
+  <!-- ============ 2 · AS TRÊS AUSÊNCIAS ============ -->
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <div style="font-size:18px;font-weight:600">2 · As três ausências, e a quarta que faltava</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(230,233,236,.4)">recusa nunca se veste de vazio</div>
+    </div>
+
+    <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start">
+
+      <div style="width:590px;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:11px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">1 · Nada consultado ainda</div>
+        <div style="border:1px solid #2b2f36;border-radius:8px;background:#16181d;padding:42px 22px;display:flex;flex-direction:column;align-items:center;gap:9px">
+          <i class="ph ph-brackets-curly" style="font-size:32px;color:rgba(230,233,236,.24)"></i>
+          <div style="font-size:13px;color:rgba(230,233,236,.75)">Nada consultado ainda</div>
+          <div style="font-size:11.5px;line-height:1.6;color:rgba(230,233,236,.5);text-align:center;max-width:400px;text-wrap:pretty">Escreva um SELECT e mande. Quem valida o SQL é o Fantasma: o que ele recusar aparece aqui com as palavras dele.</div>
+        </div>
+        <div style="font-size:10.5px;color:rgba(230,233,236,.45);text-wrap:pretty">A moldura é a mesma da grade, então o painel não salta quando a resposta chega. Sem filtro de resultado ainda, o Ctrl ⇧ K não tem dono.</div>
+      </div>
+
+      <div style="width:590px;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:11px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">2 · Vazio provado</div>
+        <div style="border:1px solid #2b2f36;border-radius:8px;background:#16181d;padding:42px 22px;display:flex;flex-direction:column;align-items:center;gap:9px">
+          <i class="ph ph-check-circle" style="font-size:32px;color:rgba(230,233,236,.3)"></i>
+          <div style="font-size:13px;color:rgba(230,233,236,.75)">Nenhuma linha.</div>
+          <div style="font-size:11.5px;line-height:1.6;color:rgba(230,233,236,.5);text-align:center;max-width:400px;text-wrap:pretty">O Fantasma provou o vazio com a query-canário — não é falha de leitura.</div>
+        </div>
+        <div style="font-size:10.5px;color:rgba(230,233,236,.45);text-wrap:pretty">Ícone apagado, nunca verde: é um fato, não uma comemoração. Sem cabeçalho de resposta, sem copiar, sem salvar. Lá embaixo, "nada encontrado" lê-se como "pode faturar" — e foi assim que onze contas já faturadas foram para a fila.</div>
+      </div>
+
+      <div style="width:590px;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:11px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">3 · O filtro não achou nada</div>
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+          <div style="width:260px;height:29px;display:flex;align-items:center;gap:7px;background:#1b1e23;border:1px solid #6ea3e0;border-radius:6px;padding:0 9px">
+            <i class="ph ph-funnel" style="font-size:13px;color:rgba(230,233,236,.6)"></i>
+            <div style="flex:1;min-width:0;font-size:11.5px">sol nascente</div>
+            <i class="ph ph-x" style="font-size:11px;color:rgba(230,233,236,.5)"></i>
+          </div>
+          <div style="font-size:11.5px;color:rgba(230,233,236,.6)"><span style="font-family:'IBM Plex Mono',monospace">0</span> de <span style="font-family:'IBM Plex Mono',monospace">42</span> linhas</div>
+        </div>
+        <div style="border:1px solid #2b2f36;border-radius:8px;background:#16181d;overflow:hidden">
+          <div style="display:flex;align-items:center;padding:0 12px;height:30px;background:#1b1e23;border-bottom:1px solid #2b2f36;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:rgba(230,233,236,.5)">
+            <div style="width:34px;flex:none"><div style="width:15px;height:15px;border-radius:3px;border:1px solid #434a53"></div></div>
+            <div style="width:112px;flex:none;text-align:right;padding-right:14px">CD_ATEND.</div>
+            <div style="flex:1;min-width:0">NM_PACIENTE</div>
+            <div style="width:92px;flex:none">DT_USO</div>
+          </div>
+          <div style="padding:30px 20px;display:flex;flex-direction:column;align-items:center;gap:8px">
+            <i class="ph ph-magnifying-glass" style="font-size:26px;color:rgba(230,233,236,.24)"></i>
+            <div style="font-size:12.5px;color:rgba(230,233,236,.7)">Nada com o que você digitou</div>
+            <div style="font-size:11px;line-height:1.6;color:rgba(230,233,236,.5);text-align:center;max-width:390px;text-wrap:pretty">O filtro olha as colunas à vista. A consulta em si respondeu normalmente — limpe o filtro para ver o resultado inteiro.</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;padding:0 12px;height:32px;border-top:1px solid #2b2f36;background:#1b1e23;font-size:11px;color:rgba(230,233,236,.4)">
+            <div style="display:flex;align-items:center;gap:5px"><i class="ph ph-arrow-left" style="font-size:11px"></i>Anterior</div>
+            <div style="font-family:'IBM Plex Mono',monospace">0–0 de 0</div>
+            <div style="display:flex;align-items:center;gap:5px">Próxima<i class="ph ph-arrow-right" style="font-size:11px"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="width:590px;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:11px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">4 · Toda linha foi removida do rascunho</div>
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+          <div style="width:260px;height:29px;display:flex;align-items:center;gap:7px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;padding:0 9px">
+            <i class="ph ph-funnel" style="font-size:13px;color:rgba(230,233,236,.45)"></i>
+            <div style="flex:1;min-width:0;font-size:11.5px;color:rgba(230,233,236,.4)">Filtrar resultado…</div>
+          </div>
+          <div style="font-size:11.5px;color:rgba(230,233,236,.6)"><span style="font-family:'IBM Plex Mono',monospace">0</span> de <span style="font-family:'IBM Plex Mono',monospace">42</span> linhas · <span style="color:rgba(230,233,236,.45)">42 removidas</span></div>
+        </div>
+        <div style="border:1px solid #2b2f36;border-radius:8px;background:#16181d;overflow:hidden">
+          <div style="display:flex;align-items:center;padding:0 12px;height:30px;background:#1b1e23;border-bottom:1px solid #2b2f36;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:rgba(230,233,236,.5)">
+            <div style="width:34px;flex:none"><div style="width:15px;height:15px;border-radius:3px;border:1px solid #434a53"></div></div>
+            <div style="width:112px;flex:none;text-align:right;padding-right:14px">CD_ATEND.</div>
+            <div style="flex:1;min-width:0">NM_PACIENTE</div>
+            <div style="width:92px;flex:none">DT_USO</div>
+          </div>
+          <div style="padding:26px 20px;display:flex;flex-direction:column;align-items:center;gap:9px">
+            <i class="ph ph-eraser" style="font-size:26px;color:rgba(230,233,236,.24)"></i>
+            <div style="font-size:12.5px;color:rgba(230,233,236,.7)">Você removeu todas as 42 linhas do rascunho</div>
+            <div style="font-size:11px;line-height:1.6;color:rgba(230,233,236,.5);text-align:center;max-width:390px;text-wrap:pretty">Nada mudou no Everest — a resposta continua inteira na memória.</div>
+            <div style="height:26px;display:flex;align-items:center;gap:6px;padding:0 11px;border:1px solid #2b2f36;border-radius:6px;font-size:11px;color:rgba(230,233,236,.85)"><i class="ph ph-arrow-counter-clockwise" style="font-size:11px"></i>Desfazer edições</div>
+          </div>
+        </div>
+        <div style="font-size:10.5px;color:rgba(230,233,236,.45);text-wrap:pretty">Hoje esta tela veste a frase do filtro mesmo com o filtro vazio — uma ausência disfarçada de outra.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 3 · CORRENDO E RECUSADO ============ -->
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <div style="font-size:18px;font-weight:600">3 · O sinal de vida, e a recusa ao lado da pergunta</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(230,233,236,.4)">a resposta anterior fica na tela</div>
+    </div>
+
+    <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start">
+
+      <div style="width:484px;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:11px">
+        <div style="display:flex;align-items:center;gap:10px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">Correndo</div>
+          <div style="flex:1"></div>
+          <div style="display:flex;align-items:center;gap:7px;height:24px;padding:0 10px;border-radius:13px;background:rgba(110,163,224,.13);border:1px solid rgba(110,163,224,.4)">
+            <i class="ph ph-clock" style="font-size:11px;color:#6ea3e0"></i>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#bfd8f5">8,5s</div>
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:10px">
+          <div style="height:30px;display:flex;align-items:center;gap:7px;padding:0 13px;border:1px solid #2b2f36;border-radius:6px;font-size:12px;color:rgba(230,233,236,.5)"><i class="ph ph-circle-notch" style="font-size:11px"></i>Consultando…</div>
+          <div style="flex:1"></div>
+          <div style="display:flex;align-items:center;gap:6px;font-size:10.5px;color:#9cc0ec"><div style="width:5px;height:5px;border-radius:3px;background:#6ea3e0"></div>Fantasma ocupado — esta consulta</div>
+        </div>
+
+        <div style="border:1px solid rgba(110,163,224,.4);background:rgba(110,163,224,.07);border-radius:7px;padding:9px 11px;font-size:10.5px;line-height:1.65;color:#bfd8f5;text-wrap:pretty">O caminho é a tela do Everest: abrir o backdoor, digitar, executar e exportar pela área de transferência. Leva dezenas de segundos, e o Fantasma fica ocupado até acabar.</div>
+
+        <div style="display:flex;flex-direction:column;gap:6px;padding-top:9px;border-top:1px solid #23272e">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.45)">Consultas</div>
+          <div style="border:1px solid rgba(110,163,224,.45);background:rgba(110,163,224,.07);border-radius:7px;padding:8px 10px;display:flex;align-items:flex-start;gap:9px">
+            <i class="ph ph-circle-notch" style="font-size:11px;color:#6ea3e0;flex:none;margin-top:3px"></i>
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#bfd8f5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">SELECT lote, qtde FROM ItemConsumo WHERE lote = '…'</div>
+              <div style="font-size:10px;color:rgba(191,216,245,.7)">10/09/2026 09:21:40 · correndo agora · 8,5s</div>
+            </div>
+          </div>
+          <div style="border:1px solid #2b2f36;border-radius:7px;padding:8px 10px;display:flex;align-items:flex-start;gap:9px">
+            <div style="width:6px;height:6px;border-radius:4px;background:#57b184;flex:none;margin-top:5px"></div>
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:rgba(230,233,236,.8);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">SELECT TOP 20 a.cd_atendimento, … WHERE a.dt_uso &gt;= '…'</div>
+              <div style="font-size:10px;color:rgba(230,233,236,.45)">10/09/2026 09:14:03 · 42 linhas · 23,9s</div>
+            </div>
+          </div>
+        </div>
+        <div style="font-size:10.5px;line-height:1.6;color:rgba(230,233,236,.45);text-wrap:pretty">"Correndo agora" e "o app fechou no meio" eram a mesma frase — <span style="font-family:'IBM Plex Mono',monospace">sem resposta</span> — para dois fatos diferentes. O relógio do cartão conta do carimbo de partida, então voltar à tela no meio não zera a contagem.</div>
+      </div>
+
+      <div style="width:696px;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:12px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">Recusado — a resposta anterior continua de pé</div>
+
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;align-items:flex-start;gap:9px;padding:10px 12px;border:1px solid rgba(224,106,99,.5);background:rgba(224,106,99,.09);border-radius:7px">
+            <i class="ph-fill ph-warning-circle" style="font-size:14px;color:#e06a63;flex:none;margin-top:1px"></i>
+            <div style="flex:1;font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.6;color:rgba(230,233,236,.9);user-select:all;text-wrap:pretty">Fantasma: o Fantasma está ocupado — aguarde o gesto atual terminar</div>
+          </div>
+          <div style="font-size:10.5px;color:rgba(230,233,236,.45);text-wrap:pretty">Imediata: a trava é tomada antes de checar a sessão, então "ocupado" não gasta segundos. <span style="color:rgba(230,233,236,.7)">Nenhuma linha de rastro é escrita</span> — a consulta não saiu.</div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;align-items:flex-start;gap:9px;padding:10px 12px;border:1px solid rgba(224,106,99,.5);background:rgba(224,106,99,.09);border-radius:7px">
+            <i class="ph-fill ph-warning-circle" style="font-size:14px;color:#e06a63;flex:none;margin-top:1px"></i>
+            <div style="flex:1;font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.6;color:rgba(230,233,236,.9);user-select:all;text-wrap:pretty">Fantasma: o Fantasma precisa estar com a sessão aberta para consultar — ligue em Configurações → Fantasma</div>
+          </div>
+          <div style="font-size:10.5px;color:rgba(230,233,236,.45)">Depois de alguns segundos de checagem — inclui o Fantasma de pé sem sessão e o subido por outro programa.</div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;align-items:flex-start;gap:9px;padding:10px 12px;border:1px solid rgba(224,106,99,.5);background:rgba(224,106,99,.09);border-radius:7px">
+            <i class="ph-fill ph-warning-circle" style="font-size:14px;color:#e06a63;flex:none;margin-top:1px"></i>
+            <div style="flex:1;font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.6;color:rgba(230,233,236,.9);user-select:all;text-wrap:pretty">Fantasma: nao foi possivel provar o vazio: a query-canario nao respondeu no tempo esperado</div>
+          </div>
+          <div style="font-size:10.5px;color:rgba(230,233,236,.45);text-wrap:pretty">Esta é a recusa que <span style="color:rgba(230,233,236,.75)">nunca</span> pode virar "Nenhuma linha." — vazio só existe quando foi provado.</div>
+        </div>
+
+        <div style="display:flex;gap:11px;flex-wrap:wrap;padding-top:11px;border-top:1px solid #23272e">
+          <div style="width:330px;display:flex;flex-direction:column;gap:6px">
+            <div style="font-size:11px;color:rgba(230,233,236,.7)">Comentário: pintado como erro</div>
+            <div style="background:#101216;border:1px solid #2b2f36;border-radius:6px;padding:9px 10px;font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.7">
+              <div><span style="color:#6ea3e0;font-weight:500">SELECT</span> <span style="color:rgba(230,233,236,.85)">cd_lote </span><span style="color:#6ea3e0;font-weight:500">FROM</span> <span style="color:rgba(230,233,236,.85)">Lote</span></div>
+              <div><span style="background:rgba(224,106,99,.2);color:#f2b3ae;border-radius:2px">-- só os de setembro</span></div>
+            </div>
+            <div style="font-size:10px;color:rgba(230,233,236,.45);text-wrap:pretty">O portão recusa comentário, e a mensagem do Everest não diz isso — então a cor já diz.</div>
+          </div>
+          <div style="width:330px;display:flex;flex-direction:column;gap:6px">
+            <div style="font-size:11px;color:rgba(230,233,236,.7)">Fora do ASCII: marcado no lugar</div>
+            <div style="background:#101216;border:1px solid #2b2f36;border-radius:6px;padding:9px 10px;font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.7">
+              <div><span style="color:#6ea3e0;font-weight:500">WHERE</span> <span style="color:rgba(230,233,236,.85)">nm_paciente </span><span style="color:rgba(230,233,236,.55)">=</span> <span style="color:#8fbf9f">'JO</span><span style="background:rgba(224,106,99,.28);color:#f8cdc9;border-radius:2px">Ã</span><span style="color:#8fbf9f">O'</span></div>
+            </div>
+            <div style="font-size:10px;color:rgba(230,233,236,.45);text-wrap:pretty">Acento quebra no caminho da área de transferência. O critério é "fora do ASCII", não uma lista.</div>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:7px;padding-top:11px;border-top:1px solid #23272e">
+          <div style="font-size:11px;color:rgba(230,233,236,.7)">As quatro dicas, agora também aqui — avisam, nunca barram</div>
+          <div style="display:flex;align-items:flex-start;gap:8px"><i class="ph-fill ph-lightbulb" style="font-size:12px;color:#e0a33c;flex:none;margin-top:2px"></i><div style="flex:1;font-size:10.5px;line-height:1.6;color:rgba(230,233,236,.65);text-wrap:pretty">Comparar com NULL (= NULL, &lt;&gt; NULL) nunca é verdadeiro: as linhas somem sem erro nenhum. Use IS NULL ou IS NOT NULL.</div></div>
+          <div style="display:flex;align-items:flex-start;gap:8px"><i class="ph-fill ph-lightbulb" style="font-size:12px;color:#e0a33c;flex:none;margin-top:2px"></i><div style="flex:1;font-size:10.5px;line-height:1.6;color:rgba(230,233,236,.65);text-wrap:pretty">BETWEEN com duas datas sem hora perde o último dia inteiro se a coluna for datetime. Prefira &gt;= data e &lt; dia seguinte.</div></div>
+          <div style="font-size:10px;color:rgba(230,233,236,.42);text-wrap:pretty">O app já tinha estas dicas no diálogo do SQL dos Catálogos; a Consulta, onde as consultas são escritas à mão, não as mostrava.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 4 · SALVAR E EXCLUIR ============ -->
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <div style="font-size:18px;font-weight:600">4 · Salvar como relatório, e a pergunta antes de excluir</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(230,233,236,.4)">caixa embutida, nunca diálogo · confirmação no lugar do botão</div>
+    </div>
+
+    <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start">
+
+      <div style="width:590px;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:12px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">Caixa de salvar · com linhas marcadas</div>
+        <div style="border:1px solid rgba(224,163,60,.5);background:#33291a;border-radius:8px;padding:12px;display:flex;flex-direction:column;gap:10px">
+          <div style="display:flex;gap:9px;align-items:center;flex-wrap:wrap">
+            <div style="flex:1;min-width:220px;height:30px;display:flex;align-items:center;padding:0 10px;background:#1b1e23;border:1px solid #434a53;border-radius:6px;font-size:12px">Consumo OPME Vale Verde — semana 36</div>
+            <div style="height:30px;display:flex;align-items:center;padding:0 11px;border:1px solid rgba(230,233,236,.22);border-radius:6px;font-size:11.5px;color:#f4d9a3">Cancelar</div>
+            <div style="height:30px;display:flex;align-items:center;gap:6px;padding:0 12px;border-radius:6px;background:#e0a33c;color:#14161a;font-size:11.5px;font-weight:500"><i class="ph ph-floppy-disk" style="font-size:12px"></i>Salvar</div>
+          </div>
+          <div style="font-size:10.5px;line-height:1.6;color:#f4d9a3;text-wrap:pretty">3 linhas selecionadas vão para o relatório — largura inteira, com a ordem das colunas, as ocultas e a ordenação de agora.</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:9px;padding-top:11px;border-top:1px solid #23272e">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">Sem nada marcado — o filtro não entra</div>
+          <div style="border:1px solid rgba(224,163,60,.5);background:#33291a;border-radius:8px;padding:12px;display:flex;flex-direction:column;gap:9px">
+            <div style="display:flex;gap:9px;align-items:center;flex-wrap:wrap">
+              <div style="flex:1;min-width:220px;height:30px;display:flex;align-items:center;padding:0 10px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;font-size:12px;color:rgba(230,233,236,.4)">Nome do relatório…</div>
+              <div style="height:30px;display:flex;align-items:center;padding:0 11px;border:1px solid rgba(230,233,236,.22);border-radius:6px;font-size:11.5px;color:#f4d9a3">Cancelar</div>
+              <div style="height:30px;display:flex;align-items:center;gap:6px;padding:0 12px;border-radius:6px;background:#e0a33c;color:#14161a;font-size:11.5px;font-weight:500;opacity:.4"><i class="ph ph-floppy-disk" style="font-size:12px"></i>Salvar</div>
+            </div>
+            <div style="font-size:10.5px;line-height:1.6;color:#f4d9a3;text-wrap:pretty">Todas as 39 linhas do resultado vão para o relatório — <span style="font-weight:600">o filtro não entra</span>, e as 3 removidas ficam de fora.</div>
+          </div>
+          <div style="font-size:10.5px;color:rgba(230,233,236,.45);text-wrap:pretty">A nota dizia "todas as linhas à vista", mas o filtro era ignorado: com 12 de 42 filtradas, salvava 42. Agora ela diz o número que vai.</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:9px;padding:9px 11px;border:1px solid rgba(87,177,132,.5);background:rgba(87,177,132,.09);border-radius:7px">
+          <i class="ph-fill ph-check-circle" style="font-size:14px;color:#57b184;flex:none"></i>
+          <div style="flex:1;font-size:11.5px;color:#a6dcbf">Relatório salvo.</div>
+          <div style="height:22px;display:flex;align-items:center;gap:5px;padding:0 8px;border:1px solid rgba(87,177,132,.5);border-radius:5px;font-size:10.5px;color:#a6dcbf">Abrir o relatório<i class="ph ph-arrow-up-right" style="font-size:10px"></i></div>
+        </div>
+      </div>
+
+      <div style="width:590px;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:12px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">A pergunta nasce no lugar do botão</div>
+
+        <div style="border:1px solid #2b2f36;border-radius:8px;background:#16181d;overflow:hidden">
+          <div style="display:flex;align-items:center;gap:9px;padding:8px 12px;background:rgba(110,163,224,.11);border-bottom:1px solid rgba(110,163,224,.35);flex-wrap:wrap">
+            <div style="font-size:11.5px;color:#bfd8f5">3 linhas selecionadas</div>
+            <div style="height:24px;display:flex;align-items:center;gap:7px;padding:0 9px;border:1px solid rgba(224,106,99,.55);background:rgba(224,106,99,.12);border-radius:5px">
+              <div style="font-size:11px;color:#f2b3ae">Excluir 3 do resultado? Nada muda no Everest.</div>
+              <div style="width:1px;height:13px;background:rgba(224,106,99,.4)"></div>
+              <div style="font-size:11px;color:rgba(230,233,236,.8)">Manter</div>
+              <div style="font-size:11px;color:#f2b3ae;font-weight:500">Excluir</div>
+            </div>
+            <div style="flex:1"></div>
+            <div style="height:24px;display:flex;align-items:center;padding:0 9px;font-size:11px;color:rgba(230,233,236,.6)">Limpar</div>
+          </div>
+          <div style="display:flex;align-items:center;padding:0 12px;height:30px;background:#1b1e23;border-bottom:1px solid #2b2f36;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:rgba(230,233,236,.5)">
+            <div style="width:34px;flex:none"><div style="width:15px;height:15px;border-radius:3px;background:#6ea3e0;display:flex;align-items:center;justify-content:center"><i class="ph-bold ph-minus" style="font-size:9px;color:#14161a"></i></div></div>
+            <div style="width:112px;flex:none;text-align:right;padding-right:14px">CD_ATEND.</div>
+            <div style="flex:1;min-width:0">NM_PACIENTE</div>
+            <div style="width:92px;flex:none">DT_USO</div>
+          </div>
+          <div style="display:flex;align-items:center;padding:0 12px;height:32px;border-bottom:1px solid #1e2126;background:rgba(110,163,224,.22);box-shadow:inset 2px 0 0 #6ea3e0;font-size:11.5px">
+            <div style="width:34px;flex:none"><div style="width:15px;height:15px;border-radius:3px;background:#6ea3e0;display:flex;align-items:center;justify-content:center"><i class="ph-bold ph-check" style="font-size:10px;color:#14161a"></i></div></div>
+            <div style="width:112px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#6ea3e0">2026004517</div>
+            <div style="flex:1;min-width:0;color:rgba(230,233,236,.82);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">MARTA LEMOS FERREIRA</div>
+            <div style="width:92px;flex:none;color:rgba(230,233,236,.82)">02/09/2026</div>
+          </div>
+          <div style="display:flex;align-items:center;padding:0 12px;height:32px;border-bottom:1px solid #1e2126;background:rgba(110,163,224,.22);box-shadow:inset 2px 0 0 #6ea3e0;font-size:11.5px">
+            <div style="width:34px;flex:none"><div style="width:15px;height:15px;border-radius:3px;background:#6ea3e0;display:flex;align-items:center;justify-content:center"><i class="ph-bold ph-check" style="font-size:10px;color:#14161a"></i></div></div>
+            <div style="width:112px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#6ea3e0">2026004602</div>
+            <div style="flex:1;min-width:0;color:rgba(230,233,236,.82);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">JOÃO CARLOS PRADO</div>
+            <div style="width:92px;flex:none;color:rgba(230,233,236,.82)">02/09/2026</div>
+          </div>
+          <div style="display:flex;align-items:center;padding:0 12px;height:32px;font-size:11.5px">
+            <div style="width:34px;flex:none"><div style="width:15px;height:15px;border-radius:3px;border:1px solid #434a53"></div></div>
+            <div style="width:112px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#6ea3e0">2026004651</div>
+            <div style="flex:1;min-width:0;color:rgba(230,233,236,.82);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">PEDRO HENRIQUE SALLES</div>
+            <div style="width:92px;flex:none;color:rgba(230,233,236,.82)">03/09/2026</div>
+          </div>
+        </div>
+
+        <div style="font-size:10.5px;line-height:1.6;color:rgba(230,233,236,.45);text-wrap:pretty">O vermelho fica <span style="color:rgba(230,233,236,.75)">dentro</span> da barra accent: a barra diz "estas estão marcadas", o botão diz "isto apaga". Se a contagem mudar enquanto a pergunta está de pé, ela recolhe de volta ao botão.</div>
+
+        <div style="display:flex;flex-direction:column;gap:8px;padding-top:11px;border-top:1px solid #23272e">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">Exportar seleção · sinal de vida</div>
+          <div style="display:flex;align-items:center;gap:9px">
+            <div style="height:26px;display:flex;align-items:center;gap:6px;padding:0 10px;border:1px solid rgba(110,163,224,.35);border-radius:5px;font-size:11px;color:rgba(191,216,245,.6)"><i class="ph ph-circle-notch" style="font-size:11px"></i>Escolhendo onde salvar…</div>
+            <div style="flex:1;font-size:10.5px;color:rgba(230,233,236,.45);text-wrap:pretty">Só o estado desabilitado marcava o tempo em que o diálogo do sistema fica aberto.</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:9px;padding:9px 11px;border:1px solid rgba(224,163,60,.45);background:#33291a;border-radius:7px">
+            <i class="ph-fill ph-warning" style="font-size:13px;color:#e0a33c;flex:none"></i>
+            <div style="flex:1;font-size:11px;color:#f4d9a3">CSV exportado — o arquivo sai do app sem cifra.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;gap:28px;max-width:1203px;font-size:11.5px;line-height:1.7;color:rgba(230,233,236,.55)">
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">Âmbar é o que espera uma pessoa</span> — a caixa de salvar pede um nome, então é âmbar. O toast de CSV também: o arquivo saindo sem cifra é um fato que pede atenção, não uma comemoração.</div>
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">Depois de salvar, há caminho para o relatório.</span> Antes o toast dizia que salvou e deixava a operadora procurar Relatórios na barra lateral.</div>
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">"Desfazer edições" devolve linhas e colunas juntas.</span> É um gesto só, no pé do popover de Colunas — e é o único caminho de volta das linhas removidas.</div>
+      </div>
+    </sc-if>
+  </div>
+
+</div>
+
+<div style="font-family:'IBM Plex Sans',system-ui,sans-serif;background:#0a0b0d;color:#e6e9ec;padding:16px 56px 56px;display:flex;flex-direction:column;gap:72px;align-items:flex-start">
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <div style="font-size:18px;font-weight:600">5 · A mesma pergunta no tema claro</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(230,233,236,.4)">o suficiente para ler a gramática de tom</div>
+    </div>
+    <div style="width:1100px;background:#f3f4f5;border:1px solid #dfe3e7;border-radius:10px;padding:18px;color:#1b1f24;display:flex;gap:16px">
+
+      <div style="width:392px;flex:none;display:flex;flex-direction:column;gap:11px">
+        <div style="border:1px solid #dfe3e7;border-radius:8px;background:#ffffff;overflow:hidden">
+          <div style="display:flex;align-items:center;gap:10px;padding:7px 11px;background:#f6f7f8;border-bottom:1px solid #dfe3e7">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(27,31,36,.55)">SQL</div>
+            <div style="flex:1"></div>
+            <div style="font-size:10px;color:rgba(27,31,36,.5)">somente SELECT · sem acento</div>
+          </div>
+          <div style="padding:10px 11px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;line-height:1.75">
+            <div><span style="color:#1f60a8;font-weight:600">SELECT TOP</span> <span style="color:#8a5c0c">20</span> <span style="color:rgba(27,31,36,.85)">a.cd_atendimento, a.nm_paciente,</span></div>
+            <div><span style="color:#1f60a8;font-weight:600">FROM</span> <span style="color:rgba(27,31,36,.85)">Atendimento a</span></div>
+            <div><span style="color:#1f60a8;font-weight:600">WHERE</span> <span style="color:rgba(27,31,36,.85)">a.dt_uso </span><span style="color:rgba(27,31,36,.6)">&gt;=</span> <span style="color:#1c6b45">'2026-09-01'</span></div>
+            <div><span style="background:rgba(168,58,50,.15);color:#a83a32;border-radius:2px">-- só os de setembro</span></div>
+            <div><span style="color:#1f60a8;font-weight:600">AND</span> <span style="color:rgba(27,31,36,.85)">nm_paciente = </span><span style="color:#1c6b45">'JO</span><span style="background:rgba(168,58,50,.2);color:#8f2d26;border-radius:2px">Ã</span><span style="color:#1c6b45">O'</span></div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px">
+          <div style="height:30px;display:flex;align-items:center;gap:7px;padding:0 13px;border:1px solid #2f6ab0;border-radius:6px;font-size:12px;color:#2f6ab0;font-weight:500"><i class="ph-fill ph-play" style="font-size:11px"></i>Consultar</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(27,31,36,.5);background:#eceef1;border:1px solid #dfe3e7;border-radius:3px;padding:2px 6px">Ctrl ⏎</div>
+          <div style="flex:1"></div>
+          <div style="display:flex;align-items:center;gap:6px;font-size:10.5px;color:#1c7a4e"><div style="width:5px;height:5px;border-radius:3px;background:#1c7a4e"></div>Fantasma pronto</div>
+        </div>
+        <div style="border:1px solid #dfe3e7;border-radius:7px;background:#ffffff;padding:9px 11px;font-size:10.5px;line-height:1.65;color:rgba(27,31,36,.65);text-wrap:pretty">Só SELECT (ou WITH), uma instrução por vez, sem comentário e sem acento. <span style="color:#1b1f24">Quem recusa é o Fantasma</span>, antes de tocar a tela.</div>
+        <div style="display:flex;align-items:flex-start;gap:9px;padding:10px 12px;border:1px solid rgba(168,58,50,.4);background:rgba(168,58,50,.07);border-radius:7px">
+          <i class="ph-fill ph-warning-circle" style="font-size:14px;color:#a83a32;flex:none;margin-top:1px"></i>
+          <div style="flex:1;font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.6;color:#7d2c25;user-select:all;text-wrap:pretty">Fantasma: o Fantasma está ocupado — aguarde o gesto atual terminar</div>
+        </div>
+      </div>
+
+      <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:10px">
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+          <div style="flex:1;min-width:0;display:flex;align-items:center;gap:8px">
+            <i class="ph ph-brackets-curly" style="font-size:13px;color:rgba(27,31,36,.45);flex:none"></i>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:rgba(27,31,36,.55);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">SELECT TOP 20 … WHERE a.dt_uso &gt;= '…'</div>
+          </div>
+          <div style="font-size:11.5px;color:rgba(27,31,36,.65)"><span style="font-family:'IBM Plex Mono',monospace">39</span> de <span style="font-family:'IBM Plex Mono',monospace">42</span> linhas · <span style="color:rgba(27,31,36,.5)">3 removidas</span></div>
+          <div style="display:flex;align-items:center;gap:5px;font-size:10.5px;color:#14487d;background:rgba(47,106,176,.1);border:1px solid rgba(47,106,176,.4);border-radius:5px;padding:2px 7px"><i class="ph ph-eye-slash" style="font-size:11px"></i>2 colunas vazias ocultas</div>
+        </div>
+        <div style="border:1px solid #dfe3e7;border-radius:8px;background:#ffffff;overflow:hidden">
+          <div style="display:flex;align-items:center;gap:9px;padding:8px 12px;background:rgba(47,106,176,.1);border-bottom:1px solid rgba(47,106,176,.3);flex-wrap:wrap">
+            <div style="font-size:11.5px;color:#14487d">3 linhas selecionadas</div>
+            <div style="height:24px;display:flex;align-items:center;gap:7px;padding:0 9px;border:1px solid rgba(168,58,50,.45);background:rgba(168,58,50,.1);border-radius:5px">
+              <div style="font-size:11px;color:#8f2d26">Excluir 3 do resultado? Nada muda no Everest.</div>
+              <div style="width:1px;height:13px;background:rgba(168,58,50,.3)"></div>
+              <div style="font-size:11px;color:rgba(27,31,36,.8)">Manter</div>
+              <div style="font-size:11px;color:#a83a32;font-weight:600">Excluir</div>
+            </div>
+            <div style="flex:1"></div>
+            <div style="font-size:11px;color:rgba(27,31,36,.6)">Limpar</div>
+          </div>
+          <div style="display:flex;align-items:center;padding:0 12px;height:30px;background:#f6f7f8;border-bottom:1px solid #dfe3e7;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:rgba(27,31,36,.55)">
+            <div style="width:34px;flex:none"><div style="width:15px;height:15px;border-radius:3px;background:#2f6ab0;display:flex;align-items:center;justify-content:center"><i class="ph-bold ph-minus" style="font-size:9px;color:#ffffff"></i></div></div>
+            <div style="width:110px;flex:none;text-align:right;padding-right:14px">CD_ATEND.</div>
+            <div style="flex:1;min-width:0;display:flex;align-items:center;gap:5px;color:#14487d">NM_PACIENTE<i class="ph-bold ph-caret-up" style="font-size:8px"></i></div>
+            <div style="width:96px;flex:none">DT_USO</div>
+            <div style="width:62px;flex:none;text-align:right;padding-right:14px">QTDE</div>
+          </div>
+          <div style="display:flex;align-items:center;padding:0 12px;height:32px;border-bottom:1px solid #f1f2f4;background:rgba(47,106,176,.16);box-shadow:inset 2px 0 0 #2f6ab0;font-size:11.5px">
+            <div style="width:34px;flex:none"><div style="width:15px;height:15px;border-radius:3px;background:#2f6ab0;display:flex;align-items:center;justify-content:center"><i class="ph-bold ph-check" style="font-size:10px;color:#ffffff"></i></div></div>
+            <div style="width:110px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#2f6ab0">2026004517</div>
+            <div style="flex:1;min-width:0;color:rgba(27,31,36,.85);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">MARTA LEMOS FERREIRA</div>
+            <div style="width:96px;flex:none;color:rgba(27,31,36,.85)">02/09/2026</div>
+            <div style="width:62px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#1f60a8">2</div>
+          </div>
+          <div style="display:flex;align-items:center;padding:0 12px;height:32px;border-bottom:1px solid #f1f2f4;font-size:11.5px">
+            <div style="width:34px;flex:none"><div style="width:15px;height:15px;border-radius:3px;border:1px solid #b9bfc7"></div></div>
+            <div style="width:110px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#2f6ab0">2026004651</div>
+            <div style="flex:1;min-width:0;color:rgba(27,31,36,.85);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">PEDRO HENRIQUE SALLES</div>
+            <div style="width:96px;flex:none;color:rgba(27,31,36,.85)">03/09/2026</div>
+            <div style="width:62px;flex:none;text-align:right;padding-right:14px;color:rgba(27,31,36,.55)">—</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;padding:0 12px;height:32px;border-top:1px solid #dfe3e7;background:#f6f7f8;font-size:11px">
+            <div style="color:rgba(27,31,36,.4)">← Anterior</div>
+            <div style="font-family:'IBM Plex Mono',monospace;color:rgba(27,31,36,.8)">1–39 de 39</div>
+            <div style="flex:1"></div>
+            <div style="color:rgba(27,31,36,.5)">ordenado por <span style="font-family:'IBM Plex Mono',monospace;color:rgba(27,31,36,.75)">NM_PACIENTE</span> ↑</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:9px">
+          <i class="ph ph-lock-simple" style="font-size:12px;color:rgba(27,31,36,.45);flex:none;margin-top:2px"></i>
+          <div style="flex:1;font-size:10.5px;line-height:1.6;color:rgba(27,31,36,.55);text-wrap:pretty">O comentário em vermelho e o caractere fora do ASCII continuam marcados no lugar; no claro a tinta de erro é <span style="font-family:'IBM Plex Mono',monospace">#a83a32</span>, e o realce fica no fundo, nunca só na cor da letra.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showNotes&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Apresentação&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return { showNotes: this.props.showNotes ?? true };
+  }
+}
+</script>
+</body>
+</html>

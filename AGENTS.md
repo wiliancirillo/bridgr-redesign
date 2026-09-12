@@ -55,15 +55,15 @@ Before changing a document:
 
 ## Repository-specific information
 
-- Purpose: the functional brief for giving **Bridgr Pro** (`~/Projects/bridgr`) a new look in **Claude Design** — what every screen does, read from the code, plus the rules any new look must keep. It holds documents only: no application code, no design files.
-- Layout: `docs/` is the set uploaded to Claude Design, numbered in reading order (`00-brief.md` first, one file per screen in `docs/screens/`); `insights/` is developer-facing and is **not** uploaded; `README.md` (Portuguese) says how to use both.
+- Purpose: the functional brief for giving **Bridgr Pro** (`~/Projects/bridgr`) a new look in **Claude Design**, plus the reviewed Claude Design exports that document the chosen direction — what every screen does, read from the code, plus the rules any new look must keep. It holds documents and design references only: no application code.
+- Layout: `docs/` is the set uploaded to Claude Design, numbered in reading order (`00-brief.md` first, one file per screen in `docs/screens/`); `design/` contains versioned `.dc.html` exports, their reviewed PNG assets, and export support files; `insights/` is developer-facing and is **not** uploaded; `README.md` (Portuguese) says how to use both.
 - Language: prose in English; on-screen text quoted **verbatim in pt-BR**, as the app renders it; `README.md` in Portuguese, because it is read by the operator.
 - Source of truth: the code of `~/Projects/bridgr` at the commit stamped in `.agents/PROJECT_MEMORY.md`. Bridgr's own `docs/telas.md`, memory and decisions explain the _why_ but are partly stale.
 - Validation command: `~/Projects/agents/check.sh .` (read-only policy check). No install, run, test, lint, type-check or build commands exist.
 
 ## Repository-specific rules
 
-- ⚠️ **No patient data, not even a real capture of the current app.** Every screen of Bridgr Pro shows a patient's name, procedure and surgery date (LGPD). Every example uses the fictitious cast in `docs/06-sample-data.md`, and no real person, order, NF, pedido or CRM number is written here. Real client or hospital names appear only where the app's own interface prints them as fixed text (the study labels in the sidebar, the portal's name) — never in an example. `.gitignore` refuses documents, images and spreadsheets, which guards the accident and never `git add -f`.
+- ⚠️ **No patient data, not even a real capture of the current app.** Every screen of Bridgr Pro shows a patient's name, procedure and surgery date (LGPD). Every example and design export uses the fictitious cast in `docs/06-sample-data.md`, and no real person, order, NF, pedido or CRM number is written here. Real client or hospital names appear only where the app's own interface prints them as fixed text (the study labels in the sidebar, the portal's name) — never in an example. The generic `.gitignore` guards external documents and media; the reviewed Claude Design exports in `design/` are the intentional exception, and never use `git add -f` to bypass it.
 - ⚠️ **Every behavioural statement must be verifiable in the code**, with the file named in the document's header. A behaviour described from memory or from Bridgr's docs alone is a defect: those docs are partly stale.
 - ⚠️ **Labels are verbatim from `src/lib/i18n/locales/pt-BR.ts`.** A paraphrased label makes the design draw a word the app does not say. A better wording is a proposal and is marked as one.
 - **Facts, proposals and open questions stay apart.** "Design opportunities", "Open questions" and `insights/` are proposals; they are never written as if the app already behaved that way.

@@ -15,7 +15,7 @@ não pode derrubar.
 
 ```
 bridgr_reborn/
-├── docs/                         ← o que sobe para o Claude Design
+├── docs/                         ← fonte canônica e conjunto que sobe para o Claude Design
 │   ├── 00-brief.md               o pedido: entregáveis, regras dos mockups, o que é fixo e o que é livre
 │   ├── 01-product.md             quem usa, o fluxo, o ecossistema, o mapa das telas, glossário
 │   ├── 02-invariants.md          as regras que valem em toda tela e passam na frente da estética
@@ -24,6 +24,11 @@ bridgr_reborn/
 │   ├── 05-components.md          componentes compartilhados (grade, filtro, listas salvas, confirmação…)
 │   ├── 06-sample-data.md         o elenco fictício
 │   └── screens/                  uma tela por arquivo, na ordem da barra lateral
+├── design/                       ← exports baixados e revisados do Claude Design
+│   ├── *.dc.html                 uma tela/canvas por arquivo
+│   ├── uploads/                  assets referenciados pelos exports
+│   ├── support.js                suporte gerado pelo export
+│   └── github.md                 registro auxiliar do sync do design
 ├── insights/
 │   └── project-insights.md       ← achados de engenharia para o desenvolvedor (NÃO sobe)
 ├── AGENTS.md                     regras para agentes neste repositório
@@ -55,7 +60,10 @@ bridgr_reborn/
 4. **Itere tela a tela**, apontando o documento da tela em cada pedido
    (`screens/NN-nome.md`) — ele traz os estados, os gestos e as linhas de
    exemplo prontas.
-5. Quando a direção estiver aprovada, o caminho de volta para o código é pelos
+5. Os exports visuais baixados ficam em `design/` para consulta e revisão. Eles
+   não substituem os briefings de `docs/`, que continuam sendo a fonte canônica
+   e o conjunto enviado ao Claude Design.
+6. Quando a direção estiver aprovada, o caminho de volta para o código é pelos
    **papéis de token** de `docs/03-platform.md`: cada papel novo precisa
    mapear para um papel que o código usa (ou vir com a proposta de mapeamento).
 

@@ -5,7 +5,7 @@
 ## Project purpose
 
 - Primary goal: the functional brief for redesigning **Bridgr Pro**'s look in Claude Design — every screen described from the code, with the rules a new look must keep ([001](decisions/001-a-functional-brief-read-from-the-code.md)).
-- Explicit non-goals: no application code; no design files (the design lives in Claude Design); it does not replace Bridgr Pro's own `docs/telas.md`, which stays the app's spec.
+- Explicit non-goals: no application code; the exported design files are references, not the app's implementation; it does not replace Bridgr Pro's own `docs/telas.md`, which stays the app's spec.
 - Intended users: the operator (uploads `docs/`, sets the design direction), Claude Design (reads `docs/`), and agents keeping the brief in step with the app.
 
 ## Source stamp
@@ -15,15 +15,17 @@
 
 ## Architecture
 
-- `docs/` is the upload set, numbered in reading order: brief → product → invariants → platform → shell → components → sample data → `screens/NN-*.md` (sidebar order).
+- `docs/` is the canonical upload set, numbered in reading order: brief → product → invariants → platform → shell → components → sample data → `screens/NN-*.md` (sidebar order).
+- `design/` contains the reviewed Claude Design exports: one `.dc.html` per canvas, its `uploads/` assets, `support.js`, and the auxiliary `github.md`; it is reference material, not the source of functional truth.
 - Every screen file follows one template (question, anatomy, data, states, actions, rules, must survive, free, samples, opportunities, open questions); `docs/00-brief.md` § "How to read a screen document" explains it.
 - `insights/` is developer-facing and never uploaded: engineering and project findings from reading the code.
 
 ## Invariants
 
-- No real patient, person, hospital, order, NF or pedido identifier anywhere; examples use the cast in `docs/06-sample-data.md`.
+- No real patient, person, hospital, order, NF or pedido identifier anywhere; examples and design exports use the cast in `docs/06-sample-data.md`.
 - On-screen text is quoted verbatim from Bridgr Pro's `src/lib/i18n/locales/pt-BR.ts`; better wording is marked as a proposal.
 - The cross-screen rules a redesign must keep are in `docs/02-invariants.md`; they come from Bridgr Pro's `AGENTS.md` domain rules.
+- `docs/` and `design/` must not contain duplicate copies of the same imported content; compare hashes when importing a Claude Design archive.
 
 ## Conventions
 

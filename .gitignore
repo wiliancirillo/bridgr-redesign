@@ -1,7 +1,9 @@
-# Patient data never enters git — no documents, images, e-mails or spreadsheets.
+# Patient data never enters git. External documents, images, e-mails and
+# spreadsheets remain ignored; the reviewed Claude Design assets under
+# design/ are the only intentional media exception.
 # Every screen of Bridgr Pro shows a patient's name, so a real capture of the
-# current app IS patient data. Mockups live in the Claude Design project and
-# use the fictitious cast in docs/06-sample-data.md (AGENTS.md).
+# current app IS patient data. Mockups use the fictitious cast in
+# docs/06-sample-data.md (AGENTS.md).
 #
 # The bracket patterns make the match case-insensitive: git's is not, and
 # scanners and cameras write `.PDF` and `.JPG` all day.
@@ -30,9 +32,10 @@ screenshots/
 capturas/
 documentos/
 
-# The Claude Design canvas, when pulled to disk to be searched: generated,
-# large, and regenerable from the project, which stays its source of truth.
-*.dc.html
+# Claude Design exports are kept under design/ as the reviewed visual artifact.
+!*.dc.html
+!design/uploads/
+!design/uploads/*.png
 
 # Local environment
 .env

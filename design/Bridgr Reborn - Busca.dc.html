@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" rel="stylesheet">
+<link href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css" rel="stylesheet">
+<style>
+body { margin: 0; background: #0a0b0d; }
+a { color: #6ea3e0; }
+a:hover { color: #9cc0ec; }
+</style>
+</helmet>
+
+<div style="font-family:'IBM Plex Sans',system-ui,sans-serif;background:#0a0b0d;color:#e6e9ec;padding:56px;display:flex;flex-direction:column;gap:72px;align-items:flex-start">
+
+  <div style="display:flex;flex-direction:column;gap:10px;max-width:980px">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(230,233,236,.4)">Bridgr Pro · reborn · rodada 14</div>
+    <div style="font-size:30px;font-weight:600;letter-spacing:-.01em">Busca — onde está o que você procura</div>
+    <div style="font-size:14px;line-height:1.6;color:rgba(230,233,236,.66);text-wrap:pretty">Um termo, digitado uma vez, sobre tudo o que esta estação guarda — e de cada resposta uma porta para o lugar da coisa. <span style="color:#e6e9ec">A varredura é uma foto e diz quando correu</span>; nada aqui vigia, atualiza ou escreve. Cada fonte é perguntada sozinha: o MedLens fora não pode esconder os códigos do ERP.</div>
+  </div>
+
+  <!-- ============ 1 · A TELA COM RESULTADOS ============ -->
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <div style="font-size:18px;font-weight:600">1 · Resultados para <span style="font-family:'IBM Plex Mono',monospace;font-size:15px;color:#9cc0ec">vale_verde</span></div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(230,233,236,.4)">1440 × 900 · sem item na barra lateral · seis grupos em ordem fixa</div>
+    </div>
+
+    <div style="width:1440px;height:900px;border-radius:8px;border:1px solid #2b2f36;background:#14161a;overflow:hidden;display:flex;flex-direction:column;font-size:13.5px;color:#e6e9ec">
+      <div style="height:42px;flex:none;display:flex;align-items:center;gap:14px;padding:0 6px 0 12px;border-bottom:1px solid #2b2f36">
+        <div style="flex:none;display:flex;align-items:center;gap:8px">
+          <svg width="20" height="22" viewBox="0 0 24 24" fill="none"><path d="M3.5 21.5V12a8.5 8.5 0 0 1 17 0v9.5" stroke="#6ea3e0" stroke-width="2"></path><path d="M1 22.5h22" stroke="#6ea3e0" stroke-width="2" stroke-linecap="round"></path><path d="M20 1.5l1.1 2.9 2.9 1.1-2.9 1.1L20 9.5l-1.1-2.9L16 5.5l2.9-1.1z" fill="#f0913a"></path></svg>
+          <div style="font-size:13.5px;font-weight:500;white-space:nowrap">Bridgr Pro</div>
+          <div style="font-size:11px;color:rgba(230,233,236,.45);white-space:nowrap">· Busca</div>
+        </div>
+        <div style="flex:1;display:flex;justify-content:center">
+          <div style="width:430px;height:26px;display:flex;align-items:center;gap:7px;background:#1b1e23;border:1px solid #6ea3e0;border-radius:6px;padding:0 8px">
+            <i class="ph ph-magnifying-glass" style="font-size:13px;color:rgba(230,233,236,.7)"></i>
+            <div style="flex:1;min-width:0;font-family:'IBM Plex Mono',monospace;font-size:11.5px">vale_verde</div>
+            <div style="width:1px;height:13px;background:#6ea3e0;opacity:.7"></div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:4px">
+          <div style="width:27px;height:25px;display:flex;align-items:center;justify-content:center"><i class="ph ph-bell" style="font-size:15px;color:rgba(230,233,236,.72)"></i></div>
+          <div style="display:flex;align-items:center;gap:7px;height:26px;padding:0 7px;border-radius:6px;background:#1b1e23"><div style="width:19px;height:19px;border-radius:10px;background:#1b3350;color:#bfd8f5;font-size:9px;font-weight:600;display:flex;align-items:center;justify-content:center">CR</div><div style="font-size:12px">Camila</div><i class="ph ph-caret-down" style="font-size:10px;color:rgba(230,233,236,.45)"></i></div>
+          <div style="display:flex;align-items:center;gap:2px;margin-left:6px">
+            <div style="width:26px;height:22px;display:flex;align-items:center;justify-content:center"><i class="ph ph-minus" style="font-size:13px;color:rgba(230,233,236,.72)"></i></div>
+            <div style="width:26px;height:22px;display:flex;align-items:center;justify-content:center"><i class="ph ph-square" style="font-size:12px;color:rgba(230,233,236,.72)"></i></div>
+            <div style="width:26px;height:22px;display:flex;align-items:center;justify-content:center"><i class="ph ph-x" style="font-size:13px;color:rgba(230,233,236,.72)"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="flex:1;display:flex;min-height:0">
+        <div style="width:236px;flex:none;border-right:1px solid #2b2f36;padding:8px;display:flex;flex-direction:column;gap:1px">
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-gauge" style="font-size:15px"></i>Dashboard</div>
+          <div style="display:flex;align-items:center;gap:8px;padding:16px 10px 6px"><div style="font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(230,233,236,.4)">Esteira</div><div style="flex:1;height:1px;background:linear-gradient(90deg,#2b2f36,rgba(43,47,54,0))"></div></div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-tray-arrow-down" style="font-size:15px"></i>Triagem</div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-check-square-offset" style="font-size:15px"></i>Revisão</div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-receipt" style="font-size:15px"></i>Faturamento</div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-copy" style="font-size:15px"></i><div style="flex:1">Duplicidades</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#f4d9a3;background:#33291a;border-radius:10px;padding:1px 6px">2</div></div>
+          <div style="display:flex;align-items:center;gap:8px;padding:16px 10px 6px"><div style="font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(230,233,236,.4)">Fora da esteira</div><div style="flex:1;height:1px;background:linear-gradient(90deg,#2b2f36,rgba(43,47,54,0))"></div></div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-archive" style="font-size:15px"></i>Ignorados</div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-brackets-curly" style="font-size:15px"></i><div style="flex:1">Consulta</div><i class="ph ph-caret-down" style="font-size:10px;opacity:.4;transform:rotate(-90deg)"></i></div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-table" style="font-size:15px"></i><div style="flex:1">Catálogos</div><i class="ph ph-caret-down" style="font-size:10px;opacity:.4;transform:rotate(-90deg)"></i></div>
+          <div style="display:flex;align-items:center;gap:8px;padding:16px 10px 6px"><div style="font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(230,233,236,.4)">Sistema</div><div style="flex:1;height:1px;background:linear-gradient(90deg,#2b2f36,rgba(43,47,54,0))"></div></div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-gear-six" style="font-size:15px"></i>Configurações</div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-terminal-window" style="font-size:15px"></i>Logs</div>
+        </div>
+
+        <div style="flex:1;min-width:0;display:flex;flex-direction:column;min-height:0">
+
+          <div style="flex:none;display:flex;align-items:flex-start;gap:16px;padding:14px 18px 11px;border-bottom:1px solid #2b2f36">
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:5px">
+              <div style="display:flex;align-items:center;gap:9px">
+                <div style="font-size:19px;font-weight:600;letter-spacing:-.01em">Resultados para</div>
+                <div style="font-family:'IBM Plex Mono',monospace;font-size:14px;color:#9cc0ec;background:rgba(110,163,224,.12);border:1px solid rgba(110,163,224,.4);border-radius:5px;padding:2px 8px;max-width:320px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">vale_verde</div>
+              </div>
+              <div style="font-size:12px;color:rgba(230,233,236,.55)">4 ocorrências em contas, arquivos, pacientes, catálogos e logs · varredura de 14:32</div>
+            </div>
+            <div style="flex:none;height:28px;display:flex;align-items:center;gap:6px;padding:0 11px;border:1px solid #2b2f36;border-radius:6px;font-size:11.5px;color:rgba(230,233,236,.85)"><i class="ph ph-arrow-u-up-left" style="font-size:12px"></i>Voltar para Revisão</div>
+          </div>
+
+          <div style="flex:none;display:flex;align-items:center;gap:6px;padding:11px 18px;flex-wrap:wrap">
+            <div style="height:27px;display:flex;align-items:center;gap:7px;padding:0 10px;border:1px solid rgba(110,163,224,.55);background:rgba(110,163,224,.13);border-radius:14px;font-size:11.5px;color:#bfd8f5"><i class="ph ph-list" style="font-size:12px"></i>Tudo<span style="font-family:'IBM Plex Mono',monospace;font-size:10px;background:rgba(110,163,224,.2);border-radius:9px;padding:0 6px">4</span></div>
+            <div style="height:27px;display:flex;align-items:center;gap:7px;padding:0 10px;border:1px solid #2b2f36;border-radius:14px;font-size:11.5px;color:rgba(230,233,236,.72)">Contas<span style="font-family:'IBM Plex Mono',monospace;font-size:10px;background:#23272e;border-radius:9px;padding:0 6px">1</span></div>
+            <div style="height:27px;display:flex;align-items:center;gap:7px;padding:0 10px;border:1px solid #2b2f36;border-radius:14px;font-size:11.5px;color:rgba(230,233,236,.72)">Arquivos da doca<span style="font-family:'IBM Plex Mono',monospace;font-size:10px;background:#23272e;border-radius:9px;padding:0 6px">2</span></div>
+            <div style="height:27px;display:flex;align-items:center;gap:7px;padding:0 10px;border:1px solid #23272e;border-radius:14px;font-size:11.5px;color:rgba(230,233,236,.35)">Pacientes<span style="font-family:'IBM Plex Mono',monospace;font-size:10px;background:#1d2126;border-radius:9px;padding:0 6px">0</span></div>
+            <div style="height:27px;display:flex;align-items:center;gap:7px;padding:0 10px;border:1px solid #2b2f36;border-radius:14px;font-size:11.5px;color:rgba(230,233,236,.72)">Códigos do ERP<span style="font-family:'IBM Plex Mono',monospace;font-size:10px;background:#23272e;border-radius:9px;padding:0 6px">1</span></div>
+            <div style="height:27px;display:flex;align-items:center;gap:7px;padding:0 10px;border:1px solid #23272e;border-radius:14px;font-size:11.5px;color:rgba(230,233,236,.35)">Linhas de log<span style="font-family:'IBM Plex Mono',monospace;font-size:10px;background:#1d2126;border-radius:9px;padding:0 6px">0</span></div>
+          </div>
+
+          <div style="flex:1;min-height:0;overflow:hidden;padding:0 18px 16px;display:flex;flex-direction:column">
+            <div style="flex:1;min-height:0;overflow:hidden;max-width:1000px;display:flex;flex-direction:column;gap:14px">
+
+              <div style="flex:none;display:flex;flex-direction:column;gap:7px">
+                <div style="display:flex;align-items:center;gap:9px">
+                  <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.55)">Contas</div>
+                  <div style="font-size:10px;color:rgba(230,233,236,.4)">1 ocorrência</div>
+                  <div style="flex:1;height:1px;background:#23272e"></div>
+                </div>
+                <div style="border:1px solid #2b2f36;border-radius:8px;background:#16181d;overflow:hidden">
+                  <div style="display:flex;align-items:center;gap:11px;padding:10px 12px">
+                    <div style="width:28px;height:28px;flex:none;border-radius:7px;background:rgba(224,163,60,.14);border:1px solid rgba(224,163,60,.4);display:flex;align-items:center;justify-content:center"><i class="ph ph-receipt" style="font-size:14px;color:#e0a33c"></i></div>
+                    <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
+                      <div style="font-size:12.5px;font-weight:500">JOÃO CARLOS PRADO</div>
+                      <div style="font-size:10.5px;color:rgba(230,233,236,.5);white-space:nowrap;overflow:hidden;text-overflow:ellipsis"><span style="color:rgba(230,233,236,.72)">Hospital Vale Verde</span> · <span style="font-family:'IBM Plex Mono',monospace">informe_<span style="background:rgba(110,163,224,.28);border-radius:2px">vale_verde</span>_2026-09-02.pdf</span></div>
+                    </div>
+                    <div style="flex:none;font-size:10.5px;color:#f4d9a3;background:#33291a;border:1px solid rgba(224,163,60,.45);border-radius:5px;padding:2px 8px">Revisão · a conferir</div>
+                    <i class="ph ph-arrow-right" style="font-size:12px;color:rgba(230,233,236,.4);flex:none"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div style="flex:none;display:flex;flex-direction:column;gap:7px">
+                <div style="display:flex;align-items:center;gap:9px">
+                  <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.55)">Arquivos da doca</div>
+                  <div style="font-size:10px;color:rgba(230,233,236,.4)">2 ocorrências</div>
+                  <div style="flex:1;height:1px;background:#23272e"></div>
+                </div>
+                <div style="border:1px solid #2b2f36;border-radius:8px;background:#16181d;overflow:hidden">
+                  <div style="display:flex;align-items:center;gap:11px;padding:10px 12px;border-bottom:1px solid #1e2126">
+                    <div style="width:28px;height:28px;flex:none;border-radius:7px;background:#23272e;border:1px solid #2b2f36;display:flex;align-items:center;justify-content:center"><i class="ph ph-file-pdf" style="font-size:14px;color:rgba(230,233,236,.6)"></i></div>
+                    <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
+                      <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">informe_<span style="background:rgba(110,163,224,.28);border-radius:2px">vale_verde</span>_2026-09-02.pdf</div>
+                      <div style="font-size:10.5px;color:rgba(230,233,236,.5);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">319 KB · <span style="color:rgba(230,233,236,.72)">Hospital Vale Verde</span> · pronta</div>
+                    </div>
+                    <div style="flex:none;font-size:10.5px;color:rgba(230,233,236,.7);background:#23272e;border-radius:5px;padding:2px 8px">Triagem</div>
+                    <i class="ph ph-arrow-right" style="font-size:12px;color:rgba(230,233,236,.4);flex:none"></i>
+                  </div>
+                  <div style="display:flex;align-items:center;gap:11px;padding:10px 12px">
+                    <div style="width:28px;height:28px;flex:none;border-radius:7px;background:rgba(224,163,60,.14);border:1px solid rgba(224,163,60,.4);display:flex;align-items:center;justify-content:center"><i class="ph ph-paperclip" style="font-size:14px;color:#e0a33c"></i></div>
+                    <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
+                      <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">etiquetas_<span style="background:rgba(110,163,224,.28);border-radius:2px">vale_verde</span>_sala3.jpg</div>
+                      <div style="font-size:10.5px;color:rgba(230,233,236,.5);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">2,1 MB · <span style="color:#f4d9a3">sem cliente</span></div>
+                    </div>
+                    <div style="flex:none;font-size:10.5px;color:rgba(230,233,236,.7);background:#23272e;border-radius:5px;padding:2px 8px">Triagem</div>
+                    <i class="ph ph-arrow-right" style="font-size:12px;color:rgba(230,233,236,.4);flex:none"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div style="flex:none;display:flex;flex-direction:column;gap:7px">
+                <div style="display:flex;align-items:center;gap:9px">
+                  <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.55)">Códigos do ERP</div>
+                  <div style="font-size:10px;color:rgba(230,233,236,.4)">1 ocorrência</div>
+                  <div style="flex:1;height:1px;background:#23272e"></div>
+                </div>
+                <div style="border:1px solid #2b2f36;border-radius:8px;background:#16181d;overflow:hidden">
+                  <div style="display:flex;align-items:center;gap:11px;padding:10px 12px">
+                    <div style="width:28px;height:28px;flex:none;border-radius:7px;background:#23272e;border:1px solid #2b2f36;display:flex;align-items:center;justify-content:center"><i class="ph ph-barcode" style="font-size:14px;color:rgba(230,233,236,.6)"></i></div>
+                    <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
+                      <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6ea3e0">04</div>
+                      <div style="font-size:10.5px;color:rgba(230,233,236,.5);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">CONSIGNADO <span style="background:rgba(110,163,224,.28);border-radius:2px">VALE VERDE</span></div>
+                    </div>
+                    <div style="flex:none;font-size:10.5px;color:rgba(230,233,236,.7);background:#23272e;border-radius:5px;padding:2px 8px">Depósitos</div>
+                    <i class="ph ph-arrow-right" style="font-size:12px;color:rgba(230,233,236,.4);flex:none"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div style="flex:none;display:flex;align-items:flex-start;gap:9px;padding:10px 12px;border:1px dashed #2b2f36;border-radius:8px">
+                <i class="ph ph-info" style="font-size:13px;color:rgba(230,233,236,.4);flex:none;margin-top:1px"></i>
+                <div style="flex:1;font-size:10.5px;line-height:1.6;color:rgba(230,233,236,.5);text-wrap:pretty">A busca olha a doca, as contas lidas, o espelho de catálogos e os logs — <span style="color:rgba(230,233,236,.72)">títulos, nomes, códigos e linhas</span>, nunca o conteúdo dos documentos. Compara letra por letra, sem juntar acentos: <span style="font-family:'IBM Plex Mono',monospace">joao</span> não acha <span style="font-family:'IBM Plex Mono',monospace">JOÃO</span>. Contas marcadas <span style="color:rgba(230,233,236,.72)">não enviar</span> aparecem, com esse rótulo. Só as peças ignoradas na doca ficam de fora — abra <a href="#">Ignorados</a>.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="height:28px;flex:none;border-top:1px solid #2b2f36;background:rgba(255,255,255,.03);display:flex;align-items:center;padding:0 10px;gap:2px;font-size:10.5px">
+        <div style="display:flex;align-items:center;gap:6px;padding:3px 8px"><i class="ph ph-tray" style="font-size:12px;color:#57b184"></i><span style="font-weight:500;color:rgba(230,233,236,.78)">MailBridgr</span><span style="color:rgba(230,233,236,.52)">canal confirmado</span></div>
+        <div style="display:flex;align-items:center;gap:6px;padding:3px 8px"><i class="ph ph-eye" style="font-size:12px;color:#57b184"></i><span style="font-weight:500;color:rgba(230,233,236,.78)">MedLens</span><span style="color:rgba(230,233,236,.52)">no ar</span></div>
+        <div style="display:flex;align-items:center;gap:6px;padding:3px 8px"><i class="ph ph-robot" style="font-size:12px;color:#57b184"></i><span style="font-weight:500;color:rgba(230,233,236,.78)">Fantasma</span><span style="color:rgba(230,233,236,.52)">pronto</span></div>
+        <div style="display:flex;align-items:center;gap:6px;padding:3px 8px"><i class="ph ph-plugs-connected" style="font-size:12px;color:rgba(230,233,236,.38)"></i><span style="font-weight:500;color:rgba(230,233,236,.78)">Spook</span><span style="color:rgba(230,233,236,.52)">sem endereço</span></div>
+        <div style="display:flex;align-items:center;gap:6px;padding:3px 8px"><i class="ph ph-package" style="font-size:12px;color:#57b184"></i><span style="font-weight:500;color:rgba(230,233,236,.78)">NFe Pack</span><span style="color:rgba(230,233,236,.52)">baixando</span></div>
+        <div style="flex:1"></div>
+        <div style="display:flex;align-items:center;gap:5px;padding:3px 8px;border-radius:5px;background:rgba(110,163,224,.11)"><i class="ph ph-stack-simple" style="font-size:12px;color:#6ea3e0"></i><span style="color:#9cc0ec">2 em voo · 3 pedem gente</span></div>
+        <div style="display:flex;align-items:center;gap:5px;padding:3px 8px"><i class="ph ph-lock" style="font-size:12px;color:#57b184"></i><span style="color:rgba(230,233,236,.72)">PIN ativo</span></div>
+        <div style="display:flex;align-items:center;gap:5px;padding:3px 8px"><i class="ph ph-info" style="font-size:12px;color:rgba(230,233,236,.38)"></i><span style="color:rgba(230,233,236,.52)">v0.1.0</span></div>
+      </div>
+    </div>
+
+    <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;gap:28px;max-width:1440px;font-size:11.5px;line-height:1.7;color:rgba(230,233,236,.55)">
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">O trecho que casou fica marcado.</span> Com termos como <span style="font-family:'IBM Plex Mono',monospace">vale_verde</span>, que aparecem no meio de nomes de arquivo e de descrições, o realce é o que explica por que a linha está ali.</div>
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">O nome do cliente, não o id do adapter.</span> As metas diziam <span style="font-family:'IBM Plex Mono',monospace">vale_verde</span>; agora dizem "Hospital Vale Verde" — e o id continua visível no nome do arquivo, que é onde ele é fato.</div>
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">Pílulas em zero ficam apagadas</span>, sem o mesmo peso das que têm resposta — e o rodapé agora avisa que a comparação é sensível a acento, perto de onde se procura paciente.</div>
+      </div>
+    </sc-if>
+  </div>
+
+  <!-- ============ 2 · O CAMPO E OS ESTADOS DA VARREDURA ============ -->
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <div style="font-size:18px;font-weight:600">2 · O campo, e o que a varredura diz enquanto corre</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(230,233,236,.4)">Ctrl K é a busca global · Ctrl ⇧ K é o filtro de cada tela</div>
+    </div>
+
+    <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start">
+
+      <div style="width:590px;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:12px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">O campo na barra de título</div>
+        <div style="display:flex;flex-direction:column;gap:9px">
+          <div style="display:flex;align-items:center;gap:11px">
+            <div style="width:90px;flex:none;font-size:10.5px;color:rgba(230,233,236,.5)">em repouso</div>
+            <div style="flex:1;height:26px;display:flex;align-items:center;gap:7px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;padding:0 8px">
+              <i class="ph ph-magnifying-glass" style="font-size:13px;color:rgba(230,233,236,.45)"></i>
+              <div style="flex:1;min-width:0;font-size:11.5px;color:rgba(230,233,236,.4);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Buscar paciente, atendimento, arquivo ou código do ERP…</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:rgba(230,233,236,.45);background:#23272e;border:1px solid #2b2f36;border-radius:3px;padding:1px 5px">Ctrl K</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:11px">
+            <div style="width:90px;flex:none;font-size:10.5px;color:rgba(230,233,236,.5)">com foco</div>
+            <div style="flex:1;height:26px;display:flex;align-items:center;gap:7px;background:#1b1e23;border:1px solid #6ea3e0;border-radius:6px;padding:0 8px">
+              <i class="ph ph-magnifying-glass" style="font-size:13px;color:rgba(230,233,236,.7)"></i>
+              <div style="flex:1;min-width:0;font-family:'IBM Plex Mono',monospace;font-size:11.5px">marta</div>
+              <div style="width:1px;height:13px;background:#6ea3e0;opacity:.7"></div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:11px">
+            <div style="width:90px;flex:none;font-size:10.5px;color:rgba(230,233,236,.5)">trancada</div>
+            <div style="flex:1;height:26px;display:flex;align-items:center;justify-content:center;border:1px dashed #23272e;border-radius:6px;font-size:10.5px;color:rgba(230,233,236,.3)">sem campo — nem na primeira montagem</div>
+          </div>
+        </div>
+        <div style="font-size:10.5px;line-height:1.6;color:rgba(230,233,236,.45);text-wrap:pretty;padding-top:8px;border-top:1px solid #23272e">A dica de tecla desaparece quando o campo ganha foco, e o texto digitado continua lá depois do Enter — buscar de novo é editar o que já está escrito.</div>
+      </div>
+
+      <div style="width:590px;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:12px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">Primeira varredura correndo</div>
+        <div style="display:flex;align-items:center;gap:9px">
+          <div style="font-size:17px;font-weight:600">Resultados para</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:#9cc0ec;background:rgba(110,163,224,.12);border:1px solid rgba(110,163,224,.4);border-radius:5px;padding:2px 8px">marta</div>
+          <i class="ph ph-circle-notch" style="font-size:13px;color:#6ea3e0"></i>
+        </div>
+        <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+          <div style="height:25px;display:flex;align-items:center;gap:6px;padding:0 9px;border:1px solid rgba(110,163,224,.55);background:rgba(110,163,224,.13);border-radius:13px;font-size:11px;color:#bfd8f5"><i class="ph ph-list" style="font-size:11px"></i>Tudo<span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;background:rgba(110,163,224,.2);border-radius:9px;padding:0 5px">…</span></div>
+          <div style="height:25px;display:flex;align-items:center;gap:6px;padding:0 9px;border:1px solid #23272e;border-radius:13px;font-size:11px;color:rgba(230,233,236,.35)">Contas<span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;background:#1d2126;border-radius:9px;padding:0 5px">…</span></div>
+          <div style="height:25px;display:flex;align-items:center;gap:6px;padding:0 9px;border:1px solid #23272e;border-radius:13px;font-size:11px;color:rgba(230,233,236,.35)">Arquivos da doca<span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;background:#1d2126;border-radius:9px;padding:0 5px">…</span></div>
+          <div style="height:25px;display:flex;align-items:center;gap:6px;padding:0 9px;border:1px solid #23272e;border-radius:13px;font-size:11px;color:rgba(230,233,236,.35)">Pacientes<span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;background:#1d2126;border-radius:9px;padding:0 5px">…</span></div>
+        </div>
+        <div style="border:1px solid #2b2f36;border-radius:8px;background:#16181d;padding:26px 18px;display:flex;flex-direction:column;align-items:center;gap:8px">
+          <i class="ph ph-circle-notch" style="font-size:22px;color:rgba(230,233,236,.32)"></i>
+          <div style="font-size:11.5px;color:rgba(230,233,236,.55);text-align:center;text-wrap:pretty">Perguntando à doca, às contas lidas, aos catálogos e aos cinco logs…</div>
+        </div>
+        <div style="font-size:10.5px;line-height:1.6;color:rgba(230,233,236,.45);text-wrap:pretty">Nenhuma pílula afirma <span style="font-family:'IBM Plex Mono',monospace">0</span> antes de a fonte responder — e não há resumo nem carimbo até a varredura pousar.</div>
+      </div>
+
+      <div style="width:590px;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:12px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">Varrendo de novo · a resposta velha continua legível</div>
+        <div style="display:flex;align-items:center;gap:9px;flex-wrap:wrap">
+          <div style="font-size:17px;font-weight:600">Resultados para</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:rgba(230,233,236,.55);background:#23272e;border:1px solid #2b2f36;border-radius:5px;padding:2px 8px">marta</div>
+          <i class="ph ph-arrow-right" style="font-size:11px;color:rgba(230,233,236,.4)"></i>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:#9cc0ec;background:rgba(110,163,224,.12);border:1px solid rgba(110,163,224,.4);border-radius:5px;padding:2px 8px">pedro</div>
+          <i class="ph ph-circle-notch" style="font-size:13px;color:#6ea3e0"></i>
+        </div>
+        <div style="font-size:11.5px;color:rgba(230,233,236,.55)">2 ocorrências · varredura de 14:32 — <span style="color:#9cc0ec">procurando “pedro”…</span></div>
+        <div style="border:1px solid #2b2f36;border-radius:8px;background:#16181d;overflow:hidden;opacity:.45">
+          <div style="display:flex;align-items:center;gap:11px;padding:9px 12px;border-bottom:1px solid #1e2126">
+            <div style="width:26px;height:26px;flex:none;border-radius:7px;background:rgba(110,163,224,.14);border:1px solid rgba(110,163,224,.4);display:flex;align-items:center;justify-content:center"><i class="ph ph-receipt" style="font-size:13px;color:#6ea3e0"></i></div>
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px">
+              <div style="font-size:12px;font-weight:500">2026004517 · MARTA LEMOS FERREIRA</div>
+              <div style="font-size:10.5px;color:rgba(230,233,236,.5)">Hospital Vale Verde</div>
+            </div>
+            <div style="flex:none;font-size:10px;color:#9cc0ec;background:rgba(110,163,224,.12);border:1px solid rgba(110,163,224,.4);border-radius:5px;padding:2px 7px">Faturamento · na fila do Fantasma</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:11px;padding:9px 12px">
+            <div style="width:26px;height:26px;flex:none;border-radius:7px;background:rgba(110,163,224,.14);border:1px solid rgba(110,163,224,.4);display:flex;align-items:center;justify-content:center"><i class="ph ph-user" style="font-size:13px;color:#6ea3e0"></i></div>
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px">
+              <div style="font-size:12px;font-weight:500">MARTA LEMOS FERREIRA</div>
+              <div style="font-size:10.5px;color:rgba(230,233,236,.5)">1 conta · 1 arquivo</div>
+            </div>
+            <div style="flex:none;font-size:10px;color:rgba(230,233,236,.7);background:#23272e;border-radius:5px;padding:2px 7px">Revisão</div>
+          </div>
+        </div>
+        <div style="font-size:10.5px;line-height:1.6;color:rgba(230,233,236,.45);text-wrap:pretty">O cabeçalho mostrava o termo novo sobre os resultados do antigo, sem dizer que eram de outra pergunta. Agora os dois termos aparecem, a lista velha se apaga, e a varredura mais nova sempre vence.</div>
+      </div>
+
+      <div style="width:590px;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:12px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">Uma fonte recusou · as outras responderam</div>
+        <div style="display:flex;align-items:flex-start;gap:9px;padding:9px 11px;border:1px solid rgba(224,106,99,.5);background:rgba(224,106,99,.09);border-radius:7px">
+          <i class="ph-fill ph-warning-circle" style="font-size:13px;color:#e06a63;flex:none;margin-top:1px"></i>
+          <div style="flex:1;display:flex;flex-direction:column;gap:3px">
+            <div style="font-size:11px;color:#f2b3ae">Contas</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;line-height:1.55;color:rgba(230,233,236,.9);user-select:all;text-wrap:pretty">MedLens: conexão recusada — 127.0.0.1:8000</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+          <div style="height:25px;display:flex;align-items:center;gap:6px;padding:0 9px;border:1px solid rgba(110,163,224,.55);background:rgba(110,163,224,.13);border-radius:13px;font-size:11px;color:#bfd8f5"><i class="ph ph-list" style="font-size:11px"></i>Tudo<span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;background:rgba(110,163,224,.2);border-radius:9px;padding:0 5px">81</span></div>
+          <div style="height:25px;display:flex;align-items:center;gap:6px;padding:0 9px;border:1px solid rgba(224,106,99,.4);border-radius:13px;font-size:11px;color:#f2b3ae">Contas<i class="ph ph-warning-circle" style="font-size:10px"></i></div>
+          <div style="height:25px;display:flex;align-items:center;gap:6px;padding:0 9px;border:1px solid #2b2f36;border-radius:13px;font-size:11px;color:rgba(230,233,236,.72)">Códigos do ERP<span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;background:#23272e;border-radius:9px;padding:0 5px">80</span></div>
+          <div style="height:25px;display:flex;align-items:center;gap:6px;padding:0 9px;border:1px solid #2b2f36;border-radius:13px;font-size:11px;color:rgba(230,233,236,.72)">Linhas de log<span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;background:#23272e;border-radius:9px;padding:0 5px">1</span></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:7px">
+          <div style="display:flex;align-items:center;gap:9px">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.55)">Códigos do ERP</div>
+            <div style="font-size:10px;color:rgba(230,233,236,.4)">mostrando 80 de 1.482</div>
+            <div style="flex:1;height:1px;background:#23272e"></div>
+            <div style="height:22px;display:flex;align-items:center;gap:5px;padding:0 8px;border:1px solid #2b2f36;border-radius:5px;font-size:10px;color:rgba(230,233,236,.8)">Ver os 1.482 em Catálogos<i class="ph ph-arrow-up-right" style="font-size:9px"></i></div>
+          </div>
+          <div style="border:1px solid #2b2f36;border-radius:8px;background:#16181d;overflow:hidden">
+            <div style="display:flex;align-items:center;gap:11px;padding:9px 12px;border-bottom:1px solid #1e2126">
+              <div style="width:26px;height:26px;flex:none;border-radius:7px;background:#23272e;border:1px solid #2b2f36;display:flex;align-items:center;justify-content:center"><i class="ph ph-barcode" style="font-size:13px;color:rgba(230,233,236,.6)"></i></div>
+              <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px">
+                <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6ea3e0">10245</div>
+                <div style="font-size:10.5px;color:rgba(230,233,236,.5);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">P<span style="background:rgba(110,163,224,.28);border-radius:2px">A</span>RAFUSO CORTICAL 3,5 MM X 24 MM TITÂNIO · FAB-3524</div>
+              </div>
+              <div style="flex:none;font-size:10px;color:rgba(230,233,236,.7);background:#23272e;border-radius:5px;padding:2px 7px">Materiais</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:11px;padding:9px 12px">
+              <div style="width:26px;height:26px;flex:none;border-radius:7px;background:#23272e;border:1px solid #2b2f36;display:flex;align-items:center;justify-content:center"><i class="ph ph-terminal-window" style="font-size:13px;color:rgba(230,233,236,.6)"></i></div>
+              <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px">
+                <div style="font-family:'IBM Plex Mono',monospace;font-size:12px">Fantasma · Sessão · linha 84</div>
+                <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:rgba(230,233,236,.5);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">2026-09-09 11:09:44 everest_login ok user=c<span style="background:rgba(110,163,224,.28);border-radius:2px">a</span>mila.rocha</div>
+              </div>
+              <div style="flex:none;font-size:10px;color:rgba(230,233,236,.7);background:#23272e;border-radius:5px;padding:2px 7px">Fantasma · Sessão</div>
+            </div>
+          </div>
+        </div>
+        <div style="font-size:10.5px;line-height:1.6;color:rgba(230,233,236,.45);text-wrap:pretty">A pílula da fonte que caiu troca a contagem por um sinal — afirmar <span style="font-family:'IBM Plex Mono',monospace">0</span> ali seria dizer que não há contas com esse termo. E o grupo cortado agora oferece uma porta para o total.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 3 · AS AUSÊNCIAS ============ -->
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <div style="font-size:18px;font-weight:600">3 · Antes de perguntar, e quando não há nada</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(230,233,236,.4)">nenhum resultado é afirmado antes de alguém perguntar</div>
+    </div>
+
+    <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start">
+
+      <div style="width:590px;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:11px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">Nunca buscou nesta sessão</div>
+        <div style="border:1px solid #2b2f36;border-radius:8px;background:#16181d;padding:38px 20px;display:flex;flex-direction:column;align-items:center;gap:9px">
+          <i class="ph ph-magnifying-glass" style="font-size:30px;color:rgba(230,233,236,.24)"></i>
+          <div style="font-size:12.5px;color:rgba(230,233,236,.72);text-align:center;text-wrap:pretty">Digite um termo e pressione Enter — a busca corre uma vez e diz quando correu.</div>
+          <div style="display:flex;align-items:center;gap:6px;font-size:10.5px;color:rgba(230,233,236,.45)">o campo está lá em cima<div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:rgba(230,233,236,.55);background:#23272e;border:1px solid #2b2f36;border-radius:3px;padding:1px 5px">Ctrl K</div></div>
+        </div>
+        <div style="font-size:10.5px;color:rgba(230,233,236,.45);text-wrap:pretty">Sem pílulas, sem resumo, sem carimbo: chegar aqui pelo histórico do navegador não inventa uma varredura que ninguém pediu.</div>
+      </div>
+
+      <div style="width:590px;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:11px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">A varredura correu e não achou nada</div>
+        <div style="display:flex;align-items:center;gap:9px">
+          <div style="font-size:15px;font-weight:600">Resultados para</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#9cc0ec;background:rgba(110,163,224,.12);border:1px solid rgba(110,163,224,.4);border-radius:5px;padding:2px 8px">joao</div>
+        </div>
+        <div style="font-size:11px;color:rgba(230,233,236,.5)">0 ocorrências · varredura de 14:41</div>
+        <div style="border:1px solid #2b2f36;border-radius:8px;background:#16181d;padding:30px 20px;display:flex;flex-direction:column;align-items:center;gap:9px">
+          <i class="ph ph-magnifying-glass" style="font-size:26px;color:rgba(230,233,236,.24)"></i>
+          <div style="font-size:12.5px;color:rgba(230,233,236,.72)">Nada com “joao”</div>
+          <div style="font-size:11px;line-height:1.6;color:rgba(230,233,236,.55);text-align:center;max-width:400px;text-wrap:pretty">A busca olha títulos, nomes, códigos e linhas de log — não o conteúdo dos documentos. E compara letra por letra: <span style="font-family:'IBM Plex Mono',monospace">joao</span> não acha <span style="font-family:'IBM Plex Mono',monospace">JOÃO</span>.</div>
+          <div style="height:26px;display:flex;align-items:center;gap:6px;padding:0 11px;border:1px solid rgba(110,163,224,.5);border-radius:6px;font-size:11px;color:#9cc0ec">Buscar “JOÃO”<i class="ph ph-arrow-right" style="font-size:10px"></i></div>
+        </div>
+        <div style="font-size:10.5px;line-height:1.6;color:rgba(230,233,236,.45);text-wrap:pretty">A comparação crua é decisão tomada — mas o campo convida a procurar paciente, e nome de paciente tem acento. Em vez de dobrar acentos por trás, a tela oferece o termo acentuado como segunda busca.</div>
+      </div>
+
+      <div style="width:590px;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:11px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">Pílula escolhida sem ocorrência</div>
+        <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+          <div style="height:25px;display:flex;align-items:center;gap:6px;padding:0 9px;border:1px solid #2b2f36;border-radius:13px;font-size:11px;color:rgba(230,233,236,.72)"><i class="ph ph-list" style="font-size:11px"></i>Tudo<span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;background:#23272e;border-radius:9px;padding:0 5px">4</span></div>
+          <div style="height:25px;display:flex;align-items:center;gap:6px;padding:0 9px;border:1px solid rgba(110,163,224,.55);background:rgba(110,163,224,.13);border-radius:13px;font-size:11px;color:#bfd8f5">Pacientes<span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;background:rgba(110,163,224,.2);border-radius:9px;padding:0 5px">0</span></div>
+          <div style="height:25px;display:flex;align-items:center;gap:6px;padding:0 9px;border:1px solid #2b2f36;border-radius:13px;font-size:11px;color:rgba(230,233,236,.72)">Códigos do ERP<span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;background:#23272e;border-radius:9px;padding:0 5px">1</span></div>
+        </div>
+        <div style="border:1px solid #2b2f36;border-radius:8px;background:#16181d;padding:28px 20px;display:flex;flex-direction:column;align-items:center;gap:9px">
+          <i class="ph ph-user" style="font-size:26px;color:rgba(230,233,236,.24)"></i>
+          <div style="font-size:12.5px;color:rgba(230,233,236,.72)">Nada em Pacientes para “vale_verde”</div>
+          <div style="font-size:11px;line-height:1.6;color:rgba(230,233,236,.55);text-align:center;max-width:400px;text-wrap:pretty">Os outros grupos responderam — volte a <span style="color:#9cc0ec">Tudo</span> para ver as 4 ocorrências.</div>
+        </div>
+        <div style="font-size:10.5px;color:rgba(230,233,236,.45);text-wrap:pretty">Hoje o corpo fica em branco, sem frase: um vazio que parece tela quebrada em vez de resposta.</div>
+      </div>
+
+      <div style="width:590px;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:11px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">Uma conta, uma linha — o modelo de ficha</div>
+        <div style="border:1px solid #2b2f36;border-radius:8px;background:#16181d;overflow:hidden">
+          <div style="display:flex;align-items:center;gap:11px;padding:10px 12px;border-bottom:1px solid #1e2126">
+            <div style="width:28px;height:28px;flex:none;border-radius:7px;background:rgba(224,106,99,.14);border:1px solid rgba(224,106,99,.4);display:flex;align-items:center;justify-content:center"><i class="ph ph-receipt" style="font-size:14px;color:#e06a63"></i></div>
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
+              <div style="font-size:12.5px;font-weight:500">2026004733 · CARLOS EDUARDO LIMA</div>
+              <div style="font-size:10.5px;color:rgba(230,233,236,.5)">Hospital Santa Aurora</div>
+            </div>
+            <div style="flex:none;font-size:10.5px;color:#f2b3ae;background:rgba(224,106,99,.12);border:1px solid rgba(224,106,99,.5);border-radius:5px;padding:2px 8px">Faturamento</div>
+            <i class="ph ph-arrow-right" style="font-size:12px;color:rgba(230,233,236,.4);flex:none"></i>
+          </div>
+          <div style="display:flex;align-items:center;gap:11px;padding:10px 12px;border-bottom:1px solid #1e2126">
+            <div style="width:28px;height:28px;flex:none;border-radius:7px;background:rgba(87,177,132,.14);border:1px solid rgba(87,177,132,.4);display:flex;align-items:center;justify-content:center"><i class="ph ph-receipt" style="font-size:14px;color:#57b184"></i></div>
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
+              <div style="font-size:12.5px;font-weight:500">2026004517 · MARTA LEMOS FERREIRA</div>
+              <div style="font-size:10.5px;color:rgba(230,233,236,.5)">Hospital Vale Verde</div>
+            </div>
+            <div style="flex:none;font-size:10.5px;color:#a6dcbf;background:rgba(87,177,132,.1);border:1px solid rgba(87,177,132,.45);border-radius:5px;padding:2px 8px">Faturamento</div>
+            <i class="ph ph-arrow-right" style="font-size:12px;color:rgba(230,233,236,.4);flex:none"></i>
+          </div>
+          <div style="display:flex;align-items:center;gap:11px;padding:10px 12px">
+            <div style="width:28px;height:28px;flex:none;border-radius:7px;background:rgba(110,163,224,.14);border:1px solid rgba(110,163,224,.4);display:flex;align-items:center;justify-content:center"><i class="ph ph-receipt" style="font-size:14px;color:#6ea3e0"></i></div>
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
+              <div style="font-size:12.5px;font-weight:500">ANA BEATRIZ MOURA</div>
+              <div style="font-size:10.5px;color:rgba(230,233,236,.5)">Hospital Santa Aurora · sem atendimento ainda</div>
+            </div>
+            <div style="flex:none;font-size:10.5px;color:rgba(230,233,236,.6);background:#23272e;border-radius:5px;padding:2px 8px">Revisão · não enviar</div>
+            <i class="ph ph-arrow-right" style="font-size:12px;color:rgba(230,233,236,.4);flex:none"></i>
+          </div>
+        </div>
+        <div style="font-size:10.5px;line-height:1.6;color:rgba(230,233,236,.45);text-wrap:pretty">Conta já enfileirada ou trabalhada responde só como linha do Faturamento, nunca também como linha da Revisão — o tom da ficha diz em que pé ela está: <span style="color:#f2b3ae">falhou</span>, <span style="color:#a6dcbf">faturada</span>, <span style="color:#9cc0ec">na fila</span>.</div>
+      </div>
+    </div>
+
+    <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;gap:28px;max-width:1203px;font-size:11.5px;line-height:1.7;color:rgba(230,233,236,.55)">
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">Sem histórico de buscas, de propósito.</span> Os termos aqui são quase sempre nomes de paciente — guardar uma lista de buscas recentes seria dado de paciente em repouso, por conveniência.</div>
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">Portas mais fundas onde dá.</span> O grupo cortado leva ao total em Catálogos, e o acerto de código abre o catálogo dele — não mais sempre Materiais. A linha de log já pousa na fonte certa, em destaque.</div>
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">"Não enviar" aparece</span>, com o rótulo — é decisão sua, não exclusão, e achá-la é justamente como se muda de ideia. O rodapé foi reescrito: a única coisa que fica fora da busca é a peça ignorada na doca.</div>
+      </div>
+    </sc-if>
+  </div>
+
+</div>
+
+<div style="font-family:'IBM Plex Sans',system-ui,sans-serif;background:#0a0b0d;color:#e6e9ec;padding:16px 56px 56px;display:flex;flex-direction:column;gap:16px;align-items:flex-start">
+  <div style="display:flex;align-items:baseline;gap:12px">
+    <div style="font-size:18px;font-weight:600">4 · No tema claro</div>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(230,233,236,.4)">o termo em pílula, as pílulas em zero apagadas e o trecho casado</div>
+  </div>
+  <div style="width:1000px;background:#f3f4f5;border:1px solid #dfe3e7;border-radius:10px;padding:18px;color:#1b1f24;display:flex;flex-direction:column;gap:12px">
+
+    <div style="display:flex;align-items:flex-start;gap:14px">
+      <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:5px">
+        <div style="display:flex;align-items:center;gap:9px">
+          <div style="font-size:18px;font-weight:600">Resultados para</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:#14487d;background:rgba(47,106,176,.1);border:1px solid rgba(47,106,176,.4);border-radius:5px;padding:2px 8px">vale_verde</div>
+        </div>
+        <div style="font-size:11.5px;color:rgba(27,31,36,.6)">4 ocorrências em contas, arquivos, pacientes, catálogos e logs · varredura de 14:32</div>
+      </div>
+      <div style="flex:none;height:28px;display:flex;align-items:center;gap:6px;padding:0 11px;border:1px solid #dfe3e7;border-radius:6px;font-size:11.5px;color:#1b1f24"><i class="ph ph-arrow-u-up-left" style="font-size:12px"></i>Voltar para Revisão</div>
+    </div>
+
+    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+      <div style="height:26px;display:flex;align-items:center;gap:7px;padding:0 10px;border:1px solid rgba(47,106,176,.5);background:rgba(47,106,176,.12);border-radius:13px;font-size:11.5px;color:#14487d"><i class="ph ph-list" style="font-size:12px"></i>Tudo<span style="font-family:'IBM Plex Mono',monospace;font-size:10px;background:rgba(47,106,176,.18);border-radius:9px;padding:0 6px">4</span></div>
+      <div style="height:26px;display:flex;align-items:center;gap:7px;padding:0 10px;border:1px solid #dfe3e7;background:#ffffff;border-radius:13px;font-size:11.5px;color:rgba(27,31,36,.75)">Contas<span style="font-family:'IBM Plex Mono',monospace;font-size:10px;background:#eceef1;border-radius:9px;padding:0 6px">1</span></div>
+      <div style="height:26px;display:flex;align-items:center;gap:7px;padding:0 10px;border:1px solid #dfe3e7;background:#ffffff;border-radius:13px;font-size:11.5px;color:rgba(27,31,36,.75)">Arquivos da doca<span style="font-family:'IBM Plex Mono',monospace;font-size:10px;background:#eceef1;border-radius:9px;padding:0 6px">2</span></div>
+      <div style="height:26px;display:flex;align-items:center;gap:7px;padding:0 10px;border:1px solid #eceef1;border-radius:13px;font-size:11.5px;color:rgba(27,31,36,.35)">Pacientes<span style="font-family:'IBM Plex Mono',monospace;font-size:10px;background:#f3f4f5;border-radius:9px;padding:0 6px">0</span></div>
+      <div style="height:26px;display:flex;align-items:center;gap:7px;padding:0 10px;border:1px solid #eceef1;border-radius:13px;font-size:11.5px;color:rgba(27,31,36,.35)">Linhas de log<span style="font-family:'IBM Plex Mono',monospace;font-size:10px;background:#f3f4f5;border-radius:9px;padding:0 6px">0</span></div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:7px">
+      <div style="display:flex;align-items:center;gap:9px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(27,31,36,.55)">Arquivos da doca</div>
+        <div style="font-size:10px;color:rgba(27,31,36,.5)">2 ocorrências</div>
+        <div style="flex:1;height:1px;background:#dfe3e7"></div>
+      </div>
+      <div style="border:1px solid #dfe3e7;border-radius:8px;background:#ffffff;overflow:hidden">
+        <div style="display:flex;align-items:center;gap:11px;padding:10px 12px;border-bottom:1px solid #f1f2f4">
+          <div style="width:28px;height:28px;flex:none;border-radius:7px;background:#eceef1;border:1px solid #dfe3e7;display:flex;align-items:center;justify-content:center"><i class="ph ph-file-pdf" style="font-size:14px;color:rgba(27,31,36,.55)"></i></div>
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">informe_<span style="background:rgba(47,106,176,.22);border-radius:2px">vale_verde</span>_2026-09-02.pdf</div>
+            <div style="font-size:10.5px;color:rgba(27,31,36,.55)">319 KB · <span style="color:rgba(27,31,36,.8)">Hospital Vale Verde</span> · pronta</div>
+          </div>
+          <div style="flex:none;font-size:10.5px;color:rgba(27,31,36,.7);background:#eceef1;border-radius:5px;padding:2px 8px">Triagem</div>
+          <i class="ph ph-arrow-right" style="font-size:12px;color:rgba(27,31,36,.4);flex:none"></i>
+        </div>
+        <div style="display:flex;align-items:center;gap:11px;padding:10px 12px">
+          <div style="width:28px;height:28px;flex:none;border-radius:7px;background:#fbf1dd;border:1px solid #e3c78a;display:flex;align-items:center;justify-content:center"><i class="ph ph-paperclip" style="font-size:14px;color:#8a5c0c"></i></div>
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">etiquetas_<span style="background:rgba(47,106,176,.22);border-radius:2px">vale_verde</span>_sala3.jpg</div>
+            <div style="font-size:10.5px;color:rgba(27,31,36,.55)">2,1 MB · <span style="color:#8a5c0c">sem cliente</span></div>
+          </div>
+          <div style="flex:none;font-size:10.5px;color:rgba(27,31,36,.7);background:#eceef1;border-radius:5px;padding:2px 8px">Triagem</div>
+          <i class="ph ph-arrow-right" style="font-size:12px;color:rgba(27,31,36,.4);flex:none"></i>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;align-items:flex-start;gap:9px;padding:10px 12px;border:1px dashed #c9ced5;border-radius:8px">
+      <i class="ph ph-info" style="font-size:13px;color:rgba(27,31,36,.45);flex:none;margin-top:1px"></i>
+      <div style="flex:1;font-size:10.5px;line-height:1.6;color:rgba(27,31,36,.6);text-wrap:pretty">A busca olha títulos, nomes, códigos e linhas — nunca o conteúdo dos documentos. Compara letra por letra: <span style="font-family:'IBM Plex Mono',monospace">joao</span> não acha <span style="font-family:'IBM Plex Mono',monospace">JOÃO</span>. Contas marcadas <span style="color:rgba(27,31,36,.8)">não enviar</span> aparecem, com esse rótulo.</div>
+    </div>
+  </div>
+</div></x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showNotes&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Apresentação&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return { showNotes: this.props.showNotes ?? true };
+  }
+}
+</script>
+</body>
+</html>
