@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" rel="stylesheet">
+<link href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css" rel="stylesheet">
+<style>
+body { margin: 0; background: #0a0b0d; }
+a { color: #6ea3e0; }
+a:hover { color: #9cc0ec; }
+</style>
+</helmet>
+
+<div style="font-family:'IBM Plex Sans',system-ui,sans-serif;background:#0a0b0d;color:#e6e9ec;padding:56px;display:flex;flex-direction:column;gap:72px;align-items:flex-start">
+
+  <div style="display:flex;flex-direction:column;gap:10px;max-width:1000px">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(230,233,236,.4)">Bridgr Pro · reborn · rodada 30</div>
+    <div style="font-size:30px;font-weight:600;letter-spacing:-.01em">As salas vazias — Doca, Exportação e os dois estudos</div>
+    <div style="font-size:14px;line-height:1.6;color:rgba(230,233,236,.66);text-wrap:pretty">Três portas que o app promete e ninguém construiu. <span style="color:#e6e9ec">Doca</span> e <span style="color:#e6e9ec">Exportação</span> são seções das Configurações que hoje não têm nada dentro — e a barra de status ainda diz "doca a caminho". Os <span style="color:#e6e9ec">estudos</span> eram três; <span style="color:#e6e9ec">Duplicidades virou tela de verdade nesta sequência e perdeu o crachá</span>, como manda a regra 4 do doc. Sobraram Inpart Saúde e Costantini, e para eles o doc pede a página de intenção — que é o oposto de uma sala vazia: diz o que a tela responderia sem inventar um número.</div>
+  </div>
+
+  <!-- ============ 1 · DOCA ============ -->
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <div style="font-size:18px;font-weight:600">1 · Doca — a segunda entrada</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(230,233,236,.4)">Configurações › Entradas › Doca · dois campos e uma verdade incômoda</div>
+    </div>
+
+    <div style="width:1000px;box-sizing:border-box;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:18px;display:flex;gap:16px;color:#e6e9ec">
+      <div style="width:190px;flex:none;box-sizing:border-box;border:1px solid #2b2f36;border-radius:8px;background:#16181d;padding:8px;display:flex;flex-direction:column;gap:1px">
+        <div style="font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(230,233,236,.4);padding:4px 8px 6px">Entradas</div>
+        <div style="display:flex;align-items:center;gap:9px;padding:6px 9px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12px"><i class="ph ph-tray" style="font-size:14px"></i><div style="flex:1">MailBridgr</div><div style="width:6px;height:6px;border-radius:4px;background:#57b184"></div></div>
+        <div style="display:flex;align-items:center;gap:9px;padding:6px 9px;border-radius:6px;background:rgba(110,163,224,.13);box-shadow:inset 2px 0 0 #6ea3e0;color:#bfd8f5;font-size:12px;font-weight:500"><i class="ph-fill ph-folder-open" style="font-size:14px"></i><div style="flex:1">Doca</div><div style="width:6px;height:6px;border-radius:4px;background:#57b184"></div></div>
+        <div style="font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(230,233,236,.4);padding:12px 8px 6px">Saída</div>
+        <div style="display:flex;align-items:center;gap:9px;padding:6px 9px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12px"><i class="ph ph-export" style="font-size:14px"></i><div style="flex:1">Exportação</div></div>
+      </div>
+
+      <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:13px">
+        <div style="display:flex;flex-direction:column;gap:3px">
+          <div style="font-size:16px;font-weight:600">Doca</div>
+          <div style="font-size:11.5px;color:rgba(230,233,236,.55)">Que pasta o app vigia, e o que ele faz com o que acha?</div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:12px;border:1px solid #2b2f36;border-radius:9px;background:#16181d;padding:12px 13px">
+          <i class="ph ph-folder-open" style="font-size:17px;color:#57b184;flex:none"></i>
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
+            <div style="font-size:13px"><span style="font-weight:500">Vigilância</span> · ligada</div>
+            <div style="font-size:11px;color:rgba(230,233,236,.55)"><span style="font-family:'IBM Plex Mono',monospace">3</span> arquivos entraram hoje · o último há 18 min</div>
+          </div>
+          <div style="width:38px;height:22px;flex:none;border-radius:12px;background:rgba(87,177,132,.75);display:flex;align-items:center;justify-content:flex-end;padding:0 3px"><div style="width:16px;height:16px;border-radius:9px;background:#f2f5f7"></div></div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <div style="font-size:11.5px;color:rgba(230,233,236,.8)">Pasta vigiada</div>
+          <div style="display:flex;gap:9px">
+            <div style="flex:1;min-width:0;height:31px;display:flex;align-items:center;padding:0 10px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">/home/camila/Documentos/Bridgr/doca</div>
+            <div style="flex:none;height:31px;display:flex;align-items:center;gap:7px;padding:0 12px;border:1px solid #2b2f36;border-radius:6px;font-size:11.5px;color:rgba(230,233,236,.85)"><i class="ph ph-folder-open" style="font-size:13px"></i>Escolher</div>
+          </div>
+          <div style="font-size:10px;line-height:1.55;color:rgba(230,233,236,.45);text-wrap:pretty">Só esta pasta, sem subpastas. Arquivo que o app não sabe ler fica onde está, sem virar peça.</div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:7px">
+          <div style="font-size:11.5px;color:rgba(230,233,236,.8)">Depois de virar peça, o arquivo</div>
+          <div style="display:flex;gap:2px;padding:2px;background:#1b1e23;border:1px solid #2b2f36;border-radius:7px;align-self:flex-start">
+            <div style="padding:5px 11px;border-radius:5px;background:rgba(110,163,224,.16);box-shadow:inset 0 0 0 1px rgba(110,163,224,.55);font-size:11.5px;color:#bfd8f5">fica onde está</div>
+            <div style="padding:5px 11px;border-radius:5px;font-size:11.5px;color:rgba(230,233,236,.62)">vai para <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px">./lidos</span></div>
+          </div>
+          <div style="font-size:10px;line-height:1.55;color:rgba(230,233,236,.45);text-wrap:pretty">Ficar onde está é o padrão porque a pasta pode ser de outra pessoa — mover arquivo alheio é gesto que este app não toma sozinho. Com "vai para ./lidos", a peça guarda o caminho antigo e o novo.</div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:8px;padding-top:12px;border-top:1px solid #23272e">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">A verdade incômoda, escrita na tela</div>
+          <div style="display:flex;align-items:flex-start;gap:9px;padding:10px 11px;border:1px solid rgba(224,163,60,.5);background:#33291a;border-radius:7px">
+            <i class="ph-fill ph-warning" style="font-size:14px;color:#e0a33c;flex:none;margin-top:1px"></i>
+            <div style="flex:1;font-size:11.5px;line-height:1.6;color:#f4d9a3;text-wrap:pretty">Com o app fechado, ninguém vigia. Na abertura ele <span style="font-weight:600">varre a pasta uma vez</span> e traz o que apareceu — mas um arquivo que chegou e foi apagado no meio-tempo nunca existiu para o app.</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:5px">
+            <div style="display:flex;gap:9px;font-size:10.5px;line-height:1.55;color:rgba(230,233,236,.6)"><span style="color:#6ea3e0;flex:none">·</span><div style="flex:1;text-wrap:pretty">A varredura de abertura aparece na <a href="#">Bandeja</a> como gesto em voo, porque numa pasta grande ela leva tempo.</div></div>
+            <div style="display:flex;gap:9px;font-size:10.5px;line-height:1.55;color:rgba(230,233,236,.6)"><span style="color:#6ea3e0;flex:none">·</span><div style="flex:1;text-wrap:pretty">Peça que veio da pasta leva o ícone da pasta na <a href="#">Triagem</a> e em <a href="#">Ignorados</a> — é o sinal de que excluir ali apaga o arquivo de verdade, sem e-mail para trazer de volta.</div></div>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:7px;padding-top:12px;border-top:1px solid #23272e">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">As recusas, literais</div>
+          <div style="display:flex;align-items:flex-start;gap:9px;padding:10px 11px;border:1px solid rgba(224,106,99,.5);background:rgba(224,106,99,.09);border-radius:7px">
+            <i class="ph-fill ph-warning-circle" style="font-size:13px;color:#e06a63;flex:none;margin-top:1px"></i>
+            <div style="flex:1;display:flex;flex-direction:column;gap:4px">
+              <div style="font-size:11px;color:#f2b3ae">A vigilância parou:</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;line-height:1.55;color:rgba(230,233,236,.9);user-select:all;text-wrap:pretty">a pasta vigiada não existe mais: /home/camila/Documentos/Bridgr/doca</div>
+            </div>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;line-height:1.55;color:rgba(230,233,236,.8);padding-left:2px">sem permissão de leitura na pasta vigiada (os error 13)</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;line-height:1.55;color:rgba(230,233,236,.8);padding-left:2px">a pasta vigiada é a mesma da exportação — escolha outra</div>
+          <div style="font-size:10.5px;line-height:1.6;color:rgba(230,233,236,.45);text-wrap:pretty;padding-top:3px">A terceira é a que salva a operadora de si mesma: vigiar a pasta onde o app escreve faria a exportação virar entrada, em loop.</div>
+        </div>
+      </div>
+    </div>
+
+    <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;gap:28px;max-width:1000px;font-size:11.5px;line-height:1.7;color:rgba(230,233,236,.55)">
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">"Fica onde está" é o padrão</span> porque a pasta vigiada costuma ser de outra pessoa — o scanner da recepção, uma pasta compartilhada. Mover arquivo alheio é gesto que este app não toma por conta própria.</div>
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">A frase sobre o app fechado é obrigatória</span>, não um detalhe. Uma doca que parece vigiar sempre é a origem de "mandei e não chegou" — e a varredura de abertura é o que o app pode honestamente prometer.</div>
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">O ponto de estado na trilha</span> segue os quatro tons de sempre; aqui ele conta se a vigilância está de pé, não se a pasta tem arquivo.</div>
+      </div>
+    </sc-if>
+  </div>
+
+  <!-- ============ 2 · EXPORTAÇÃO ============ -->
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <div style="font-size:18px;font-weight:600">2 · Exportação — formato e planilha de registro</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(230,233,236,.4)">a sala mais vazia de todas · e a que o Costantini espera</div>
+    </div>
+
+    <div style="width:1000px;box-sizing:border-box;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:18px;display:flex;gap:16px;color:#e6e9ec">
+      <div style="width:190px;flex:none;box-sizing:border-box;border:1px solid #2b2f36;border-radius:8px;background:#16181d;padding:8px;display:flex;flex-direction:column;gap:1px">
+        <div style="font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(230,233,236,.4);padding:4px 8px 6px">Entradas</div>
+        <div style="display:flex;align-items:center;gap:9px;padding:6px 9px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12px"><i class="ph ph-tray" style="font-size:14px"></i><div style="flex:1">MailBridgr</div><div style="width:6px;height:6px;border-radius:4px;background:#57b184"></div></div>
+        <div style="display:flex;align-items:center;gap:9px;padding:6px 9px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12px"><i class="ph ph-folder-open" style="font-size:14px"></i><div style="flex:1">Doca</div><div style="width:6px;height:6px;border-radius:4px;background:#57b184"></div></div>
+        <div style="font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(230,233,236,.4);padding:12px 8px 6px">Saída</div>
+        <div style="display:flex;align-items:center;gap:9px;padding:6px 9px;border-radius:6px;background:rgba(110,163,224,.13);box-shadow:inset 2px 0 0 #6ea3e0;color:#bfd8f5;font-size:12px;font-weight:500"><i class="ph-fill ph-export" style="font-size:14px"></i><div style="flex:1">Exportação</div></div>
+      </div>
+
+      <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:13px">
+        <div style="display:flex;flex-direction:column;gap:3px">
+          <div style="font-size:16px;font-weight:600">Exportação</div>
+          <div style="font-size:11.5px;color:rgba(230,233,236,.55)">Em que formato a conta sai, e onde fica o registro do que saiu?</div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:7px">
+          <div style="font-size:11.5px;color:rgba(230,233,236,.8)">Formato do arquivo</div>
+          <div style="display:flex;gap:2px;padding:2px;background:#1b1e23;border:1px solid #2b2f36;border-radius:7px;align-self:flex-start">
+            <div style="padding:5px 11px;border-radius:5px;background:rgba(110,163,224,.16);box-shadow:inset 0 0 0 1px rgba(110,163,224,.55);font-size:11.5px;color:#bfd8f5">CSV</div>
+            <div style="padding:5px 11px;border-radius:5px;font-size:11.5px;color:rgba(230,233,236,.62)">XLSX</div>
+            <div style="padding:5px 11px;border-radius:5px;font-size:11.5px;color:rgba(230,233,236,.62)">TXT posicional</div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:12px">
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:6px">
+            <div style="font-size:11.5px;color:rgba(230,233,236,.8)">Separador</div>
+            <div style="height:31px;display:flex;align-items:center;padding:0 10px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:12px">;</div>
+          </div>
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:6px">
+            <div style="font-size:11.5px;color:rgba(230,233,236,.8)">Codificação</div>
+            <div style="height:31px;display:flex;align-items:center;padding:0 10px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;font-size:12px">UTF-8 <span style="color:rgba(230,233,236,.45);padding-left:6px">· ou ISO-8859-1</span></div>
+          </div>
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:6px">
+            <div style="font-size:11.5px;color:rgba(230,233,236,.8)">Decimal</div>
+            <div style="height:31px;display:flex;align-items:center;padding:0 10px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:12px">1234,56</div>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <div style="font-size:11.5px;color:rgba(230,233,236,.8)">Pasta de saída</div>
+          <div style="display:flex;gap:9px">
+            <div style="flex:1;min-width:0;height:31px;display:flex;align-items:center;padding:0 10px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">/home/camila/Documentos/Bridgr/saida</div>
+            <div style="flex:none;height:31px;display:flex;align-items:center;gap:7px;padding:0 12px;border:1px solid #2b2f36;border-radius:6px;font-size:11.5px;color:rgba(230,233,236,.85)"><i class="ph ph-folder-open" style="font-size:13px"></i>Escolher</div>
+          </div>
+        </div>
+
+        <div style="border:1px solid #2b2f36;border-radius:9px;background:#16181d;padding:12px 13px;display:flex;flex-direction:column;gap:10px">
+          <div style="display:flex;align-items:center;gap:10px">
+            <i class="ph ph-table" style="font-size:15px;color:rgba(230,233,236,.6);flex:none"></i>
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px">
+              <div style="font-size:12.5px;font-weight:500">Planilha de registro</div>
+              <div style="font-size:10.5px;color:rgba(230,233,236,.55)">uma linha por conta que saiu, acrescentada ao fim</div>
+            </div>
+            <div style="width:38px;height:22px;flex:none;border-radius:12px;background:rgba(87,177,132,.75);display:flex;align-items:center;justify-content:flex-end;padding:0 3px"><div style="width:16px;height:16px;border-radius:9px;background:#f2f5f7"></div></div>
+          </div>
+          <div style="height:31px;display:flex;align-items:center;padding:0 10px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">/home/camila/Documentos/Bridgr/registro-2026.xlsx</div>
+          <div style="display:flex;align-items:flex-start;gap:9px;padding:9px 11px;border:1px solid rgba(224,163,60,.5);background:#33291a;border-radius:7px">
+            <i class="ph-fill ph-warning" style="font-size:13px;color:#e0a33c;flex:none;margin-top:1px"></i>
+            <div style="flex:1;font-size:11px;line-height:1.55;color:#f4d9a3;text-wrap:pretty">A planilha estava aberta no Excel na última tentativa: <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px">o arquivo está travado por outro programa (os error 11)</span>. A conta foi exportada; <span style="font-weight:600">a linha do registro não foi escrita</span> — e está na fila para a próxima vez.</div>
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:11px;padding-top:12px;border-top:1px solid #23272e">
+          <div style="flex:1;min-width:0;font-size:11px;line-height:1.6;color:rgba(230,233,236,.55);text-wrap:pretty">Um arquivo de mentira, com duas contas inventadas, para conferir separador e acento antes de valer.</div>
+          <div style="flex:none;height:29px;display:flex;align-items:center;gap:7px;padding:0 12px;border:1px solid #6ea3e0;border-radius:6px;font-size:11.5px;color:#6ea3e0"><i class="ph ph-file-arrow-down" style="font-size:12px"></i>Gerar um exemplo</div>
+        </div>
+
+        <div style="display:flex;align-items:flex-start;gap:9px;padding:10px 11px;border:1px dashed #2b2f36;border-radius:7px">
+          <i class="ph ph-buildings" style="font-size:13px;color:rgba(230,233,236,.42);flex:none;margin-top:1px"></i>
+          <div style="flex:1;font-size:10.5px;line-height:1.6;color:rgba(230,233,236,.55);text-wrap:pretty"><span style="color:rgba(230,233,236,.8)">Formato por cliente não existe.</span> O Costantini aceita um layout próprio, e hoje isso vive na cabeça de quem confere — é a primeira dependência do estudo dele, e o próximo passo que o doc aponta.</div>
+        </div>
+      </div>
+    </div>
+
+    <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;gap:28px;max-width:1000px;font-size:11.5px;line-height:1.7;color:rgba(230,233,236,.55)">
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">"Gerar um exemplo" existe porque formato se confere vendo.</span> Separador, acento e decimal são as três coisas que um ERP recusa sem explicar — e descobrir isso na primeira exportação de verdade custa um dia.</div>
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">A planilha travada é meio-desfecho, não falha.</span> A conta saiu e a linha do registro não: são dois fatos, e o aviso diz os dois. Um "exportação falhou" faria a operadora exportar de novo, e a conta sairia duas vezes.</div>
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">Pasta de saída e pasta vigiada não podem ser a mesma</span> — a Doca recusa, com a frase escrita lá. É o tipo de laço que só aparece depois de acontecer uma vez.</div>
+      </div>
+    </sc-if>
+  </div>
+
+
+  <!-- ============ 3 · OS ESTUDOS ============ -->
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <div style="font-size:18px;font-weight:600">3 · Os estudos — a página de intenção</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(230,233,236,.4)">eram três · Duplicidades saiu do grupo ao virar tela</div>
+    </div>
+
+    <div style="width:1196px;box-sizing:border-box;display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start">
+
+      <div style="width:388px;box-sizing:border-box;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:12px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">O grupo, depois da promoção</div>
+        <div style="border:1px solid #2b2f36;border-radius:8px;background:#16181d;padding:8px;display:flex;flex-direction:column;gap:1px">
+          <div style="display:flex;align-items:center;gap:8px;padding:4px 9px 7px"><div style="font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(230,233,236,.4)">Estudos</div><div style="flex:1;height:1px;background:linear-gradient(90deg,#2b2f36,rgba(43,47,54,0))"></div></div>
+          <div style="display:flex;align-items:center;gap:9px;padding:6px 9px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12px"><i class="ph ph-first-aid-kit" style="font-size:14px"></i><div style="flex:1">Inpart Saúde</div><div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:rgba(230,233,236,.55);background:#23272e;border-radius:3px;padding:0 5px">estudo</div></div>
+          <div style="display:flex;align-items:center;gap:9px;padding:6px 9px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12px"><i class="ph ph-buildings" style="font-size:14px"></i><div style="flex:1">Costantini</div><div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:rgba(230,233,236,.55);background:#23272e;border-radius:3px;padding:0 5px">estudo</div></div>
+          <div style="display:flex;align-items:center;gap:9px;padding:8px 9px 4px;opacity:.45">
+            <i class="ph ph-arrow-up" style="font-size:12px;color:#6ea3e0;flex:none"></i>
+            <div style="flex:1;font-size:10px;line-height:1.5;color:rgba(230,233,236,.6);text-wrap:pretty">Duplicidades subiu para <span style="color:rgba(230,233,236,.8)">Esteira</span> e perdeu o crachá</div>
+          </div>
+        </div>
+        <div style="font-size:10.5px;line-height:1.6;color:rgba(230,233,236,.45);text-wrap:pretty">A regra 4 do doc: estudo que vira tela perde o crachá — mantê-lo diria "pode nunca ser construída" sobre algo que já responde. Opmenexo e NFePackMonitor abriram esse caminho; Duplicidades é o terceiro, e agora o grupo só tem estudo de verdade.</div>
+      </div>
+
+      <div style="width:792px;box-sizing:border-box;background:#14161a;border:1px solid #2b2f36;border-radius:9px;padding:22px;display:flex;flex-direction:column;gap:16px">
+        <div style="display:flex;flex-direction:column;gap:9px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(230,233,236,.45)">ideia · nada construído</div>
+          <div style="font-size:23px;font-weight:500;letter-spacing:-.01em">Inpart Saúde</div>
+          <div style="font-size:12.5px;line-height:1.65;color:rgba(230,233,236,.68);max-width:620px;text-wrap:pretty"><span style="color:#e6e9ec">De onde vem a necessidade:</span> parte das ordens não chega por e-mail — ela espera num portal, e só vira trabalho quando alguém lembra de baixar e reenviar. Enquanto ninguém lembra, a ordem envelhece sem aparecer em nenhuma tela deste app.</div>
+        </div>
+
+        <div style="display:flex;gap:20px;padding-top:4px;border-top:1px solid #23272e">
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:10px">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.45)">O que ela responderia</div>
+            <div style="display:flex;flex-direction:column;gap:9px">
+              <div style="display:flex;gap:9px;align-items:flex-start"><i class="ph ph-question" style="font-size:13px;color:#6ea3e0;flex:none;margin-top:2px"></i><div style="flex:1;font-size:11.5px;line-height:1.6;color:rgba(230,233,236,.82);text-wrap:pretty">Qual ordem do portal ainda não tem informe de uso?</div></div>
+              <div style="display:flex;gap:9px;align-items:flex-start"><i class="ph ph-question" style="font-size:13px;color:#6ea3e0;flex:none;margin-top:2px"></i><div style="flex:1;font-size:11.5px;line-height:1.6;color:rgba(230,233,236,.82);text-wrap:pretty">Onde a autorização travou, e desde quando?</div></div>
+              <div style="display:flex;gap:9px;align-items:flex-start"><i class="ph ph-question" style="font-size:13px;color:#6ea3e0;flex:none;margin-top:2px"></i><div style="flex:1;font-size:11.5px;line-height:1.6;color:rgba(230,233,236,.82);text-wrap:pretty">O que já foi baixado daqui?</div></div>
+            </div>
+          </div>
+
+          <div style="width:1px;background:#23272e;flex:none"></div>
+
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:10px">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.45)">De que ela depende</div>
+            <div style="display:flex;flex-direction:column;gap:9px">
+              <div style="display:flex;gap:9px;align-items:flex-start">
+                <i class="ph-fill ph-check-circle" style="font-size:13px;color:#57b184;flex:none;margin-top:2px"></i>
+                <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px">
+                  <div style="font-size:11.5px;line-height:1.6;color:rgba(230,233,236,.82);text-wrap:pretty">A doca aceitar qualquer peça e guardar de onde ela veio</div>
+                  <div style="font-size:9.5px;color:rgba(230,233,236,.45)">conferido por Camila em 12/09/2026</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:9px;align-items:flex-start">
+                <i class="ph ph-circle-dashed" style="font-size:13px;color:rgba(230,233,236,.4);flex:none;margin-top:2px"></i>
+                <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px">
+                  <div style="font-size:11.5px;line-height:1.6;color:rgba(230,233,236,.82);text-wrap:pretty">Ler o portal com credencial, com o mesmo cuidado do acesso só-leitura do robô</div>
+                  <div style="font-size:9.5px;color:rgba(230,233,236,.45)">ninguém conferiu</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:9px;align-items:flex-start">
+                <i class="ph ph-circle-half" style="font-size:13px;color:#e0a33c;flex:none;margin-top:2px"></i>
+                <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px">
+                  <div style="font-size:11.5px;line-height:1.6;color:rgba(230,233,236,.82);text-wrap:pretty">Uma regra de duplicidade, para uma ordem não entrar duas vezes por dois caminhos</div>
+                  <div style="font-size:9.5px;color:#f4d9a3">metade: a bancada de <a href="#">Duplicidades</a> existe, a chave de identidade da conta não</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:flex-start;gap:10px;padding:11px 13px;border:1px solid rgba(110,163,224,.45);background:rgba(110,163,224,.08);border-radius:8px">
+          <i class="ph ph-flag" style="font-size:14px;color:#6ea3e0;flex:none;margin-top:1px"></i>
+          <div style="flex:1;font-size:11.5px;line-height:1.6;color:#bfd8f5;text-wrap:pretty"><span style="font-weight:500">Próximo passo:</span> medir quantas ordens por semana chegam pelo portal em vez do e-mail. Sem esse número, não há como saber se a tela vale.</div>
+        </div>
+
+        <div style="font-size:10.5px;line-height:1.65;color:rgba(230,233,236,.45);text-wrap:pretty;padding-top:4px;border-top:1px solid #23272e">Tela de intenção, de propósito <span style="color:rgba(230,233,236,.7)">sem dado e sem botão</span>: um número inventado aqui viraria expectativa de coisa pronta.</div>
+      </div>
+
+      <div style="width:590px;box-sizing:border-box;background:#14161a;border:1px solid #2b2f36;border-radius:9px;padding:18px;display:flex;flex-direction:column;gap:13px">
+        <div style="display:flex;flex-direction:column;gap:7px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(230,233,236,.45)">ideia · nada construído</div>
+          <div style="font-size:20px;font-weight:500;letter-spacing:-.01em">Costantini</div>
+          <div style="font-size:11.5px;line-height:1.6;color:rgba(230,233,236,.68);text-wrap:pretty"><span style="color:#e6e9ec">De onde vem a necessidade:</span> as ordens, os códigos de material e o formato do informe deste cliente são diferentes de todos os outros — e hoje isso vive como exceção na cabeça de quem confere.</div>
+        </div>
+        <div style="display:flex;gap:16px;padding-top:3px;border-top:1px solid #23272e">
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:8px">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.45)">Responderia</div>
+            <div style="display:flex;gap:7px;align-items:flex-start"><i class="ph ph-question" style="font-size:12px;color:#6ea3e0;flex:none;margin-top:2px"></i><div style="flex:1;font-size:11px;line-height:1.55;color:rgba(230,233,236,.8);text-wrap:pretty">O que deles está travado, e em que etapa?</div></div>
+            <div style="display:flex;gap:7px;align-items:flex-start"><i class="ph ph-question" style="font-size:12px;color:#6ea3e0;flex:none;margin-top:2px"></i><div style="flex:1;font-size:11px;line-height:1.55;color:rgba(230,233,236,.8);text-wrap:pretty">Qual código deles casa com o nosso, e quem confirmou?</div></div>
+            <div style="display:flex;gap:7px;align-items:flex-start"><i class="ph ph-question" style="font-size:12px;color:#6ea3e0;flex:none;margin-top:2px"></i><div style="flex:1;font-size:11px;line-height:1.55;color:rgba(230,233,236,.8);text-wrap:pretty">O informe saiu no formato que eles aceitam?</div></div>
+          </div>
+          <div style="width:1px;background:#23272e;flex:none"></div>
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:8px">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.45)">Depende</div>
+            <div style="display:flex;gap:7px;align-items:flex-start"><i class="ph-fill ph-check-circle" style="font-size:12px;color:#57b184;flex:none;margin-top:2px"></i><div style="flex:1;font-size:11px;line-height:1.55;color:rgba(230,233,236,.8);text-wrap:pretty">A Triagem separar peça por cliente<div style="font-size:9.5px;color:rgba(230,233,236,.45)">conferido em 12/09/2026</div></div></div>
+            <div style="display:flex;gap:7px;align-items:flex-start"><i class="ph ph-circle-dashed" style="font-size:12px;color:rgba(230,233,236,.4);flex:none;margin-top:2px"></i><div style="flex:1;font-size:11px;line-height:1.55;color:rgba(230,233,236,.8);text-wrap:pretty">Regra por cliente — hoje os adapters aprendem para todos<div style="font-size:9.5px;color:rgba(230,233,236,.45)">ninguém conferiu</div></div></div>
+            <div style="display:flex;gap:7px;align-items:flex-start"><i class="ph ph-circle-half" style="font-size:12px;color:#e0a33c;flex:none;margin-top:2px"></i><div style="flex:1;font-size:11px;line-height:1.55;color:rgba(230,233,236,.8);text-wrap:pretty">Modelo de exportação com o layout deles<div style="font-size:9.5px;color:#f4d9a3">metade: a seção de <a href="#">Exportação</a> existe, formato por cliente não</div></div></div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:9px;padding:10px 12px;border:1px solid rgba(110,163,224,.45);background:rgba(110,163,224,.08);border-radius:8px">
+          <i class="ph ph-flag" style="font-size:13px;color:#6ea3e0;flex:none;margin-top:1px"></i>
+          <div style="flex:1;font-size:11px;line-height:1.55;color:#bfd8f5;text-wrap:pretty"><span style="font-weight:500">Próximo passo:</span> começar pelo formato de saída.</div>
+        </div>
+      </div>
+
+      <div style="width:590px;box-sizing:border-box;background:#14161a;border:1px solid rgba(224,163,60,.4);border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:11px">
+        <div style="display:flex;align-items:center;gap:9px">
+          <i class="ph ph-seal-question" style="font-size:14px;color:#e0a33c"></i>
+          <div style="font-size:13px;font-weight:500;color:#f4d9a3">A pergunta aberta do doc, respondida</div>
+        </div>
+        <div style="font-size:11.5px;line-height:1.65;color:rgba(230,233,236,.66);text-wrap:pretty">"Se a página de intenção for adotada, quem atualiza as marcas de dependência?" Um "pronto" velho afirmaria o que ninguém verificou — o mesmo defeito que a tela existe para não cometer.</div>
+        <div style="display:flex;flex-direction:column;gap:7px">
+          <div style="display:flex;gap:9px;align-items:flex-start"><i class="ph-fill ph-check-circle" style="font-size:13px;color:#57b184;flex:none;margin-top:2px"></i><div style="flex:1;font-size:11px;line-height:1.6;color:rgba(230,233,236,.75);text-wrap:pretty"><span style="color:#e6e9ec">A marca não é do app, é de uma pessoa.</span> Ela carrega quem conferiu e quando — "conferido por Camila em 12/09/2026". Sem nome e data, nenhum tique verde.</div></div>
+          <div style="display:flex;gap:9px;align-items:flex-start"><i class="ph ph-circle-half" style="font-size:13px;color:#e0a33c;flex:none;margin-top:2px"></i><div style="flex:1;font-size:11px;line-height:1.6;color:rgba(230,233,236,.75);text-wrap:pretty"><span style="color:#e6e9ec">Meio-pronto existe e é o estado mais comum.</span> Duas das seis dependências mudaram nesta sequência sem ficarem prontas — e a frase diz o que existe e o que falta.</div></div>
+          <div style="display:flex;gap:9px;align-items:flex-start"><i class="ph ph-circle-dashed" style="font-size:13px;color:rgba(230,233,236,.4);flex:none;margin-top:2px"></i><div style="flex:1;font-size:11px;line-height:1.6;color:rgba(230,233,236,.75);text-wrap:pretty"><span style="color:#e6e9ec">"Ninguém conferiu" é o padrão</span>, e não é falha — é o estado honesto de uma dependência que nunca foi olhada.</div></div>
+        </div>
+        <div style="font-size:10.5px;line-height:1.6;color:rgba(230,233,236,.45);text-wrap:pretty;padding-top:9px;border-top:1px solid #23272e">Marca conferida antes da versão instalada aparece apagada, com a data — o app não a promove nem a derruba sozinho. Ele só diz há quanto tempo ninguém olhou.</div>
+      </div>
+    </div>
+
+    <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;gap:28px;max-width:1196px;font-size:11.5px;line-height:1.7;color:rgba(230,233,236,.55)">
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">A página de intenção substitui a sala vazia</span> — adotei a proposta do doc. Ela diz de onde vem a necessidade, o que responderia e de que depende, sem um único número inventado. Uma sala com três linhas não dizia nada disso.</div>
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">As dependências ganharam três estados</span>, não dois: pronto, meio-pronto e ninguém conferiu. O meio surgiu naturalmente — construir Duplicidades e a Exportação mexeu em duas dependências sem completar nenhuma.</div>
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">Nenhum botão nestas páginas.</span> Um controle morto ensina a operadora a desconfiar dos vivos — e é a mesma regra do EmptyScreen, que fica valendo para quem preferir a sala vazia.</div>
+      </div>
+    </sc-if>
+  </div>
+
+  <!-- ============ 4 · TEMA CLARO ============ -->
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <div style="font-size:18px;font-weight:600">4 · No tema claro</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(230,233,236,.4)">a página de intenção e a recusa da Doca</div>
+    </div>
+    <div style="width:1000px;box-sizing:border-box;background:#f3f4f5;border:1px solid #dfe3e7;border-radius:10px;padding:18px;color:#1b1f24;display:flex;flex-direction:column;gap:14px">
+
+      <div style="background:#ffffff;border:1px solid #dfe3e7;border-radius:9px;padding:18px;display:flex;flex-direction:column;gap:13px">
+        <div style="display:flex;flex-direction:column;gap:7px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(27,31,36,.5)">ideia · nada construído</div>
+          <div style="font-size:20px;font-weight:500;letter-spacing:-.01em">Inpart Saúde</div>
+          <div style="font-size:11.5px;line-height:1.6;color:rgba(27,31,36,.7);max-width:620px;text-wrap:pretty"><span style="color:#1b1f24">De onde vem a necessidade:</span> parte das ordens espera num portal e só vira trabalho quando alguém lembra de baixar.</div>
+        </div>
+        <div style="display:flex;gap:18px;padding-top:3px;border-top:1px solid #eceef1">
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:8px">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(27,31,36,.5)">Responderia</div>
+            <div style="display:flex;gap:7px;align-items:flex-start"><i class="ph ph-question" style="font-size:12px;color:#2f6ab0;flex:none;margin-top:2px"></i><div style="flex:1;font-size:11px;line-height:1.55;color:rgba(27,31,36,.82)">Qual ordem ainda não tem informe de uso?</div></div>
+            <div style="display:flex;gap:7px;align-items:flex-start"><i class="ph ph-question" style="font-size:12px;color:#2f6ab0;flex:none;margin-top:2px"></i><div style="flex:1;font-size:11px;line-height:1.55;color:rgba(27,31,36,.82)">Onde a autorização travou, e desde quando?</div></div>
+          </div>
+          <div style="width:1px;background:#eceef1;flex:none"></div>
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:8px">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(27,31,36,.5)">Depende</div>
+            <div style="display:flex;gap:7px;align-items:flex-start"><i class="ph-fill ph-check-circle" style="font-size:12px;color:#1c7a4e;flex:none;margin-top:2px"></i><div style="flex:1;font-size:11px;line-height:1.55;color:rgba(27,31,36,.82)">A doca guardar de onde a peça veio<div style="font-size:9.5px;color:rgba(27,31,36,.5)">conferido por Camila em 12/09/2026</div></div></div>
+            <div style="display:flex;gap:7px;align-items:flex-start"><i class="ph ph-circle-half" style="font-size:12px;color:#8a5c0c;flex:none;margin-top:2px"></i><div style="flex:1;font-size:11px;line-height:1.55;color:rgba(27,31,36,.82)">Regra de duplicidade<div style="font-size:9.5px;color:#6b4708">metade: a bancada existe, a chave de identidade não</div></div></div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:9px;padding:10px 12px;border:1px solid rgba(47,106,176,.4);background:rgba(47,106,176,.08);border-radius:8px">
+          <i class="ph ph-flag" style="font-size:13px;color:#2f6ab0;flex:none;margin-top:1px"></i>
+          <div style="flex:1;font-size:11px;line-height:1.55;color:#14487d"><span style="font-weight:500">Próximo passo:</span> medir quantas ordens por semana chegam pelo portal.</div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:flex-start;gap:9px;padding:10px 12px;border:1px solid rgba(168,58,50,.4);background:rgba(168,58,50,.07);border-radius:8px">
+        <i class="ph-fill ph-warning-circle" style="font-size:14px;color:#a83a32;flex:none;margin-top:1px"></i>
+        <div style="flex:1;display:flex;flex-direction:column;gap:4px">
+          <div style="font-size:11.5px;color:#8f2d26">A vigilância parou:</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.55;color:#7d2c25;user-select:all;text-wrap:pretty">a pasta vigiada é a mesma da exportação — escolha outra</div>
+        </div>
+      </div>
+
+      <div style="font-size:10.5px;line-height:1.6;color:rgba(27,31,36,.55);text-wrap:pretty">No claro, o meio-pronto é <span style="font-family:'IBM Plex Mono',monospace">#8a5c0c</span> e o pronto <span style="font-family:'IBM Plex Mono',monospace">#1c7a4e</span> — e o "ninguém conferiu" continua sem cor, porque não é aviso: é o estado normal de uma dependência que ninguém olhou.</div>
+    </div>
+  </div>
+
+</div></x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showNotes&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Apresentação&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return { showNotes: this.props.showNotes ?? true };
+  }
+}
+</script>
+</body>
+</html>

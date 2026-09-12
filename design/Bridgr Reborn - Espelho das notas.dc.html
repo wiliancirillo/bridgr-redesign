@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" rel="stylesheet">
+<link href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css" rel="stylesheet">
+<style>
+body { margin: 0; background: #0a0b0d; }
+a { color: #6ea3e0; }
+a:hover { color: #9cc0ec; }
+</style>
+</helmet>
+
+<div style="font-family:'IBM Plex Sans',system-ui,sans-serif;background:#0a0b0d;color:#e6e9ec;padding:56px;display:flex;flex-direction:column;gap:72px;align-items:flex-start">
+
+  <div style="display:flex;flex-direction:column;gap:10px;max-width:1020px">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(230,233,236,.4)">Bridgr Pro · reborn · rodada 31 · <span style="color:#f4d9a3">tela nova, fora do inventário</span></div>
+    <div style="font-size:30px;font-weight:600;letter-spacing:-.01em">Espelho das notas — o que as notas já disseram</div>
+    <div style="font-size:14px;line-height:1.6;color:rgba(230,233,236,.66);text-wrap:pretty">O NFe Pack já baixa os XMLs. Cada um deles é <span style="color:#e6e9ec">documento aceito pelo SEFAZ</span> e carrega, por item, o código, a descrição, a unidade, o registro ANVISA e — o que o espelho do Everest <span style="color:#e6e9ec">não tem</span> — o lote, a fabricação, a validade, a quantidade e o preço realmente enviados. Este é o segundo espelho: montado das notas, sem pedir nada ao Fantasma. Ele não substitui o primeiro, tem cobertura diferente, e a tela existe justamente para dizer onde os dois discordam.</div>
+  </div>
+
+  <!-- ============ 1 · A TELA ============ -->
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <div style="font-size:18px;font-weight:600">1 · Um material aberto, com seus lotes e suas descrições</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(230,233,236,.4)">1440 × 900 · a coluna que compara com o espelho do Everest</div>
+    </div>
+
+    <div style="width:1440px;height:900px;border-radius:8px;border:1px solid #2b2f36;background:#14161a;overflow:hidden;display:flex;flex-direction:column;font-size:13.5px;color:#e6e9ec">
+      <div style="height:42px;flex:none;display:flex;align-items:center;gap:14px;padding:0 6px 0 12px;border-bottom:1px solid #2b2f36">
+        <div style="flex:none;display:flex;align-items:center;gap:8px">
+          <svg width="20" height="22" viewBox="0 0 24 24" fill="none"><path d="M3.5 21.5V12a8.5 8.5 0 0 1 17 0v9.5" stroke="#6ea3e0" stroke-width="2"></path><path d="M1 22.5h22" stroke="#6ea3e0" stroke-width="2" stroke-linecap="round"></path><path d="M20 1.5l1.1 2.9 2.9 1.1-2.9 1.1L20 9.5l-1.1-2.9L16 5.5l2.9-1.1z" fill="#f0913a"></path></svg>
+          <div style="font-size:13.5px;font-weight:500;white-space:nowrap">Bridgr Pro</div>
+          <div style="font-size:11px;color:rgba(230,233,236,.45);white-space:nowrap">· Espelho das notas</div>
+        </div>
+        <div style="flex:1;display:flex;justify-content:center">
+          <div style="width:430px;height:26px;display:flex;align-items:center;gap:7px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;padding:0 8px">
+            <i class="ph ph-magnifying-glass" style="font-size:13px;color:rgba(230,233,236,.45)"></i>
+            <div style="flex:1;font-size:11.5px;color:rgba(230,233,236,.4);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Buscar paciente, atendimento, arquivo ou código do ERP…</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(230,233,236,.45);background:#23272e;border:1px solid #2b2f36;border-radius:3px;padding:1px 5px">Ctrl K</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:4px">
+          <div style="width:27px;height:25px;display:flex;align-items:center;justify-content:center;border-radius:5px;position:relative"><i class="ph ph-bell" style="font-size:15px;color:rgba(230,233,236,.72)"></i><div style="position:absolute;top:4px;right:4px;width:7px;height:7px;border-radius:4px;background:#e06a63;box-shadow:0 0 0 2px #14161a"></div></div>
+          <div style="display:flex;align-items:center;gap:7px;height:26px;padding:0 7px;border-radius:6px;background:#1b1e23"><div style="width:19px;height:19px;border-radius:10px;background:#1b3350;color:#bfd8f5;font-size:9px;font-weight:600;display:flex;align-items:center;justify-content:center">CR</div><div style="font-size:12px">Camila</div><i class="ph ph-caret-down" style="font-size:10px;color:rgba(230,233,236,.45)"></i></div>
+          <div style="display:flex;align-items:center;gap:2px;margin-left:6px">
+            <div style="width:26px;height:22px;display:flex;align-items:center;justify-content:center"><i class="ph ph-minus" style="font-size:13px;color:rgba(230,233,236,.72)"></i></div>
+            <div style="width:26px;height:22px;display:flex;align-items:center;justify-content:center"><i class="ph ph-square" style="font-size:12px;color:rgba(230,233,236,.72)"></i></div>
+            <div style="width:26px;height:22px;display:flex;align-items:center;justify-content:center"><i class="ph ph-x" style="font-size:13px;color:rgba(230,233,236,.72)"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="flex:1;display:flex;min-height:0">
+        <div style="width:236px;flex:none;border-right:1px solid #2b2f36;padding:8px;display:flex;flex-direction:column;gap:1px">
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-gauge" style="font-size:15px"></i>Dashboard</div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-calendar-check" style="font-size:15px"></i>Fechamento</div>
+          <div style="display:flex;align-items:center;gap:8px;padding:16px 10px 6px"><div style="font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(230,233,236,.4)">Esteira</div><div style="flex:1;height:1px;background:linear-gradient(90deg,#2b2f36,rgba(43,47,54,0))"></div></div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-tray-arrow-down" style="font-size:15px"></i>Triagem</div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-check-square-offset" style="font-size:15px"></i><div style="flex:1">Revisão</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(230,233,236,.6);background:#23272e;border-radius:10px;padding:1px 6px">9</div></div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-receipt" style="font-size:15px"></i><div style="flex:1">Faturamento</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(230,233,236,.6);background:#23272e;border-radius:10px;padding:1px 6px">10</div></div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-copy" style="font-size:15px"></i><div style="flex:1">Duplicidades</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#f4d9a3;background:#33291a;border-radius:10px;padding:1px 6px">2</div></div>
+          <div style="display:flex;align-items:center;gap:8px;padding:16px 10px 6px"><div style="font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(230,233,236,.4)">Fora da esteira</div><div style="flex:1;height:1px;background:linear-gradient(90deg,#2b2f36,rgba(43,47,54,0))"></div></div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-archive" style="font-size:15px"></i>Ignorados</div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-brackets-curly" style="font-size:15px"></i><div style="flex:1">Consulta</div><i class="ph ph-caret-down" style="font-size:10px;opacity:.4;transform:rotate(-90deg)"></i></div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-table" style="font-size:15px"></i><div style="flex:1">Catálogos</div><i class="ph ph-caret-down" style="font-size:10px;opacity:.4;transform:rotate(-90deg)"></i></div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;background:rgba(110,163,224,.13);box-shadow:inset 2px 0 0 #6ea3e0;color:#bfd8f5;font-size:12.5px;font-weight:500"><i class="ph-fill ph-file-code" style="font-size:15px"></i>Espelho das notas</div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-pencil-line" style="font-size:15px"></i>Correções</div>
+          <div style="display:flex;align-items:center;gap:8px;padding:16px 10px 6px"><div style="font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(230,233,236,.4)">Sistema</div><div style="flex:1;height:1px;background:linear-gradient(90deg,#2b2f36,rgba(43,47,54,0))"></div></div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-gear-six" style="font-size:15px"></i>Configurações</div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-terminal-window" style="font-size:15px"></i>Logs</div>
+        </div>
+
+        <div style="flex:1;min-width:0;display:flex;flex-direction:column;min-height:0">
+
+          <div style="flex:none;display:flex;align-items:flex-start;gap:16px;padding:14px 18px 12px;border-bottom:1px solid #2b2f36">
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:5px">
+              <div style="font-size:19px;font-weight:600;letter-spacing:-.01em">Espelho das notas</div>
+              <div style="display:flex;align-items:center;gap:9px;font-size:11.5px;color:rgba(230,233,236,.55);flex-wrap:wrap">
+                <div><span style="font-family:'IBM Plex Mono',monospace">1.482</span> notas lidas</div>
+                <div style="width:1px;height:10px;background:#2b2f36"></div>
+                <div><span style="font-family:'IBM Plex Mono',monospace">387</span> materiais</div>
+                <div style="width:1px;height:10px;background:#2b2f36"></div>
+                <div><span style="font-family:'IBM Plex Mono',monospace">2.914</span> lotes</div>
+                <div style="width:1px;height:10px;background:#2b2f36"></div>
+                <div>cobrindo de <span style="font-family:'IBM Plex Mono',monospace;color:rgba(230,233,236,.8)">02/07/2026</span> a <span style="font-family:'IBM Plex Mono',monospace;color:rgba(230,233,236,.8)">10/09/2026</span></div>
+              </div>
+            </div>
+            <div style="flex:none;display:flex;flex-direction:column;align-items:flex-end;gap:4px">
+              <div style="height:29px;display:flex;align-items:center;gap:7px;padding:0 12px;border-radius:6px;background:#6ea3e0;color:#14161a;font-size:11.5px;font-weight:500"><i class="ph ph-arrows-clockwise" style="font-size:12px"></i>Ler as notas novas</div>
+              <div style="display:flex;align-items:center;gap:5px;font-size:9.5px;color:rgba(230,233,236,.5)"><i class="ph ph-robot" style="font-size:11px"></i>não passa pelo Fantasma</div>
+            </div>
+          </div>
+
+          <div style="flex:none;display:flex;align-items:center;gap:10px;padding:11px 18px;flex-wrap:wrap">
+            <div style="width:300px;height:29px;display:flex;align-items:center;gap:7px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;padding:0 9px">
+              <i class="ph ph-funnel" style="font-size:13px;color:rgba(230,233,236,.45)"></i>
+              <div style="flex:1;min-width:0;font-size:11.5px;color:rgba(230,233,236,.4)">Buscar por código, descrição, lote ou ANVISA…</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(230,233,236,.45);background:#23272e;border-radius:3px;padding:1px 4px">Ctrl ⇧ K</div>
+            </div>
+            <div style="display:flex;gap:2px;padding:2px;background:#1b1e23;border:1px solid #2b2f36;border-radius:7px">
+              <div style="padding:4px 11px;border-radius:5px;background:rgba(110,163,224,.16);box-shadow:inset 0 0 0 1px rgba(110,163,224,.55);font-size:11.5px;color:#bfd8f5">Materiais <span style="font-family:'IBM Plex Mono',monospace;font-size:10px">387</span></div>
+              <div style="padding:4px 11px;border-radius:5px;font-size:11.5px;color:rgba(230,233,236,.62)">Lotes <span style="font-family:'IBM Plex Mono',monospace;font-size:10px">2.914</span></div>
+              <div style="padding:4px 11px;border-radius:5px;font-size:11.5px;color:rgba(230,233,236,.62)">Notas <span style="font-family:'IBM Plex Mono',monospace;font-size:10px">1.482</span></div>
+            </div>
+            <div style="flex:1"></div>
+            <div style="height:29px;display:flex;align-items:center;gap:6px;padding:0 10px;border:1px solid rgba(224,163,60,.5);background:#33291a;border-radius:6px;font-size:11.5px;color:#f4d9a3"><i class="ph ph-git-diff" style="font-size:12px"></i>Só os que diferem do espelho<div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;background:rgba(224,163,60,.2);border-radius:3px;padding:0 4px">23</div></div>
+            <div style="height:29px;display:flex;align-items:center;gap:6px;padding:0 10px;border:1px solid #2b2f36;border-radius:6px;font-size:11.5px;color:rgba(230,233,236,.8)"><i class="ph ph-download-simple" style="font-size:12px"></i>Exportar CSV</div>
+          </div>
+
+          <div style="flex:1;min-height:0;overflow:hidden;padding:0 18px 14px;display:flex;flex-direction:column">
+            <div style="flex:1;min-height:0;border:1px solid #2b2f36;border-radius:8px;background:#16181d;overflow:hidden;display:flex;flex-direction:column">
+
+              <div style="flex:none;display:flex;align-items:center;padding:0 12px;height:30px;background:#1b1e23;border-bottom:1px solid #2b2f36;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:rgba(230,233,236,.5)">
+                <div style="width:88px;flex:none;text-align:right;padding-right:14px;display:flex;align-items:center;justify-content:flex-end;gap:5px;color:#bfd8f5">Código<i class="ph-bold ph-caret-up" style="font-size:8px"></i></div>
+                <div style="flex:1;min-width:0">Descrição na nota mais recente</div>
+                <div style="width:64px;flex:none">Unid.</div>
+                <div style="width:118px;flex:none;text-align:right;padding-right:14px">ANVISA</div>
+                <div style="width:66px;flex:none;text-align:right;padding-right:14px">Notas</div>
+                <div style="width:66px;flex:none;text-align:right;padding-right:14px">Lotes</div>
+                <div style="width:150px;flex:none">Contra o espelho</div>
+                <div style="width:28px;flex:none"></div>
+              </div>
+
+              <div style="flex:1;min-height:0;overflow:hidden;display:flex;flex-direction:column">
+
+                <div style="display:flex;align-items:center;padding:0 12px;height:32px;border-bottom:1px solid #1e2126;background:rgba(110,163,224,.22);box-shadow:inset 2px 0 0 #6ea3e0;font-size:11.5px">
+                  <div style="width:88px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#6ea3e0">10245</div>
+                  <div style="flex:1;min-width:0;color:rgba(230,233,236,.82);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">PARAFUSO CORTICAL 3,5 MM X 24 MM TITÂNIO</div>
+                  <div style="width:64px;flex:none;color:rgba(230,233,236,.82)">UN</div>
+                  <div style="width:118px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:rgba(230,233,236,.82)">80000000011</div>
+                  <div style="width:66px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#9cc0ec">213</div>
+                  <div style="width:66px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#9cc0ec">36</div>
+                  <div style="width:150px;flex:none;display:flex;align-items:center;gap:5px;font-size:10.5px;color:#f4d9a3"><i class="ph ph-git-diff" style="font-size:11px"></i>descrição difere</div>
+                  <div style="width:28px;flex:none;display:flex;justify-content:flex-end"><i class="ph ph-caret-up" style="font-size:12px;color:#9cc0ec"></i></div>
+                </div>
+
+                <div style="border-bottom:1px solid #1e2126;background:rgba(110,163,224,.07);padding:12px;display:flex;gap:14px">
+                  <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:8px">
+                    <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.45)">Os lotes que já saíram</div>
+                    <div style="border:1px solid #2b2f36;border-radius:7px;background:#16181d;overflow:hidden">
+                      <div style="display:flex;align-items:center;padding:0 11px;height:27px;background:#1b1e23;border-bottom:1px solid #2b2f36;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:rgba(230,233,236,.5)">
+                        <div style="width:96px;flex:none">Lote</div>
+                        <div style="width:44px;flex:none;text-align:right;padding-right:10px">Qtde</div>
+                        <div style="width:86px;flex:none">Validade</div>
+                        <div style="flex:1;min-width:0">Foi para</div>
+                        <div style="width:76px;flex:none;text-align:right">Nota</div>
+                      </div>
+                      <div style="display:flex;align-items:center;padding:0 11px;height:29px;border-bottom:1px solid #1e2126;font-size:11.5px">
+                        <div style="width:96px;flex:none;font-family:'IBM Plex Mono',monospace;color:#6ea3e0">A7K2219</div>
+                        <div style="width:44px;flex:none;text-align:right;padding-right:10px;font-family:'IBM Plex Mono',monospace;color:#9cc0ec">1</div>
+                        <div style="width:86px;flex:none;color:rgba(230,233,236,.82)">09/2029</div>
+                        <div style="flex:1;min-width:0;color:rgba(230,233,236,.82);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Hospital Vale Verde</div>
+                        <div style="width:76px;flex:none;text-align:right;font-family:'IBM Plex Mono',monospace;color:#9cc0ec">100246</div>
+                      </div>
+                      <div style="display:flex;align-items:center;padding:0 11px;height:29px;border-bottom:1px solid #1e2126;background:rgba(224,163,60,.09);box-shadow:inset 2px 0 0 #e0a33c;font-size:11.5px">
+                        <div style="width:96px;flex:none;font-family:'IBM Plex Mono',monospace;color:#6ea3e0">B19F4402</div>
+                        <div style="width:44px;flex:none;text-align:right;padding-right:10px;font-family:'IBM Plex Mono',monospace;color:#9cc0ec">2</div>
+                        <div style="width:86px;flex:none;color:#f4d9a3">12/2026</div>
+                        <div style="flex:1;min-width:0;color:rgba(230,233,236,.82);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Hospital Santa Aurora</div>
+                        <div style="width:76px;flex:none;text-align:right;font-family:'IBM Plex Mono',monospace;color:#9cc0ec">100238</div>
+                      </div>
+                      <div style="display:flex;align-items:center;padding:0 11px;height:29px;font-size:11.5px;opacity:.55">
+                        <div style="width:96px;flex:none;font-family:'IBM Plex Mono',monospace;color:#6ea3e0;text-decoration:line-through">A7K1180</div>
+                        <div style="width:44px;flex:none;text-align:right;padding-right:10px;font-family:'IBM Plex Mono',monospace;color:rgba(230,233,236,.7);text-decoration:line-through">1</div>
+                        <div style="width:86px;flex:none;color:rgba(230,233,236,.7)">11/2026</div>
+                        <div style="flex:1;min-width:0;color:rgba(230,233,236,.7);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Instituto Horizonte <span style="color:#f2b3ae">· nota cancelada</span></div>
+                        <div style="width:76px;flex:none;text-align:right;font-family:'IBM Plex Mono',monospace;color:rgba(230,233,236,.7);text-decoration:line-through">100201</div>
+                      </div>
+                      <div style="display:flex;align-items:center;gap:8px;padding:7px 11px;border-top:1px solid #2b2f36;background:rgba(255,255,255,.016)">
+                        <i class="ph ph-info" style="font-size:11px;color:rgba(230,233,236,.4);flex:none"></i>
+                        <div style="flex:1;font-size:10px;line-height:1.5;color:rgba(230,233,236,.55);text-wrap:pretty">mais <span style="font-family:'IBM Plex Mono',monospace">34</span> lotes na contagem · o de <span style="color:#f4d9a3">12/2026</span> está marcado porque vence em menos de 90 dias e já está com o cliente · o <span style="font-family:'IBM Plex Mono',monospace">A7K1180</span> ficou fora dela, riscado, porque a nota foi cancelada</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style="width:336px;flex:none;display:flex;flex-direction:column;gap:9px">
+                    <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.45)">Onde as notas e o espelho discordam</div>
+                    <div style="border:1px solid rgba(224,163,60,.5);background:#33291a;border-radius:7px;padding:10px 11px;display:flex;flex-direction:column;gap:8px">
+                      <div style="display:flex;flex-direction:column;gap:5px">
+                        <div style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:rgba(244,217,163,.7)">No espelho do Everest, hoje</div>
+                        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.5;color:rgba(230,233,236,.9);text-wrap:pretty">PARAFUSO CORTICAL 3,5MM X 24MM TITANIO</div>
+                      </div>
+                      <div style="height:1px;background:rgba(224,163,60,.25)"></div>
+                      <div style="display:flex;flex-direction:column;gap:5px">
+                        <div style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:rgba(244,217,163,.7)">Na nota mais recente · 10/09/2026</div>
+                        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.5;color:#e6e9ec;text-wrap:pretty">PARAFUSO CORTICAL 3,5 MM X 24 MM TITÂNIO</div>
+                      </div>
+                      <div style="font-size:10.5px;line-height:1.55;color:#f4d9a3;text-wrap:pretty">Espaço e acento. As notas mudaram de grafia em <span style="font-family:'IBM Plex Mono',monospace">14/08/2026</span> — alguém arrumou o cadastro, e o espelho é de antes disso.</div>
+                    </div>
+                    <div style="border:1px solid #2b2f36;border-radius:7px;padding:10px 11px;display:flex;flex-direction:column;gap:8px">
+                      <div style="font-size:11px;line-height:1.55;color:rgba(230,233,236,.6);text-wrap:pretty">O que fazer: recoletar <a href="#">Materiais</a> para o espelho pegar a grafia nova, ou ensinar o par na colinha se o informe do hospital usa a antiga.</div>
+                      <div style="display:flex;gap:7px">
+                        <div style="flex:1;height:27px;display:flex;align-items:center;justify-content:center;gap:6px;border:1px solid rgba(110,163,224,.5);border-radius:6px;font-size:11px;color:#9cc0ec"><i class="ph ph-arrows-clockwise" style="font-size:11px"></i>Recoletar</div>
+                        <div style="flex:1;height:27px;display:flex;align-items:center;justify-content:center;gap:6px;border:1px solid #2b2f36;border-radius:6px;font-size:11px;color:rgba(230,233,236,.85)"><i class="ph ph-note-pencil" style="font-size:11px"></i>Colinha</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div style="display:flex;align-items:center;padding:0 12px;height:32px;border-bottom:1px solid #1e2126;font-size:11.5px">
+                  <div style="width:88px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#6ea3e0">10311</div>
+                  <div style="flex:1;min-width:0;color:rgba(230,233,236,.82);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">PLACA BLOQUEADA 3,5 MM 6 FUROS</div>
+                  <div style="width:64px;flex:none;color:rgba(230,233,236,.82)">UN</div>
+                  <div style="width:118px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:rgba(230,233,236,.82)">80000000012</div>
+                  <div style="width:66px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#9cc0ec">96</div>
+                  <div style="width:66px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#9cc0ec">21</div>
+                  <div style="width:150px;flex:none;display:flex;align-items:center;gap:5px;font-size:10.5px;color:rgba(230,233,236,.5)"><i class="ph ph-check" style="font-size:11px"></i>casa</div>
+                  <div style="width:28px;flex:none;display:flex;justify-content:flex-end"><i class="ph ph-caret-down" style="font-size:12px;color:rgba(230,233,236,.45)"></i></div>
+                </div>
+
+                <div style="display:flex;align-items:center;padding:0 12px;height:32px;border-bottom:1px solid #1e2126;background:rgba(224,163,60,.09);box-shadow:inset 2px 0 0 #e0a33c;font-size:11.5px">
+                  <div style="width:88px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#6ea3e0">10877</div>
+                  <div style="flex:1;min-width:0;color:rgba(230,233,236,.82);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">CIMENTO ÓSSEO 40 G</div>
+                  <div style="width:64px;flex:none;color:rgba(230,233,236,.82)">UN</div>
+                  <div style="width:118px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:rgba(230,233,236,.82)">80000000013</div>
+                  <div style="width:66px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#9cc0ec">31</div>
+                  <div style="width:66px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#9cc0ec">8</div>
+                  <div style="width:150px;flex:none;display:flex;align-items:center;gap:5px;font-size:10.5px;color:#f4d9a3"><i class="ph ph-question" style="font-size:11px"></i>não está no espelho</div>
+                  <div style="width:28px;flex:none;display:flex;justify-content:flex-end"><i class="ph ph-caret-down" style="font-size:12px;color:rgba(230,233,236,.45)"></i></div>
+                </div>
+
+                <div style="display:flex;align-items:center;padding:0 12px;height:32px;border-bottom:1px solid #1e2126;background:rgba(255,255,255,.03);font-size:11.5px">
+                  <div style="width:88px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#6ea3e0">11002</div>
+                  <div style="flex:1;min-width:0;color:rgba(230,233,236,.82);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">HASTE FEMORAL BLOQUEADA 10 MM X 380 MM</div>
+                  <div style="width:64px;flex:none;color:rgba(230,233,236,.82)">UN</div>
+                  <div style="width:118px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:rgba(230,233,236,.82)">80000000015</div>
+                  <div style="width:66px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#9cc0ec">12</div>
+                  <div style="width:66px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#9cc0ec">12</div>
+                  <div style="width:150px;flex:none;display:flex;align-items:center;gap:5px;font-size:10.5px;color:rgba(230,233,236,.5)"><i class="ph ph-check" style="font-size:11px"></i>casa</div>
+                  <div style="width:28px;flex:none;display:flex;justify-content:flex-end"><i class="ph ph-caret-down" style="font-size:12px;color:rgba(230,233,236,.45)"></i></div>
+                </div>
+
+                <div style="display:flex;align-items:center;padding:0 12px;height:32px;font-size:11.5px">
+                  <div style="width:88px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#6ea3e0">11284</div>
+                  <div style="flex:1;min-width:0;color:rgba(230,233,236,.82);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">TELA DE POLIPROPILENO 15 X 15 CM</div>
+                  <div style="width:64px;flex:none;color:rgba(230,233,236,.82)">UN</div>
+                  <div style="width:118px;flex:none;text-align:right;padding-right:14px;color:rgba(230,233,236,.28)">—</div>
+                  <div style="width:66px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#9cc0ec">7</div>
+                  <div style="width:66px;flex:none;text-align:right;padding-right:14px;font-family:'IBM Plex Mono',monospace;color:#9cc0ec">7</div>
+                  <div style="width:150px;flex:none;display:flex;align-items:center;gap:5px;font-size:10.5px;color:#f4d9a3"><i class="ph ph-git-diff" style="font-size:11px"></i>ANVISA só na nota</div>
+                  <div style="width:28px;flex:none;display:flex;justify-content:flex-end"><i class="ph ph-caret-down" style="font-size:12px;color:rgba(230,233,236,.45)"></i></div>
+                </div>
+              </div>
+
+              <div style="flex:none;display:flex;align-items:center;gap:14px;padding:0 12px;height:34px;border-top:1px solid #2b2f36;background:#1b1e23;font-size:11px">
+                <div style="display:flex;align-items:center;gap:5px;color:rgba(230,233,236,.4)"><i class="ph ph-arrow-left" style="font-size:11px"></i>Anterior</div>
+                <div style="font-family:'IBM Plex Mono',monospace;color:rgba(230,233,236,.82)">1–50 de 387</div>
+                <div style="display:flex;align-items:center;gap:5px;color:#9cc0ec">Próxima<i class="ph ph-arrow-right" style="font-size:11px"></i></div>
+                <div style="flex:1"></div>
+                <div style="display:flex;align-items:center;gap:5px;color:rgba(230,233,236,.45)">ordenado por <span style="font-family:'IBM Plex Mono',monospace;color:rgba(230,233,236,.7)">CÓDIGO</span><i class="ph-bold ph-caret-up" style="font-size:8px"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="height:28px;flex:none;border-top:1px solid #2b2f36;background:rgba(255,255,255,.03);display:flex;align-items:center;padding:0 10px;gap:2px;font-size:10.5px">
+        <div style="display:flex;align-items:center;gap:6px;padding:3px 8px"><i class="ph ph-tray" style="font-size:12px;color:#57b184"></i><span style="font-weight:500;color:rgba(230,233,236,.78)">MailBridgr</span><span style="color:rgba(230,233,236,.52)">canal confirmado</span></div>
+        <div style="display:flex;align-items:center;gap:6px;padding:3px 8px"><i class="ph ph-eye" style="font-size:12px;color:#57b184"></i><span style="font-weight:500;color:rgba(230,233,236,.78)">MedLens</span><span style="color:rgba(230,233,236,.52)">no ar</span></div>
+        <div style="display:flex;align-items:center;gap:6px;padding:3px 8px"><i class="ph ph-robot" style="font-size:12px;color:#57b184"></i><span style="font-weight:500;color:rgba(230,233,236,.78)">Fantasma</span><span style="color:rgba(230,233,236,.52)">pronto</span></div>
+        <div style="display:flex;align-items:center;gap:6px;padding:3px 8px"><i class="ph ph-plugs-connected" style="font-size:12px;color:rgba(230,233,236,.38)"></i><span style="font-weight:500;color:rgba(230,233,236,.78)">Spook</span><span style="color:rgba(230,233,236,.52)">sem endereço</span></div>
+        <div style="display:flex;align-items:center;gap:6px;padding:3px 8px"><i class="ph ph-package" style="font-size:12px;color:#57b184"></i><span style="font-weight:500;color:rgba(230,233,236,.78)">NFe Pack</span><span style="color:rgba(230,233,236,.52)">baixando</span></div>
+        <div style="flex:1"></div>
+        <div style="display:flex;align-items:center;gap:5px;padding:3px 8px;border-radius:5px;background:rgba(110,163,224,.11)"><i class="ph ph-stack-simple" style="font-size:12px;color:#6ea3e0"></i><span style="color:#9cc0ec">2 em voo · 3 pedem gente</span></div>
+        <div style="display:flex;align-items:center;gap:5px;padding:3px 8px"><i class="ph ph-lock" style="font-size:12px;color:#57b184"></i><span style="color:rgba(230,233,236,.72)">PIN ativo</span></div>
+        <div style="display:flex;align-items:center;gap:5px;padding:3px 8px"><i class="ph ph-info" style="font-size:12px;color:rgba(230,233,236,.38)"></i><span style="color:rgba(230,233,236,.52)">v0.1.0</span></div>
+      </div>
+    </div>
+
+    <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;gap:28px;max-width:1440px;font-size:11.5px;line-height:1.7;color:rgba(230,233,236,.55)">
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">"Contra o espelho" é a coluna que justifica a tela.</span> Três valores e nenhum deles escolhe um lado: <span style="color:rgba(230,233,236,.75)">casa</span>, <span style="color:#f4d9a3">difere</span> e <span style="color:#f4d9a3">não está no espelho</span>. Um app que preferisse silenciosamente uma das fontes seria pior do que não ter a segunda.</div>
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">Ler as notas não passa pelo Fantasma</span> — e isso está escrito embaixo do botão, porque é a diferença prática mais importante em relação a Coletar: não segura o robô, não precisa de sessão no Everest, e pode rodar enquanto uma conta é faturada.</div>
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">A validade só aparece marcada quando é decisão.</span> Lote que vence em menos de 90 dias <span style="color:#e6e9ec">e já está com o cliente</span> é âmbar; vencimento longe é fato, e fato não pede cor.</div>
+      </div>
+    </sc-if>
+  </div>
+
+
+  <!-- ============ 2 · AS DUAS FONTES ============ -->
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <div style="font-size:18px;font-weight:600">2 · Os dois espelhos — o que cada um sabe</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(230,233,236,.4)">a resposta honesta a "em vez de consultar o Everest"</div>
+    </div>
+
+    <div style="width:1196px;box-sizing:border-box;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:18px;display:flex;flex-direction:column;gap:14px;color:#e6e9ec">
+      <div style="border:1px solid #2b2f36;border-radius:8px;background:#16181d;overflow:hidden">
+        <div style="display:flex;align-items:center;padding:0 12px;height:30px;background:#1b1e23;border-bottom:1px solid #2b2f36;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:rgba(230,233,236,.5)">
+          <div style="flex:1;min-width:0">O que se quer saber</div>
+          <div style="width:230px;flex:none">Espelho do Everest</div>
+          <div style="width:230px;flex:none">Espelho das notas</div>
+          <div style="width:290px;flex:none">Quem manda</div>
+        </div>
+        <div style="display:flex;align-items:center;padding:0 12px;height:32px;border-bottom:1px solid #1e2126;font-size:11.5px">
+          <div style="flex:1;min-width:0;color:rgba(230,233,236,.85)">Descrição e unidade</div>
+          <div style="width:230px;flex:none;color:rgba(230,233,236,.82)">o cadastro de hoje</div>
+          <div style="width:230px;flex:none;color:rgba(230,233,236,.82)">o que foi faturado</div>
+          <div style="width:290px;flex:none;color:#9cc0ec">o espelho do Everest</div>
+        </div>
+        <div style="display:flex;align-items:center;padding:0 12px;height:32px;border-bottom:1px solid #1e2126;background:rgba(255,255,255,.03);font-size:11.5px">
+          <div style="flex:1;min-width:0;color:rgba(230,233,236,.85)">O material existe no cadastro</div>
+          <div style="width:230px;flex:none;color:rgba(230,233,236,.82)">todos, faturados ou não</div>
+          <div style="width:230px;flex:none;color:#f4d9a3">só os já faturados</div>
+          <div style="width:290px;flex:none;color:#9cc0ec">o espelho do Everest</div>
+        </div>
+        <div style="display:flex;align-items:center;padding:0 12px;height:32px;border-bottom:1px solid #1e2126;font-size:11.5px">
+          <div style="flex:1;min-width:0;color:rgba(230,233,236,.85)">Lote, fabricação e validade</div>
+          <div style="width:230px;flex:none;color:rgba(230,233,236,.42)">não tem</div>
+          <div style="width:230px;flex:none;color:#a6dcbf">tem, por item de nota</div>
+          <div style="width:290px;flex:none;color:#9cc0ec">as notas — não há competição</div>
+        </div>
+        <div style="display:flex;align-items:center;padding:0 12px;height:32px;border-bottom:1px solid #1e2126;background:rgba(255,255,255,.03);font-size:11.5px">
+          <div style="flex:1;min-width:0;color:rgba(230,233,236,.85)">Quantidade e preço que saíram</div>
+          <div style="width:230px;flex:none;color:rgba(230,233,236,.42)">só a tabela de preço</div>
+          <div style="width:230px;flex:none;color:#a6dcbf">o que foi cobrado</div>
+          <div style="width:290px;flex:none;color:#9cc0ec">as notas</div>
+        </div>
+        <div style="display:flex;align-items:center;padding:0 12px;height:32px;border-bottom:1px solid #1e2126;font-size:11.5px">
+          <div style="flex:1;min-width:0;color:rgba(230,233,236,.85)">Qual cliente recebeu qual lote</div>
+          <div style="width:230px;flex:none;color:rgba(230,233,236,.42)">não tem</div>
+          <div style="width:230px;flex:none;color:#a6dcbf">tem</div>
+          <div style="width:290px;flex:none;color:#9cc0ec">as notas</div>
+        </div>
+        <div style="display:flex;align-items:center;padding:0 12px;height:32px;background:rgba(255,255,255,.03);font-size:11.5px">
+          <div style="flex:1;min-width:0;color:rgba(230,233,236,.85)">Quão atual é</div>
+          <div style="width:230px;flex:none;color:rgba(230,233,236,.82)">da última coleta</div>
+          <div style="width:230px;flex:none;color:rgba(230,233,236,.82)">da última nota baixada</div>
+          <div style="width:290px;flex:none;color:rgba(230,233,236,.6)">os dois carimbos ficam à vista</div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <div style="width:388px;box-sizing:border-box;border:1px solid rgba(87,177,132,.45);background:rgba(87,177,132,.07);border-radius:8px;padding:12px;display:flex;flex-direction:column;gap:7px">
+          <div style="display:flex;align-items:center;gap:8px"><i class="ph-fill ph-check-circle" style="font-size:14px;color:#57b184"></i><div style="font-size:12.5px;font-weight:500;color:#a6dcbf">Onde as notas substituem o Everest</div></div>
+          <div style="font-size:11px;line-height:1.6;color:rgba(230,233,236,.75);text-wrap:pretty">Lote, validade, quantidade enviada, preço cobrado e quem recebeu. Aqui não há o que comparar: <span style="color:#e6e9ec">o espelho do Everest nunca teve esses campos</span>. Uma consulta ao ERP para descobrir lote é uma consulta que nunca precisou existir.</div>
+        </div>
+        <div style="width:388px;box-sizing:border-box;border:1px solid rgba(224,163,60,.45);background:#33291a;border-radius:8px;padding:12px;display:flex;flex-direction:column;gap:7px">
+          <div style="display:flex;align-items:center;gap:8px"><i class="ph-fill ph-warning" style="font-size:14px;color:#e0a33c"></i><div style="font-size:12.5px;font-weight:500;color:#f4d9a3">Onde não substituem</div></div>
+          <div style="font-size:11px;line-height:1.6;color:#f4d9a3;text-wrap:pretty">Existência. Material cadastrado e nunca faturado <span style="font-weight:600">não existe aqui</span> — e é justamente ele que o portão precisa achar na hora de aprovar uma conta nova. Para isso, o espelho do Everest continua sendo a fonte.</div>
+        </div>
+        <div style="width:388px;box-sizing:border-box;border:1px solid #2b2f36;border-radius:8px;padding:12px;display:flex;flex-direction:column;gap:7px">
+          <div style="display:flex;align-items:center;gap:8px"><i class="ph ph-scales" style="font-size:14px;color:rgba(230,233,236,.6)"></i><div style="font-size:12.5px;font-weight:500">E quando discordam</div></div>
+          <div style="font-size:11px;line-height:1.6;color:rgba(230,233,236,.7);text-wrap:pretty">O app <span style="color:#e6e9ec">não escolhe em silêncio</span>. Mostra os dois, com data, e diz qual gesto resolve: recoletar o espelho ou ensinar o par na colinha. Preferir uma fonte sem dizer seria pior do que ter uma só.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 3 · ESTADOS ============ -->
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <div style="font-size:18px;font-weight:600">3 · A cobertura, a nota cancelada e as recusas</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(230,233,236,.4)">o espelho tem começo, e ele está escrito</div>
+    </div>
+
+    <div style="width:1196px;box-sizing:border-box;display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start">
+
+      <div style="width:590px;box-sizing:border-box;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:12px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">1 · Nunca leu nota nenhuma</div>
+        <div style="border:1px solid #2b2f36;border-radius:8px;background:#16181d;padding:32px 20px;display:flex;flex-direction:column;align-items:center;gap:9px">
+          <i class="ph ph-file-code" style="font-size:30px;color:rgba(230,233,236,.24)"></i>
+          <div style="font-size:12.5px;color:rgba(230,233,236,.75)">Nenhuma nota foi lida nesta máquina</div>
+          <div style="font-size:11px;line-height:1.6;color:rgba(230,233,236,.55);text-align:center;max-width:410px;text-wrap:pretty">O NFe Pack precisa ter baixado XMLs primeiro. Este espelho é montado do que já está em disco — ele não vai buscar nota no portal.</div>
+          <div style="height:28px;display:flex;align-items:center;gap:6px;padding:0 12px;border:1px solid rgba(110,163,224,.5);border-radius:6px;font-size:11px;color:#9cc0ec">Ver o NFe Pack Monitor<i class="ph ph-arrow-up-right" style="font-size:10px"></i></div>
+        </div>
+        <div style="font-size:10.5px;line-height:1.6;color:rgba(230,233,236,.45);text-wrap:pretty">A separação importa: baixar nota é trabalho do monitor, ler nota é trabalho desta tela. Se o monitor está parado, o espelho só envelhece — não quebra.</div>
+      </div>
+
+      <div style="width:590px;box-sizing:border-box;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:12px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">2 · A cobertura, sempre à vista</div>
+        <div style="display:flex;align-items:flex-start;gap:10px;padding:11px 12px;border:1px dashed #2b2f36;border-radius:8px">
+          <i class="ph ph-calendar-dots" style="font-size:14px;color:rgba(230,233,236,.42);flex:none;margin-top:1px"></i>
+          <div style="flex:1;font-size:11.5px;line-height:1.6;color:rgba(230,233,236,.65);text-wrap:pretty">As notas cobrem <span style="color:#e6e9ec">70 dias</span>, de 02/07/2026 a 10/09/2026. <span style="color:#e6e9ec">Material que não foi faturado nesse período não está aqui</span> — e nem por isso deixou de existir.</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:11px;padding:10px 12px;border:1px solid rgba(110,163,224,.45);background:rgba(110,163,224,.08);border-radius:8px">
+          <i class="ph ph-circle-notch" style="font-size:14px;color:#6ea3e0;flex:none"></i>
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:4px">
+            <div style="font-size:11.5px;color:#bfd8f5">Lendo as notas novas · <span style="font-family:'IBM Plex Mono',monospace">38 de 61</span></div>
+            <div style="height:3px;border-radius:2px;background:rgba(110,163,224,.2);overflow:hidden"><div style="width:62%;height:3px;background:#6ea3e0"></div></div>
+            <div style="font-size:10px;color:rgba(191,216,245,.7)">o Fantasma segue livre — a leitura é de arquivo em disco</div>
+          </div>
+        </div>
+        <div style="font-size:10.5px;line-height:1.6;color:rgba(230,233,236,.45);text-wrap:pretty">A frase sobre a cobertura não é rodapé decorativo: é o que impede alguém de concluir "este material não existe" olhando uma tela que só conhece o que já foi vendido.</div>
+      </div>
+
+      <div style="width:590px;box-sizing:border-box;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:12px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">3 · A nota cancelada</div>
+        <div style="display:flex;align-items:flex-start;gap:10px;padding:11px 12px;border:1px solid rgba(224,106,99,.5);background:rgba(224,106,99,.09);border-radius:8px">
+          <i class="ph-fill ph-prohibit" style="font-size:14px;color:#e06a63;flex:none;margin-top:1px"></i>
+          <div style="flex:1;font-size:11.5px;line-height:1.6;color:#f2b3ae;text-wrap:pretty">A nota <span style="font-family:'IBM Plex Mono',monospace">100201</span> foi cancelada no SEFAZ em 08/09/2026. As <span style="font-family:'IBM Plex Mono',monospace">2</span> linhas que ela trouxe saem das contagens e ficam listadas, riscadas — inclusive no painel de lotes do material.</div>
+        </div>
+        <div style="border:1px solid #2b2f36;border-radius:8px;background:#16181d;overflow:hidden">
+          <div style="display:flex;align-items:center;padding:0 11px;height:28px;background:#1b1e23;border-bottom:1px solid #2b2f36;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:rgba(230,233,236,.5)">
+            <div style="width:88px;flex:none">Código</div>
+            <div style="width:96px;flex:none">Lote</div>
+            <div style="flex:1;min-width:0">Situação da linha</div>
+          </div>
+          <div style="display:flex;align-items:center;padding:0 11px;height:30px;border-bottom:1px solid #1e2126;font-size:11.5px;opacity:.6">
+            <div style="width:88px;flex:none;font-family:'IBM Plex Mono',monospace;color:#6ea3e0;text-decoration:line-through">10245</div>
+            <div style="width:96px;flex:none;font-family:'IBM Plex Mono',monospace;color:rgba(230,233,236,.8);text-decoration:line-through">A7K1180</div>
+            <div style="flex:1;min-width:0;font-size:10.5px;color:rgba(230,233,236,.6)">saiu da contagem · a nota foi cancelada</div>
+          </div>
+          <div style="display:flex;align-items:center;padding:0 11px;height:30px;font-size:11.5px;opacity:.6">
+            <div style="width:88px;flex:none;font-family:'IBM Plex Mono',monospace;color:#6ea3e0;text-decoration:line-through">10877</div>
+            <div style="width:96px;flex:none;font-family:'IBM Plex Mono',monospace;color:rgba(230,233,236,.8);text-decoration:line-through">C24B0917</div>
+            <div style="flex:1;min-width:0;font-size:10.5px;color:rgba(230,233,236,.6)">saiu da contagem · a nota foi cancelada</div>
+          </div>
+        </div>
+        <div style="font-size:10.5px;line-height:1.6;color:rgba(230,233,236,.45);text-wrap:pretty">Riscada e não apagada: o lote saiu fisicamente e voltou, e alguém vai perguntar onde ele está. Apagar a linha faria o espelho mentir por omissão. Uma <span style="color:rgba(230,233,236,.7)">carta de correção</span> entra do mesmo jeito, somando a versão nova sem sumir com a antiga.</div>
+      </div>
+
+      <div style="width:590px;box-sizing:border-box;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:12px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">4 · XMLs que não entraram</div>
+        <div style="display:flex;align-items:flex-start;gap:10px;padding:11px 12px;border:1px solid rgba(224,163,60,.5);background:#33291a;border-radius:8px">
+          <i class="ph-fill ph-warning" style="font-size:14px;color:#e0a33c;flex:none;margin-top:1px"></i>
+          <div style="flex:1;display:flex;flex-direction:column;gap:5px">
+            <div style="font-size:11.5px;color:#f4d9a3"><span style="font-weight:600">4 de 61</span> arquivos ficaram de fora, e cada um diz por quê:</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;line-height:1.55;color:rgba(230,233,236,.9);user-select:all">2 · o XML não é uma NFe (é um evento de cancelamento)</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;line-height:1.55;color:rgba(230,233,236,.9);user-select:all">1 · o arquivo está truncado — o XML não fecha</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;line-height:1.55;color:rgba(230,233,236,.9);user-select:all">1 · a nota é de entrada, emitida por outro CNPJ</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:9px;padding:9px 11px;border:1px solid #2b2f36;border-radius:7px;background:#16181d">
+          <i class="ph ph-info" style="font-size:12px;color:rgba(230,233,236,.4);flex:none"></i>
+          <div style="flex:1;font-size:10.5px;line-height:1.55;color:rgba(230,233,236,.6);text-wrap:pretty">O evento de cancelamento <span style="color:rgba(230,233,236,.82)">não é recusa</span> — é o que cancela a nota do cartão ao lado. Fica listado aqui só para o total dos 61 fechar.</div>
+        </div>
+        <div style="font-size:10.5px;line-height:1.6;color:rgba(230,233,236,.45);text-wrap:pretty">Nenhum arquivo é apagado nem movido: ler é leitura. O que não entrou continua na pasta do monitor, e a próxima leitura tenta de novo.</div>
+      </div>
+    </div>
+
+    <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;gap:28px;max-width:1196px;font-size:11.5px;line-height:1.7;color:rgba(230,233,236,.55)">
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">Nota cancelada é riscada, não apagada.</span> O material saiu fisicamente e voltou; alguém vai perguntar onde ele está. Apagar a linha faria o espelho mentir por omissão — e o total dos arquivos lidos deixaria de fechar.</div>
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">Ler é leitura.</span> Nenhum XML é movido, renomeado ou apagado, e a pasta continua sendo do monitor. É a mesma regra da Doca: mexer em arquivo alheio não é gesto que este app toma sozinho.</div>
+        <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">Do que ela precisa:</span> um leitor de NFe que entenda <span style="font-family:'IBM Plex Mono',monospace">det</span>, <span style="font-family:'IBM Plex Mono',monospace">rastro</span> e <span style="font-family:'IBM Plex Mono',monospace">med</span>, e guarde por item de nota. Nada de rede, nada de robô — o que já está em disco basta.</div>
+      </div>
+    </sc-if>
+  </div>
+
+  <!-- ============ 4 · TEMA CLARO ============ -->
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <div style="font-size:18px;font-weight:600">4 · No tema claro</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(230,233,236,.4)">a coluna da comparação e os lotes</div>
+    </div>
+    <div style="width:1000px;box-sizing:border-box;background:#f3f4f5;border:1px solid #dfe3e7;border-radius:10px;padding:18px;color:#1b1f24;display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+        <div style="font-size:17px;font-weight:600">Espelho das notas</div>
+        <div style="font-size:11px;color:rgba(27,31,36,.6)"><span style="font-family:'IBM Plex Mono',monospace">1.482</span> notas · <span style="font-family:'IBM Plex Mono',monospace">387</span> materiais · <span style="font-family:'IBM Plex Mono',monospace">2.914</span> lotes</div>
+        <div style="flex:1"></div>
+        <div style="height:28px;display:flex;align-items:center;gap:6px;padding:0 11px;border-radius:6px;background:#2f6ab0;color:#ffffff;font-size:11.5px;font-weight:500"><i class="ph ph-arrows-clockwise" style="font-size:12px"></i>Ler as notas novas</div>
+      </div>
+
+      <div style="border:1px solid #dfe3e7;border-radius:8px;background:#ffffff;overflow:hidden">
+        <div style="display:flex;align-items:center;padding:0 12px;height:30px;background:#f6f7f8;border-bottom:1px solid #dfe3e7;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:rgba(27,31,36,.55)">
+          <div style="width:84px;flex:none;text-align:right;padding-right:12px;color:#14487d">Código ↑</div>
+          <div style="flex:1;min-width:0">Descrição na nota mais recente</div>
+          <div style="width:58px;flex:none;text-align:right;padding-right:12px">Notas</div>
+          <div style="width:58px;flex:none;text-align:right;padding-right:12px">Lotes</div>
+          <div style="width:150px;flex:none">Contra o espelho</div>
+        </div>
+        <div style="display:flex;align-items:center;padding:0 12px;height:32px;border-bottom:1px solid #f1f2f4;background:rgba(224,163,60,.14);box-shadow:inset 2px 0 0 #c99a3d;font-size:11.5px">
+          <div style="width:84px;flex:none;text-align:right;padding-right:12px;font-family:'IBM Plex Mono',monospace;color:#2f6ab0">10245</div>
+          <div style="flex:1;min-width:0;color:rgba(27,31,36,.85);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">PARAFUSO CORTICAL 3,5 MM X 24 MM TITÂNIO</div>
+          <div style="width:58px;flex:none;text-align:right;padding-right:12px;font-family:'IBM Plex Mono',monospace;color:#1f60a8">213</div>
+          <div style="width:58px;flex:none;text-align:right;padding-right:12px;font-family:'IBM Plex Mono',monospace;color:#1f60a8">36</div>
+          <div style="width:150px;flex:none;display:flex;align-items:center;gap:5px;font-size:10.5px;color:#6b4708"><i class="ph ph-git-diff" style="font-size:11px"></i>descrição difere</div>
+        </div>
+        <div style="display:flex;align-items:center;padding:0 12px;height:32px;border-bottom:1px solid #f1f2f4;font-size:11.5px">
+          <div style="width:84px;flex:none;text-align:right;padding-right:12px;font-family:'IBM Plex Mono',monospace;color:#2f6ab0">10311</div>
+          <div style="flex:1;min-width:0;color:rgba(27,31,36,.85);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">PLACA BLOQUEADA 3,5 MM 6 FUROS</div>
+          <div style="width:58px;flex:none;text-align:right;padding-right:12px;font-family:'IBM Plex Mono',monospace;color:#1f60a8">96</div>
+          <div style="width:58px;flex:none;text-align:right;padding-right:12px;font-family:'IBM Plex Mono',monospace;color:#1f60a8">21</div>
+          <div style="width:150px;flex:none;display:flex;align-items:center;gap:5px;font-size:10.5px;color:rgba(27,31,36,.5)"><i class="ph ph-check" style="font-size:11px"></i>casa</div>
+        </div>
+        <div style="display:flex;align-items:center;padding:0 12px;height:32px;background:#f6f7f8;font-size:11.5px">
+          <div style="width:84px;flex:none;text-align:right;padding-right:12px;font-family:'IBM Plex Mono',monospace;color:#2f6ab0">10877</div>
+          <div style="flex:1;min-width:0;color:rgba(27,31,36,.85);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">CIMENTO ÓSSEO 40 G</div>
+          <div style="width:58px;flex:none;text-align:right;padding-right:12px;font-family:'IBM Plex Mono',monospace;color:#1f60a8">31</div>
+          <div style="width:58px;flex:none;text-align:right;padding-right:12px;font-family:'IBM Plex Mono',monospace;color:#1f60a8">8</div>
+          <div style="width:150px;flex:none;display:flex;align-items:center;gap:5px;font-size:10.5px;color:#6b4708"><i class="ph ph-question" style="font-size:11px"></i>não está no espelho</div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border:1px dashed #c9ced5;border-radius:8px">
+        <i class="ph ph-calendar-dots" style="font-size:13px;color:rgba(27,31,36,.45);flex:none;margin-top:1px"></i>
+        <div style="flex:1;font-size:11px;line-height:1.6;color:rgba(27,31,36,.6);text-wrap:pretty">As notas cobrem <span style="color:#1b1f24">70 dias</span>. Material não faturado nesse período não está aqui — e nem por isso deixou de existir.</div>
+      </div>
+
+      <div style="font-size:10.5px;line-height:1.6;color:rgba(27,31,36,.55);text-wrap:pretty">"Casa" fica sem cor: concordar é o normal, e o normal não pede tinta. Só a discordância é âmbar, porque é ela que pede uma decisão — e no claro o âmbar é <span style="font-family:'IBM Plex Mono',monospace">#6b4708</span> sobre <span style="font-family:'IBM Plex Mono',monospace">rgba(224,163,60,.14)</span>.</div>
+    </div>
+  </div>
+
+</div></x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showNotes&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Apresentação&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return { showNotes: this.props.showNotes ?? true };
+  }
+}
+</script>
+</body>
+</html>

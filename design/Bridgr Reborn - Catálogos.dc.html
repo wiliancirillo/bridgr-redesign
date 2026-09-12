@@ -51,7 +51,7 @@ a:hover { color: #9cc0ec; }
           </div>
         </div>
         <div style="display:flex;align-items:center;gap:4px">
-          <div style="width:27px;height:25px;display:flex;align-items:center;justify-content:center"><i class="ph ph-bell" style="font-size:15px;color:rgba(230,233,236,.72)"></i></div>
+          <div style="width:27px;height:25px;display:flex;align-items:center;justify-content:center;border-radius:5px;position:relative"><i class="ph ph-bell" style="font-size:15px;color:rgba(230,233,236,.72)"></i><div style="position:absolute;top:4px;right:4px;width:7px;height:7px;border-radius:4px;background:#e06a63;box-shadow:0 0 0 2px #14161a"></div></div>
           <div style="display:flex;align-items:center;gap:7px;height:26px;padding:0 7px;border-radius:6px;background:#1b1e23"><div style="width:19px;height:19px;border-radius:10px;background:#1b3350;color:#bfd8f5;font-size:9px;font-weight:600;display:flex;align-items:center;justify-content:center">CR</div><div style="font-size:12px">Camila</div><i class="ph ph-caret-down" style="font-size:10px;color:rgba(230,233,236,.45)"></i></div>
           <div style="display:flex;align-items:center;gap:2px;margin-left:6px">
             <div style="width:26px;height:22px;display:flex;align-items:center;justify-content:center"><i class="ph ph-minus" style="font-size:13px;color:rgba(230,233,236,.72)"></i></div>
@@ -64,6 +64,7 @@ a:hover { color: #9cc0ec; }
       <div style="flex:1;display:flex;min-height:0">
         <div style="width:236px;flex:none;border-right:1px solid #2b2f36;padding:8px;display:flex;flex-direction:column;gap:1px">
           <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-gauge" style="font-size:15px"></i>Dashboard</div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-calendar-check" style="font-size:15px"></i>Fechamento</div>
           <div style="display:flex;align-items:center;gap:8px;padding:16px 10px 6px"><div style="font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(230,233,236,.4)">Esteira</div><div style="flex:1;height:1px;background:linear-gradient(90deg,#2b2f36,rgba(43,47,54,0))"></div></div>
           <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-tray-arrow-down" style="font-size:15px"></i>Triagem</div>
           <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-check-square-offset" style="font-size:15px"></i>Revisão</div>
@@ -74,6 +75,8 @@ a:hover { color: #9cc0ec; }
           <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-brackets-curly" style="font-size:15px"></i><div style="flex:1">Consulta</div><i class="ph ph-caret-down" style="font-size:10px;opacity:.4;transform:rotate(-90deg)"></i></div>
           <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;background:rgba(110,163,224,.13);box-shadow:inset 2px 0 0 #6ea3e0;color:#bfd8f5;font-size:12.5px;font-weight:500"><i class="ph-fill ph-table" style="font-size:15px"></i><div style="flex:1">Catálogos</div><i class="ph ph-caret-down" style="font-size:10px;opacity:.6"></i></div>
           <div style="display:flex;align-items:center;gap:9px;padding:7px 10px 7px 34px;border-radius:6px;color:rgba(230,233,236,.6);font-size:12px"><i class="ph ph-list-checks" style="font-size:14px"></i>Listas</div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-file-code" style="font-size:15px"></i>Espelho das notas</div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-pencil-line" style="font-size:15px"></i>Correções</div>
           <div style="display:flex;align-items:center;gap:8px;padding:16px 10px 6px"><div style="font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(230,233,236,.4)">Sistema</div><div style="flex:1;height:1px;background:linear-gradient(90deg,#2b2f36,rgba(43,47,54,0))"></div></div>
           <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-gear-six" style="font-size:15px"></i>Configurações</div>
           <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-terminal-window" style="font-size:15px"></i>Logs</div>
@@ -177,7 +180,7 @@ a:hover { color: #9cc0ec; }
               <div style="flex:none;display:flex;align-items:center;gap:10px;padding-bottom:10px;flex-wrap:wrap">
                 <div style="width:284px;height:29px;display:flex;align-items:center;gap:7px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;padding:0 9px">
                   <i class="ph ph-funnel" style="font-size:13px;color:rgba(230,233,236,.45)"></i>
-                  <div style="flex:1;min-width:0;font-size:11.5px;color:rgba(230,233,236,.4);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Buscar por código, nome ou referência…</div>
+                  <div style="flex:1;min-width:0;font-size:11.5px;color:rgba(230,233,236,.4);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Buscar por código, descrição ou código alt.…</div>
                   <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:rgba(230,233,236,.4);background:#23272e;border-radius:3px;padding:1px 4px">Ctrl ⇧ K</div>
                 </div>
                 <div style="font-size:11.5px;color:rgba(230,233,236,.6)"><span style="font-family:'IBM Plex Mono',monospace">2.418</span> itens</div>
@@ -306,7 +309,7 @@ a:hover { color: #9cc0ec; }
 
                 <div style="flex:none;display:flex;align-items:center;gap:14px;padding:0 12px;height:34px;border-top:1px solid #2b2f36;background:#1b1e23;font-size:11px">
                   <div style="display:flex;align-items:center;gap:5px;color:rgba(230,233,236,.55)"><i class="ph ph-arrow-left" style="font-size:11px"></i>Anterior</div>
-                  <div style="font-family:'IBM Plex Mono',monospace;color:rgba(230,233,236,.7)">1–50 de 2418</div>
+                  <div style="font-family:'IBM Plex Mono',monospace;color:rgba(230,233,236,.7)">1–50 de 2.418</div>
                   <div style="display:flex;align-items:center;gap:5px;color:rgba(230,233,236,.85)">Próxima<i class="ph ph-arrow-right" style="font-size:11px"></i></div>
                   <div style="flex:1"></div>
                   <div style="display:flex;align-items:center;gap:6px;color:rgba(230,233,236,.4)"><i class="ph ph-bookmark-simple" style="font-size:11px"></i>layout salvo para Materiais<span style="color:rgba(230,233,236,.6)">· Desfazer edições</span></div>
@@ -534,9 +537,9 @@ a:hover { color: #9cc0ec; }
           <div style="width:196px;flex:none;border:1px solid #2b2f36;border-radius:8px;background:#16181d;padding:8px;display:flex;flex-direction:column;gap:6px;min-height:132px">
             <div style="font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(230,233,236,.38);padding:4px 8px">Cadastros do ERP</div>
             <div style="display:flex;flex-direction:column;gap:7px;padding:0 9px">
-              <div style="width:112px;height:8px;border-radius:4px;background:#1d2126"></div>
-              <div style="width:86px;height:8px;border-radius:4px;background:#1d2126"></div>
-              <div style="width:98px;height:8px;border-radius:4px;background:#1d2126"></div>
+              <div style="width:112px;height:8px;border-radius:4px;background:#1e2126"></div>
+              <div style="width:86px;height:8px;border-radius:4px;background:#1e2126"></div>
+              <div style="width:98px;height:8px;border-radius:4px;background:#1e2126"></div>
             </div>
           </div>
           <div style="flex:1;min-width:0;min-height:132px;border:1px dashed #23272e;border-radius:8px;display:flex;align-items:center;justify-content:center">
@@ -662,7 +665,7 @@ a:hover { color: #9cc0ec; }
             <div style="background:#101216;border:1px solid #2b2f36;border-radius:7px;padding:11px 12px;font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.75">
               <div style="display:flex;gap:11px">
                 <div style="flex:none;width:14px;text-align:right;color:rgba(230,233,236,.28)">1</div>
-                <div style="flex:1;min-width:0;text-wrap:pretty"><span style="color:#c98fd1">SELECT TOP</span> <span style="color:#e0a33c">500</span> c.cd_cadastro <span style="color:#c98fd1">AS</span> id, <span style="color:#6ea3e0">RTRIM</span>(<span style="color:#6ea3e0">LTRIM</span>(c.razao)) <span style="color:#c98fd1">AS</span> descricao, <span style="color:#6ea3e0">RTRIM</span>(<span style="color:#6ea3e0">LTRIM</span>(c.fantasia)) <span style="color:#c98fd1">AS</span> apelido, <span style="color:#6ea3e0">RTRIM</span>(<span style="color:#6ea3e0">LTRIM</span>(<span style="color:#6ea3e0">ISNULL</span>(e.cd_crm, <span style="color:#57b184">''</span>))) <span style="color:#c98fd1">AS</span> registro, <span style="color:#6ea3e0">RTRIM</span>(<span style="color:#6ea3e0">LTRIM</span>(c.situacao)) <span style="color:#c98fd1">AS</span> situacao, <span style="color:#57b184">'.'</span> <span style="color:#c98fd1">AS</span> fim <span style="color:#c98fd1">FROM</span> dbo.Cadastro c <span style="color:#c98fd1">INNER JOIN</span> dbo.CadastroClasse cc <span style="color:#c98fd1">ON</span> cc.cd_cadastro = c.cd_cadastro <span style="color:#c98fd1">INNER JOIN</span> dbo.Classe cl <span style="color:#c98fd1">ON</span> cl.cd_classe = cc.cd_classe <span style="color:#c98fd1">LEFT JOIN</span> dbo.cadastroEXT e <span style="color:#c98fd1">ON</span> e.cd_cadastro = c.cd_cadastro <span style="color:#c98fd1">WHERE</span> c.cd_cadastro &gt; <span style="color:#57b184">'{after}'</span> <span style="color:#c98fd1">AND</span> cl.nome = <span style="color:#57b184">"MEDICO"</span> <span style="color:#c98fd1">ORDER BY</span> c.cd_cadastro</div>
+                <div style="flex:1;min-width:0;text-wrap:pretty"><span style="color:#c98fd1">SELECT TOP</span> <span style="color:rgba(230,233,236,.85)">500</span> c.cd_cadastro <span style="color:#c98fd1">AS</span> id, <span style="color:#6ea3e0">RTRIM</span>(<span style="color:#6ea3e0">LTRIM</span>(c.razao)) <span style="color:#c98fd1">AS</span> descricao, <span style="color:#6ea3e0">RTRIM</span>(<span style="color:#6ea3e0">LTRIM</span>(c.fantasia)) <span style="color:#c98fd1">AS</span> apelido, <span style="color:#6ea3e0">RTRIM</span>(<span style="color:#6ea3e0">LTRIM</span>(<span style="color:#6ea3e0">ISNULL</span>(e.cd_crm, <span style="color:#7fc7c7">''</span>))) <span style="color:#c98fd1">AS</span> registro, <span style="color:#6ea3e0">RTRIM</span>(<span style="color:#6ea3e0">LTRIM</span>(c.situacao)) <span style="color:#c98fd1">AS</span> situacao, <span style="color:#7fc7c7">'.'</span> <span style="color:#c98fd1">AS</span> fim <span style="color:#c98fd1">FROM</span> dbo.Cadastro c <span style="color:#c98fd1">INNER JOIN</span> dbo.CadastroClasse cc <span style="color:#c98fd1">ON</span> cc.cd_cadastro = c.cd_cadastro <span style="color:#c98fd1">INNER JOIN</span> dbo.Classe cl <span style="color:#c98fd1">ON</span> cl.cd_classe = cc.cd_classe <span style="color:#c98fd1">LEFT JOIN</span> dbo.cadastroEXT e <span style="color:#c98fd1">ON</span> e.cd_cadastro = c.cd_cadastro <span style="color:#c98fd1">WHERE</span> c.cd_cadastro &gt; <span style="color:#7fc7c7">'{after}'</span> <span style="color:#c98fd1">AND</span> cl.nome = <span style="color:#7fc7c7">"MEDICO"</span> <span style="color:#c98fd1">ORDER BY</span> c.cd_cadastro</div>
               </div>
             </div>
           </div>
@@ -672,7 +675,7 @@ a:hover { color: #9cc0ec; }
             <div style="background:#101216;border:1px solid #2b2f36;border-radius:7px;padding:11px 12px;font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.75;max-height:92px;overflow:hidden">
               <div style="display:flex;gap:11px">
                 <div style="flex:none;width:14px;text-align:right;color:rgba(230,233,236,.28)">1</div>
-                <div style="flex:1;min-width:0;text-wrap:pretty"><span style="color:#c98fd1">SELECT</span> <span style="color:#6ea3e0">COUNT</span>(*) <span style="color:#c98fd1">AS</span> total <span style="color:#c98fd1">FROM</span> dbo.Cadastro c <span style="color:#c98fd1">INNER JOIN</span> dbo.CadastroClasse cc <span style="color:#c98fd1">ON</span> cc.cd_cadastro = c.cd_cadastro <span style="color:#c98fd1">INNER JOIN</span> dbo.Classe cl <span style="color:#c98fd1">ON</span> cl.cd_classe = cc.cd_classe <span style="color:#c98fd1">WHERE</span> cl.nome = <span style="color:#57b184">'MEDICO'</span></div>
+                <div style="flex:1;min-width:0;text-wrap:pretty"><span style="color:#c98fd1">SELECT</span> <span style="color:#6ea3e0">COUNT</span>(*) <span style="color:#c98fd1">AS</span> total <span style="color:#c98fd1">FROM</span> dbo.Cadastro c <span style="color:#c98fd1">INNER JOIN</span> dbo.CadastroClasse cc <span style="color:#c98fd1">ON</span> cc.cd_cadastro = c.cd_cadastro <span style="color:#c98fd1">INNER JOIN</span> dbo.Classe cl <span style="color:#c98fd1">ON</span> cl.cd_classe = cc.cd_classe <span style="color:#c98fd1">WHERE</span> cl.nome = <span style="color:#7fc7c7">'MEDICO'</span></div>
               </div>
             </div>
             <div style="font-size:10.5px;line-height:1.6;color:rgba(230,233,236,.5);text-wrap:pretty">É ela que prova que a coleta chegou ao fim. Se você filtrar a consulta acima, filtre aqui também — senão a coleta é recusada por ter parado cedo.</div>
@@ -959,7 +962,7 @@ a:hover { color: #9cc0ec; }
           </div>
           <div style="display:flex;align-items:center;gap:14px;padding:0 12px;height:32px;border-top:1px solid #dfe3e7;background:#f6f7f8;font-size:11px">
             <div style="color:rgba(27,31,36,.4)">← Anterior</div>
-            <div style="font-family:'IBM Plex Mono',monospace;color:rgba(27,31,36,.8)">1–50 de 2418</div>
+            <div style="font-family:'IBM Plex Mono',monospace;color:rgba(27,31,36,.8)">1–50 de 2.418</div>
             <div style="color:#2f6ab0">Próxima →</div>
           </div>
         </div>

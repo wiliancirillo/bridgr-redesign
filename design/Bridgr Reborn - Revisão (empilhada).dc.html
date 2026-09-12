@@ -64,6 +64,7 @@ a:hover { color: #9cc0ec; }
       <div style="flex:1;display:flex;min-height:0">
         <div style="width:236px;flex:none;border-right:1px solid #2b2f36;padding:8px;display:flex;flex-direction:column;gap:1px">
           <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-gauge" style="font-size:15px"></i>Dashboard</div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-calendar-check" style="font-size:15px"></i>Fechamento</div>
           <div style="display:flex;align-items:center;gap:8px;padding:16px 10px 6px"><div style="font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(230,233,236,.4)">Esteira</div><div style="flex:1;height:1px;background:linear-gradient(90deg,#2b2f36,rgba(43,47,54,0))"></div></div>
           <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-tray-arrow-down" style="font-size:15px"></i>Triagem</div>
           <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;background:rgba(110,163,224,.13);box-shadow:inset 2px 0 0 #6ea3e0;color:#bfd8f5;font-size:12.5px;font-weight:500"><i class="ph-fill ph-check-square-offset" style="font-size:15px"></i>Revisão</div>
@@ -73,6 +74,8 @@ a:hover { color: #9cc0ec; }
           <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-archive" style="font-size:15px"></i>Ignorados</div>
           <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-brackets-curly" style="font-size:15px"></i><div style="flex:1">Consulta</div><i class="ph ph-caret-down" style="font-size:10px;opacity:.4;transform:rotate(-90deg)"></i></div>
           <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-table" style="font-size:15px"></i><div style="flex:1">Catálogos</div><i class="ph ph-caret-down" style="font-size:10px;opacity:.4;transform:rotate(-90deg)"></i></div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-file-code" style="font-size:15px"></i>Espelho das notas</div>
+          <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-pencil-line" style="font-size:15px"></i>Correções</div>
           <div style="display:flex;align-items:center;gap:8px;padding:16px 10px 6px"><div style="font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(230,233,236,.4)">Sistema</div><div style="flex:1;height:1px;background:linear-gradient(90deg,#2b2f36,rgba(43,47,54,0))"></div></div>
           <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-gear-six" style="font-size:15px"></i>Configurações</div>
           <div style="display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;color:rgba(230,233,236,.72);font-size:12.5px"><i class="ph ph-terminal-window" style="font-size:15px"></i>Logs</div>
@@ -225,7 +228,7 @@ a:hover { color: #9cc0ec; }
       </div>
 
       <div style="background:#14161a;border:1px solid #2b2f36;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;height:300px">
-        <div style="display:flex;align-items:center;gap:9px;padding:9px 16px;background:#33201f;border-bottom:1px solid rgba(224,106,99,.35)"><i class="ph-fill ph-warning-octagon" style="font-size:13px;color:#e06a63"></i><div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#f3b1ac;flex:1">MedLens: HTTP 401</div></div>
+        <div style="display:flex;align-items:center;gap:9px;padding:9px 16px;background:#33201f;border-bottom:1px solid rgba(224,106,99,.35)"><i class="ph-fill ph-warning-octagon" style="font-size:13px;color:#e06a63"></i><div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#f2b3ae;flex:1">MedLens: HTTP 401</div></div>
         <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:20px">
           <i class="ph ph-files" style="font-size:26px;color:rgba(230,233,236,.28)"></i>
           <div style="font-size:13px;font-weight:500">Nada para conferir</div>
@@ -284,7 +287,7 @@ a:hover { color: #9cc0ec; }
           </div>
         </div>
         <div style="display:flex;align-items:center;gap:4px">
-          <div style="width:27px;height:25px;display:flex;align-items:center;justify-content:center"><i class="ph ph-bell" style="font-size:15px;color:rgba(230,233,236,.72)"></i></div>
+          <div style="width:27px;height:25px;display:flex;align-items:center;justify-content:center;border-radius:5px;position:relative"><i class="ph ph-bell" style="font-size:15px;color:rgba(230,233,236,.72)"></i><div style="position:absolute;top:4px;right:4px;width:7px;height:7px;border-radius:4px;background:#e06a63;box-shadow:0 0 0 2px #14161a"></div></div>
           <div style="display:flex;align-items:center;gap:7px;height:26px;padding:0 7px;border-radius:6px;background:#1b1e23"><div style="width:19px;height:19px;border-radius:10px;background:#1b3350;color:#bfd8f5;font-size:9px;font-weight:600;display:flex;align-items:center;justify-content:center">CR</div><div style="font-size:12px">Camila</div><i class="ph ph-caret-down" style="font-size:10px;color:rgba(230,233,236,.45)"></i></div>
           <div style="display:flex;align-items:center;gap:2px;margin-left:6px">
             <div style="width:26px;height:22px;display:flex;align-items:center;justify-content:center"><i class="ph ph-minus" style="font-size:13px;color:rgba(230,233,236,.72)"></i></div>
@@ -451,7 +454,7 @@ a:hover { color: #9cc0ec; }
                 </div>
               </div>
               <div style="flex:1;display:flex;flex-direction:column;min-height:0">
-                <div style="height:26px;flex:none;background:#3a3d42;display:flex;align-items:center;justify-content:center;gap:14px;color:#d8dde2;font-size:10.5px"><i class="ph ph-caret-up" style="font-size:11px"></i><span style="font-family:'IBM Plex Mono',monospace">1 / 2</span><i class="ph ph-caret-down" style="font-size:11px"></i><span style="opacity:.4">|</span><i class="ph ph-minus" style="font-size:11px"></i><span style="font-family:'IBM Plex Mono',monospace">100%</span><i class="ph ph-plus" style="font-size:11px"></i></div>
+                <div style="height:26px;flex:none;background:#3a3d42;display:flex;align-items:center;justify-content:center;gap:14px;color:#d4d9df;font-size:10.5px"><i class="ph ph-caret-up" style="font-size:11px"></i><span style="font-family:'IBM Plex Mono',monospace">1 / 2</span><i class="ph ph-caret-down" style="font-size:11px"></i><span style="opacity:.4">|</span><i class="ph ph-minus" style="font-size:11px"></i><span style="font-family:'IBM Plex Mono',monospace">100%</span><i class="ph ph-plus" style="font-size:11px"></i></div>
                 <div style="flex:1;overflow:hidden;padding:16px;display:flex;justify-content:center">
                   <div style="width:100%;max-width:480px;background:#f7f6f3;color:#1b1a17;padding:22px 24px;display:flex;flex-direction:column;gap:12px">
                     <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -590,7 +593,7 @@ a:hover { color: #9cc0ec; }
         <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid #2b2f36;border-radius:8px;background:#1b1e23">
           <i class="ph ph-caret-right" style="font-size:12px;color:rgba(230,233,236,.4)"></i>
           <div style="flex:1;display:flex;flex-direction:column;gap:4px"><div style="display:flex;align-items:center;gap:8px"><div style="font-size:13px;font-weight:500;color:rgba(230,233,236,.72)">BEATRIZ MONTEIRO</div><div style="font-size:10.5px;color:rgba(230,233,236,.6);background:#23272e;border-radius:4px;padding:1px 7px">Vida Plena Saúde</div><div style="font-size:10.5px;color:rgba(230,233,236,.6);background:#23272e;border:1px solid #434a53;border-radius:4px;padding:1px 7px">não enviar</div></div><div style="font-size:11px;color:rgba(230,233,236,.45)"><span style="font-family:'IBM Plex Mono',monospace">02/09/2026</span> · <span style="font-family:'IBM Plex Mono',monospace">2026004611</span> · 1 item</div></div>
-          <div style="width:7px;height:7px;border-radius:4px;background:#5c646e"></div>
+          <div style="width:7px;height:7px;border-radius:4px;background:#5b6270"></div>
         </div>
         <div style="font-size:11px;color:rgba(230,233,236,.5);line-height:1.6;text-wrap:pretty">Verde só depois que o portão liberou; âmbar enquanto ele segura; cinza para "não enviar" — e o ponto nunca é o único sinal: a pílula diz a palavra.</div>
       </div>
@@ -650,7 +653,7 @@ a:hover { color: #9cc0ec; }
         <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.4)">Proposta: sinal de vida por célula (oportunidade 1)</div>
         <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
           <div style="display:flex;align-items:center;gap:6px;font-size:11.5px;background:#1b1e23;border:1px solid #2b2f36;border-radius:5px;padding:4px 9px"><i class="ph ph-circle-notch" style="font-size:11px;color:#6ea3e0"></i>gravando…</div>
-          <div style="display:flex;align-items:center;gap:6px;font-size:11.5px;background:#33201f;border:1px solid rgba(224,106,99,.45);border-radius:5px;padding:4px 9px;color:#f3b1ac"><i class="ph-fill ph-warning-octagon" style="font-size:11px;color:#e06a63"></i>não gravou — tentar de novo</div>
+          <div style="display:flex;align-items:center;gap:6px;font-size:11.5px;background:#33201f;border:1px solid rgba(224,106,99,.45);border-radius:5px;padding:4px 9px;color:#f2b3ae"><i class="ph-fill ph-warning-octagon" style="font-size:11px;color:#e06a63"></i>não gravou — tentar de novo</div>
         </div>
       </div>
 
@@ -725,7 +728,7 @@ a:hover { color: #9cc0ec; }
           </div>
         </div>
         <div style="flex:1;display:flex;align-items:center;justify-content:center;padding:18px">
-          <div style="width:300px;height:210px;background:#16181c;border:1px solid #2b2f36;box-shadow:0 12px 28px rgba(0,0,0,.6);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.02) 0 8px,rgba(255,255,255,0) 8px 16px)">
+          <div style="width:300px;height:210px;background:#16181d;border:1px solid #2b2f36;box-shadow:0 12px 28px rgba(0,0,0,.6);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.02) 0 8px,rgba(255,255,255,0) 8px 16px)">
             <i class="ph ph-image" style="font-size:22px;color:rgba(230,233,236,.3)"></i>
             <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:rgba(230,233,236,.45);text-align:center;line-height:1.6">foto da etiqueta<br>(placeholder — entra a imagem real)</div>
           </div>
@@ -750,8 +753,8 @@ a:hover { color: #9cc0ec; }
         </div>
         <div style="flex:1;display:flex;align-items:center;justify-content:center;padding:20px">
           <div style="max-width:420px;background:#33201f;border:1px solid rgba(224,106,99,.45);border-radius:8px;padding:13px 14px;display:flex;flex-direction:column;gap:10px">
-            <div style="display:flex;gap:9px;align-items:flex-start"><i class="ph-fill ph-warning-octagon" style="font-size:13px;color:#e06a63;margin-top:2px"></i><div style="font-size:12px;color:#f3b1ac;line-height:1.5">Não consegui mostrar o documento: <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px">doca: o arquivo na pasta vigiada mudou desde a leitura — este original não existe mais</span></div></div>
-            <div style="align-self:flex-start;height:25px;display:flex;align-items:center;gap:6px;padding:0 11px;border:1px solid rgba(224,106,99,.5);border-radius:5px;font-size:11.5px;color:#f3b1ac"><i class="ph ph-arrows-clockwise" style="font-size:11px"></i>Tentar de novo</div>
+            <div style="display:flex;gap:9px;align-items:flex-start"><i class="ph-fill ph-warning-octagon" style="font-size:13px;color:#e06a63;margin-top:2px"></i><div style="font-size:12px;color:#f2b3ae;line-height:1.5">Não consegui mostrar o documento: <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px">doca: o arquivo na pasta vigiada mudou desde a leitura — este original não existe mais</span></div></div>
+            <div style="align-self:flex-start;height:25px;display:flex;align-items:center;gap:6px;padding:0 11px;border:1px solid rgba(224,106,99,.5);border-radius:5px;font-size:11.5px;color:#f2b3ae"><i class="ph ph-arrows-clockwise" style="font-size:11px"></i>Tentar de novo</div>
           </div>
         </div>
       </div>
@@ -767,7 +770,7 @@ a:hover { color: #9cc0ec; }
     <div style="display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap">
       <div style="width:340px;height:190px;background:#14161a;border:1px solid #2b2f36;border-radius:10px;display:flex;align-items:center;justify-content:center"><div style="font-size:12px;color:rgba(230,233,236,.45)">Abrindo a extração…</div></div>
       <div style="width:340px;height:190px;background:#14161a;border:1px solid #2b2f36;border-radius:10px;display:flex;flex-direction:column">
-        <div style="display:flex;align-items:center;gap:9px;padding:9px 12px;background:#33201f;border-bottom:1px solid rgba(224,106,99,.35)"><i class="ph-fill ph-warning-octagon" style="font-size:12px;color:#e06a63"></i><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#f3b1ac">MedLens: HTTP 404</div></div>
+        <div style="display:flex;align-items:center;gap:9px;padding:9px 12px;background:#33201f;border-bottom:1px solid rgba(224,106,99,.35)"><i class="ph-fill ph-warning-octagon" style="font-size:12px;color:#e06a63"></i><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#f2b3ae">MedLens: HTTP 404</div></div>
         <div style="flex:1;display:flex;align-items:center;justify-content:center"><div style="font-size:12px;color:rgba(230,233,236,.45)">Abrindo a extração…</div></div>
       </div>
       <div style="width:340px;height:190px;background:#14161a;border:1px solid #2b2f36;border-radius:10px;display:flex;flex-direction:column">
@@ -818,7 +821,7 @@ a:hover { color: #9cc0ec; }
           <div style="display:flex;flex-direction:column;gap:4px;grid-column:span 3"><div style="font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(27,31,36,.45)">Convênio <span style="text-transform:none;letter-spacing:0;color:rgba(27,31,36,.6);font-size:10px">· AMPARO SAÚDE</span></div><div style="display:flex;align-items:center;gap:7px;border-bottom:1.5px solid #8a5c0c;padding-bottom:4px"><div style="flex:1;font-size:12.5px;color:rgba(27,31,36,.45)">buscar no catálogo…</div><i class="ph-fill ph-warning" style="font-size:13px;color:#8a5c0c"></i></div><div style="font-size:10.5px;color:#6b4708;line-height:1.5">Mais de um cadastro atende por este nome. Diga qual antes de aprovar — acertar por sorte é pior que perguntar.</div></div>
           <div style="display:flex;flex-direction:column;gap:4px;grid-column:span 3"><div style="font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(27,31,36,.45)">Médico <span style="text-transform:none;letter-spacing:0;color:rgba(27,31,36,.6);font-size:10px">· Dra. Helena Castro</span></div><div style="display:flex;align-items:center;gap:6px"><div style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#1f60a5">004533</div><div style="flex:1;font-size:11.5px;color:rgba(27,31,36,.6);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">DRA. HELENA CASTRO</div><i class="ph-fill ph-check-circle" style="font-size:13px;color:#1c7a4e"></i><i class="ph ph-pencil-simple" style="font-size:12px;color:rgba(27,31,36,.5)"></i></div></div>
         </div>
-        <div style="margin:0 12px 12px;background:#fbf1de;border:1px solid rgba(138,92,12,.4);border-radius:7px;padding:11px 12px;display:flex;flex-direction:column;gap:7px">
+        <div style="margin:0 12px 12px;background:#fbf1dd;border:1px solid rgba(138,92,12,.4);border-radius:7px;padding:11px 12px;display:flex;flex-direction:column;gap:7px">
           <div style="font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(107,71,8,.8)">Falta para esta conta ir</div>
           <div style="display:flex;align-items:flex-start;gap:8px"><i class="ph-fill ph-warning" style="font-size:12px;color:#8a5c0c;margin-top:2px"></i><div style="font-size:11.5px;color:#6b4708;line-height:1.5">Convênio → código — mais de um cadastro atende; escolha um</div></div>
           <div style="display:flex;align-items:flex-start;gap:8px"><i class="ph-fill ph-warning" style="font-size:12px;color:#8a5c0c;margin-top:2px"></i><div style="font-size:11.5px;color:#6b4708;line-height:1.5">Lote — 1 item(ns) não riscado(s) sem lote: linhas 2</div></div>

@@ -22,7 +22,9 @@ bridgr_reborn/
 │   ├── 03-platform.md            restrições técnicas: WebKitGTK, janela, controles nativos, tokens, densidade
 │   ├── 04-shell.md               barra de título, lateral, barra de status, toasts
 │   ├── 05-components.md          componentes compartilhados (grade, filtro, listas salvas, confirmação…)
-│   ├── 06-sample-data.md         o elenco fictício
+│   ├── 06-sample-data.md         o elenco fictício base
+│   ├── 06-sample-data-reborn.md  dados canônicos adicionais das telas novas
+│   ├── inventario-de-instancias.md inventário dos componentes compartilhados nos exports
 │   └── screens/                  uma tela por arquivo, na ordem da barra lateral
 ├── design/                       ← exports baixados e revisados do Claude Design
 │   ├── *.dc.html                 uma tela/canvas por arquivo
@@ -59,10 +61,12 @@ bridgr_reborn/
 
 4. **Itere tela a tela**, apontando o documento da tela em cada pedido
    (`screens/NN-nome.md`) — ele traz os estados, os gestos e as linhas de
-   exemplo prontas.
+   exemplo prontas. As telas 19 a 25 usam também `06-sample-data-reborn.md`,
+   que mantém números e contas consistentes entre os novos fluxos.
 5. Os exports visuais baixados ficam em `design/` para consulta e revisão. Eles
    não substituem os briefings de `docs/`, que continuam sendo a fonte canônica
-   e o conjunto enviado ao Claude Design.
+   e o conjunto enviado ao Claude Design. `inventario-de-instancias.md` registra
+   a cobertura dos componentes compartilhados nos exports.
 6. Quando a direção estiver aprovada, o caminho de volta para o código é pelos
    **papéis de token** de `docs/03-platform.md`: cada papel novo precisa
    mapear para um papel que o código usa (ou vir com a proposta de mapeamento).
