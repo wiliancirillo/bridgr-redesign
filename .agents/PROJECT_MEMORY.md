@@ -17,7 +17,9 @@
 
 - `docs/` is the canonical upload set, numbered in reading order: brief → product → invariants → platform → shell → components → sample data → `screens/NN-*.md` (sidebar order).
 - `design/` contains the reviewed Claude Design exports: one `.dc.html` per canvas, its `uploads/` assets, `support.js`, and the auxiliary `github.md`; it is reference material, not the source of functional truth.
-- Every screen file follows one template (question, anatomy, data, states, actions, rules, must survive, free, samples, opportunities, open questions); `docs/00-brief.md` § "How to read a screen document" explains it.
+- Existing-screen briefs follow the template described in `docs/00-brief.md`. Documents `docs/screens/19-*.md` through `25-*.md` are proposed flows, not implemented behavior.
+- Original export names (`Bridgr Reborn - …`) remain unchanged for import compatibility; the repository name is Bridgr Redesign.
+- `docs/06-sample-data-reborn.md` supplements the fictional design data; `docs/inventario-de-instancias.md` records component coverage and known gaps, not completed validation.
 - `insights/` is developer-facing and never uploaded: engineering and project findings from reading the code.
 
 ## Invariants
@@ -43,7 +45,8 @@ Verified on 2026-09-10, bash, with `~/Projects/agents/check.sh`: passes with 0 w
 
 ## Repository
 
-- Remote: `git@github.com:alatarithron/bridgr_reborn.git`, private — the same visibility as `alatarithron/bridgr`, whose internal workflow and ERP details the brief describes.
+- Repository: `alatarithron/bridgr-redesign`; local directory: `/home/alatar/Projetos/bridgr-redesign`.
+- Remote: `git@github.com:alatarithron/bridgr-redesign.git`, private — the same visibility as `alatarithron/bridgr`, whose internal workflow and ERP details the brief describes.
 
 ## External integrations
 

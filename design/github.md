@@ -1,4 +1,4 @@
-repo: alatarithron/bridgr_reborn
+repo: alatarithron/bridgr-redesign
 branch: main
 path: docs/
 output: design/

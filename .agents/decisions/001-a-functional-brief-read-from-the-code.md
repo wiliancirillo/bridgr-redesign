@@ -26,7 +26,7 @@ three reasons:
 
 ## Decision
 
-1. **A separate repository holds the brief**: `~/Projects/bridgr_reborn`,
+1. **A separate repository holds the brief**: `alatarithron/bridgr-redesign`,
    documents only, following the agents structure (`AGENTS.md`, `.agents/`).
 2. **The code is the source**: every screen document is read from the code of
    Bridgr Pro at a stamped commit, names its source files, and quotes the

@@ -55,6 +55,8 @@ Before changing a document:
 
 ## Repository-specific information
 
+- Repository: `alatarithron/bridgr-redesign` (Bridgr Redesign). Preserve the original `Bridgr Reborn - …` export filenames. The repository name does not rename the application or the Claude Design canvases.
+
 - Purpose: the functional brief for giving **Bridgr Pro** (`~/Projects/bridgr`) a new look in **Claude Design**, plus the reviewed Claude Design exports that document the chosen direction — what every screen does, read from the code, plus the rules any new look must keep. It holds documents and design references only: no application code.
 - Layout: `docs/` is the set uploaded to Claude Design, numbered in reading order (`00-brief.md` first, one file per screen in `docs/screens/`); `design/` contains versioned `.dc.html` exports, their reviewed PNG assets, and export support files; `insights/` is developer-facing and is **not** uploaded; `README.md` (Portuguese) says how to use both.
 - Language: prose in English; on-screen text quoted **verbatim in pt-BR**, as the app renders it; `README.md` in Portuguese, because it is read by the operator.
