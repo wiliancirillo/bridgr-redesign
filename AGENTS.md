@@ -35,7 +35,7 @@ Before changing a document:
 
 ## Tests and validation
 
-- There is no code here, so there is no test suite. The validations are the policy check (`~/Projects/agents/check.sh .`) and re-reading the described code; never claim a document matches the code without having read the code.
+- There is no code here, so there is no test suite. The validations are the Markdown gate (`bun run lint:md` and `bun run format:check`), the policy check (`~/Projects/agents/check.sh .`) and re-reading the described code; never claim a document matches the code without having read the code.
 - Do not weaken a rule in a document to make a proposal fit.
 
 ## Git and CI
@@ -61,7 +61,7 @@ Before changing a document:
 - Layout: `docs/` is the set uploaded to Claude Design, numbered in reading order (`00-brief.md` first, one file per screen in `docs/screens/`); `design/` contains versioned `.dc.html` exports, their reviewed PNG assets, and export support files; `insights/` is developer-facing and is **not** uploaded; `README.md` (Portuguese) says how to use both.
 - Language: prose in English; on-screen text quoted **verbatim in pt-BR**, as the app renders it; `README.md` in Portuguese, because it is read by the operator.
 - Source of truth: the code of `~/Projects/bridgr` at the commit stamped in `.agents/PROJECT_MEMORY.md`. Bridgr's own `docs/telas.md`, memory and decisions explain the _why_ but are partly stale.
-- Validation command: `~/Projects/agents/check.sh .` (read-only policy check). No install, run, test, lint, type-check or build commands exist.
+- Validation commands: `bun install` once, then `bun run lint:md` (markdownlint-cli2) and `bun run format:check` (Prettier; `bun run format` rewrites) for every Markdown file except the Claude Design exports, plus `~/Projects/agents/check.sh .` (read-only policy check). No run, test, type-check or build commands exist.
 
 ## Repository-specific rules
 

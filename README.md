@@ -31,6 +31,7 @@ bridgr-redesign/
 │   └── github.md                 registro de sincronização e mapa dos desenhos
 ├── insights/                     achados de engenharia; não enviar ao Claude Design
 ├── AGENTS.md                     regras para agentes
+├── package.json                  lint e formatação do Markdown (bun)
 └── .agents/                      memória e decisões do projeto
 ```
 
@@ -77,8 +78,11 @@ Os `.dc.html` e os assets permitidos em `design/uploads/` são versionados para 
 Quando o comportamento do app mudar, revise o documento correspondente a partir do código e atualize o commit de referência na memória. Uma nova exportação visual, por si só, não muda esse commit.
 
 ```sh
+bun install
+bun run lint:md
+bun run format:check
 git diff --check
 ../agents/check.sh .
 ```
 
-O segundo comando pressupõe o clone de `agents` ao lado deste repositório; ajuste o caminho se necessário. A checagem valida a política dos arquivos de instruções e memória, não a aparência dos canvases nem sua correspondência com o aplicativo. Não há suíte de testes ou build de aplicativo neste repositório.
+O Markdown é formatado pelo Prettier (`bun run format` reescreve os arquivos) e verificado pelo markdownlint-cli2; os exports em `design/` e o `design/github.md` ficam fora dos dois. O último comando pressupõe o clone de `agents` ao lado deste repositório; ajuste o caminho se necessário. A checagem valida a política dos arquivos de instruções e memória, não a aparência dos canvases nem sua correspondência com o aplicativo. Não há suíte de testes ou build de aplicativo neste repositório.

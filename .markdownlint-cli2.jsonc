@@ -1,0 +1,71 @@
+// The markdown gate for the brief.
+//
+// Prettier owns layout here (`.prettierrc`, `proseWrap: "preserve"`), so this
+// file's whole job is the half Prettier cannot see: structure that renders
+// wrong, links that go nowhere, text that silently disappears.
+//
+// ⚠️ **Every rule turned off below is turned off with its reason.** A rule
+// disabled in silence is a rule nobody can re-enable later, because nobody
+// knows what it cost.
+{
+  "config": {
+    "default": true,
+
+    // Prettier's half, not ours. `proseWrap: "preserve"` keeps the hand-wrapped
+    // prose intact, and the longest lines are tables Prettier pads to its own
+    // widest cell. Two tools with an opinion about width is one tool too many.
+    "line-length": false,
+
+    // The screen template (`docs/00-brief.md`) names its sub-blocks with a bold
+    // run-in label — **Anatomy**, **Rules.**, **Interactions** — under a real
+    // `##` heading, in every document. The rule would only catch the labels
+    // that happen to end without punctuation, which is no convention at all.
+    "no-emphasis-as-heading": false,
+
+    // A screen file describes one screen per `##` section, each with the same
+    // template headings (Anatomy, States, Actions, Must survive…). The same
+    // heading under different parents is the template working, not a slip;
+    // only a repeat among siblings is worth a finding.
+    "no-duplicate-heading": { "siblings_only": true },
+
+    // The brief quotes labels verbatim and writes their interpolations as
+    // `<N>`, `<state>`, `<reason>` — 91 of them across the screen files.
+    // Markdown reads those as HTML tags, so GitHub's preview drops them; the
+    // reader of record is Claude Design, which gets the raw text, and an
+    // escape (`\<N>`) would be one more thing it has to know to ignore.
+    "no-inline-html": false,
+
+    // Label suffixes are quoted verbatim, leading space included:
+    // "` · confirmada no portal`" is what the app appends. CommonMark keeps a
+    // lone leading space, so the span says exactly what the screen says.
+    "no-space-in-code": false,
+
+    // E-mail addresses and the Spook URL are screen text quoted verbatim
+    // («faturamento@valeverde.example», the hint under "Endereço"). An
+    // autolink would draw a link the app does not have, to a `.example`
+    // domain that goes nowhere by design.
+    "no-bare-urls": false,
+
+    // Prettier's half again, and the one place the two disagree: inside a tight
+    // list item Prettier removes the blank line between a table and the list
+    // that follows it (`docs/screens/13-opmenexo.md`, the answer sheet), and
+    // re-adds nothing. CommonMark ends the table at the list either way, so
+    // the render is right; letting Prettier win keeps `format` idempotent.
+    "blanks-around-tables": false,
+  },
+
+  "globs": ["**/*.md"],
+
+  "ignores": [
+    // `.gitignore` is honoured below; this is belt and braces. A stray
+    // `node_modules` must not become thousands of findings nobody reads.
+    "node_modules/**",
+    // Symlink to AGENTS.md; linting the target once is enough.
+    "CLAUDE.md",
+    // Written by Claude Design's GitHub sync and overwritten on every import;
+    // its `key: value` header is the tool's format, not a document of ours.
+    "design/github.md",
+  ],
+
+  "gitignore": true,
+}

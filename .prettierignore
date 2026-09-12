@@ -1,0 +1,19 @@
+# Vendored by the package manager; formatting it changes nothing and hides the
+# diff that matters.
+node_modules
+
+# ⚠️ The lockfile is the package manager's format, not ours.
+bun.lock
+
+# ⚠️ Claude Design exports are reference material imported as-is (AGENTS.md):
+# reformatting `.dc.html`, `support.js` or the uploads would make every
+# re-import a spurious diff. Only the Markdown written here is ours to format.
+design/**
+!design/*.md
+
+# Symlink to AGENTS.md; formatting the target once is enough.
+CLAUDE.md
+
+# Written by Claude Design's GitHub sync and overwritten on every import;
+# formatting it only manufactures a diff against the next export.
+design/github.md

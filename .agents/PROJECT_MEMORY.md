@@ -34,14 +34,18 @@
 - Prose in English, screen text in pt-BR, `README.md` in Portuguese.
 - `**[functional]**` marks an arrangement the work depends on; everything else in an anatomy is today's presentation.
 - Links between documents are relative; each screen file names its source files in its header.
+- Prettier (`proseWrap: preserve`) owns Markdown layout; markdownlint-cli2 owns structure, and `.markdownlint-cli2.jsonc` states why each disabled rule is off. `design/` exports and `design/github.md` are never formatted or linted (`.prettierignore`).
 
 ## Commands
 
 ```text
-Policy check: ~/Projects/agents/check.sh .
+Install tooling: bun install
+Lint Markdown:   bun run lint:md
+Format Markdown: bun run format          (check only: bun run format:check)
+Policy check:    ~/Projects/agents/check.sh .
 ```
 
-Verified on 2026-09-10, bash, with `~/Projects/agents/check.sh`: passes with 0 warnings.
+Verified on 2026-09-12, bash: `bun run lint:md` and `bun run format:check` pass; `check.sh` passes with 0 warnings.
 
 ## Repository
 
@@ -50,11 +54,11 @@ Verified on 2026-09-10, bash, with `~/Projects/agents/check.sh`: passes with 0 w
 
 ## External integrations
 
-| Integration | Purpose | Contract or documentation | Failure considerations |
-| --- | --- | --- | --- |
-| Bridgr Pro (`~/Projects/bridgr`) | The app being described | Its code; `AGENTS.md`, `.agents/decisions/`, `docs/telas.md` for the why | Its docs are partly stale — the code wins |
-| Claude Design | Draws the new look from `docs/` | Uploaded by hand by the operator | Never receives captures or `insights/` |
-| Claude Design project "Bridgr Pro" | The current look (Nocturne + Breeze) | `https://claude.ai/design/p/4654ab58-8272-4f62-945c-87ea3d6b494a` | Predates Spook, NFe Pack and several screens |
+| Integration                        | Purpose                              | Contract or documentation                                                | Failure considerations                       |
+| ---------------------------------- | ------------------------------------ | ------------------------------------------------------------------------ | -------------------------------------------- |
+| Bridgr Pro (`~/Projects/bridgr`)   | The app being described              | Its code; `AGENTS.md`, `.agents/decisions/`, `docs/telas.md` for the why | Its docs are partly stale — the code wins    |
+| Claude Design                      | Draws the new look from `docs/`      | Uploaded by hand by the operator                                         | Never receives captures or `insights/`       |
+| Claude Design project "Bridgr Pro" | The current look (Nocturne + Breeze) | `https://claude.ai/design/p/4654ab58-8272-4f62-945c-87ea3d6b494a`        | Predates Spook, NFe Pack and several screens |
 
 ## Active architectural decisions
 

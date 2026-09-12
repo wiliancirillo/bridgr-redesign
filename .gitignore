@@ -40,3 +40,6 @@ documentos/
 # Local environment
 .env
 .env.*
+
+# Markdown tooling (package.json)
+node_modules/
