@@ -91,7 +91,7 @@ three reasons:
 - Every file in `docs/screens/` names its source files in the bridgr repo, and
   its quoted labels exist in `src/lib/i18n/locales/pt-BR.ts`.
 - No real person, hospital, order or document number appears in `docs/`.
-- `~/Projects/agents/check.sh .` passes.
+- `~/Projects/ecosystem/agents/check.sh .` passes.
 
 ## References
 

@@ -2,6 +2,12 @@
 
 > Version-controlled source of truth for durable project context. Keep it current and free of secrets.
 
+## Workspace
+
+- Paths here are for the `ecosystem` workspace (`/home/wilian/Projects/ecosystem`), not the earlier personal machine (`/home/alatar/Projetos`), whose paths do not exist here.
+- Siblings: `agents/`, `bridgr-pro/`, `bridgr-services/{medlens,nfepack,spook}/`. The described app is `~/Projects/bridgr`, outside the workspace.
+- Example folders in `docs/` (`~/Projetos/medlens`, …) are sample data the app displays, not paths of this workspace.
+
 ## Project purpose
 
 - Primary goal: the functional brief for redesigning **Bridgr Pro**'s look in Claude Design — every screen described from the code, with the rules a new look must keep ([001](decisions/001-a-functional-brief-read-from-the-code.md)).
@@ -42,14 +48,14 @@
 Install tooling: bun install
 Lint Markdown:   bun run lint:md
 Format Markdown: bun run format          (check only: bun run format:check)
-Policy check:    ~/Projects/agents/check.sh .
+Policy check:    ~/Projects/ecosystem/agents/check.sh .
 ```
 
 Verified on 2026-09-12, bash: `bun run lint:md` and `bun run format:check` pass; `check.sh` passes with 0 warnings.
 
 ## Repository
 
-- Repository: `alatarithron/bridgr-redesign`; local directory: `/home/alatar/Projetos/bridgr-redesign`.
+- Repository: `alatarithron/bridgr-redesign`; local directory: `~/Projects/ecosystem/bridgr-redesign`.
 - Remote: `git@github.com:alatarithron/bridgr-redesign.git`, private — the same visibility as `alatarithron/bridgr`, whose internal workflow and ERP details the brief describes.
 
 ## External integrations
