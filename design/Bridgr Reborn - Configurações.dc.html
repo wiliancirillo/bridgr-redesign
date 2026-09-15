@@ -794,9 +794,12 @@ a:hover { color: #9cc0ec; }
             <div style="font-size:10.5px;line-height:1.55;color:rgba(230,233,236,.5);text-wrap:pretty">Onde as NF-e e DANFEs baixadas ficam salvas. Em branco: o padrão do monitor (storage/ dentro do projeto). O log não tem campo — o app lê o padrão e mostra em Logs.</div>
           </div>
           <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:7px">
-            <div style="font-size:12px;color:rgba(230,233,236,.8)">Intervalo (s)</div>
-            <div style="height:30px;display:flex;align-items:center;justify-content:flex-end;padding:0 10px;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:rgba(230,233,236,.38)">10</div>
-            <div style="font-size:10.5px;line-height:1.55;color:rgba(230,233,236,.5);text-wrap:pretty">Pausa entre um ciclo e o próximo. Em branco: o padrão do settings.toml do monitor (hoje 10 s).</div>
+            <div style="font-size:12px;color:rgba(230,233,236,.8)">Intervalo entre ciclos</div>
+            <div style="width:78px;height:32px;box-sizing:border-box;display:flex;align-items:center;background:#16181d;border:1px dashed #2b2f36;border-radius:6px;padding:0 9px;gap:5px">
+              <div style="flex:1;text-align:right;font-family:'IBM Plex Mono',monospace;font-size:12px;color:rgba(230,233,236,.35);font-variant-numeric:tabular-nums">10</div>
+              <div style="font-size:10.5px;color:rgba(230,233,236,.28)">s</div>
+            </div>
+            <div style="font-size:10.5px;line-height:1.55;color:rgba(230,233,236,.5);text-wrap:pretty">Pausa entre um ciclo e o próximo. Tracejado é o padrão do settings.toml do monitor (hoje 10 s) — digitar assume o valor aqui.</div>
           </div>
         </div>
 

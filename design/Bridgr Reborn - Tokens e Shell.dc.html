@@ -878,6 +878,238 @@ a:hover { color: #9cc0ec; }
       </div>
     </div>
   </div>
+
+  <!-- ============ CAMPO DE NÚMERO ============ -->
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;flex-direction:column;gap:8px;max-width:940px">
+      <div style="font-size:20px;font-weight:600;letter-spacing:-.01em">A quinta peça — campo de número</div>
+      <div style="font-size:13px;line-height:1.65;color:rgba(230,233,236,.66);text-wrap:pretty">O <span style="font-family:'IBM Plex Mono',monospace">input[type=number]</span> é proibido, pela mesma razão do <span style="font-family:'IBM Plex Mono',monospace">input[type=date]</span>: o WebKitGTK desenha o próprio spinner, ignora o tema e cola dois triângulos no dígito. Três defeitos vêm de graça — a unidade sobra solta fora da caixa, o número cai em fonte proporcional, e nada alinha de uma linha para a outra.</div>
+    </div>
+
+    <div style="width:1196px;display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start">
+
+      <div style="width:590px;box-sizing:border-box;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:13px">
+        <div style="display:flex;align-items:center;gap:9px">
+          <i class="ph ph-hash" style="font-size:15px;color:#6ea3e0"></i>
+          <div style="font-size:14px;font-weight:600">NumberField</div>
+          <div style="flex:1"></div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:rgba(230,233,236,.45)">32px no total (30 + borda) · 3 larguras fixas</div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:9px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.42)">Repouso — passo escondido, unidade dentro</div>
+          <div style="display:flex;align-items:center;gap:10px">
+            <div style="width:78px;height:32px;box-sizing:border-box;display:flex;align-items:center;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;padding:0 9px;gap:5px">
+              <div style="flex:1;text-align:right;font-family:'IBM Plex Mono',monospace;font-size:12px;font-variant-numeric:tabular-nums">10</div>
+              <div style="font-size:10.5px;color:rgba(230,233,236,.45)">s</div>
+            </div>
+            <div style="width:78px;height:32px;box-sizing:border-box;display:flex;align-items:center;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;padding:0 9px;gap:5px">
+              <div style="flex:1;text-align:right;font-family:'IBM Plex Mono',monospace;font-size:12px;font-variant-numeric:tabular-nums">7</div>
+              <div style="font-size:10.5px;color:rgba(230,233,236,.45)">dias</div>
+            </div>
+            <div style="width:96px;height:32px;box-sizing:border-box;display:flex;align-items:center;background:#1b1e23;border:1px solid #2b2f36;border-radius:6px;padding:0 9px;gap:5px">
+              <div style="flex:1;text-align:right;font-family:'IBM Plex Mono',monospace;font-size:12px;font-variant-numeric:tabular-nums">3.600</div>
+              <div style="font-size:10.5px;color:rgba(230,233,236,.45)">s</div>
+            </div>
+            <div style="flex:1;min-width:0;font-size:10.5px;line-height:1.5;color:rgba(230,233,236,.5);text-wrap:pretty">A unidade é parte do campo, não palavra vizinha. Número em mono tabular, à direita: o separador de milhar cai na mesma coluna em toda a lista.</div>
+          </div>
+        </div>
+
+        <div style="height:1px;background:#23272e"></div>
+
+        <div style="display:flex;flex-direction:column;gap:9px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.42)">Ponteiro em cima · foco</div>
+          <div style="display:flex;align-items:center;gap:10px">
+            <div style="width:78px;height:32px;box-sizing:border-box;display:flex;align-items:stretch;background:#20242a;border:1px solid #434a53;border-radius:6px;overflow:hidden">
+              <div style="flex:1;min-width:0;display:flex;align-items:center;gap:5px;padding:0 4px 0 9px">
+                <div style="flex:1;text-align:right;font-family:'IBM Plex Mono',monospace;font-size:12px;font-variant-numeric:tabular-nums">10</div>
+                <div style="font-size:10.5px;color:rgba(230,233,236,.45)">s</div>
+              </div>
+              <div style="width:19px;flex:none;border-left:1px solid #2b2f36;display:flex;flex-direction:column">
+                <div style="flex:1;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.05)"><i class="ph ph-caret-up" style="font-size:8px;color:rgba(230,233,236,.75)"></i></div>
+                <div style="height:1px;background:#2b2f36"></div>
+                <div style="flex:1;display:flex;align-items:center;justify-content:center"><i class="ph ph-caret-down" style="font-size:8px;color:rgba(230,233,236,.6)"></i></div>
+              </div>
+            </div>
+            <div style="width:78px;height:32px;box-sizing:border-box;display:flex;align-items:stretch;background:#1b1e23;border:1px solid #6ea3e0;box-shadow:0 0 0 2px rgba(110,163,224,.18);border-radius:6px;overflow:hidden">
+              <div style="flex:1;min-width:0;display:flex;align-items:center;gap:5px;padding:0 4px 0 9px">
+                <div style="flex:1;text-align:right;font-family:'IBM Plex Mono',monospace;font-size:12px;font-variant-numeric:tabular-nums">15<span style="color:#6ea3e0">|</span></div>
+                <div style="font-size:10.5px;color:rgba(230,233,236,.45)">s</div>
+              </div>
+              <div style="width:19px;flex:none;border-left:1px solid #2b2f36;display:flex;flex-direction:column">
+                <div style="flex:1;display:flex;align-items:center;justify-content:center"><i class="ph ph-caret-up" style="font-size:8px;color:rgba(230,233,236,.6)"></i></div>
+                <div style="height:1px;background:#2b2f36"></div>
+                <div style="flex:1;display:flex;align-items:center;justify-content:center"><i class="ph ph-caret-down" style="font-size:8px;color:rgba(230,233,236,.6)"></i></div>
+              </div>
+            </div>
+            <div style="flex:1;min-width:0;font-size:10.5px;line-height:1.5;color:rgba(230,233,236,.5);text-wrap:pretty">O passo aparece com ponteiro ou foco e ocupa 19px <span style="color:#e6e9ec">reservados desde o repouso</span> — a caixa não muda de largura nem o número dança. <span style="font-family:'IBM Plex Mono',monospace;color:#9cc0ec">↑ ↓</span> andam um passo, com <span style="font-family:'IBM Plex Mono',monospace;color:#9cc0ec">⇧</span> dez; roda do mouse só com foco.</div>
+          </div>
+        </div>
+
+        <div style="height:1px;background:#23272e"></div>
+
+        <div style="display:flex;flex-direction:column;gap:9px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.42)">Fora do limite · herdado do padrão</div>
+          <div style="display:flex;align-items:flex-start;gap:12px">
+            <div style="display:flex;flex-direction:column;gap:5px;width:150px;flex:none">
+              <div style="width:78px;height:32px;box-sizing:border-box;display:flex;align-items:center;background:#1b1e23;border:1px solid #e06a63;border-radius:6px;padding:0 9px;gap:5px">
+                <div style="flex:1;text-align:right;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#f2b3ae;font-variant-numeric:tabular-nums">2</div>
+                <div style="font-size:10.5px;color:rgba(230,233,236,.45)">s</div>
+              </div>
+              <div style="font-size:10px;color:#f2b3ae;line-height:1.45">mínimo 5 s — abaixo disso o portal derruba a conexão</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:5px;width:158px;flex:none">
+              <div style="width:78px;height:32px;box-sizing:border-box;display:flex;align-items:center;background:#16181d;border:1px dashed #2b2f36;border-radius:6px;padding:0 9px;gap:5px">
+                <div style="flex:1;text-align:right;font-family:'IBM Plex Mono',monospace;font-size:12px;color:rgba(230,233,236,.35);font-variant-numeric:tabular-nums">30</div>
+                <div style="font-size:10.5px;color:rgba(230,233,236,.28)">s</div>
+              </div>
+              <div style="font-size:10px;color:rgba(230,233,236,.45);line-height:1.45">herdado do padrão — tracejado, sem passo; clicar assume o valor</div>
+            </div>
+            <div style="flex:1;min-width:0;font-size:10.5px;line-height:1.5;color:rgba(230,233,236,.5);text-wrap:pretty">Nunca corrige calado nem trava a digitação: aceita o 2, marca vermelho e quem desliga é o salvar da folha. Sair do campo sem salvar devolve o valor anterior.</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="width:590px;box-sizing:border-box;background:#f7f8f9;border:1px solid #d4d9df;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:13px">
+        <div style="display:flex;align-items:center;gap:9px">
+          <i class="ph ph-hash" style="font-size:15px;color:#2f5f95"></i>
+          <div style="font-size:14px;font-weight:600;color:#14161a">NumberField — claro</div>
+          <div style="flex:1"></div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#5b6270">mesmos papéis de token</div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+          <div style="width:78px;height:32px;box-sizing:border-box;display:flex;align-items:center;background:#ffffff;border:1px solid #d4d9df;border-radius:6px;padding:0 9px;gap:5px">
+            <div style="flex:1;text-align:right;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#14161a;font-variant-numeric:tabular-nums">10</div>
+            <div style="font-size:10.5px;color:#5b6270">s</div>
+          </div>
+          <div style="width:78px;height:32px;box-sizing:border-box;display:flex;align-items:stretch;background:#ffffff;border:1px solid #2f5f95;box-shadow:0 0 0 2px rgba(47,95,149,.16);border-radius:6px;overflow:hidden">
+            <div style="flex:1;min-width:0;display:flex;align-items:center;gap:5px;padding:0 4px 0 9px">
+              <div style="flex:1;text-align:right;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#14161a;font-variant-numeric:tabular-nums">15<span style="color:#2f5f95">|</span></div>
+              <div style="font-size:10.5px;color:#5b6270">s</div>
+            </div>
+            <div style="width:19px;flex:none;border-left:1px solid #d4d9df;display:flex;flex-direction:column">
+              <div style="flex:1;display:flex;align-items:center;justify-content:center;background:#eceef1"><i class="ph ph-caret-up" style="font-size:8px;color:#434a53"></i></div>
+              <div style="height:1px;background:#d4d9df"></div>
+              <div style="flex:1;display:flex;align-items:center;justify-content:center"><i class="ph ph-caret-down" style="font-size:8px;color:#5b6270"></i></div>
+            </div>
+          </div>
+          <div style="width:78px;height:32px;box-sizing:border-box;display:flex;align-items:center;background:#ffffff;border:1px solid #a5342c;border-radius:6px;padding:0 9px;gap:5px">
+            <div style="flex:1;text-align:right;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#a5342c;font-variant-numeric:tabular-nums">2</div>
+            <div style="font-size:10.5px;color:#5b6270">s</div>
+          </div>
+          <div style="width:78px;height:32px;box-sizing:border-box;display:flex;align-items:center;background:#eceef1;border:1px dashed #c3c9d0;border-radius:6px;padding:0 9px;gap:5px">
+            <div style="flex:1;text-align:right;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8b939d;font-variant-numeric:tabular-nums">30</div>
+            <div style="font-size:10.5px;color:#a3aab3">s</div>
+          </div>
+        </div>
+
+        <div style="height:1px;background:#e2e5e9"></div>
+
+        <div style="display:flex;flex-direction:column;gap:9px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#5b6270">Variante de tempo — fala na unidade de gente</div>
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+            <div style="height:26px;display:flex;align-items:center;padding:0 10px;border-radius:13px;border:1px solid #d4d9df;background:#ffffff;font-size:11px;color:#434a53">30 s</div>
+            <div style="height:26px;display:flex;align-items:center;padding:0 10px;border-radius:13px;border:1px solid #2f5f95;background:#e8f0fa;font-size:11px;color:#1d3c5f;font-weight:500">10 min</div>
+            <div style="height:26px;display:flex;align-items:center;padding:0 10px;border-radius:13px;border:1px solid #d4d9df;background:#ffffff;font-size:11px;color:#434a53">1 h</div>
+            <div style="height:26px;display:flex;align-items:center;padding:0 10px;border-radius:13px;border:1px solid #d4d9df;background:#ffffff;font-size:11px;color:#434a53">6 h</div>
+            <div style="width:86px;height:32px;box-sizing:border-box;display:flex;align-items:center;background:#ffffff;border:1px solid #d4d9df;border-radius:6px;padding:0 9px;gap:5px">
+              <div style="flex:1;text-align:right;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#14161a;font-variant-numeric:tabular-nums">45</div>
+              <div style="font-size:10.5px;color:#5b6270">min</div>
+            </div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#8b939d">= 2.700 s</div>
+          </div>
+          <div style="font-size:10.5px;line-height:1.6;color:#5b6270;text-wrap:pretty">Ninguém pensa "3.600 s". O campo guarda segundos e mostra a maior unidade que couber inteira; o valor cru fica ao lado, em cinza, para conferir contra o log. Os quatro atalhos são os intervalos que a operação usa de verdade — digitar é exceção, não o caminho normal.</div>
+        </div>
+      </div>
+
+      <div style="width:1196px;box-sizing:border-box;background:#14161a;border:1px solid #2b2f36;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:13px">
+        <div style="display:flex;align-items:center;gap:9px">
+          <i class="ph ph-rows" style="font-size:15px;color:#6ea3e0"></i>
+          <div style="font-size:14px;font-weight:600">A linha de agendamento — antes e depois</div>
+          <div style="flex:1"></div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:rgba(230,233,236,.45)">quatro rotas, uma grade</div>
+        </div>
+
+        <div style="display:flex;gap:16px;align-items:flex-start">
+
+          <div style="width:420px;flex:none;display:flex;flex-direction:column;gap:8px">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.42)">Antes</div>
+            <div style="background:#f7f8f9;border:1px solid #d4d9df;border-radius:7px;overflow:hidden">
+              <div style="display:flex;align-items:center;gap:6px;padding:9px 11px;border-bottom:1px solid #e2e5e9;font-size:11px;color:#5b6270">
+                <div>a cada</div>
+                <div style="width:62px;height:24px;box-sizing:border-box;display:flex;align-items:center;background:#ffffff;border:1px solid #c3c9d0;border-radius:4px;padding:0 3px 0 7px"><div style="flex:1;text-align:right;font-size:11px;color:#14161a">10</div><div style="display:flex;flex-direction:column;gap:1px;padding-left:4px;color:#8b939d"><i class="ph ph-caret-up" style="font-size:6px"></i><i class="ph ph-caret-down" style="font-size:6px"></i></div></div>
+                <div>s</div>
+                <div style="padding-left:6px">janela</div>
+                <div style="width:56px;height:24px;box-sizing:border-box;display:flex;align-items:center;background:#ffffff;border:1px solid #c3c9d0;border-radius:4px;padding:0 3px 0 7px"><div style="flex:1;text-align:right;font-size:11px;color:#14161a">1</div><div style="display:flex;flex-direction:column;gap:1px;padding-left:4px;color:#8b939d"><i class="ph ph-caret-up" style="font-size:6px"></i><i class="ph ph-caret-down" style="font-size:6px"></i></div></div>
+                <div>dias</div>
+              </div>
+              <div style="display:flex;align-items:center;gap:6px;padding:9px 11px;border-bottom:1px solid #e2e5e9;font-size:11px;color:#5b6270">
+                <div>a cada</div>
+                <div style="width:62px;height:24px;box-sizing:border-box;display:flex;align-items:center;background:#ffffff;border:1px solid #c3c9d0;border-radius:4px;padding:0 3px 0 7px"><div style="flex:1;text-align:right;font-size:11px;color:#14161a">3600</div><div style="display:flex;flex-direction:column;gap:1px;padding-left:4px;color:#8b939d"><i class="ph ph-caret-up" style="font-size:6px"></i><i class="ph ph-caret-down" style="font-size:6px"></i></div></div>
+                <div>s</div>
+                <div style="padding-left:6px">janela</div>
+                <div style="width:56px;height:24px;box-sizing:border-box;display:flex;align-items:center;background:#ffffff;border:1px solid #c3c9d0;border-radius:4px;padding:0 3px 0 7px"><div style="flex:1;text-align:right;font-size:11px;color:#14161a">7</div><div style="display:flex;flex-direction:column;gap:1px;padding-left:4px;color:#8b939d"><i class="ph ph-caret-up" style="font-size:6px"></i><i class="ph ph-caret-down" style="font-size:6px"></i></div></div>
+                <div>dias</div>
+              </div>
+              <div style="display:flex;align-items:center;gap:6px;padding:9px 11px;font-size:11px;color:#5b6270">
+                <div>a cada</div>
+                <div style="width:62px;height:24px;box-sizing:border-box;display:flex;align-items:center;background:#ffffff;border:1px solid #c3c9d0;border-radius:4px;padding:0 3px 0 7px"><div style="flex:1;text-align:right;font-size:11px;color:#14161a">600</div><div style="display:flex;flex-direction:column;gap:1px;padding-left:4px;color:#8b939d"><i class="ph ph-caret-up" style="font-size:6px"></i><i class="ph ph-caret-down" style="font-size:6px"></i></div></div>
+                <div>s</div>
+                <div style="padding-left:6px">janela</div>
+                <div style="width:56px;height:24px;box-sizing:border-box;display:flex;align-items:center;background:#ffffff;border:1px solid #c3c9d0;border-radius:4px;padding:0 3px 0 7px"><div style="flex:1;text-align:right;font-size:11px;color:#14161a">1</div><div style="display:flex;flex-direction:column;gap:1px;padding-left:4px;color:#8b939d"><i class="ph ph-caret-up" style="font-size:6px"></i><i class="ph ph-caret-down" style="font-size:6px"></i></div></div>
+                <div>dias</div>
+              </div>
+            </div>
+            <div style="font-size:10.5px;line-height:1.6;color:rgba(230,233,236,.5);text-wrap:pretty">Quatro defeitos somados: unidade solta, dígito encostado no spinner, nada alinhado de uma linha para a outra e <span style="color:#e6e9ec">"1 dias"</span>. Além do principal: ninguém lê 3600 como uma hora.</div>
+          </div>
+
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:8px">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(230,233,236,.42)">Depois</div>
+            <div style="border:1px solid #2b2f36;border-radius:7px;background:#1b1e23;overflow:hidden">
+              <div style="display:flex;align-items:center;height:30px;padding:0 12px;background:#16181d;border-bottom:1px solid #2b2f36;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:rgba(230,233,236,.5)">
+                <div style="flex:1;min-width:0">Rota</div>
+                <div style="width:128px;flex:none">Relê a cada</div>
+                <div style="width:120px;flex:none">Janela lida</div>
+                <div style="width:96px;flex:none;text-align:right">Última leitura</div>
+              </div>
+              <div style="display:flex;align-items:center;height:40px;padding:0 12px;border-bottom:1px solid #1e2126;font-size:11.5px">
+                <div style="flex:1;min-width:0;display:flex;align-items:center;gap:8px"><i class="ph ph-plugs-connected" style="font-size:13px;color:rgba(230,233,236,.55)"></i>Opmenexo</div>
+                <div style="width:128px;flex:none"><div style="width:86px;height:32px;box-sizing:border-box;display:flex;align-items:center;background:#20242a;border:1px solid #2b2f36;border-radius:6px;padding:0 9px;gap:5px"><div style="flex:1;text-align:right;font-family:'IBM Plex Mono',monospace;font-size:12px;font-variant-numeric:tabular-nums">15</div><div style="font-size:10.5px;color:rgba(230,233,236,.45)">min</div></div></div>
+                <div style="width:120px;flex:none"><div style="width:86px;height:32px;box-sizing:border-box;display:flex;align-items:center;background:#20242a;border:1px solid #2b2f36;border-radius:6px;padding:0 9px;gap:5px"><div style="flex:1;text-align:right;font-family:'IBM Plex Mono',monospace;font-size:12px;font-variant-numeric:tabular-nums">1</div><div style="font-size:10.5px;color:rgba(230,233,236,.45)">dia</div></div></div>
+                <div style="width:96px;flex:none;text-align:right;font-size:11px;color:rgba(230,233,236,.55)">há 9 min</div>
+              </div>
+              <div style="display:flex;align-items:center;height:40px;padding:0 12px;border-bottom:1px solid #1e2126;font-size:11.5px">
+                <div style="flex:1;min-width:0;display:flex;align-items:center;gap:8px"><i class="ph ph-receipt" style="font-size:13px;color:rgba(230,233,236,.55)"></i>NFe Pack Monitor</div>
+                <div style="width:128px;flex:none"><div style="width:86px;height:32px;box-sizing:border-box;display:flex;align-items:center;background:#20242a;border:1px solid #2b2f36;border-radius:6px;padding:0 9px;gap:5px"><div style="flex:1;text-align:right;font-family:'IBM Plex Mono',monospace;font-size:12px;font-variant-numeric:tabular-nums">1</div><div style="font-size:10.5px;color:rgba(230,233,236,.45)">h</div></div></div>
+                <div style="width:120px;flex:none"><div style="width:86px;height:32px;box-sizing:border-box;display:flex;align-items:center;background:#20242a;border:1px solid #2b2f36;border-radius:6px;padding:0 9px;gap:5px"><div style="flex:1;text-align:right;font-family:'IBM Plex Mono',monospace;font-size:12px;font-variant-numeric:tabular-nums">7</div><div style="font-size:10.5px;color:rgba(230,233,236,.45)">dias</div></div></div>
+                <div style="width:96px;flex:none;text-align:right;font-size:11px;color:rgba(230,233,236,.55)">há 41 min</div>
+              </div>
+              <div style="display:flex;align-items:center;height:40px;padding:0 12px;border-bottom:1px solid #1e2126;font-size:11.5px">
+                <div style="flex:1;min-width:0;display:flex;align-items:center;gap:8px"><i class="ph ph-tray" style="font-size:13px;color:rgba(230,233,236,.55)"></i>MailBridgr</div>
+                <div style="width:128px;flex:none"><div style="width:86px;height:32px;box-sizing:border-box;display:flex;align-items:stretch;background:#1b1e23;border:1px solid #6ea3e0;box-shadow:0 0 0 2px rgba(110,163,224,.18);border-radius:6px;overflow:hidden"><div style="flex:1;min-width:0;display:flex;align-items:center;gap:5px;padding:0 4px 0 9px"><div style="flex:1;text-align:right;font-family:'IBM Plex Mono',monospace;font-size:12px;font-variant-numeric:tabular-nums">10<span style="color:#6ea3e0">|</span></div><div style="font-size:10.5px;color:rgba(230,233,236,.45)">min</div></div><div style="width:19px;flex:none;border-left:1px solid #2b2f36;display:flex;flex-direction:column"><div style="flex:1;display:flex;align-items:center;justify-content:center"><i class="ph ph-caret-up" style="font-size:8px;color:rgba(230,233,236,.6)"></i></div><div style="height:1px;background:#2b2f36"></div><div style="flex:1;display:flex;align-items:center;justify-content:center"><i class="ph ph-caret-down" style="font-size:8px;color:rgba(230,233,236,.6)"></i></div></div></div></div>
+                <div style="width:120px;flex:none"><div style="width:86px;height:32px;box-sizing:border-box;display:flex;align-items:center;background:#20242a;border:1px solid #2b2f36;border-radius:6px;padding:0 9px;gap:5px"><div style="flex:1;text-align:right;font-family:'IBM Plex Mono',monospace;font-size:12px;font-variant-numeric:tabular-nums">1</div><div style="font-size:10.5px;color:rgba(230,233,236,.45)">dia</div></div></div>
+                <div style="width:96px;flex:none;text-align:right;font-size:11px;color:rgba(230,233,236,.55)">há 2 min</div>
+              </div>
+              <div style="display:flex;align-items:center;height:40px;padding:0 12px;font-size:11.5px">
+                <div style="flex:1;min-width:0;display:flex;align-items:center;gap:8px"><i class="ph ph-eye" style="font-size:13px;color:rgba(230,233,236,.55)"></i>MedLens</div>
+                <div style="width:128px;flex:none"><div style="width:86px;height:32px;box-sizing:border-box;display:flex;align-items:center;background:#16181d;border:1px dashed #2b2f36;border-radius:6px;padding:0 9px"><div style="flex:1;text-align:right;font-family:'IBM Plex Mono',monospace;font-size:12px;color:rgba(230,233,236,.35)">—</div></div></div>
+                <div style="width:120px;flex:none;font-size:11px;color:rgba(230,233,236,.45)">sob demanda</div>
+                <div style="width:96px;flex:none;text-align:right;font-size:11px;color:rgba(230,233,236,.4)">—</div>
+              </div>
+            </div>
+            <div style="font-size:10.5px;line-height:1.6;color:rgba(230,233,236,.5);text-wrap:pretty">A frase virou coluna: o rótulo sai da linha e sobe para o cabeçalho, os campos ganham vaga de largura fixa, e <span style="color:#e6e9ec">dá para comparar as quatro rotas de cima a baixo</span> — que é o que alguém abre esta folha para fazer. Rota sem agendamento mostra <span style="font-family:'IBM Plex Mono',monospace">—</span> tracejado, nunca zero.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:28px;max-width:1196px;font-size:11.5px;line-height:1.7;color:rgba(230,233,236,.55)">
+      <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">Três larguras, só.</span> <span style="font-family:'IBM Plex Mono',monospace">78px</span> até 3 dígitos com unidade curta, <span style="font-family:'IBM Plex Mono',monospace">86px</span> com unidade de 3 letras, <span style="font-family:'IBM Plex Mono',monospace">96px</span> até 5 dígitos. Campo de número nunca é elástico: largura fixa é o que faz a coluna alinhar.</div>
+      <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">A unidade concorda com o número.</span> <span style="font-family:'IBM Plex Mono',monospace">1 dia</span>, <span style="font-family:'IBM Plex Mono',monospace">7 dias</span> — o plural é do campo, não texto fixo ao lado. É detalhe pequeno e é o que separa ferramenta de formulário gerado.</div>
+      <div style="flex:1;text-wrap:pretty"><span style="color:#e6e9ec">Onde isso entra:</span> hoje só <span style="color:#e6e9ec">Configurações · NFe Pack</span> tem campo de número desenhado — "Intervalo entre ciclos", já convertido, no estado herdado. Doca, Exportação e os estudos ainda não têm campos; quando tiverem (lote, tamanho, teto de páginas, dia de corte), a peça já está aqui.</div>
+    </div>
+  </div>
 </div>
 <div style="font-family:'IBM Plex Sans',system-ui,sans-serif;background:#0a0b0d;color:#e6e9ec;padding:16px 56px 56px;display:flex;flex-direction:column;gap:20px;align-items:flex-start">
 

@@ -3,7 +3,8 @@
 > Where: a handle in the status bar, right of the service blocks; it opens a drawer
 > above the toast stack. No sidebar item and no route — the tray is part of the shell.
 >
-> **Status: proposed.** Designed in the reborn deck (`Bridgr Reborn - Bandeja de trabalho.dc.html`), not built. Nothing in `docs/04-shell.md` describes it yet.
+> **Status: proposed.** Designed in the reborn deck (`Bridgr Reborn - Bandeja de
+trabalho.dc.html`), not built. Nothing in `docs/04-shell.md` describes it yet.
 
 ## The question
 
